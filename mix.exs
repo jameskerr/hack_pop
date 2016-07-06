@@ -15,7 +15,8 @@ defmodule HackPop.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison, :floki]]
+    [applications: [:logger, :httpoison, :floki],
+     mod: {HackPop, []}]
   end
 
   # Dependencies can be Hex packages:

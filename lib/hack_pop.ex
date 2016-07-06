@@ -1,25 +1,30 @@
 require Logger
 
 defmodule HackPop do
-  def main(args) do
-    options = parse_args(args)
+  use Application
 
-    coord_task = Task.async(HackPop.Coordinator, :start, [options[:n]])
-    do_requests(options[:n], options[:url])
+  @url "https://news.ycombinator.com/"
 
-    Task.await(coord_task, :infinity)
+  def start(_type, _args) do
+    HackPop.Supervisor.start_link
   end
 
-  defp parse_args(args) do
-    {options, _, _} = OptionParser.parse(args,
-      switches: [n: :integer, url: :string]
-    )
-    options
+  def request do
+    try do
+      HTTPoison.get(@url) |> handle_response
+    rescue
+      error in HTTPoison.HTTPError ->
+        Logger.info "Http error (#{inspect error.message})"
+    end
   end
 
-  defp do_requests(n, url) do
-    Enum.each(1..n, fn(i) ->
-      spawn HackPop.Http, :request, [i, url]
-    end)
+  defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
+    HackPop.Parser.find_stories(body)
+  end
+
+  defp handle_response({:ok, %HTTPoison.Response{status_code: status_code}}) do
+    Logger.info "error: (#{status_code})"
   end
 end
+
+
