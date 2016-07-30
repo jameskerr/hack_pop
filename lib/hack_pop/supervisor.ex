@@ -7,7 +7,8 @@ defmodule HackPop.Supervisor do
 
   def init(:ok) do 
     children = [
-      worker(HackPop.Stories, [])
+      worker(HackPop.Stories, []),
+      worker(HackPop.Pinger, [])
     ]
 
     supervise(children, strategy: :one_for_one)

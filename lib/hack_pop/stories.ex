@@ -1,3 +1,5 @@
+require Logger
+
 defmodule HackPop.Stories do
 
   @name __MODULE__
@@ -13,8 +15,11 @@ defmodule HackPop.Stories do
   def update(story) do
     Agent.update(@name, fn stories -> 
       if Map.has_key?(stories, story.url) do
+        Logger.info "Updating story: #{inspect story}"
         %{stories | story.url => story} 
       else
+        Logger.info "Adding story: #{inspect story}"
+        HackPop.Sms.send_story("7143096756", story)
         Map.put(stories, story.url, story)
       end
     end)
