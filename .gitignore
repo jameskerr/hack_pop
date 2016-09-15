@@ -1,3 +1,4 @@
+# ELIXIR
 /_build
 /cover
 /deps
@@ -5,3 +6,11 @@ erl_crash.dump
 *.ez
 public/public.iml
 /.idea
+
+
+# XCODE
+.DS_Store
+Source/Application.h
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata
