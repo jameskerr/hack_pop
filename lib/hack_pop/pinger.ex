@@ -2,7 +2,7 @@ require Logger
 
 defmodule HackPop.Pinger do
   @url "https://news.ycombinator.com"
-  @interval 5_000
+  @interval 60_000 * 5
 
   @name __MODULE__
 
@@ -27,7 +27,7 @@ defmodule HackPop.Pinger do
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
     HackPop.Parser.find_stories(body)
-    |> Enum.each(&HackPop.Stories.update/1)
+    |> HackPop.Story.save_all
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: status_code}}) do

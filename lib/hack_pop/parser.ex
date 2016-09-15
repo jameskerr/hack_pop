@@ -1,18 +1,18 @@
 defmodule HackPop.Parser do
-
-  @min_score 300
-
   def find_stories(body) do
-    Enum.filter(all_stories(body), fn(story) -> story.score > @min_score end)
+    list = List.zip([
+      find_titles(body),
+      find_urls(body),
+      find_points(body)
+    ])
+
+    Enum.map(list, &build_story/1)
   end
 
-  defp all_stories(body) do
-    List.zip([find_titles(body), find_urls(body), find_scores(body)])
-      |> Enum.map(&build_story/1)
-  end
+  # PRIVATE
 
-  defp build_story({title, url, score}) do
-    %{title: title, url: url, score: score}
+  defp build_story({title, url, points}) do
+    %HackPop.Story{title: title, url: url, points: points}
   end
 
   defp find_titles(body) do
@@ -27,7 +27,7 @@ defmodule HackPop.Parser do
       |> Floki.attribute("href")
   end
 
-  defp find_scores(body) do
+  defp find_points(body) do
     body
      |> Floki.find("tr .score")
      |> Enum.map(fn(html) ->
