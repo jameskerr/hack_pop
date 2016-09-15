@@ -19,7 +19,6 @@ defmodule HackPop.Stories do
         %{stories | story.url => story}
       else
         Logger.info "Adding story: #{inspect story}"
-        HackPop.Sms.send_story("7143096756", story)
         Map.put(stories, story.url, story)
       end
     end)
