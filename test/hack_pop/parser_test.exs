@@ -6,14 +6,16 @@ defmodule HackPopTest.ParserTest do
     HTTPoison.start
   end
 
-  test "find_stories" do
+  test "find_stories parses title" do
     use_cassette "hackernews" do
       {:ok, response} = HTTPoison.get("https://news.ycombinator.com/")
       stories = HackPop.Parser.find_stories(response.body)
-      first = hd(stories)
-      assert first.title == "After 100 years World War I battlefields are poisoned and uninhabitable" 
-      assert first.url   == "http://www.wearethemighty.com/articles/after-100-years-world-war-i-battlefields-are-poisoned-and-uninhabitable"
-      assert first.score == 377
+      expected = %HackPop.Story{
+        title:  "Israel Proves the Desalination Era Is Here",
+        url:    "http://www.scientificamerican.com/article/israel-proves-the-desalination-era-is-here/",
+        points: 136
+      }
+      assert expected == hd(stories)
     end
   end
 end
