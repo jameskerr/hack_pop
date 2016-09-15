@@ -2,15 +2,16 @@ require Logger
 
 defmodule HackPop.Pinger do
   @url "https://news.ycombinator.com"
-  @interval 15_000
+  @interval 5_000
+
+  @name __MODULE__
 
   def start_link do
-    pid = spawn __MODULE__, :forever_ping, []
-    {:ok, pid}
+    Task.start_link __MODULE__, :forever_ping, []
   end
 
   def forever_ping do
-    ping
+    Task.start @name, :ping, []
     :timer.sleep(@interval)
     forever_ping
   end
