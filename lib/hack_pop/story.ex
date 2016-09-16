@@ -23,10 +23,12 @@ defmodule HackPop.Story do
   end
 
   defp upsert(story) do
-    exists = Story
-    |> where(title: ^story.title, url: ^story.url)
-    |> first
-    |> Repo.one
+    query = from s in Story,
+      where: s.title == ^story.title and
+             s.url   == ^story.url   and
+             s.inserted_at > datetime_add(^Ecto.DateTime.utc, -3, "day")
+
+    exists = Repo.one(query)
 
     case exists do
       nil ->
