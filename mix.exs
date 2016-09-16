@@ -15,7 +15,7 @@ defmodule HackPop.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison, :floki, :ecto, :postgrex],
+    [applications: [:logger, :httpoison, :floki, :ecto, :postgrex, :timex],
      mod: {HackPop, []}]
   end
 
@@ -33,6 +33,7 @@ defmodule HackPop.Mixfile do
      {:floki, "~> 0.9.0"},
      {:ecto, "~> 2.0"},
      {:postgrex, "~> 0.11"},
+     {:timex, "~> 3.0"},
      {:exvcr, "~> 0.7", only: :test}]
   end
 end
