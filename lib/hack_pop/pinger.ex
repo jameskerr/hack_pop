@@ -28,6 +28,7 @@ defmodule HackPop.Pinger do
   defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
     HackPop.Parser.find_stories(body)
     |> HackPop.Story.save_all
+    |> HackPop.Story.set_trending
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: status_code}}) do

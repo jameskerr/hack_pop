@@ -18,6 +18,12 @@ defmodule HackPop.Story do
     |> Ecto.Changeset.cast(params, [:points])
   end
 
+  def set_trending(stories) do
+    ids   = Enum.map(stories, fn story -> story.id end)
+    from(s in Story, where: not s.id in ^ids)
+    |> Repo.update_all(set: [trending: false])
+  end
+
   def save_all(stories) do
     stories
     |> Enum.map(&upsert/1)
@@ -31,11 +37,12 @@ defmodule HackPop.Story do
 
     exists = Repo.one(query)
 
-    case exists do
-      nil ->
-        Repo.insert(story)
-      %Story{} ->
-        Repo.update(Story.changeset(exists, %{points: story.points}))
-    end
+    {:ok, story} =  case exists do
+                      nil ->
+                        Repo.insert(story)
+                      %Story{} ->
+                        Repo.update(Story.changeset(exists, %{points: story.points}))
+                    end
+    story
   end
 end

@@ -17,7 +17,7 @@ defmodule HackPop.StoryTest do
       %HackPop.Story{title: "B", url: "b.com", points: 2},
       %HackPop.Story{title: "C", url: "c.com", points: 3},
     ]
-    HackPop.Story.save_all(stories)
+    IO.inspect HackPop.Story.save_all(stories)
     assert 3 == story_count
   end
 
