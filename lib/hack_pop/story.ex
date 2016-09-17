@@ -4,6 +4,7 @@ defmodule HackPop.Story do
   alias HackPop.Repo
   alias HackPop.Story
 
+  @derive {Poison.Encoder, only: [:title, :url, :points]}
   schema "stories" do
     field :title
     field :url

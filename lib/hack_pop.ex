@@ -7,7 +7,8 @@ defmodule HackPop do
     import Supervisor.Spec, warn: false
     children = [
       worker(HackPop.Repo, []),
-      worker(HackPop.Pinger, [])
+      worker(HackPop.Pinger, []),
+      Plug.Adapters.Cowboy.child_spec(:http, HackPop.Web, [], [port: 4001])
     ]
 
     opts = [strategy: :one_for_one, name: HackPop.Supervisor]
