@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hack popTests</key>
+	<dict>
+		<key>BundleIdentifiersForCrashReportEmphasis</key>
+		<array>
+			<string>com.hack-pop</string>
+			<string>com.hack-popUITests</string>
+			<string>com.hack-popTests</string>
+		</array>
+		<key>CommandLineArguments</key>
+		<array/>
+		<key>DependentProductPaths</key>
+		<array>
+			<string>__TESTROOT__/Debug-iphoneos/hack popUITests-Runner.app/PlugIns/hack popUITests.xctest</string>
+			<string>__TESTROOT__/Debug-iphoneos/hack pop.app</string>
+			<string>__TESTROOT__/Debug-iphoneos/hack pop.app/PlugIns/hack popTests.xctest</string>
+		</array>
+		<key>EnvironmentVariables</key>
+		<dict>
+			<key>OS_ACTIVITY_DT_MODE</key>
+			<string>YES</string>
+		</dict>
+		<key>IsAppHostedTestBundle</key>
+		<true/>
+		<key>ProductModuleName</key>
+		<string>hack_popTests</string>
+		<key>TestBundlePath</key>
+		<string>__TESTHOST__/PlugIns/hack popTests.xctest</string>
+		<key>TestHostBundleIdentifier</key>
+		<string>com.hack-pop</string>
+		<key>TestHostPath</key>
+		<string>__TESTROOT__/Debug-iphoneos/hack pop.app</string>
+		<key>TestingEnvironmentVariables</key>
+		<dict>
+			<key>DTX_CONNECTION_SERVICES_PATH</key>
+			<string>/Developer/Library/PrivateFrameworks/DTXConnectionServices.framework</string>
+			<key>DYLD_FRAMEWORK_PATH</key>
+			<string>__TESTROOT__/Debug-iphoneos:__PLATFORMS__/iPhoneOS.platform/Developer/Library/Frameworks</string>
+			<key>DYLD_INSERT_LIBRARIES</key>
+			<string>__PLATFORMS__/iPhoneOS.platform/Developer/Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection</string>
+			<key>DYLD_LIBRARY_PATH</key>
+			<string>__TESTROOT__/Debug-iphoneos:__PLATFORMS__/iPhoneOS.platform/Developer/Library/Frameworks</string>
+			<key>XCInjectBundleInto</key>
+			<string>__TESTHOST__/hack pop</string>
+			<key>XCODE_DBG_XPC_EXCLUSIONS</key>
+			<string>com.apple.dt.xctestSymbolicator</string>
+		</dict>
+		<key>ToolchainsSettingValue</key>
+		<array/>
+	</dict>
+</dict>
+</plist>

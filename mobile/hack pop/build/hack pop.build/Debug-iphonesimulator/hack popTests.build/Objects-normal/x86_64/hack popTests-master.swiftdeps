@@ -1,0 +1,13 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "6f5976ade8fc2f2c64136e6ac043630f"
+build_time: [527753982, 635875000]
+inputs:
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack popTests/HackPopStyleTests.swift": [527753978, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointsRetainer.swift": [527672623, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack popTests/hack_popTests.swift": [527751307, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack popTests/HomeViewControllerTests.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopStyle.swift": [527748421, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Stories.swift": [527674036, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack popTests/PointsRetainerTests.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectionSegue.swift": [527752804, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [527748432, 0]

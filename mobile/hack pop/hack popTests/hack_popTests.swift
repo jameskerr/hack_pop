@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import hack_pop
 
 class hack_popTests: XCTestCase {
     
@@ -15,6 +14,7 @@ class hack_popTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+    
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
@@ -28,7 +28,7 @@ class hack_popTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

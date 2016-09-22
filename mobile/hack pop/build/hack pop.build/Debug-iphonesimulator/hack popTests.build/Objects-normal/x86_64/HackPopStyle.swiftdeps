@@ -1,0 +1,600 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HackPopStyle"
+provides-nominal:
+- "C13hack_popTests12HackPopStyle"
+provides-member:
+- ["C13hack_popTests12HackPopStyle", ""]
+provides-dynamic-lookup:
+- "NormalText"
+- "pointRetainer"
+- "GetStyledPointSelectionCell"
+- "UnderlinedText"
+depends-top-level:
+- !private "Int"
+- "NSObject"
+- "CGFloat"
+- !private "=="
+- !private "UIFont"
+- !private "StringLiteralType"
+- !private "UITableViewCellSelectionStyle"
+- !private "NSFontAttributeName"
+- "UITableViewCell"
+- "PointsRetainer"
+- "AnyObject"
+- "NSAttributedString"
+- "HackPopStyle"
+- !private "NSUnderlineStyle"
+- !private "Dictionary"
+- "String"
+- !private "UITableViewCellStyle"
+- !private "NSForegroundColorAttributeName"
+- !private "UIColor"
+- !private "NSUnderlineStyleAttributeName"
+depends-member:
+- ["Ps9AnyObject", "GetStyledPointSelectionCell"]
+- !private ["Ps9AnyObject", "NSAttributedString"]
+- !private ["Ps9AnyObject", "NSFontAttributeName"]
+- !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
+- !private ["Ps9AnyObject", "NSUnderlineStyle"]
+- !private ["Ps9AnyObject", "NSUnderlineStyleAttributeName"]
+- ["Ps9AnyObject", "NormalText"]
+- ["Ps9AnyObject", "PointsRetainer"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "UITableViewCell"]
+- !private ["Ps9AnyObject", "UITableViewCellSelectionStyle"]
+- !private ["Ps9AnyObject", "UITableViewCellStyle"]
+- ["Ps9AnyObject", "UnderlinedText"]
+- !private ["Ps9AnyObject", "attributedText"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "clearColor"]
+- !private ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "font"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "instance"]
+- ["Ps9AnyObject", "pointRetainer"]
+- !private ["Ps9AnyObject", "selectionStyle"]
+- !private ["Ps9AnyObject", "textColor"]
+- !private ["Ps9AnyObject", "textLabel"]
+- !private ["Ps9AnyObject", "value"]
+- !private ["Ps9AnyObject", "whiteColor"]
+- ["Ps9AnyObject", ""]
+- !private ["P6SQLite7Binding", "_getBuiltinLogicValue"]
+- !private ["P6SQLite7Binding", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- ["Ps11CVarArgType", "GetStyledPointSelectionCell"]
+- !private ["Ps11CVarArgType", "NSAttributedString"]
+- !private ["Ps11CVarArgType", "NSFontAttributeName"]
+- !private ["Ps11CVarArgType", "NSForegroundColorAttributeName"]
+- !private ["Ps11CVarArgType", "NSUnderlineStyle"]
+- !private ["Ps11CVarArgType", "NSUnderlineStyleAttributeName"]
+- ["Ps11CVarArgType", "NormalText"]
+- ["Ps11CVarArgType", "PointsRetainer"]
+- !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UIFont"]
+- !private ["Ps11CVarArgType", "UITableViewCell"]
+- !private ["Ps11CVarArgType", "UITableViewCellSelectionStyle"]
+- !private ["Ps11CVarArgType", "UITableViewCellStyle"]
+- ["Ps11CVarArgType", "UnderlinedText"]
+- !private ["Ps11CVarArgType", "attributedText"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- !private ["Ps11CVarArgType", "clearColor"]
+- !private ["Ps11CVarArgType", "font"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "instance"]
+- ["Ps11CVarArgType", "pointRetainer"]
+- !private ["Ps11CVarArgType", "selectionStyle"]
+- !private ["Ps11CVarArgType", "textColor"]
+- !private ["Ps11CVarArgType", "textLabel"]
+- !private ["Ps11CVarArgType", "value"]
+- !private ["Ps11CVarArgType", "whiteColor"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "GetStyledPointSelectionCell"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
+- !private ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUnderlineStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "NSUnderlineStyleAttributeName"]
+- ["Ps28CustomDebugStringConvertible", "NormalText"]
+- ["Ps28CustomDebugStringConvertible", "PointsRetainer"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIFont"]
+- !private ["Ps28CustomDebugStringConvertible", "UITableViewCell"]
+- !private ["Ps28CustomDebugStringConvertible", "UITableViewCellSelectionStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UITableViewCellStyle"]
+- ["Ps28CustomDebugStringConvertible", "UnderlinedText"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "attributedText"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "clearColor"]
+- !private ["Ps28CustomDebugStringConvertible", "font"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "instance"]
+- ["Ps28CustomDebugStringConvertible", "pointRetainer"]
+- !private ["Ps28CustomDebugStringConvertible", "selectionStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- !private ["Ps28CustomDebugStringConvertible", "textLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "GetStyledPointSelectionCell"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "NSAttributedString"]
+- !private ["Ps23CustomStringConvertible", "NSFontAttributeName"]
+- !private ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps23CustomStringConvertible", "NSUnderlineStyle"]
+- !private ["Ps23CustomStringConvertible", "NSUnderlineStyleAttributeName"]
+- ["Ps23CustomStringConvertible", "NormalText"]
+- ["Ps23CustomStringConvertible", "PointsRetainer"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIFont"]
+- !private ["Ps23CustomStringConvertible", "UITableViewCell"]
+- !private ["Ps23CustomStringConvertible", "UITableViewCellSelectionStyle"]
+- !private ["Ps23CustomStringConvertible", "UITableViewCellStyle"]
+- ["Ps23CustomStringConvertible", "UnderlinedText"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "attributedText"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- !private ["Ps23CustomStringConvertible", "clearColor"]
+- !private ["Ps23CustomStringConvertible", "font"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "instance"]
+- ["Ps23CustomStringConvertible", "pointRetainer"]
+- !private ["Ps23CustomStringConvertible", "selectionStyle"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- !private ["Ps23CustomStringConvertible", "textLabel"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Default"]
+- ["Ps9Equatable", "GetStyledPointSelectionCell"]
+- !private ["Ps9Equatable", "NSAttributedString"]
+- !private ["Ps9Equatable", "NSFontAttributeName"]
+- !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
+- !private ["Ps9Equatable", "NSUnderlineStyle"]
+- !private ["Ps9Equatable", "NSUnderlineStyleAttributeName"]
+- !private ["Ps9Equatable", "None"]
+- ["Ps9Equatable", "NormalText"]
+- ["Ps9Equatable", "PointsRetainer"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "StyleNone"]
+- !private ["Ps9Equatable", "StyleSingle"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIFont"]
+- !private ["Ps9Equatable", "UITableViewCell"]
+- !private ["Ps9Equatable", "UITableViewCellSelectionStyle"]
+- !private ["Ps9Equatable", "UITableViewCellStyle"]
+- ["Ps9Equatable", "UnderlinedText"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "attributedText"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "clearColor"]
+- !private ["Ps9Equatable", "font"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "instance"]
+- ["Ps9Equatable", "pointRetainer"]
+- !private ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "selectionStyle"]
+- !private ["Ps9Equatable", "textColor"]
+- !private ["Ps9Equatable", "textLabel"]
+- !private ["Ps9Equatable", "value"]
+- !private ["Ps9Equatable", "whiteColor"]
+- ["Ps9Equatable", ""]
+- !private ["P6SQLite11Expressible", "_getBuiltinLogicValue"]
+- !private ["P6SQLite11Expressible", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- ["C13hack_popTests12HackPopStyle", "AnyObject"]
+- ["C13hack_popTests12HackPopStyle", "CGFloat"]
+- ["C13hack_popTests12HackPopStyle", "GetStyledPointSelectionCell"]
+- !private ["C13hack_popTests12HackPopStyle", "Int"]
+- ["C13hack_popTests12HackPopStyle", "NSAttributedString"]
+- !private ["C13hack_popTests12HackPopStyle", "NSFontAttributeName"]
+- !private ["C13hack_popTests12HackPopStyle", "NSForegroundColorAttributeName"]
+- !private ["C13hack_popTests12HackPopStyle", "NSUnderlineStyle"]
+- !private ["C13hack_popTests12HackPopStyle", "NSUnderlineStyleAttributeName"]
+- ["C13hack_popTests12HackPopStyle", "NormalText"]
+- ["C13hack_popTests12HackPopStyle", "PointsRetainer"]
+- ["C13hack_popTests12HackPopStyle", "String"]
+- !private ["C13hack_popTests12HackPopStyle", "UIColor"]
+- !private ["C13hack_popTests12HackPopStyle", "UIFont"]
+- ["C13hack_popTests12HackPopStyle", "UITableViewCell"]
+- !private ["C13hack_popTests12HackPopStyle", "UITableViewCellSelectionStyle"]
+- !private ["C13hack_popTests12HackPopStyle", "UITableViewCellStyle"]
+- ["C13hack_popTests12HackPopStyle", "UnderlinedText"]
+- ["C13hack_popTests12HackPopStyle", "deinit"]
+- ["C13hack_popTests12HackPopStyle", "init"]
+- ["C13hack_popTests12HackPopStyle", "pointRetainer"]
+- !private ["Ps8Hashable", "Default"]
+- ["Ps8Hashable", "GetStyledPointSelectionCell"]
+- !private ["Ps8Hashable", "NSAttributedString"]
+- !private ["Ps8Hashable", "NSFontAttributeName"]
+- !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps8Hashable", "NSUnderlineStyle"]
+- !private ["Ps8Hashable", "NSUnderlineStyleAttributeName"]
+- !private ["Ps8Hashable", "None"]
+- ["Ps8Hashable", "NormalText"]
+- ["Ps8Hashable", "PointsRetainer"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "StyleNone"]
+- !private ["Ps8Hashable", "StyleSingle"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIFont"]
+- !private ["Ps8Hashable", "UITableViewCell"]
+- !private ["Ps8Hashable", "UITableViewCellSelectionStyle"]
+- !private ["Ps8Hashable", "UITableViewCellStyle"]
+- ["Ps8Hashable", "UnderlinedText"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "attributedText"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "clearColor"]
+- !private ["Ps8Hashable", "font"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "instance"]
+- ["Ps8Hashable", "pointRetainer"]
+- !private ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "selectionStyle"]
+- !private ["Ps8Hashable", "textColor"]
+- !private ["Ps8Hashable", "textLabel"]
+- !private ["Ps8Hashable", "value"]
+- !private ["Ps8Hashable", "whiteColor"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["CSo18NSAttributedString", "init"]
+- !private ["PSo8NSCoding", "attributedText"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "clearColor"]
+- !private ["PSo8NSCoding", "font"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "selectionStyle"]
+- !private ["PSo8NSCoding", "textColor"]
+- !private ["PSo8NSCoding", "textLabel"]
+- !private ["PSo8NSCoding", "whiteColor"]
+- !private ["PSo9NSCopying", "clearColor"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "whiteColor"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "GetStyledPointSelectionCell"]
+- !private ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "NSAttributedString"]
+- !private ["CSo8NSObject", "NSFontAttributeName"]
+- !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
+- !private ["CSo8NSObject", "NSUnderlineStyle"]
+- !private ["CSo8NSObject", "NSUnderlineStyleAttributeName"]
+- ["CSo8NSObject", "NormalText"]
+- ["CSo8NSObject", "PointsRetainer"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "UIFont"]
+- ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "UITableViewCellSelectionStyle"]
+- !private ["CSo8NSObject", "UITableViewCellStyle"]
+- ["CSo8NSObject", "UnderlinedText"]
+- !private ["CSo8NSObject", "attributedText"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "clearColor"]
+- !private ["CSo8NSObject", "font"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "instance"]
+- ["CSo8NSObject", "pointRetainer"]
+- !private ["CSo8NSObject", "selectionStyle"]
+- !private ["CSo8NSObject", "textColor"]
+- !private ["CSo8NSObject", "textLabel"]
+- !private ["CSo8NSObject", "value"]
+- !private ["CSo8NSObject", "whiteColor"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "GetStyledPointSelectionCell"]
+- !private ["PSo16NSObjectProtocol", "NSAttributedString"]
+- !private ["PSo16NSObjectProtocol", "NSFontAttributeName"]
+- !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
+- !private ["PSo16NSObjectProtocol", "NSUnderlineStyle"]
+- !private ["PSo16NSObjectProtocol", "NSUnderlineStyleAttributeName"]
+- ["PSo16NSObjectProtocol", "NormalText"]
+- ["PSo16NSObjectProtocol", "PointsRetainer"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "UITableViewCell"]
+- !private ["PSo16NSObjectProtocol", "UITableViewCellSelectionStyle"]
+- !private ["PSo16NSObjectProtocol", "UITableViewCellStyle"]
+- ["PSo16NSObjectProtocol", "UnderlinedText"]
+- !private ["PSo16NSObjectProtocol", "attributedText"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "clearColor"]
+- !private ["PSo16NSObjectProtocol", "font"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "instance"]
+- ["PSo16NSObjectProtocol", "pointRetainer"]
+- !private ["PSo16NSObjectProtocol", "selectionStyle"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- !private ["PSo16NSObjectProtocol", "textLabel"]
+- !private ["PSo16NSObjectProtocol", "value"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["CSo8NSString", "init"]
+- !private ["OSC16NSUnderlineStyle", "StyleNone"]
+- !private ["OSC16NSUnderlineStyle", "StyleSingle"]
+- !private ["OSC16NSUnderlineStyle", "rawValue"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- ["C13hack_popTests14PointsRetainer", "instance"]
+- !private ["C13hack_popTests14PointsRetainer", "value"]
+- !private ["Ps16RawRepresentable", "Default"]
+- !private ["Ps16RawRepresentable", "None"]
+- !private ["Ps16RawRepresentable", "StyleNone"]
+- !private ["Ps16RawRepresentable", "StyleSingle"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps10Streamable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "attributedText"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "font"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "selectionStyle"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- !private ["PSo29UIAccessibilityIdentification", "textLabel"]
+- !private ["PSo12UIAppearance", "attributedText"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "font"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "selectionStyle"]
+- !private ["PSo12UIAppearance", "textColor"]
+- !private ["PSo12UIAppearance", "textLabel"]
+- !private ["PSo21UIAppearanceContainer", "attributedText"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "font"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "selectionStyle"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- !private ["PSo21UIAppearanceContainer", "textLabel"]
+- !private ["CSo7UIColor", "clearColor"]
+- !private ["CSo7UIColor", "whiteColor"]
+- !private ["PSo17UICoordinateSpace", "attributedText"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "font"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "selectionStyle"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- !private ["PSo17UICoordinateSpace", "textLabel"]
+- !private ["PSo13UIDynamicItem", "attributedText"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "font"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "selectionStyle"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- !private ["PSo13UIDynamicItem", "textLabel"]
+- !private ["PSo18UIFocusEnvironment", "attributedText"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "font"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "selectionStyle"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- !private ["PSo18UIFocusEnvironment", "textLabel"]
+- !private ["CSo6UIFont", "init"]
+- !private ["PSo27UIGestureRecognizerDelegate", "backgroundColor"]
+- !private ["PSo27UIGestureRecognizerDelegate", "init"]
+- !private ["PSo27UIGestureRecognizerDelegate", "selectionStyle"]
+- !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
+- !private ["CSo7UILabel", "attributedText"]
+- !private ["CSo7UILabel", "font"]
+- !private ["CSo7UILabel", "textColor"]
+- !private ["CSo11UIResponder", "attributedText"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- !private ["CSo11UIResponder", "font"]
+- !private ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "selectionStyle"]
+- !private ["CSo11UIResponder", "textColor"]
+- !private ["CSo11UIResponder", "textLabel"]
+- !private ["CSo15UITableViewCell", "backgroundColor"]
+- !private ["CSo15UITableViewCell", "init"]
+- !private ["CSo15UITableViewCell", "selectionStyle"]
+- !private ["CSo15UITableViewCell", "textLabel"]
+- !private ["OSC29UITableViewCellSelectionStyle", "None"]
+- !private ["OSC20UITableViewCellStyle", "Default"]
+- !private ["PSo18UITraitEnvironment", "attributedText"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- !private ["PSo18UITraitEnvironment", "font"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "selectionStyle"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- !private ["PSo18UITraitEnvironment", "textLabel"]
+- !private ["CSo6UIView", "attributedText"]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "font"]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "selectionStyle"]
+- !private ["CSo6UIView", "textColor"]
+- !private ["CSo6UIView", "textLabel"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["P6SQLite5Value", "_getBuiltinLogicValue"]
+- !private ["P6SQLite5Value", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "clearColor"]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "attributedText"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["Ps12_Reflectable", "font"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "selectionStyle"]
+- !private ["Ps12_Reflectable", "textColor"]
+- !private ["Ps12_Reflectable", "textLabel"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "P6SQLite7Binding"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "P6SQLite11Expressible"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- "C13hack_popTests12HackPopStyle"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps14MirrorPathType"
+- !private "CSo18NSAttributedString"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "OSC16NSUnderlineStyle"
+- !private "Sq"
+- !private "Ps16OutputStreamType"
+- "C13hack_popTests14PointsRetainer"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps10Streamable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo6UIFont"
+- !private "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UILabel"
+- !private "CSo11UIResponder"
+- !private "CSo15UITableViewCell"
+- !private "OSC29UITableViewCellSelectionStyle"
+- !private "OSC20UITableViewCellStyle"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "P6SQLite5Value"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Modules/SQLite.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/module.modulemap"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite-Swift.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/sqlite3.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite-Bridging.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/CocoaPods/iphonesimulator/module.modulemap"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Modules/module.modulemap"
+interface-hash: "55691a9b32f6115a728244b94decf6b7"

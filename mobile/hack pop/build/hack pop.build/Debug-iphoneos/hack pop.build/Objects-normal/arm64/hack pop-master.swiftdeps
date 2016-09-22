@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "779a3a616ab6ebf97541261beee9642a"
+build_time: [527826683, 88929000]
+inputs:
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HomeViewController.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Stories.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectionSegue.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopStyle.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/AppDelegate.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointsRetainer.swift": [527826679, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [527826679, 0]
