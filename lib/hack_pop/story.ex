@@ -4,6 +4,7 @@ defmodule HackPop.Story do
   alias HackPop.Repo
   alias HackPop.Story
 
+  @derive {Poison.Encoder, only: [:title, :url, :points]}
   schema "stories" do
     field :title
     field :url
@@ -14,7 +15,13 @@ defmodule HackPop.Story do
 
   def changeset(story, params \\ %{}) do
     story
-    |> Ecto.Changeset.cast(params, [:points])
+    |> Ecto.Changeset.cast(params, [:points, :trending])
+  end
+
+  def set_trending(stories) do
+    ids   = Enum.map(stories, fn story -> story.id end)
+    from(s in Story, where: not s.id in ^ids and s.trending == true)
+    |> Repo.update_all(set: [trending: false])
   end
 
   def save_all(stories) do
@@ -30,11 +37,12 @@ defmodule HackPop.Story do
 
     exists = Repo.one(query)
 
-    case exists do
-      nil ->
-        Repo.insert(story)
-      %Story{} ->
-        Repo.update(Story.changeset(exists, %{points: story.points}))
-    end
+    {:ok, story} =  case exists do
+                      nil ->
+                        Repo.insert(story)
+                      %Story{} ->
+                        Repo.update(Story.changeset(exists, %{points: story.points, trending: true}))
+                    end
+    story
   end
 end
