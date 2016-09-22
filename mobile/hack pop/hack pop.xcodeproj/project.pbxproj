@@ -7,9 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */; };
+		7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */; };
+		7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */; };
+		7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
+		7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
+		7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
+		7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
+		7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
+		7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
+		7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
+		7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
+		7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
+		7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
+		7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
+		7D4A9E321D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
+		7D4A9E4D1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
+		7D4A9E4E1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
+		7D4A9E4F1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
+		7D4A9E511D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
+		7D4A9E521D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
+		7D4A9E531D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
+		7D63E4ED1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */; };
+		7D63E4EE1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */; };
+		7D63E4EF1D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */; };
+		7D63E4F01D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */; };
+		7D63E4F11D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E61D8A5A5600AE27D1 /* Raleway-Regular.ttf */; };
+		7D63E4F21D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E61D8A5A5600AE27D1 /* Raleway-Regular.ttf */; };
+		7D63E4F31D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E71D8A5A5600AE27D1 /* Raleway-Heavy.ttf */; };
+		7D63E4F41D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E71D8A5A5600AE27D1 /* Raleway-Heavy.ttf */; };
+		7D63E4F51D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E81D8A5A5600AE27D1 /* Raleway-Medium.ttf */; };
+		7D63E4F61D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E81D8A5A5600AE27D1 /* Raleway-Medium.ttf */; };
+		7D63E4F71D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E91D8A5A5600AE27D1 /* Raleway-Bold.ttf */; };
+		7D63E4F81D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E91D8A5A5600AE27D1 /* Raleway-Bold.ttf */; };
+		7D63E4F91D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */; };
+		7D63E4FA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */; };
+		7D63E4FB1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */; };
+		7D63E4FC1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */; };
+		7D63E4FD1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
+		7D63E4FE1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
 		7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
-		7DE2ECF91D8A3F2400A53ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* ViewController.swift */; };
-		7DE2ECFC1D8A3F2400A53ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2ECFA1D8A3F2400A53ABF /* Main.storyboard */; };
+		7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */; };
 		7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECFD1D8A3F2400A53ABF /* hack_pop.xcdatamodeld */; };
 		7DE2ED011D8A3F2400A53ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2ED001D8A3F2400A53ABF /* Assets.xcassets */; };
 		7DE2ED041D8A3F2400A53ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2ED021D8A3F2400A53ABF /* LaunchScreen.storyboard */; };
@@ -35,10 +73,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyleTests.swift; sourceTree = "<group>"; };
+		7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainerTests.swift; sourceTree = "<group>"; };
+		7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainer.swift; sourceTree = "<group>"; };
+		7D4563B11D9117800083FEB0 /* HackPopStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyle.swift; sourceTree = "<group>"; };
+		7D4563B81D9124A10083FEB0 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		7D4563BB1D9125430083FEB0 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectViewController.swift; sourceTree = "<group>"; };
+		7D4A9E4C1D8D2FCA009A7A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectionSegue.swift; sourceTree = "<group>"; };
+		7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		7D63E4E61D8A5A5600AE27D1 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		7D63E4E71D8A5A5600AE27D1 /* Raleway-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Heavy.ttf"; sourceTree = "<group>"; };
+		7D63E4E81D8A5A5600AE27D1 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		7D63E4E91D8A5A5600AE27D1 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		7DE2ECF31D8A3F2400A53ABF /* hack pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hack pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DE2ECF81D8A3F2400A53ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7DE2ECFB1D8A3F2400A53ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7DE2ECFE1D8A3F2400A53ABF /* hack_pop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hack_pop.xcdatamodel; sourceTree = "<group>"; };
 		7DE2ED001D8A3F2400A53ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DE2ED031D8A3F2400A53ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,9 +132,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D4563B01D91174E0083FEB0 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				7D4563B11D9117800083FEB0 /* HackPopStyle.swift */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		7D4563B61D911A2B0083FEB0 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		7D4563B71D911A390083FEB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */,
+				7D4563BB1D9125430083FEB0 /* Stories.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7D4A9E431D8BDD40009A7A61 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */,
+				7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7D63E49A1D8A58EE00AE27D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D63E49B1D8A594400AE27D1 /* fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7D63E49B1D8A594400AE27D1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */,
+				7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */,
+				7D63E4E61D8A5A5600AE27D1 /* Raleway-Regular.ttf */,
+				7D63E4E71D8A5A5600AE27D1 /* Raleway-Heavy.ttf */,
+				7D63E4E81D8A5A5600AE27D1 /* Raleway-Medium.ttf */,
+				7D63E4E91D8A5A5600AE27D1 /* Raleway-Bold.ttf */,
+				7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */,
+				7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */,
+				7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		7DE2ECEA1D8A3F2400A53ABF = {
 			isa = PBXGroup;
 			children = (
+				7D4563B81D9124A10083FEB0 /* SQLite.framework */,
 				7DE2ECF51D8A3F2400A53ABF /* hack pop */,
 				7DE2ED0D1D8A3F2500A53ABF /* hack popTests */,
 				7DE2ED181D8A3F2500A53ABF /* hack popUITests */,
@@ -99,11 +214,15 @@
 		7DE2ECF51D8A3F2400A53ABF /* hack pop */ = {
 			isa = PBXGroup;
 			children = (
+				7D4563B71D911A390083FEB0 /* Models */,
+				7D4563B61D911A2B0083FEB0 /* Segues */,
+				7D4563B01D91174E0083FEB0 /* Styles */,
+				7D4A9E431D8BDD40009A7A61 /* View Controllers */,
+				7D63E49A1D8A58EE00AE27D1 /* Resources */,
 				7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */,
-				7DE2ECF81D8A3F2400A53ABF /* ViewController.swift */,
-				7DE2ECFA1D8A3F2400A53ABF /* Main.storyboard */,
 				7DE2ED001D8A3F2400A53ABF /* Assets.xcassets */,
 				7DE2ED021D8A3F2400A53ABF /* LaunchScreen.storyboard */,
+				7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */,
 				7DE2ED051D8A3F2400A53ABF /* Info.plist */,
 				7DE2ECFD1D8A3F2400A53ABF /* hack_pop.xcdatamodeld */,
 			);
@@ -115,6 +234,9 @@
 			children = (
 				7DE2ED0E1D8A3F2500A53ABF /* hack_popTests.swift */,
 				7DE2ED101D8A3F2500A53ABF /* Info.plist */,
+				7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */,
+				7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */,
+				7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */,
 			);
 			path = "hack popTests";
 			sourceTree = "<group>";
@@ -138,6 +260,7 @@
 				7DE2ECEF1D8A3F2400A53ABF /* Sources */,
 				7DE2ECF01D8A3F2400A53ABF /* Frameworks */,
 				7DE2ECF11D8A3F2400A53ABF /* Resources */,
+				7D4563BA1D9124C70083FEB0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,21 +314,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "james inc";
 				TargetAttributes = {
 					7DE2ECF21D8A3F2400A53ABF = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = D46864E29W;
+						LastSwiftMigration = 0800;
 					};
 					7DE2ED091D8A3F2500A53ABF = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = D46864E29W;
+						LastSwiftMigration = 0800;
 						TestTargetID = 7DE2ECF21D8A3F2400A53ABF;
 					};
 					7DE2ED141D8A3F2500A53ABF = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = D46864E29W;
+						LastSwiftMigration = 0800;
 						TestTargetID = 7DE2ECF21D8A3F2400A53ABF;
 					};
 				};
@@ -236,8 +362,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DE2ED041D8A3F2400A53ABF /* LaunchScreen.storyboard in Resources */,
+				7D63E4F71D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */,
+				7D63E4F51D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */,
+				7D4A9E4D1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
+				7D63E4F31D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */,
+				7D63E4F11D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */,
 				7DE2ED011D8A3F2400A53ABF /* Assets.xcassets in Resources */,
-				7DE2ECFC1D8A3F2400A53ABF /* Main.storyboard in Resources */,
+				7D63E4F91D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */,
+				7D63E4FD1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */,
+				7D63E4ED1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */,
+				7D63E4EF1D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */,
+				7D63E4FB1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4A9E4E1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,19 +388,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D63E4F41D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */,
+				7D4A9E4F1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
+				7D63E4FC1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */,
+				7D63E4FE1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */,
+				7D63E4F81D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */,
+				7D63E4EE1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */,
+				7D63E4F61D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */,
+				7D63E4F21D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */,
+				7D63E4F01D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */,
+				7D63E4FA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D4563BA1D9124C70083FEB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DE2ECEF1D8A3F2400A53ABF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DE2ECF91D8A3F2400A53ABF /* ViewController.swift in Sources */,
+				7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */,
+				7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */,
 				7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */,
+				7D4A9E511D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
+				7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
 				7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */,
+				7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */,
+				7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +440,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */,
+				7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
 				7DE2ED0F1D8A3F2500A53ABF /* hack_popTests.swift in Sources */,
+				7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */,
+				7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
+				7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */,
+				7D4A9E521D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
+				7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
 				7DE2ED1A1D8A3F2500A53ABF /* hack_popUITests.swift in Sources */,
+				7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */,
+				7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D4A9E531D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
+				7D4A9E321D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +481,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7DE2ECFA1D8A3F2400A53ABF /* Main.storyboard */ = {
+		7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7DE2ECFB1D8A3F2400A53ABF /* Base */,
+				7D4A9E4C1D8D2FCA009A7A61 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -333,8 +514,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -378,8 +561,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -398,6 +583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -406,10 +592,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = D46864E29W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack pop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-pop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -417,10 +613,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = D46864E29W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack pop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-pop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -428,10 +634,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack popTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-popTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hack pop.app/hack pop";
 			};
 			name = Debug;
@@ -440,10 +651,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack popTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-popTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hack pop.app/hack pop";
 			};
 			name = Release;
@@ -451,10 +667,15 @@
 		7DE2ED251D8A3F2500A53ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack popUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-popUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "hack pop";
 			};
 			name = Debug;
@@ -462,10 +683,15 @@
 		7DE2ED261D8A3F2500A53ABF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "hack popUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-popUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "hack pop";
 			};
 			name = Release;
@@ -489,6 +715,7 @@
 				7DE2ED201D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE2ED211D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +724,7 @@
 				7DE2ED231D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DE2ED241D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +733,7 @@
 				7DE2ED261D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

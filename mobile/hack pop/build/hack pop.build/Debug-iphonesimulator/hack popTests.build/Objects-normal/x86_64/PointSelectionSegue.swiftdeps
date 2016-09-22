@@ -1,0 +1,620 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HomeViewControllerContainers"
+- "PointSelectionViewControllerContainers"
+- "SelectionAnimation"
+- "PointSelectionSegue"
+provides-nominal:
+- "O13hack_popTests28HomeViewControllerContainers"
+- "O13hack_popTests38PointSelectionViewControllerContainers"
+- "O13hack_popTests18SelectionAnimation"
+- "C13hack_popTests19PointSelectionSegue"
+provides-member:
+- ["O13hack_popTests28HomeViewControllerContainers", ""]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", ""]
+- ["O13hack_popTests18SelectionAnimation", ""]
+- ["C13hack_popTests19PointSelectionSegue", ""]
+provides-dynamic-lookup:
+- "close"
+- "perform"
+- "yTitleTopOffset"
+- "animationDuration"
+- "open"
+depends-top-level:
+- !private "-="
+- !private "BooleanLiteralType"
+- !private "-"
+- !private "UIViewController"
+- "PointSelectionViewControllerContainers"
+- "UIStoryboardSegue"
+- "HomeViewControllerContainers"
+- "PointSelectionSegue"
+- !private "UIView"
+- !private "~="
+- "Int"
+- "SelectionAnimation"
+- "NSTimeInterval"
+- "CGFloat"
+- "=="
+depends-member:
+- !private ["Ps9AnyObject", "HomeViewControllerContainers"]
+- !private ["Ps9AnyObject", "PointSelectionViewControllerContainers"]
+- ["Ps9AnyObject", "SelectionAnimation"]
+- !private ["Ps9AnyObject", "UIView"]
+- !private ["Ps9AnyObject", "addSubview"]
+- !private ["Ps9AnyObject", "animateWithDuration"]
+- ["Ps9AnyObject", "animationDuration"]
+- ["Ps9AnyObject", "animationType"]
+- ["Ps9AnyObject", "close"]
+- !private ["Ps9AnyObject", "destinationViewController"]
+- !private ["Ps9AnyObject", "frame"]
+- !private ["Ps9AnyObject", "hidden"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "open"]
+- ["Ps9AnyObject", "perform"]
+- !private ["Ps9AnyObject", "presentViewController"]
+- !private ["Ps9AnyObject", "sourceViewController"]
+- !private ["Ps9AnyObject", "superview"]
+- !private ["Ps9AnyObject", "view"]
+- !private ["Ps9AnyObject", "viewWithTag"]
+- ["Ps9AnyObject", "yTitleTopOffset"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["P6SQLite7Binding", "Distance"]
+- !private ["P6SQLite7Binding", "IntegerLiteralType"]
+- !private ["P6SQLite7Binding", "_getBuiltinLogicValue"]
+- !private ["P6SQLite7Binding", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC7CGPoint", "x"]
+- !private ["VSC7CGPoint", "y"]
+- !private ["VSC6CGRect", "origin"]
+- !private ["VSC6CGRect", "size"]
+- !private ["VSC6CGSize", "height"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "HomeViewControllerContainers"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "PointSelectionViewControllerContainers"]
+- ["Ps11CVarArgType", "SelectionAnimation"]
+- !private ["Ps11CVarArgType", "UIView"]
+- !private ["Ps11CVarArgType", "addSubview"]
+- !private ["Ps11CVarArgType", "animateWithDuration"]
+- ["Ps11CVarArgType", "animationDuration"]
+- ["Ps11CVarArgType", "animationType"]
+- ["Ps11CVarArgType", "close"]
+- !private ["Ps11CVarArgType", "destinationViewController"]
+- !private ["Ps11CVarArgType", "frame"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "hidden"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "open"]
+- ["Ps11CVarArgType", "perform"]
+- !private ["Ps11CVarArgType", "presentViewController"]
+- !private ["Ps11CVarArgType", "sourceViewController"]
+- !private ["Ps11CVarArgType", "superview"]
+- !private ["Ps11CVarArgType", "view"]
+- !private ["Ps11CVarArgType", "viewWithTag"]
+- ["Ps11CVarArgType", "yTitleTopOffset"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps28CustomDebugStringConvertible", "HomeViewControllerContainers"]
+- !private ["Ps28CustomDebugStringConvertible", "PointSelectionViewControllerContainers"]
+- ["Ps28CustomDebugStringConvertible", "SelectionAnimation"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "UIView"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- !private ["Ps28CustomDebugStringConvertible", "animateWithDuration"]
+- ["Ps28CustomDebugStringConvertible", "animationDuration"]
+- ["Ps28CustomDebugStringConvertible", "animationType"]
+- ["Ps28CustomDebugStringConvertible", "close"]
+- !private ["Ps28CustomDebugStringConvertible", "destinationViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- !private ["Ps28CustomDebugStringConvertible", "hidden"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "open"]
+- ["Ps28CustomDebugStringConvertible", "perform"]
+- !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "sourceViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "superview"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "viewWithTag"]
+- ["Ps28CustomDebugStringConvertible", "yTitleTopOffset"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "HomeViewControllerContainers"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "PointSelectionViewControllerContainers"]
+- ["Ps23CustomStringConvertible", "SelectionAnimation"]
+- !private ["Ps23CustomStringConvertible", "UIView"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- !private ["Ps23CustomStringConvertible", "animateWithDuration"]
+- ["Ps23CustomStringConvertible", "animationDuration"]
+- ["Ps23CustomStringConvertible", "animationType"]
+- ["Ps23CustomStringConvertible", "close"]
+- !private ["Ps23CustomStringConvertible", "destinationViewController"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "hidden"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "open"]
+- ["Ps23CustomStringConvertible", "perform"]
+- !private ["Ps23CustomStringConvertible", "presentViewController"]
+- !private ["Ps23CustomStringConvertible", "sourceViewController"]
+- !private ["Ps23CustomStringConvertible", "superview"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "viewWithTag"]
+- ["Ps23CustomStringConvertible", "yTitleTopOffset"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "ClosePointSelection"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "HomeViewControllerContainers"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NotifyThresholdContainer"]
+- ["Ps9Equatable", "OpenPointSelection"]
+- !private ["Ps9Equatable", "PointSelectionViewControllerContainers"]
+- ["Ps9Equatable", "RawValue"]
+- ["Ps9Equatable", "SelectionAnimation"]
+- !private ["Ps9Equatable", "TitleContainer"]
+- !private ["Ps9Equatable", "TopStoriesContainer"]
+- !private ["Ps9Equatable", "UIView"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addSubview"]
+- !private ["Ps9Equatable", "animateWithDuration"]
+- ["Ps9Equatable", "animationDuration"]
+- ["Ps9Equatable", "animationType"]
+- ["Ps9Equatable", "close"]
+- !private ["Ps9Equatable", "destinationViewController"]
+- !private ["Ps9Equatable", "frame"]
+- ["Ps9Equatable", "hashValue"]
+- !private ["Ps9Equatable", "height"]
+- !private ["Ps9Equatable", "hidden"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "open"]
+- !private ["Ps9Equatable", "origin"]
+- ["Ps9Equatable", "perform"]
+- !private ["Ps9Equatable", "presentViewController"]
+- ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "size"]
+- !private ["Ps9Equatable", "sourceViewController"]
+- !private ["Ps9Equatable", "superview"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps9Equatable", "viewWithTag"]
+- !private ["Ps9Equatable", "x"]
+- !private ["Ps9Equatable", "y"]
+- ["Ps9Equatable", "yTitleTopOffset"]
+- ["Ps9Equatable", ""]
+- !private ["P6SQLite11Expressible", "Distance"]
+- !private ["P6SQLite11Expressible", "IntegerLiteralType"]
+- !private ["P6SQLite11Expressible", "_getBuiltinLogicValue"]
+- !private ["P6SQLite11Expressible", "hashValue"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- ["Ps8Hashable", "ClosePointSelection"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "HomeViewControllerContainers"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NotifyThresholdContainer"]
+- ["Ps8Hashable", "OpenPointSelection"]
+- !private ["Ps8Hashable", "PointSelectionViewControllerContainers"]
+- ["Ps8Hashable", "RawValue"]
+- ["Ps8Hashable", "SelectionAnimation"]
+- !private ["Ps8Hashable", "TitleContainer"]
+- !private ["Ps8Hashable", "TopStoriesContainer"]
+- !private ["Ps8Hashable", "UIView"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addSubview"]
+- !private ["Ps8Hashable", "animateWithDuration"]
+- ["Ps8Hashable", "animationDuration"]
+- ["Ps8Hashable", "animationType"]
+- ["Ps8Hashable", "close"]
+- !private ["Ps8Hashable", "destinationViewController"]
+- !private ["Ps8Hashable", "frame"]
+- ["Ps8Hashable", "hashValue"]
+- !private ["Ps8Hashable", "hidden"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "open"]
+- ["Ps8Hashable", "perform"]
+- !private ["Ps8Hashable", "presentViewController"]
+- ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "sourceViewController"]
+- !private ["Ps8Hashable", "superview"]
+- !private ["Ps8Hashable", "view"]
+- !private ["Ps8Hashable", "viewWithTag"]
+- ["Ps8Hashable", "yTitleTopOffset"]
+- ["Ps8Hashable", ""]
+- ["O13hack_popTests28HomeViewControllerContainers", "NotifyThresholdContainer"]
+- ["O13hack_popTests28HomeViewControllerContainers", "RawValue"]
+- ["O13hack_popTests28HomeViewControllerContainers", "TitleContainer"]
+- ["O13hack_popTests28HomeViewControllerContainers", "TopStoriesContainer"]
+- ["O13hack_popTests28HomeViewControllerContainers", "deinit"]
+- ["O13hack_popTests28HomeViewControllerContainers", "hashValue"]
+- ["O13hack_popTests28HomeViewControllerContainers", "init"]
+- ["O13hack_popTests28HomeViewControllerContainers", "rawValue"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "animateWithDuration"]
+- !private ["PSo8NSCoding", "frame"]
+- !private ["PSo8NSCoding", "hidden"]
+- !private ["PSo8NSCoding", "presentViewController"]
+- !private ["PSo8NSCoding", "superview"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo8NSCoding", "viewWithTag"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["CSo8NSNumber", "deinit"]
+- ["CSo8NSObject", "CGFloat"]
+- !private ["CSo8NSObject", "HomeViewControllerContainers"]
+- ["CSo8NSObject", "NSTimeInterval"]
+- !private ["CSo8NSObject", "PointSelectionViewControllerContainers"]
+- ["CSo8NSObject", "SelectionAnimation"]
+- !private ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "UIViewController"]
+- !private ["CSo8NSObject", "addSubview"]
+- !private ["CSo8NSObject", "animateWithDuration"]
+- ["CSo8NSObject", "animationDuration"]
+- ["CSo8NSObject", "animationType"]
+- ["CSo8NSObject", "close"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "destinationViewController"]
+- !private ["CSo8NSObject", "frame"]
+- !private ["CSo8NSObject", "hidden"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "open"]
+- ["CSo8NSObject", "perform"]
+- !private ["CSo8NSObject", "presentViewController"]
+- !private ["CSo8NSObject", "sourceViewController"]
+- !private ["CSo8NSObject", "superview"]
+- !private ["CSo8NSObject", "view"]
+- !private ["CSo8NSObject", "viewWithTag"]
+- ["CSo8NSObject", "yTitleTopOffset"]
+- !private ["PSo16NSObjectProtocol", "HomeViewControllerContainers"]
+- !private ["PSo16NSObjectProtocol", "PointSelectionViewControllerContainers"]
+- ["PSo16NSObjectProtocol", "SelectionAnimation"]
+- !private ["PSo16NSObjectProtocol", "UIView"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- !private ["PSo16NSObjectProtocol", "animateWithDuration"]
+- ["PSo16NSObjectProtocol", "animationDuration"]
+- ["PSo16NSObjectProtocol", "animationType"]
+- ["PSo16NSObjectProtocol", "close"]
+- !private ["PSo16NSObjectProtocol", "destinationViewController"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- !private ["PSo16NSObjectProtocol", "hidden"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "open"]
+- ["PSo16NSObjectProtocol", "perform"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
+- !private ["PSo16NSObjectProtocol", "sourceViewController"]
+- !private ["PSo16NSObjectProtocol", "superview"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["PSo16NSObjectProtocol", "viewWithTag"]
+- ["PSo16NSObjectProtocol", "yTitleTopOffset"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo7NSValue", "deinit"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- !private ["P6SQLite6Number", "Distance"]
+- !private ["P6SQLite6Number", "IntegerLiteralType"]
+- !private ["P6SQLite6Number", "hashValue"]
+- ["Sq", "Some"]
+- ["C13hack_popTests19PointSelectionSegue", "CGFloat"]
+- !private ["C13hack_popTests19PointSelectionSegue", "HomeViewControllerContainers"]
+- ["C13hack_popTests19PointSelectionSegue", "NSTimeInterval"]
+- !private ["C13hack_popTests19PointSelectionSegue", "PointSelectionViewControllerContainers"]
+- ["C13hack_popTests19PointSelectionSegue", "SelectionAnimation"]
+- !private ["C13hack_popTests19PointSelectionSegue", "UIView"]
+- !private ["C13hack_popTests19PointSelectionSegue", "UIViewController"]
+- ["C13hack_popTests19PointSelectionSegue", "animationDuration"]
+- ["C13hack_popTests19PointSelectionSegue", "animationType"]
+- ["C13hack_popTests19PointSelectionSegue", "close"]
+- ["C13hack_popTests19PointSelectionSegue", "deinit"]
+- !private ["C13hack_popTests19PointSelectionSegue", "destinationViewController"]
+- ["C13hack_popTests19PointSelectionSegue", "init"]
+- ["C13hack_popTests19PointSelectionSegue", "open"]
+- ["C13hack_popTests19PointSelectionSegue", "perform"]
+- !private ["C13hack_popTests19PointSelectionSegue", "sourceViewController"]
+- ["C13hack_popTests19PointSelectionSegue", "yTitleTopOffset"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "NotifyThresholdContainer"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "RawValue"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "deinit"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "hashValue"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "init"]
+- ["O13hack_popTests38PointSelectionViewControllerContainers", "rawValue"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps16RawRepresentable", "NotifyThresholdContainer"]
+- ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "TitleContainer"]
+- !private ["Ps16RawRepresentable", "TopStoriesContainer"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- ["O13hack_popTests18SelectionAnimation", "ClosePointSelection"]
+- ["O13hack_popTests18SelectionAnimation", "OpenPointSelection"]
+- ["O13hack_popTests18SelectionAnimation", "deinit"]
+- ["O13hack_popTests18SelectionAnimation", "hashValue"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "animateWithDuration"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "hidden"]
+- !private ["PSo29UIAccessibilityIdentification", "superview"]
+- !private ["PSo29UIAccessibilityIdentification", "viewWithTag"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "animateWithDuration"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "hidden"]
+- !private ["PSo12UIAppearance", "superview"]
+- !private ["PSo12UIAppearance", "viewWithTag"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "animateWithDuration"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- !private ["PSo21UIAppearanceContainer", "hidden"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
+- !private ["PSo21UIAppearanceContainer", "superview"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo21UIAppearanceContainer", "viewWithTag"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "animateWithDuration"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "hidden"]
+- !private ["PSo17UICoordinateSpace", "superview"]
+- !private ["PSo17UICoordinateSpace", "viewWithTag"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "animateWithDuration"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "hidden"]
+- !private ["PSo13UIDynamicItem", "superview"]
+- !private ["PSo13UIDynamicItem", "viewWithTag"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "animateWithDuration"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- !private ["PSo18UIFocusEnvironment", "hidden"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
+- !private ["PSo18UIFocusEnvironment", "superview"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["PSo18UIFocusEnvironment", "viewWithTag"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "animateWithDuration"]
+- !private ["CSo11UIResponder", "frame"]
+- !private ["CSo11UIResponder", "hidden"]
+- !private ["CSo11UIResponder", "presentViewController"]
+- !private ["CSo11UIResponder", "superview"]
+- !private ["CSo11UIResponder", "view"]
+- !private ["CSo11UIResponder", "viewWithTag"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["CSo17UIStoryboardSegue", "CGFloat"]
+- !private ["CSo17UIStoryboardSegue", "HomeViewControllerContainers"]
+- ["CSo17UIStoryboardSegue", "NSTimeInterval"]
+- !private ["CSo17UIStoryboardSegue", "PointSelectionViewControllerContainers"]
+- ["CSo17UIStoryboardSegue", "SelectionAnimation"]
+- !private ["CSo17UIStoryboardSegue", "UIView"]
+- !private ["CSo17UIStoryboardSegue", "UIViewController"]
+- ["CSo17UIStoryboardSegue", "animationDuration"]
+- ["CSo17UIStoryboardSegue", "animationType"]
+- ["CSo17UIStoryboardSegue", "close"]
+- !private ["CSo17UIStoryboardSegue", "destinationViewController"]
+- ["CSo17UIStoryboardSegue", "init"]
+- ["CSo17UIStoryboardSegue", "open"]
+- ["CSo17UIStoryboardSegue", "perform"]
+- !private ["CSo17UIStoryboardSegue", "sourceViewController"]
+- ["CSo17UIStoryboardSegue", "yTitleTopOffset"]
+- ["CSo17UIStoryboardSegue", ""]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "animateWithDuration"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- !private ["PSo18UITraitEnvironment", "hidden"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
+- !private ["PSo18UITraitEnvironment", "superview"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["PSo18UITraitEnvironment", "viewWithTag"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "animateWithDuration"]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "hidden"]
+- !private ["CSo6UIView", "superview"]
+- !private ["CSo6UIView", "viewWithTag"]
+- !private ["CSo16UIViewController", "presentViewController"]
+- !private ["CSo16UIViewController", "view"]
+- !private ["P6SQLite5Value", "Distance"]
+- !private ["P6SQLite5Value", "IntegerLiteralType"]
+- !private ["P6SQLite5Value", "_getBuiltinLogicValue"]
+- !private ["P6SQLite5Value", "hashValue"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- ["P6SQLite13_OptionalType", "Some"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addSubview"]
+- !private ["Ps12_Reflectable", "animateWithDuration"]
+- !private ["Ps12_Reflectable", "frame"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "height"]
+- !private ["Ps12_Reflectable", "hidden"]
+- !private ["Ps12_Reflectable", "origin"]
+- !private ["Ps12_Reflectable", "size"]
+- !private ["Ps12_Reflectable", "superview"]
+- !private ["Ps12_Reflectable", "viewWithTag"]
+- !private ["Ps12_Reflectable", "x"]
+- !private ["Ps12_Reflectable", "y"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps22BidirectionalIndexType"
+- !private "P6SQLite7Binding"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "V12CoreGraphics7CGFloat"
+- !private "VSC7CGPoint"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
+- "Ps11CVarArgType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "P6SQLite11Expressible"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- "O13hack_popTests28HomeViewControllerContainers"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "PSo8NSCoding"
+- !private "PSo26NSExtensionRequestHandling"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo7NSValue"
+- "Ps21NilLiteralConvertible"
+- !private "P6SQLite6Number"
+- "Sq"
+- "C13hack_popTests19PointSelectionSegue"
+- "O13hack_popTests38PointSelectionViewControllerContainers"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- "O13hack_popTests18SelectionAnimation"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo11UIResponder"
+- !private "PSo16UIStateRestoring"
+- "CSo17UIStoryboardSegue"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- !private "P6SQLite5Value"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- "P6SQLite13_OptionalType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUICoordinate.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIDevice.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypeQueryProvider.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementTypes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElementAttributes.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIElement.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIApplication.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservation.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObservationCenter.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestObserver.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestLog.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCaseRun.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase+AsynchronousTesting.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestCase.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertionsImpl.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestAssertions.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCAbstractTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestErrors.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestDefines.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Modules/SQLite.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.3.sdk/usr/include/module.modulemap"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite-Swift.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/sqlite3.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite-Bridging.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/CocoaPods/iphonesimulator/module.modulemap"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Headers/SQLite.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Build/iOS/SQLite.framework/Modules/module.modulemap"
+interface-hash: "a79430848262785841e42115eedaf18d"
