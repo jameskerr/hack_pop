@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/build/Release-iphonesimulator/SQLite.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/build/SQLite.build/Release-iphonesimulator/SQLite iOS.build/unextended-module.modulemap',
+    }]
+  }]
+}

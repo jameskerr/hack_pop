@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "7520ff18d0eec76edd42707602e09a38"
+build_time: [527673580, 943475000]
+inputs:
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/CoreFunctions.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Extensions/R*Tree.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Core/Blob.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Foundation.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Core/Connection.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Expression.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Helpers.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Collation.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Setter.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/CustomFunctions.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Extensions/FTS4.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Core/Value.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Operators.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Schema.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/Query.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Core/Statement.swift": [9223372036854775807, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/Carthage/Checkouts/SQLite.swift/SQLite/Typed/AggregateFunctions.swift": [9223372036854775807, 0]
