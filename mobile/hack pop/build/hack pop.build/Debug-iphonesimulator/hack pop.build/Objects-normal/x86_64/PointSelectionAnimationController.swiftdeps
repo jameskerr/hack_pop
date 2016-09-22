@@ -1,0 +1,472 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PointSelectionAnimationController"
+provides-nominal:
+- "C8hack_pop33PointSelectionAnimationController"
+- "OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers"
+- "OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers"
+provides-member:
+- ["C8hack_pop33PointSelectionAnimationController", ""]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", ""]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", ""]
+provides-dynamic-lookup:
+- "animateTransition"
+- "originFrame"
+- "transitionDuration"
+depends-top-level:
+- !private "UITransitionContextToViewControllerKey"
+- "CGRect"
+- "BooleanLiteralType"
+- "Int"
+- "NSTimeInterval"
+- "PointSelectionAnimationController"
+- "NSObject"
+- !private "UIView"
+- !private "-"
+- "UIViewControllerAnimatedTransitioning"
+- !private "-="
+- !private "UITransitionContextFromViewControllerKey"
+- "UIViewControllerContextTransitioning"
+- !private "~="
+- "=="
+depends-member:
+- ["Ps9AnyObject", "CGRect"]
+- !private ["Ps9AnyObject", "HomeViewControllerContainers"]
+- !private ["Ps9AnyObject", "PointSelectionViewControllerContainers"]
+- !private ["Ps9AnyObject", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps9AnyObject", "UITransitionContextToViewControllerKey"]
+- !private ["Ps9AnyObject", "UIView"]
+- !private ["Ps9AnyObject", "addSubview"]
+- ["Ps9AnyObject", "animateTransition"]
+- !private ["Ps9AnyObject", "animateWithDuration"]
+- ["Ps9AnyObject", "animationEnded"]
+- !private ["Ps9AnyObject", "frame"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "originFrame"]
+- ["Ps9AnyObject", "transitionDuration"]
+- !private ["Ps9AnyObject", "view"]
+- !private ["Ps9AnyObject", "viewWithTag"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["VSC7CGPoint", "y"]
+- !private ["VSC6CGRect", "origin"]
+- ["VSC6CGRect", "zero"]
+- ["Ps11CVarArgType", "CGRect"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "HomeViewControllerContainers"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "PointSelectionViewControllerContainers"]
+- !private ["Ps11CVarArgType", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps11CVarArgType", "UITransitionContextToViewControllerKey"]
+- !private ["Ps11CVarArgType", "UIView"]
+- !private ["Ps11CVarArgType", "addSubview"]
+- ["Ps11CVarArgType", "animateTransition"]
+- !private ["Ps11CVarArgType", "animateWithDuration"]
+- ["Ps11CVarArgType", "animationEnded"]
+- !private ["Ps11CVarArgType", "frame"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "originFrame"]
+- ["Ps11CVarArgType", "transitionDuration"]
+- !private ["Ps11CVarArgType", "view"]
+- !private ["Ps11CVarArgType", "viewWithTag"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "hashValue"]
+- ["Ps28CustomDebugStringConvertible", "CGRect"]
+- !private ["Ps28CustomDebugStringConvertible", "HomeViewControllerContainers"]
+- !private ["Ps28CustomDebugStringConvertible", "PointSelectionViewControllerContainers"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps28CustomDebugStringConvertible", "UITransitionContextToViewControllerKey"]
+- !private ["Ps28CustomDebugStringConvertible", "UIView"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- ["Ps28CustomDebugStringConvertible", "animateTransition"]
+- !private ["Ps28CustomDebugStringConvertible", "animateWithDuration"]
+- ["Ps28CustomDebugStringConvertible", "animationEnded"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "originFrame"]
+- ["Ps28CustomDebugStringConvertible", "transitionDuration"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "viewWithTag"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "CGRect"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "HomeViewControllerContainers"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "PointSelectionViewControllerContainers"]
+- !private ["Ps23CustomStringConvertible", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps23CustomStringConvertible", "UITransitionContextToViewControllerKey"]
+- !private ["Ps23CustomStringConvertible", "UIView"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- ["Ps23CustomStringConvertible", "animateTransition"]
+- !private ["Ps23CustomStringConvertible", "animateWithDuration"]
+- ["Ps23CustomStringConvertible", "animationEnded"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "originFrame"]
+- ["Ps23CustomStringConvertible", "transitionDuration"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "viewWithTag"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Background"]
+- ["Ps9Equatable", "CGRect"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "HomeViewControllerContainers"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NotifyThresholdContainer"]
+- !private ["Ps9Equatable", "PointSelectionViewControllerContainers"]
+- ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "TitleContainer"]
+- !private ["Ps9Equatable", "TopStoriesContainer"]
+- !private ["Ps9Equatable", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps9Equatable", "UITransitionContextToViewControllerKey"]
+- !private ["Ps9Equatable", "UIView"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addSubview"]
+- ["Ps9Equatable", "animateTransition"]
+- !private ["Ps9Equatable", "animateWithDuration"]
+- ["Ps9Equatable", "animationEnded"]
+- !private ["Ps9Equatable", "frame"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "origin"]
+- ["Ps9Equatable", "originFrame"]
+- ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "transitionDuration"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps9Equatable", "viewWithTag"]
+- !private ["Ps9Equatable", "y"]
+- ["Ps9Equatable", "zero"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps8Hashable", "Background"]
+- ["Ps8Hashable", "CGRect"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "HomeViewControllerContainers"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NotifyThresholdContainer"]
+- !private ["Ps8Hashable", "PointSelectionViewControllerContainers"]
+- ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "TitleContainer"]
+- !private ["Ps8Hashable", "TopStoriesContainer"]
+- !private ["Ps8Hashable", "UITransitionContextFromViewControllerKey"]
+- !private ["Ps8Hashable", "UITransitionContextToViewControllerKey"]
+- !private ["Ps8Hashable", "UIView"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addSubview"]
+- ["Ps8Hashable", "animateTransition"]
+- !private ["Ps8Hashable", "animateWithDuration"]
+- ["Ps8Hashable", "animationEnded"]
+- !private ["Ps8Hashable", "frame"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "originFrame"]
+- ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "transitionDuration"]
+- !private ["Ps8Hashable", "view"]
+- !private ["Ps8Hashable", "viewWithTag"]
+- ["Ps8Hashable", ""]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "Background"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "NotifyThresholdContainer"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "RawValue"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "TitleContainer"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "TopStoriesContainer"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "deinit"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "hashValue"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "init"]
+- ["OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers", "rawValue"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "animateWithDuration"]
+- !private ["PSo8NSCoding", "frame"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo8NSCoding", "viewWithTag"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["CSo8NSNumber", "deinit"]
+- ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "HomeViewControllerContainers"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "NSTimeInterval"]
+- !private ["CSo8NSObject", "PointSelectionViewControllerContainers"]
+- !private ["CSo8NSObject", "UITransitionContextFromViewControllerKey"]
+- !private ["CSo8NSObject", "UITransitionContextToViewControllerKey"]
+- !private ["CSo8NSObject", "UIView"]
+- ["CSo8NSObject", "UIViewControllerContextTransitioning"]
+- !private ["CSo8NSObject", "addSubview"]
+- ["CSo8NSObject", "animateTransition"]
+- !private ["CSo8NSObject", "animateWithDuration"]
+- ["CSo8NSObject", "animationEnded"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "originFrame"]
+- ["CSo8NSObject", "transitionDuration"]
+- !private ["CSo8NSObject", "view"]
+- !private ["CSo8NSObject", "viewWithTag"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "CGRect"]
+- !private ["PSo16NSObjectProtocol", "HomeViewControllerContainers"]
+- !private ["PSo16NSObjectProtocol", "PointSelectionViewControllerContainers"]
+- !private ["PSo16NSObjectProtocol", "UITransitionContextFromViewControllerKey"]
+- !private ["PSo16NSObjectProtocol", "UITransitionContextToViewControllerKey"]
+- !private ["PSo16NSObjectProtocol", "UIView"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- ["PSo16NSObjectProtocol", "animateTransition"]
+- !private ["PSo16NSObjectProtocol", "animateWithDuration"]
+- ["PSo16NSObjectProtocol", "animationEnded"]
+- !private ["PSo16NSObjectProtocol", "completeTransition"]
+- !private ["PSo16NSObjectProtocol", "containerView"]
+- !private ["PSo16NSObjectProtocol", "finalFrameForViewController"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "originFrame"]
+- ["PSo16NSObjectProtocol", "transitionDuration"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["PSo16NSObjectProtocol", "viewControllerForKey"]
+- !private ["PSo16NSObjectProtocol", "viewWithTag"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo7NSValue", "deinit"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- ["C8hack_pop33PointSelectionAnimationController", "CGRect"]
+- ["C8hack_pop33PointSelectionAnimationController", "HomeViewControllerContainers"]
+- ["C8hack_pop33PointSelectionAnimationController", "Int"]
+- ["C8hack_pop33PointSelectionAnimationController", "NSTimeInterval"]
+- ["C8hack_pop33PointSelectionAnimationController", "PointSelectionViewControllerContainers"]
+- !private ["C8hack_pop33PointSelectionAnimationController", "UITransitionContextFromViewControllerKey"]
+- !private ["C8hack_pop33PointSelectionAnimationController", "UITransitionContextToViewControllerKey"]
+- !private ["C8hack_pop33PointSelectionAnimationController", "UIView"]
+- ["C8hack_pop33PointSelectionAnimationController", "UIViewControllerContextTransitioning"]
+- ["C8hack_pop33PointSelectionAnimationController", "animateTransition"]
+- ["C8hack_pop33PointSelectionAnimationController", "animationEnded"]
+- ["C8hack_pop33PointSelectionAnimationController", "deinit"]
+- ["C8hack_pop33PointSelectionAnimationController", "init"]
+- ["C8hack_pop33PointSelectionAnimationController", "originFrame"]
+- ["C8hack_pop33PointSelectionAnimationController", "transitionDuration"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "NotifyThresholdContainer"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "RawValue"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "deinit"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "hashValue"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "init"]
+- ["OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers", "rawValue"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps16RawRepresentable", "Background"]
+- !private ["Ps16RawRepresentable", "NotifyThresholdContainer"]
+- ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "TitleContainer"]
+- !private ["Ps16RawRepresentable", "TopStoriesContainer"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "animateWithDuration"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "viewWithTag"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "animateWithDuration"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "viewWithTag"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "animateWithDuration"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo21UIAppearanceContainer", "viewWithTag"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "animateWithDuration"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "viewWithTag"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "animateWithDuration"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "viewWithTag"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "animateWithDuration"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["PSo18UIFocusEnvironment", "viewWithTag"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "animateWithDuration"]
+- !private ["CSo11UIResponder", "frame"]
+- !private ["CSo11UIResponder", "view"]
+- !private ["CSo11UIResponder", "viewWithTag"]
+- !private ["PSo16UIStateRestoring", "view"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "animateWithDuration"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["PSo18UITraitEnvironment", "viewWithTag"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "animateWithDuration"]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "viewWithTag"]
+- !private ["CSo16UIViewController", "view"]
+- ["PSo37UIViewControllerAnimatedTransitioning", "CGRect"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "HomeViewControllerContainers"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "PointSelectionViewControllerContainers"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "UITransitionContextFromViewControllerKey"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "UITransitionContextToViewControllerKey"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "UIView"]
+- ["PSo37UIViewControllerAnimatedTransitioning", "animateTransition"]
+- ["PSo37UIViewControllerAnimatedTransitioning", "animationEnded"]
+- ["PSo37UIViewControllerAnimatedTransitioning", "transitionDuration"]
+- ["PSo37UIViewControllerAnimatedTransitioning", ""]
+- !private ["PSo36UIViewControllerContextTransitioning", "completeTransition"]
+- !private ["PSo36UIViewControllerContextTransitioning", "containerView"]
+- !private ["PSo36UIViewControllerContextTransitioning", "finalFrameForViewController"]
+- !private ["PSo36UIViewControllerContextTransitioning", "viewControllerForKey"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addSubview"]
+- !private ["Ps12_Reflectable", "animateWithDuration"]
+- !private ["Ps12_Reflectable", "frame"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "origin"]
+- !private ["Ps12_Reflectable", "viewWithTag"]
+- !private ["Ps12_Reflectable", "y"]
+- ["Ps12_Reflectable", "zero"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "VSC7CGPoint"
+- "VSC6CGRect"
+- "Ps11CVarArgType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- "OC8hack_pop33PointSelectionAnimationController28HomeViewControllerContainers"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "PSo8NSCoding"
+- !private "PSo26NSExtensionRequestHandling"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo7NSValue"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- "C8hack_pop33PointSelectionAnimationController"
+- "OC8hack_pop33PointSelectionAnimationController38PointSelectionViewControllerContainers"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo11UIResponder"
+- !private "PSo16UIStateRestoring"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- "PSo37UIViewControllerAnimatedTransitioning"
+- !private "PSo36UIViewControllerContextTransitioning"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "1931f33e21bd538336ecd5d5a8b0f94a"
