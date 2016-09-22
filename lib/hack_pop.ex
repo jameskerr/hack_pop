@@ -5,10 +5,11 @@ defmodule HackPop do
 
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
+
     children = [
       worker(HackPop.Repo, []),
       worker(HackPop.Pinger, []),
-      Plug.Adapters.Cowboy.child_spec(:http, HackPop.Web, [], [port: 4001])
+      Plug.Adapters.Cowboy.child_spec(:http, HackPop.Web, [], [port: Application.fetch_env!(:plug, :port)])
     ]
 
     opts = [strategy: :one_for_one, name: HackPop.Supervisor]
