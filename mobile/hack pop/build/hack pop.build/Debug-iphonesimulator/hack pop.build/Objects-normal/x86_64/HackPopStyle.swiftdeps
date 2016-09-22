@@ -6,35 +6,34 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop12HackPopStyle", ""]
 provides-dynamic-lookup:
-- "pointRetainer"
-- "GetStyledPointSelectionCell"
 - "UnderlinedText"
+- "pointRetainer"
 - "NormalText"
+- "GetStyledPointSelectionCell"
 depends-top-level:
-- !private "Int"
-- !private "UIColor"
-- !private "NSFontAttributeName"
-- "PointsRetainer"
+- "HackPopStyle"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "=="
 - "NSAttributedString"
-- !private "UIEdgeInsets"
+- !private "UIFont"
+- "AnyObject"
+- "PointsRetainer"
 - "String"
-- !private "NSForegroundColorAttributeName"
-- !private "StringLiteralType"
-- !private "NSUnderlineStyle"
+- !private "UITableViewCellStyle"
+- "CGFloat"
+- !private "NSFontAttributeName"
+- "TernaryPrecedence"
+- !private "UIColor"
+- "UITableViewCell"
 - !private "NSUnderlineStyleAttributeName"
 - !private "UITableViewCellSelectionStyle"
-- !private "Dictionary"
-- "CastingPrecedence"
-- !private "=="
-- !private "UITableViewCellStyle"
-- "HackPopStyle"
-- "AssignmentPrecedence"
-- "AnyObject"
-- "CGFloat"
-- "TernaryPrecedence"
-- !private "UIFont"
-- "UITableViewCell"
 - "NSObject"
+- !private "NSUnderlineStyle"
+- !private "NSForegroundColorAttributeName"
+- !private "StringLiteralType"
+- !private "Dictionary"
+- !private "Int"
 depends-member:
 - ["Ps9AnyObject", "GetStyledPointSelectionCell"]
 - !private ["Ps9AnyObject", "NSAttributedString"]
@@ -46,7 +45,6 @@ depends-member:
 - ["Ps9AnyObject", "PointsRetainer"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIColor"]
-- !private ["Ps9AnyObject", "UIEdgeInsets"]
 - !private ["Ps9AnyObject", "UIFont"]
 - !private ["Ps9AnyObject", "UITableViewCell"]
 - !private ["Ps9AnyObject", "UITableViewCellSelectionStyle"]
@@ -58,10 +56,8 @@ depends-member:
 - ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "instance"]
-- !private ["Ps9AnyObject", "layoutMargins"]
 - ["Ps9AnyObject", "pointRetainer"]
 - !private ["Ps9AnyObject", "selectionStyle"]
-- !private ["Ps9AnyObject", "separatorInset"]
 - !private ["Ps9AnyObject", "textLabel"]
 - !private ["Ps9AnyObject", "value"]
 - !private ["Ps9AnyObject", "white"]
@@ -71,9 +67,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "attributedText"]
 - !private ["PSo15CALayerDelegate", "backgroundColor"]
 - !private ["PSo15CALayerDelegate", "init"]
-- !private ["PSo15CALayerDelegate", "layoutMargins"]
 - !private ["PSo15CALayerDelegate", "selectionStyle"]
-- !private ["PSo15CALayerDelegate", "separatorInset"]
 - !private ["PSo15CALayerDelegate", "textLabel"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - ["Ps7CVarArg", "GetStyledPointSelectionCell"]
@@ -87,7 +81,6 @@ depends-member:
 - ["Ps7CVarArg", "PointsRetainer"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "UIColor"]
-- !private ["Ps7CVarArg", "UIEdgeInsets"]
 - !private ["Ps7CVarArg", "UIFont"]
 - !private ["Ps7CVarArg", "UITableViewCell"]
 - !private ["Ps7CVarArg", "UITableViewCellSelectionStyle"]
@@ -99,10 +92,8 @@ depends-member:
 - !private ["Ps7CVarArg", "clear"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "instance"]
-- !private ["Ps7CVarArg", "layoutMargins"]
 - ["Ps7CVarArg", "pointRetainer"]
 - !private ["Ps7CVarArg", "selectionStyle"]
-- !private ["Ps7CVarArg", "separatorInset"]
 - !private ["Ps7CVarArg", "textLabel"]
 - !private ["Ps7CVarArg", "value"]
 - !private ["Ps7CVarArg", "white"]
@@ -122,7 +113,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "PointsRetainer"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
-- !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsets"]
 - !private ["Ps28CustomDebugStringConvertible", "UIFont"]
 - !private ["Ps28CustomDebugStringConvertible", "UITableViewCell"]
 - !private ["Ps28CustomDebugStringConvertible", "UITableViewCellSelectionStyle"]
@@ -134,10 +124,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "clear"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "instance"]
-- !private ["Ps28CustomDebugStringConvertible", "layoutMargins"]
 - ["Ps28CustomDebugStringConvertible", "pointRetainer"]
 - !private ["Ps28CustomDebugStringConvertible", "selectionStyle"]
-- !private ["Ps28CustomDebugStringConvertible", "separatorInset"]
 - !private ["Ps28CustomDebugStringConvertible", "textLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "value"]
 - !private ["Ps28CustomDebugStringConvertible", "white"]
@@ -159,7 +147,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "PointsRetainer"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
-- !private ["Ps23CustomStringConvertible", "UIEdgeInsets"]
 - !private ["Ps23CustomStringConvertible", "UIFont"]
 - !private ["Ps23CustomStringConvertible", "UITableViewCell"]
 - !private ["Ps23CustomStringConvertible", "UITableViewCellSelectionStyle"]
@@ -172,10 +159,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "clear"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "instance"]
-- !private ["Ps23CustomStringConvertible", "layoutMargins"]
 - ["Ps23CustomStringConvertible", "pointRetainer"]
 - !private ["Ps23CustomStringConvertible", "selectionStyle"]
-- !private ["Ps23CustomStringConvertible", "separatorInset"]
 - !private ["Ps23CustomStringConvertible", "textLabel"]
 - !private ["Ps23CustomStringConvertible", "value"]
 - !private ["Ps23CustomStringConvertible", "white"]
@@ -194,7 +179,6 @@ depends-member:
 - ["Ps9Equatable", "PointsRetainer"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "UIColor"]
-- !private ["Ps9Equatable", "UIEdgeInsets"]
 - !private ["Ps9Equatable", "UIFont"]
 - !private ["Ps9Equatable", "UITableViewCell"]
 - !private ["Ps9Equatable", "UITableViewCellSelectionStyle"]
@@ -207,18 +191,15 @@ depends-member:
 - !private ["Ps9Equatable", "default"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "instance"]
-- !private ["Ps9Equatable", "layoutMargins"]
 - !private ["Ps9Equatable", "none"]
 - ["Ps9Equatable", "pointRetainer"]
 - !private ["Ps9Equatable", "rawValue"]
 - !private ["Ps9Equatable", "selectionStyle"]
-- !private ["Ps9Equatable", "separatorInset"]
 - !private ["Ps9Equatable", "styleNone"]
 - !private ["Ps9Equatable", "styleSingle"]
 - !private ["Ps9Equatable", "textLabel"]
 - !private ["Ps9Equatable", "value"]
 - !private ["Ps9Equatable", "white"]
-- !private ["Ps9Equatable", "zero"]
 - ["Ps9Equatable", ""]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
@@ -241,7 +222,6 @@ depends-member:
 - ["C8hack_pop12HackPopStyle", "PointsRetainer"]
 - ["C8hack_pop12HackPopStyle", "String"]
 - !private ["C8hack_pop12HackPopStyle", "UIColor"]
-- !private ["C8hack_pop12HackPopStyle", "UIEdgeInsets"]
 - !private ["C8hack_pop12HackPopStyle", "UIFont"]
 - ["C8hack_pop12HackPopStyle", "UITableViewCell"]
 - !private ["C8hack_pop12HackPopStyle", "UITableViewCellSelectionStyle"]
@@ -260,7 +240,6 @@ depends-member:
 - ["Ps8Hashable", "PointsRetainer"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "UIColor"]
-- !private ["Ps8Hashable", "UIEdgeInsets"]
 - !private ["Ps8Hashable", "UIFont"]
 - !private ["Ps8Hashable", "UITableViewCell"]
 - !private ["Ps8Hashable", "UITableViewCellSelectionStyle"]
@@ -273,12 +252,10 @@ depends-member:
 - !private ["Ps8Hashable", "default"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "instance"]
-- !private ["Ps8Hashable", "layoutMargins"]
 - !private ["Ps8Hashable", "none"]
 - ["Ps8Hashable", "pointRetainer"]
 - !private ["Ps8Hashable", "rawValue"]
 - !private ["Ps8Hashable", "selectionStyle"]
-- !private ["Ps8Hashable", "separatorInset"]
 - !private ["Ps8Hashable", "styleNone"]
 - !private ["Ps8Hashable", "styleSingle"]
 - !private ["Ps8Hashable", "textLabel"]
@@ -303,9 +280,7 @@ depends-member:
 - !private ["PSo8NSCoding", "backgroundColor"]
 - !private ["PSo8NSCoding", "clear"]
 - !private ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "layoutMargins"]
 - !private ["PSo8NSCoding", "selectionStyle"]
-- !private ["PSo8NSCoding", "separatorInset"]
 - !private ["PSo8NSCoding", "textLabel"]
 - !private ["PSo8NSCoding", "white"]
 - !private ["PSo9NSCopying", "clear"]
@@ -325,7 +300,6 @@ depends-member:
 - ["CSo8NSObject", "PointsRetainer"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIColor"]
-- !private ["CSo8NSObject", "UIEdgeInsets"]
 - !private ["CSo8NSObject", "UIFont"]
 - ["CSo8NSObject", "UITableViewCell"]
 - !private ["CSo8NSObject", "UITableViewCellSelectionStyle"]
@@ -337,10 +311,8 @@ depends-member:
 - ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "instance"]
-- !private ["CSo8NSObject", "layoutMargins"]
 - ["CSo8NSObject", "pointRetainer"]
 - !private ["CSo8NSObject", "selectionStyle"]
-- !private ["CSo8NSObject", "separatorInset"]
 - !private ["CSo8NSObject", "textLabel"]
 - !private ["CSo8NSObject", "value"]
 - !private ["CSo8NSObject", "white"]
@@ -355,7 +327,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "PointsRetainer"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
-- !private ["PSo16NSObjectProtocol", "UIEdgeInsets"]
 - !private ["PSo16NSObjectProtocol", "UIFont"]
 - !private ["PSo16NSObjectProtocol", "UITableViewCell"]
 - !private ["PSo16NSObjectProtocol", "UITableViewCellSelectionStyle"]
@@ -366,10 +337,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "clear"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "instance"]
-- !private ["PSo16NSObjectProtocol", "layoutMargins"]
 - ["PSo16NSObjectProtocol", "pointRetainer"]
 - !private ["PSo16NSObjectProtocol", "selectionStyle"]
-- !private ["PSo16NSObjectProtocol", "separatorInset"]
 - !private ["PSo16NSObjectProtocol", "textLabel"]
 - !private ["PSo16NSObjectProtocol", "value"]
 - !private ["PSo16NSObjectProtocol", "white"]
@@ -400,23 +369,17 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "attributedText"]
 - !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
-- !private ["PSo29UIAccessibilityIdentification", "layoutMargins"]
 - !private ["PSo29UIAccessibilityIdentification", "selectionStyle"]
-- !private ["PSo29UIAccessibilityIdentification", "separatorInset"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
 - !private ["PSo12UIAppearance", "attributedText"]
 - !private ["PSo12UIAppearance", "backgroundColor"]
 - !private ["PSo12UIAppearance", "init"]
-- !private ["PSo12UIAppearance", "layoutMargins"]
 - !private ["PSo12UIAppearance", "selectionStyle"]
-- !private ["PSo12UIAppearance", "separatorInset"]
 - !private ["PSo12UIAppearance", "textLabel"]
 - !private ["PSo21UIAppearanceContainer", "attributedText"]
 - !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - !private ["PSo21UIAppearanceContainer", "init"]
-- !private ["PSo21UIAppearanceContainer", "layoutMargins"]
 - !private ["PSo21UIAppearanceContainer", "selectionStyle"]
-- !private ["PSo21UIAppearanceContainer", "separatorInset"]
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
 - !private ["CSo7UIColor", "clear"]
 - ["CSo7UIColor", "deinit"]
@@ -425,63 +388,45 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "attributedText"]
 - !private ["PSo17UICoordinateSpace", "backgroundColor"]
 - !private ["PSo17UICoordinateSpace", "init"]
-- !private ["PSo17UICoordinateSpace", "layoutMargins"]
 - !private ["PSo17UICoordinateSpace", "selectionStyle"]
-- !private ["PSo17UICoordinateSpace", "separatorInset"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "attributedText"]
 - !private ["PSo13UIDynamicItem", "backgroundColor"]
 - !private ["PSo13UIDynamicItem", "init"]
-- !private ["PSo13UIDynamicItem", "layoutMargins"]
 - !private ["PSo13UIDynamicItem", "selectionStyle"]
-- !private ["PSo13UIDynamicItem", "separatorInset"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
-- ["VSC12UIEdgeInsets", "deinit"]
-- !private ["VSC12UIEdgeInsets", "zero"]
 - !private ["PSo18UIFocusEnvironment", "attributedText"]
 - !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - !private ["PSo18UIFocusEnvironment", "init"]
-- !private ["PSo18UIFocusEnvironment", "layoutMargins"]
 - !private ["PSo18UIFocusEnvironment", "selectionStyle"]
-- !private ["PSo18UIFocusEnvironment", "separatorInset"]
 - !private ["PSo18UIFocusEnvironment", "textLabel"]
 - !private ["PSo11UIFocusItem", "attributedText"]
 - !private ["PSo11UIFocusItem", "backgroundColor"]
 - !private ["PSo11UIFocusItem", "init"]
-- !private ["PSo11UIFocusItem", "layoutMargins"]
 - !private ["PSo11UIFocusItem", "selectionStyle"]
-- !private ["PSo11UIFocusItem", "separatorInset"]
 - !private ["PSo11UIFocusItem", "textLabel"]
 - ["CSo6UIFont", "deinit"]
 - !private ["CSo6UIFont", "init"]
 - !private ["PSo27UIGestureRecognizerDelegate", "backgroundColor"]
 - !private ["PSo27UIGestureRecognizerDelegate", "init"]
-- !private ["PSo27UIGestureRecognizerDelegate", "layoutMargins"]
 - !private ["PSo27UIGestureRecognizerDelegate", "selectionStyle"]
-- !private ["PSo27UIGestureRecognizerDelegate", "separatorInset"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
 - !private ["CSo7UILabel", "attributedText"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo11UIResponder", "attributedText"]
 - !private ["CSo11UIResponder", "backgroundColor"]
 - !private ["CSo11UIResponder", "init"]
-- !private ["CSo11UIResponder", "layoutMargins"]
 - !private ["CSo11UIResponder", "selectionStyle"]
-- !private ["CSo11UIResponder", "separatorInset"]
 - !private ["CSo11UIResponder", "textLabel"]
 - !private ["PSo30UIResponderStandardEditActions", "attributedText"]
 - !private ["PSo30UIResponderStandardEditActions", "backgroundColor"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
-- !private ["PSo30UIResponderStandardEditActions", "layoutMargins"]
 - !private ["PSo30UIResponderStandardEditActions", "selectionStyle"]
-- !private ["PSo30UIResponderStandardEditActions", "separatorInset"]
 - !private ["PSo30UIResponderStandardEditActions", "textLabel"]
 - !private ["CSo15UITableViewCell", "backgroundColor"]
 - ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "init"]
-- !private ["CSo15UITableViewCell", "layoutMargins"]
 - !private ["CSo15UITableViewCell", "selectionStyle"]
-- !private ["CSo15UITableViewCell", "separatorInset"]
 - !private ["CSo15UITableViewCell", "textLabel"]
 - ["OSC29UITableViewCellSelectionStyle", "deinit"]
 - !private ["OSC29UITableViewCellSelectionStyle", "none"]
@@ -490,16 +435,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "attributedText"]
 - !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - !private ["PSo18UITraitEnvironment", "init"]
-- !private ["PSo18UITraitEnvironment", "layoutMargins"]
 - !private ["PSo18UITraitEnvironment", "selectionStyle"]
-- !private ["PSo18UITraitEnvironment", "separatorInset"]
 - !private ["PSo18UITraitEnvironment", "textLabel"]
 - !private ["CSo6UIView", "attributedText"]
 - !private ["CSo6UIView", "backgroundColor"]
 - !private ["CSo6UIView", "init"]
-- !private ["CSo6UIView", "layoutMargins"]
 - !private ["CSo6UIView", "selectionStyle"]
-- !private ["CSo6UIView", "separatorInset"]
 - !private ["CSo6UIView", "textLabel"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
@@ -510,9 +451,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "attributedText"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "backgroundColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
-- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "layoutMargins"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "selectionStyle"]
-- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "separatorInset"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -532,7 +471,6 @@ depends-member:
 - ["Ps9_Hashable", "PointsRetainer"]
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "UIColor"]
-- !private ["Ps9_Hashable", "UIEdgeInsets"]
 - !private ["Ps9_Hashable", "UIFont"]
 - !private ["Ps9_Hashable", "UITableViewCell"]
 - !private ["Ps9_Hashable", "UITableViewCellSelectionStyle"]
@@ -545,12 +483,10 @@ depends-member:
 - !private ["Ps9_Hashable", "default"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "instance"]
-- !private ["Ps9_Hashable", "layoutMargins"]
 - !private ["Ps9_Hashable", "none"]
 - ["Ps9_Hashable", "pointRetainer"]
 - !private ["Ps9_Hashable", "rawValue"]
 - !private ["Ps9_Hashable", "selectionStyle"]
-- !private ["Ps9_Hashable", "separatorInset"]
 - !private ["Ps9_Hashable", "styleNone"]
 - !private ["Ps9_Hashable", "styleSingle"]
 - !private ["Ps9_Hashable", "textLabel"]
@@ -618,7 +554,6 @@ depends-nominal:
 - !private "PSo30UIContentSizeCategoryAdjusting"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
-- "VSC12UIEdgeInsets"
 - !private "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
 - "CSo6UIFont"

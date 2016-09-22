@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop11AppDelegate", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "applicationDocumentsDirectory"
 - "application"
 - "saveContext"
@@ -46,6 +47,48 @@ depends-top-level:
 - "UIResponder"
 - "NSManagedObjectContext"
 - !private "abort"
+=======
+- "managedObjectContext"
+- "applicationWillTerminate"
+- "window"
+- "persistentStoreCoordinator"
+- "managedObjectModel"
+- "applicationDocumentsDirectory"
+- "applicationDidBecomeActive"
+- "saveContext"
+- "application"
+- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationDidEnterBackground"
+depends-top-level:
+- "UIResponder"
+- !private "BooleanLiteralType"
+- "UIApplicationLaunchOptionsKey"
+- "URL"
+- !private "NSError"
+- "NSPersistentStoreCoordinator"
+- "NSManagedObjectModel"
+- !private "NSLocalizedDescriptionKey"
+- !private "NSSQLiteStoreType"
+- !private "abort"
+- !private "NSUnderlyingErrorKey"
+- "UIWindow"
+- "UIApplicationDelegate"
+- "UIApplication"
+- !private "StringLiteralType"
+- "NSManagedObjectContext"
+- !private "NSLog"
+- !private "Bundle"
+- !private "-"
+- !private "FileManager"
+- "CastingPrecedence"
+- "Bool"
+- !private "AssignmentPrecedence"
+- !private "NSLocalizedFailureReasonErrorKey"
+- !private "AnyObject"
+- "AppDelegate"
+- !private "String"
+>>>>>>> added-a-table-view-to-storyboard
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "Bundle"]

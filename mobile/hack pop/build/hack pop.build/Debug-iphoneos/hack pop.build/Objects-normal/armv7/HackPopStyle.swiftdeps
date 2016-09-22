@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop12HackPopStyle", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "GetStyledPointSelectionCell"
 - "UnderlinedText"
 - "NormalText"
@@ -34,6 +35,36 @@ depends-top-level:
 - "TernaryPrecedence"
 - !private "NSForegroundColorAttributeName"
 - !private "Dictionary"
+=======
+- "UnderlinedText"
+- "NormalText"
+- "GetStyledPointSelectionCell"
+- "pointRetainer"
+depends-top-level:
+- "String"
+- !private "UIFont"
+- "CastingPrecedence"
+- !private "=="
+- !private "Dictionary"
+- "NSAttributedString"
+- "HackPopStyle"
+- !private "UIColor"
+- "AssignmentPrecedence"
+- "CGFloat"
+- !private "NSFontAttributeName"
+- !private "UITableViewCellSelectionStyle"
+- "TernaryPrecedence"
+- "AnyObject"
+- !private "NSUnderlineStyle"
+- !private "Int"
+- "PointsRetainer"
+- !private "UITableViewCellStyle"
+- !private "NSForegroundColorAttributeName"
+- "UITableViewCell"
+- !private "NSUnderlineStyleAttributeName"
+- !private "StringLiteralType"
+- "NSObject"
+>>>>>>> added-a-table-view-to-storyboard
 depends-member:
 - ["Ps9AnyObject", "GetStyledPointSelectionCell"]
 - !private ["Ps9AnyObject", "NSAttributedString"]

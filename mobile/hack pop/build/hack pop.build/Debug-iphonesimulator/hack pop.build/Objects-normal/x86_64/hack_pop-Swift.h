@@ -155,11 +155,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PointsRetain
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
 @class UIStoryboardSegue;
 @class UIStackView;
 @class UITableView;
 @class UILabel;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
@@ -173,9 +173,10 @@ SWIFT_CLASS("_TtC8hack_pop18HomeViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified storyThresholdButton;
 @property (nonatomic, readonly, strong) PointsRetainer * _Nonnull pointRetainer;
 - (void)viewDidLoad;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
-- (IBAction)revealPointSelectionVC:(UIButton * _Nonnull)sender;
+- (IBAction)revealPointSelectionVC:(id _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -189,6 +190,7 @@ SWIFT_CLASS("_TtC8hack_pop25PointSelectViewController")
 @property (nonatomic, readonly, strong) PointsRetainer * _Nonnull pointRetainer;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;

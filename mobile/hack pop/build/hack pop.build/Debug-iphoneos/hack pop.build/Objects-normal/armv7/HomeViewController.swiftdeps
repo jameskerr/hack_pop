@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop18HomeViewController", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "prepare"
 - "topStoriesLabel"
 - "notifyViewContainer"
@@ -26,17 +27,47 @@ depends-top-level:
 - "PointsRetainer"
 - "UIButton"
 - "UITableView"
+=======
+- "topStoriesLabel"
+- "revealPointSelectionVC"
+- "didReceiveMemoryWarning"
+- "supportedInterfaceOrientations"
+- "preferredStatusBarStyle"
+- "pointRetainer"
+- "notifyViewContainer"
+- "topStoriesTable"
+- "storyThresholdButton"
+- "viewDidLoad"
+- "titleViewContainer"
+- "topStoriesContainerView"
+- "prepare"
+depends-top-level:
+- "PointsRetainer"
+- "HomeViewController"
+- "AnyObject"
+- "UIStatusBarStyle"
+- !private "UIControlState"
+- "UITableView"
+- "UIButton"
+>>>>>>> added-a-table-view-to-storyboard
 - !private "StringLiteralType"
 - "UIInterfaceOrientationMask"
 - !private "PointSelectionSegue"
 - "UIStackView"
 - "CastingPrecedence"
 - "AssignmentPrecedence"
+<<<<<<< HEAD
 - "UIViewController"
 - "UIStatusBarStyle"
 - "UILabel"
 - !private "UIControlState"
 - !private "HackPopStyle"
+=======
+- "UIStoryboardSegue"
+- "UIViewController"
+- !private "HackPopStyle"
+- "UILabel"
+>>>>>>> added-a-table-view-to-storyboard
 depends-member:
 - !private ["Ps9AnyObject", "HackPopStyle"]
 - !private ["Ps9AnyObject", "PointSelectionSegue"]

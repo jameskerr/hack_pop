@@ -6,32 +6,35 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop18HomeViewController", ""]
 provides-dynamic-lookup:
-- "topStoriesLabel"
-- "notifyViewContainer"
-- "pointRetainer"
-- "storyThresholdButton"
-- "preferredStatusBarStyle"
-- "viewDidLoad"
 - "revealPointSelectionVC"
-- "topStoriesTable"
+- "notifyViewContainer"
+- "topStoriesLabel"
 - "didReceiveMemoryWarning"
+- "preferredStatusBarStyle"
+- "pointRetainer"
+- "titleViewContainer"
+- "storyThresholdButton"
+- "viewDidLoad"
+- "supportedInterfaceOrientations"
+- "topStoriesTable"
 - "topStoriesContainerView"
 - "prepare"
-- "titleViewContainer"
 depends-top-level:
-- "HomeViewController"
-- "UIStoryboardSegue"
-- "PointsRetainer"
-- "UIButton"
-- !private "StringLiteralType"
-- "UITableView"
-- !private "PointSelectionSegue"
-- "UIStackView"
-- "CastingPrecedence"
 - "AssignmentPrecedence"
-- "UILabel"
-- "UIViewController"
 - "UIStatusBarStyle"
+- "CastingPrecedence"
+- "PointsRetainer"
+- !private "PointSelectionSegue"
+- "UIButton"
+- "UITableView"
+- "HomeViewController"
+- "UIInterfaceOrientationMask"
+- "UIViewController"
+- "AnyObject"
+- !private "StringLiteralType"
+- "UILabel"
+- "UIStoryboardSegue"
+- "UIStackView"
 - !private "UIControlState"
 - !private "HackPopStyle"
 depends-member:
@@ -40,6 +43,7 @@ depends-member:
 - ["Ps9AnyObject", "PointsRetainer"]
 - !private ["Ps9AnyObject", "SegueId"]
 - !private ["Ps9AnyObject", "UIControlState"]
+- !private ["Ps9AnyObject", "UIInterfaceOrientationMask"]
 - !private ["Ps9AnyObject", "UIStatusBarStyle"]
 - !private ["Ps9AnyObject", "UnderlinedText"]
 - !private ["Ps9AnyObject", "animationType"]
@@ -54,6 +58,7 @@ depends-member:
 - ["Ps9AnyObject", "revealPointSelectionVC"]
 - !private ["Ps9AnyObject", "setAttributedTitle"]
 - ["Ps9AnyObject", "storyThresholdButton"]
+- ["Ps9AnyObject", "supportedInterfaceOrientations"]
 - !private ["Ps9AnyObject", "text"]
 - ["Ps9AnyObject", "titleViewContainer"]
 - ["Ps9AnyObject", "topStoriesContainerView"]
@@ -72,6 +77,7 @@ depends-member:
 - ["Ps7CVarArg", "PointsRetainer"]
 - !private ["Ps7CVarArg", "SegueId"]
 - !private ["Ps7CVarArg", "UIControlState"]
+- !private ["Ps7CVarArg", "UIInterfaceOrientationMask"]
 - !private ["Ps7CVarArg", "UIStatusBarStyle"]
 - !private ["Ps7CVarArg", "UnderlinedText"]
 - !private ["Ps7CVarArg", "animationType"]
@@ -86,6 +92,7 @@ depends-member:
 - ["Ps7CVarArg", "revealPointSelectionVC"]
 - !private ["Ps7CVarArg", "setAttributedTitle"]
 - ["Ps7CVarArg", "storyThresholdButton"]
+- ["Ps7CVarArg", "supportedInterfaceOrientations"]
 - !private ["Ps7CVarArg", "text"]
 - ["Ps7CVarArg", "titleViewContainer"]
 - ["Ps7CVarArg", "topStoriesContainerView"]
@@ -101,6 +108,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "PointsRetainer"]
 - !private ["Ps28CustomDebugStringConvertible", "SegueId"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
+- !private ["Ps28CustomDebugStringConvertible", "UIInterfaceOrientationMask"]
 - !private ["Ps28CustomDebugStringConvertible", "UIStatusBarStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "UnderlinedText"]
 - !private ["Ps28CustomDebugStringConvertible", "animationType"]
@@ -115,6 +123,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "revealPointSelectionVC"]
 - !private ["Ps28CustomDebugStringConvertible", "setAttributedTitle"]
 - ["Ps28CustomDebugStringConvertible", "storyThresholdButton"]
+- ["Ps28CustomDebugStringConvertible", "supportedInterfaceOrientations"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "titleViewContainer"]
 - ["Ps28CustomDebugStringConvertible", "topStoriesContainerView"]
@@ -132,6 +141,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "PointsRetainer"]
 - !private ["Ps23CustomStringConvertible", "SegueId"]
 - !private ["Ps23CustomStringConvertible", "UIControlState"]
+- !private ["Ps23CustomStringConvertible", "UIInterfaceOrientationMask"]
 - !private ["Ps23CustomStringConvertible", "UIStatusBarStyle"]
 - !private ["Ps23CustomStringConvertible", "UnderlinedText"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -147,6 +157,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "revealPointSelectionVC"]
 - !private ["Ps23CustomStringConvertible", "setAttributedTitle"]
 - ["Ps23CustomStringConvertible", "storyThresholdButton"]
+- ["Ps23CustomStringConvertible", "supportedInterfaceOrientations"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "titleViewContainer"]
 - ["Ps23CustomStringConvertible", "topStoriesContainerView"]
@@ -163,6 +174,7 @@ depends-member:
 - !private ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "SegueId"]
 - !private ["Ps9Equatable", "UIControlState"]
+- !private ["Ps9Equatable", "UIInterfaceOrientationMask"]
 - !private ["Ps9Equatable", "UIStatusBarStyle"]
 - !private ["Ps9Equatable", "UnderlinedText"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
@@ -175,11 +187,14 @@ depends-member:
 - !private ["Ps9Equatable", "openPointSelection"]
 - !private ["Ps9Equatable", "performSegue"]
 - ["Ps9Equatable", "pointRetainer"]
+- !private ["Ps9Equatable", "portrait"]
 - ["Ps9Equatable", "preferredStatusBarStyle"]
 - ["Ps9Equatable", "prepare"]
+- !private ["Ps9Equatable", "rawValue"]
 - ["Ps9Equatable", "revealPointSelectionVC"]
 - !private ["Ps9Equatable", "setAttributedTitle"]
 - ["Ps9Equatable", "storyThresholdButton"]
+- ["Ps9Equatable", "supportedInterfaceOrientations"]
 - !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "titleViewContainer"]
 - ["Ps9Equatable", "topStoriesContainerView"]
@@ -191,6 +206,8 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "RawValue"]
 - !private ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps25ExpressibleByArrayLiteral", "portrait"]
+- !private ["Ps25ExpressibleByArrayLiteral", "rawValue"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
@@ -203,6 +220,7 @@ depends-member:
 - ["Ps8Hashable", "PointsRetainer"]
 - !private ["Ps8Hashable", "SegueId"]
 - !private ["Ps8Hashable", "UIControlState"]
+- !private ["Ps8Hashable", "UIInterfaceOrientationMask"]
 - !private ["Ps8Hashable", "UIStatusBarStyle"]
 - !private ["Ps8Hashable", "UnderlinedText"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
@@ -220,6 +238,7 @@ depends-member:
 - ["Ps8Hashable", "revealPointSelectionVC"]
 - !private ["Ps8Hashable", "setAttributedTitle"]
 - ["Ps8Hashable", "storyThresholdButton"]
+- ["Ps8Hashable", "supportedInterfaceOrientations"]
 - !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "titleViewContainer"]
 - ["Ps8Hashable", "topStoriesContainerView"]
@@ -228,11 +247,13 @@ depends-member:
 - !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- ["C8hack_pop18HomeViewController", "AnyObject"]
 - !private ["C8hack_pop18HomeViewController", "HackPopStyle"]
 - !private ["C8hack_pop18HomeViewController", "PointSelectionSegue"]
 - ["C8hack_pop18HomeViewController", "PointsRetainer"]
 - ["C8hack_pop18HomeViewController", "UIButton"]
 - !private ["C8hack_pop18HomeViewController", "UIControlState"]
+- ["C8hack_pop18HomeViewController", "UIInterfaceOrientationMask"]
 - ["C8hack_pop18HomeViewController", "UILabel"]
 - ["C8hack_pop18HomeViewController", "UIStackView"]
 - ["C8hack_pop18HomeViewController", "UIStatusBarStyle"]
@@ -248,6 +269,7 @@ depends-member:
 - ["C8hack_pop18HomeViewController", "prepare"]
 - ["C8hack_pop18HomeViewController", "revealPointSelectionVC"]
 - ["C8hack_pop18HomeViewController", "storyThresholdButton"]
+- ["C8hack_pop18HomeViewController", "supportedInterfaceOrientations"]
 - ["C8hack_pop18HomeViewController", "titleViewContainer"]
 - ["C8hack_pop18HomeViewController", "topStoriesContainerView"]
 - ["C8hack_pop18HomeViewController", "topStoriesLabel"]
@@ -268,6 +290,7 @@ depends-member:
 - !private ["PSo8NSCoding", "PointSelectionSegue"]
 - ["PSo8NSCoding", "PointsRetainer"]
 - !private ["PSo8NSCoding", "UIControlState"]
+- !private ["PSo8NSCoding", "UIInterfaceOrientationMask"]
 - !private ["PSo8NSCoding", "UIStatusBarStyle"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "init"]
@@ -279,6 +302,7 @@ depends-member:
 - ["PSo8NSCoding", "revealPointSelectionVC"]
 - !private ["PSo8NSCoding", "setAttributedTitle"]
 - ["PSo8NSCoding", "storyThresholdButton"]
+- ["PSo8NSCoding", "supportedInterfaceOrientations"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "titleViewContainer"]
 - ["PSo8NSCoding", "topStoriesContainerView"]
@@ -291,6 +315,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "PointSelectionSegue"]
 - ["PSo26NSExtensionRequestHandling", "PointsRetainer"]
 - !private ["PSo26NSExtensionRequestHandling", "UIControlState"]
+- !private ["PSo26NSExtensionRequestHandling", "UIInterfaceOrientationMask"]
 - !private ["PSo26NSExtensionRequestHandling", "UIStatusBarStyle"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
@@ -301,6 +326,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "prepare"]
 - ["PSo26NSExtensionRequestHandling", "revealPointSelectionVC"]
 - ["PSo26NSExtensionRequestHandling", "storyThresholdButton"]
+- ["PSo26NSExtensionRequestHandling", "supportedInterfaceOrientations"]
 - ["PSo26NSExtensionRequestHandling", "titleViewContainer"]
 - ["PSo26NSExtensionRequestHandling", "topStoriesContainerView"]
 - ["PSo26NSExtensionRequestHandling", "topStoriesLabel"]
@@ -308,12 +334,14 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "HackPopStyle"]
 - !private ["CSo8NSObject", "PointSelectionSegue"]
 - ["CSo8NSObject", "PointsRetainer"]
 - !private ["CSo8NSObject", "SegueId"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIControlState"]
+- ["CSo8NSObject", "UIInterfaceOrientationMask"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UIStackView"]
 - ["CSo8NSObject", "UIStatusBarStyle"]
@@ -332,6 +360,7 @@ depends-member:
 - ["CSo8NSObject", "revealPointSelectionVC"]
 - !private ["CSo8NSObject", "setAttributedTitle"]
 - ["CSo8NSObject", "storyThresholdButton"]
+- ["CSo8NSObject", "supportedInterfaceOrientations"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "titleViewContainer"]
 - ["CSo8NSObject", "topStoriesContainerView"]
@@ -344,6 +373,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "PointsRetainer"]
 - !private ["PSo16NSObjectProtocol", "SegueId"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
+- !private ["PSo16NSObjectProtocol", "UIInterfaceOrientationMask"]
 - !private ["PSo16NSObjectProtocol", "UIStatusBarStyle"]
 - !private ["PSo16NSObjectProtocol", "UnderlinedText"]
 - !private ["PSo16NSObjectProtocol", "animationType"]
@@ -358,6 +388,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "revealPointSelectionVC"]
 - !private ["PSo16NSObjectProtocol", "setAttributedTitle"]
 - ["PSo16NSObjectProtocol", "storyThresholdButton"]
+- ["PSo16NSObjectProtocol", "supportedInterfaceOrientations"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "titleViewContainer"]
 - ["PSo16NSObjectProtocol", "topStoriesContainerView"]
@@ -371,6 +402,8 @@ depends-member:
 - !private ["Ps9OptionSet", "Element"]
 - !private ["Ps9OptionSet", "RawValue"]
 - !private ["Ps9OptionSet", "init"]
+- !private ["Ps9OptionSet", "portrait"]
+- !private ["Ps9OptionSet", "rawValue"]
 - ["Sq", "deinit"]
 - !private ["C8hack_pop19PointSelectionSegue", "SegueId"]
 - !private ["C8hack_pop19PointSelectionSegue", "animationType"]
@@ -382,11 +415,15 @@ depends-member:
 - !private ["Ps16RawRepresentable", "RawValue"]
 - !private ["Ps16RawRepresentable", "init"]
 - !private ["Ps16RawRepresentable", "lightContent"]
+- !private ["Ps16RawRepresentable", "portrait"]
+- !private ["Ps16RawRepresentable", "rawValue"]
 - ["O8hack_pop18SelectionAnimation", "deinit"]
 - !private ["O8hack_pop18SelectionAnimation", "openPointSelection"]
 - !private ["Ps10SetAlgebra", "Element"]
 - !private ["Ps10SetAlgebra", "RawValue"]
 - !private ["Ps10SetAlgebra", "init"]
+- !private ["Ps10SetAlgebra", "portrait"]
+- !private ["Ps10SetAlgebra", "rawValue"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
@@ -399,6 +436,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "PointSelectionSegue"]
 - ["PSo21UIAppearanceContainer", "PointsRetainer"]
 - !private ["PSo21UIAppearanceContainer", "UIControlState"]
+- !private ["PSo21UIAppearanceContainer", "UIInterfaceOrientationMask"]
 - !private ["PSo21UIAppearanceContainer", "UIStatusBarStyle"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "init"]
@@ -410,6 +448,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "revealPointSelectionVC"]
 - !private ["PSo21UIAppearanceContainer", "setAttributedTitle"]
 - ["PSo21UIAppearanceContainer", "storyThresholdButton"]
+- ["PSo21UIAppearanceContainer", "supportedInterfaceOrientations"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "titleViewContainer"]
 - ["PSo21UIAppearanceContainer", "topStoriesContainerView"]
@@ -422,6 +461,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "PointSelectionSegue"]
 - ["PSo18UIContentContainer", "PointsRetainer"]
 - !private ["PSo18UIContentContainer", "UIControlState"]
+- !private ["PSo18UIContentContainer", "UIInterfaceOrientationMask"]
 - !private ["PSo18UIContentContainer", "UIStatusBarStyle"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "init"]
@@ -432,6 +472,7 @@ depends-member:
 - ["PSo18UIContentContainer", "prepare"]
 - ["PSo18UIContentContainer", "revealPointSelectionVC"]
 - ["PSo18UIContentContainer", "storyThresholdButton"]
+- ["PSo18UIContentContainer", "supportedInterfaceOrientations"]
 - ["PSo18UIContentContainer", "titleViewContainer"]
 - ["PSo18UIContentContainer", "topStoriesContainerView"]
 - ["PSo18UIContentContainer", "topStoriesLabel"]
@@ -452,6 +493,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "PointSelectionSegue"]
 - ["PSo18UIFocusEnvironment", "PointsRetainer"]
 - !private ["PSo18UIFocusEnvironment", "UIControlState"]
+- !private ["PSo18UIFocusEnvironment", "UIInterfaceOrientationMask"]
 - !private ["PSo18UIFocusEnvironment", "UIStatusBarStyle"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "init"]
@@ -463,6 +505,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "revealPointSelectionVC"]
 - !private ["PSo18UIFocusEnvironment", "setAttributedTitle"]
 - ["PSo18UIFocusEnvironment", "storyThresholdButton"]
+- ["PSo18UIFocusEnvironment", "supportedInterfaceOrientations"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "titleViewContainer"]
 - ["PSo18UIFocusEnvironment", "topStoriesContainerView"]
@@ -472,12 +515,18 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "setAttributedTitle"]
 - !private ["PSo11UIFocusItem", "text"]
+- ["VSC26UIInterfaceOrientationMask", "deinit"]
+- !private ["VSC26UIInterfaceOrientationMask", "init"]
+- !private ["VSC26UIInterfaceOrientationMask", "portrait"]
+- !private ["VSC26UIInterfaceOrientationMask", "rawValue"]
 - !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "AnyObject"]
 - !private ["CSo11UIResponder", "HackPopStyle"]
 - !private ["CSo11UIResponder", "PointSelectionSegue"]
 - ["CSo11UIResponder", "PointsRetainer"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIControlState"]
+- ["CSo11UIResponder", "UIInterfaceOrientationMask"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UIStackView"]
 - ["CSo11UIResponder", "UIStatusBarStyle"]
@@ -493,6 +542,7 @@ depends-member:
 - ["CSo11UIResponder", "revealPointSelectionVC"]
 - !private ["CSo11UIResponder", "setAttributedTitle"]
 - ["CSo11UIResponder", "storyThresholdButton"]
+- ["CSo11UIResponder", "supportedInterfaceOrientations"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "titleViewContainer"]
 - ["CSo11UIResponder", "topStoriesContainerView"]
@@ -503,6 +553,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "PointSelectionSegue"]
 - ["PSo30UIResponderStandardEditActions", "PointsRetainer"]
 - !private ["PSo30UIResponderStandardEditActions", "UIControlState"]
+- !private ["PSo30UIResponderStandardEditActions", "UIInterfaceOrientationMask"]
 - !private ["PSo30UIResponderStandardEditActions", "UIStatusBarStyle"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
@@ -514,6 +565,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "revealPointSelectionVC"]
 - !private ["PSo30UIResponderStandardEditActions", "setAttributedTitle"]
 - ["PSo30UIResponderStandardEditActions", "storyThresholdButton"]
+- ["PSo30UIResponderStandardEditActions", "supportedInterfaceOrientations"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
 - ["PSo30UIResponderStandardEditActions", "titleViewContainer"]
 - ["PSo30UIResponderStandardEditActions", "topStoriesContainerView"]
@@ -525,6 +577,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "PointSelectionSegue"]
 - ["PSo16UIStateRestoring", "PointsRetainer"]
 - !private ["PSo16UIStateRestoring", "UIControlState"]
+- !private ["PSo16UIStateRestoring", "UIInterfaceOrientationMask"]
 - !private ["PSo16UIStateRestoring", "UIStatusBarStyle"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "init"]
@@ -535,6 +588,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "prepare"]
 - ["PSo16UIStateRestoring", "revealPointSelectionVC"]
 - ["PSo16UIStateRestoring", "storyThresholdButton"]
+- ["PSo16UIStateRestoring", "supportedInterfaceOrientations"]
 - ["PSo16UIStateRestoring", "titleViewContainer"]
 - ["PSo16UIStateRestoring", "topStoriesContainerView"]
 - ["PSo16UIStateRestoring", "topStoriesLabel"]
@@ -550,6 +604,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "PointSelectionSegue"]
 - ["PSo18UITraitEnvironment", "PointsRetainer"]
 - !private ["PSo18UITraitEnvironment", "UIControlState"]
+- !private ["PSo18UITraitEnvironment", "UIInterfaceOrientationMask"]
 - !private ["PSo18UITraitEnvironment", "UIStatusBarStyle"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "init"]
@@ -561,6 +616,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "revealPointSelectionVC"]
 - !private ["PSo18UITraitEnvironment", "setAttributedTitle"]
 - ["PSo18UITraitEnvironment", "storyThresholdButton"]
+- ["PSo18UITraitEnvironment", "supportedInterfaceOrientations"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "titleViewContainer"]
 - ["PSo18UITraitEnvironment", "topStoriesContainerView"]
@@ -570,11 +626,13 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "setAttributedTitle"]
 - !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "AnyObject"]
 - !private ["CSo16UIViewController", "HackPopStyle"]
 - !private ["CSo16UIViewController", "PointSelectionSegue"]
 - ["CSo16UIViewController", "PointsRetainer"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIControlState"]
+- ["CSo16UIViewController", "UIInterfaceOrientationMask"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UIStackView"]
 - ["CSo16UIViewController", "UIStatusBarStyle"]
@@ -590,13 +648,14 @@ depends-member:
 - ["CSo16UIViewController", "prepare"]
 - ["CSo16UIViewController", "revealPointSelectionVC"]
 - ["CSo16UIViewController", "storyThresholdButton"]
+- ["CSo16UIViewController", "supportedInterfaceOrientations"]
 - ["CSo16UIViewController", "titleViewContainer"]
 - ["CSo16UIViewController", "topStoriesContainerView"]
 - ["CSo16UIViewController", "topStoriesLabel"]
 - ["CSo16UIViewController", "topStoriesTable"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
-- !private ["Su", "deinit"]
+- ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt64", "deinit"]
@@ -615,6 +674,7 @@ depends-member:
 - ["Ps9_Hashable", "PointsRetainer"]
 - !private ["Ps9_Hashable", "SegueId"]
 - !private ["Ps9_Hashable", "UIControlState"]
+- !private ["Ps9_Hashable", "UIInterfaceOrientationMask"]
 - !private ["Ps9_Hashable", "UIStatusBarStyle"]
 - !private ["Ps9_Hashable", "UnderlinedText"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
@@ -632,6 +692,7 @@ depends-member:
 - ["Ps9_Hashable", "revealPointSelectionVC"]
 - !private ["Ps9_Hashable", "setAttributedTitle"]
 - ["Ps9_Hashable", "storyThresholdButton"]
+- ["Ps9_Hashable", "supportedInterfaceOrientations"]
 - !private ["Ps9_Hashable", "text"]
 - ["Ps9_Hashable", "titleViewContainer"]
 - ["Ps9_Hashable", "topStoriesContainerView"]
@@ -706,6 +767,7 @@ depends-nominal:
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
+- "VSC26UIInterfaceOrientationMask"
 - !private "CSo7UILabel"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
@@ -715,7 +777,7 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
-- !private "Su"
+- "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
@@ -742,4 +804,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "40022d02d275b73e649abcd923b3e062"
+interface-hash: "f2ccb9585ba9aeefcff34422d1e01909"

@@ -6,10 +6,16 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop25PointSelectViewController", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
+=======
+- "viewDidLoad"
+- "supportedInterfaceOrientations"
+>>>>>>> added-a-table-view-to-storyboard
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
+<<<<<<< HEAD
 - "closePointSelection"
 - "preferredStatusBarStyle"
 - "didReceiveMemoryWarning"
@@ -42,6 +48,38 @@ depends-top-level:
 - "AnyObject"
 - !private "UIEdgeInsetsMake"
 - !private "NSIndexPath"
+=======
+- "prepare"
+- "closePointSelection"
+- "pointSelectionCloseButton"
+- "preferredStatusBarStyle"
+- "didReceiveMemoryWarning"
+- "pointRetainer"
+depends-top-level:
+- "UITableViewDataSource"
+- "UIInterfaceOrientationMask"
+- "UIStoryboardSegue"
+- !private "UIColor"
+- "UIViewController"
+- !private "HackPopStyle"
+- "UITableViewCell"
+- !private "UIControlState"
+- "AnyObject"
+- !private "StringLiteralType"
+- "IndexPath"
+- "PointsRetainer"
+- !private "NSIndexPath"
+- "PointSelectViewController"
+- !private "UIEdgeInsetsMake"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "PointSelectionSegue"
+- "UIStatusBarStyle"
+- "UIButton"
+- "UITableViewDelegate"
+- "Int"
+- "UITableView"
+>>>>>>> added-a-table-view-to-storyboard
 depends-member:
 - !private ["Ps9AnyObject", "GetStyledPointSelectionCell"]
 - !private ["Ps9AnyObject", "HackPopStyle"]

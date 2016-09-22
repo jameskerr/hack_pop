@@ -8,13 +8,21 @@ provides-member:
 - ["C8hack_pop14PointsRetainer", ""]
 - ["VC8hack_pop14PointsRetainer12defaultsKeys", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "_instance"
 - "value"
 - "instance"
+=======
+- "instance"
+- "_instance"
+- "value"
+>>>>>>> added-a-table-view-to-storyboard
 - "defaults"
+- "initialDefaultValue"
 - "pointSelectionValues"
 - "initialDefaultValue"
 depends-top-level:
+<<<<<<< HEAD
 - !private "!="
 - "NSObject"
 - "AssignmentPrecedence"
@@ -24,6 +32,17 @@ depends-top-level:
 - "Array"
 - "Int"
 - "StringLiteralType"
+=======
+- "Int"
+- "Array"
+- "PointsRetainer"
+- "NSObject"
+- "NSArray"
+- !private "!="
+- "StringLiteralType"
+- !private "=="
+- "AssignmentPrecedence"
+>>>>>>> added-a-table-view-to-storyboard
 - "UserDefaults"
 depends-member:
 - ["Ps9AnyObject", "Element"]

@@ -14,6 +14,7 @@ provides-member:
 - ["OC8hack_pop19PointSelectionSegue28HomeViewControllerContainers", ""]
 - ["OC8hack_pop19PointSelectionSegue38PointSelectionViewControllerContainers", ""]
 provides-dynamic-lookup:
+<<<<<<< HEAD
 - "animationDuration"
 - "perform"
 - "close"
@@ -37,6 +38,31 @@ depends-top-level:
 - !private "-"
 - !private "UIView"
 - !private "BooleanLiteralType"
+=======
+- "open"
+- "yTitleTopOffset"
+- "perform"
+- "close"
+- "animationDuration"
+- "SegueId"
+depends-top-level:
+- "UIStoryboardSegue"
+- !private "BooleanLiteralType"
+- !private "-"
+- !private "UIView"
+- "Int"
+- !private "UIViewController"
+- "String"
+- !private "-="
+- "SelectionAnimation"
+- "StringLiteralType"
+- !private "~="
+- "PointSelectionSegue"
+- "=="
+- "AssignmentPrecedence"
+- "TimeInterval"
+- "CGFloat"
+>>>>>>> added-a-table-view-to-storyboard
 depends-member:
 - !private ["Ps9AnyObject", "HomeViewControllerContainers"]
 - !private ["Ps9AnyObject", "PointSelectionViewControllerContainers"]
