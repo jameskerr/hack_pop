@@ -15,7 +15,7 @@ defmodule HackPop.Story do
 
   def changeset(story, params \\ %{}) do
     story
-    |> Ecto.Changeset.cast(params, [:points])
+    |> Ecto.Changeset.cast(params, [:points, :trending])
   end
 
   def set_trending(stories) do
@@ -41,7 +41,7 @@ defmodule HackPop.Story do
                       nil ->
                         Repo.insert(story)
                       %Story{} ->
-                        Repo.update(Story.changeset(exists, %{points: story.points}))
+                        Repo.update(Story.changeset(exists, %{points: story.points, trending: true}))
                     end
     story
   end
