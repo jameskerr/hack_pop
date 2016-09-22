@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PointSelectViewController.revealHomeVC(AnyObject) -&gt; ():PointSelectViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segueAnimationId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "pointSelectionViewController.view.convertPoint(notifyThresholdPointSelectionView.frame.origin , toView:nil)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.identifier == segueAnimationId">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PointsRetainer.value.getter:PointsRetainer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_defaultValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PointSelectionSegue.open() -&gt; ():PointSelectionSegue.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PointSelectViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:PointSelectViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pointValue  as! String">
+            </PersistentString>
+            <PersistentString
+               value = "pointRetainer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PointSelectionSegue.(open() -&gt; ()).(closure #1):PointSelectionSegue.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.yTitleTopOffset">
+            </PersistentString>
+            <PersistentString
+               value = "notifyThresholdPointSelectionView.bounds.origin">
+            </PersistentString>
+            <PersistentString
+               value = "notifyThresholdPointSelectionView.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.viewDidLoad() -&gt; ():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pointRetainer.value">
+            </PersistentString>
+            <PersistentString
+               value = "storyThresholdButton">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PointSelectionAnimationController.(animateTransition(UIViewControllerContextTransitioning) -&gt; ()).(closure #1):PointSelectionAnimationController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "titleView.frame.origin.y - notifcationDeltaY">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
