@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, HttpStoriesListener, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var titleViewContainer: UIStackView!
     @IBOutlet weak var notifyViewContainer: UIStackView!
@@ -18,12 +18,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var storyThresholdButton: UIButton!
     
     let pointRetainer = PointsRetainer.instance()
+    let hackPopServer = HackPopServer.instance()
+    var stories:[Story]? = nil
+    var filteredStories:[Story]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let attributedString = HackPopStyle.UnderlinedText("\(pointRetainer.value) Points", fontSize: 18)
+        HackPopStyle.StyleTopStoriesTableView(tableView: topStoriesTable)
         storyThresholdButton.setAttributedTitle(attributedString, for: UIControlState())
         topStoriesLabel.text = "Stories Over \(pointRetainer.value) Points"
+        hackPopServer.getStories(delegate: self)
         
     }
     
@@ -44,11 +49,48 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: PointSelectionSegue.SegueId, sender: nil)
     }
     
+    @IBAction func openHackerNews(_ sender: AnyObject) {
+        let hackerNewsStory = Story(url: "https://news.ycombinator.com/", title: "", points: 0);
+        Story.current = hackerNewsStory
+        performSegue(withIdentifier:"openWebView", sender: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue is PointSelectionSegue {
             (segue as! PointSelectionSegue).animationType = .openPointSelection
+        }        
+    }
+    
+    func onStoriesLoaded(stories: [Story]) {
+        self.stories = stories
+        DispatchQueue.main.async {
+            self.topStoriesTable.reloadData()
         }
-        
+    }
+    
+    func onStoriesLoadedError(error: Error) {
+       //switch on error handling
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
+        if let currentStories = self.stories {
+            filteredStories = currentStories.filter({$0.meetsThreshold(threshold: pointRetainer.value)})
+            return filteredStories!.count
+        }
+        filteredStories = nil
+        //show no stories view
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let story = filteredStories?[(indexPath as NSIndexPath).row]
+        return HackPopStyle.GetStyledStoryCell(story!);
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let story = filteredStories?[(indexPath as NSIndexPath).row]
+        Story.current = story
+        performSegue(withIdentifier:"openWebView", sender: nil)
     }
 }
 

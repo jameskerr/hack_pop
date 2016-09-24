@@ -3,18 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "PointSelectViewController.revealHomeVC(AnyObject) -&gt; ():PointSelectViewController.swift">
+         contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "segueAnimationId">
+               value = "notifyThresholdPointSelectionView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "GLOBAL">
+         contextName = "PointSelectionSegue.(open() -&gt; ()).(closure #1):PointSelectionSegue.swift">
          <PersistentStrings>
             <PersistentString
-               value = "pointSelectionViewController.view.convertPoint(notifyThresholdPointSelectionView.frame.origin , toView:nil)">
+               value = "notifyThresholdPointSelectionView.bounds.origin">
+            </PersistentString>
+            <PersistentString
+               value = "self.yTitleTopOffset">
+            </PersistentString>
+            <PersistentString
+               value = "notifyThresholdPointSelectionView.frame.origin.y">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,15 +36,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PointsRetainer.value.getter:PointsRetainer.swift">
+         contextName = "HomeViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "_defaultValue">
+               value = "filteredStories!.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PointSelectionSegue.open() -&gt; ():PointSelectionSegue.swift">
+         contextName = "HackPopServer.(getStories(delegate : HttpStoriesListener) -&gt; ()).(closure #1):HackPopServer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSONSerialization.jsonObject(with: data!, options: .allowFragments)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "PointSelectViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:PointSelectViewController.swift">
@@ -52,16 +63,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PointSelectionSegue.(open() -&gt; ()).(closure #1):PointSelectionSegue.swift">
+         contextName = "PointSelectionSegue.open() -&gt; ():PointSelectionSegue.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.yTitleTopOffset">
-            </PersistentString>
-            <PersistentString
-               value = "notifyThresholdPointSelectionView.bounds.origin">
-            </PersistentString>
-            <PersistentString
-               value = "notifyThresholdPointSelectionView.frame.origin.y">
+               value = "notifyThresholdPointSelectionView.bounds">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -81,6 +86,25 @@
          <PersistentStrings>
             <PersistentString
                value = "titleView.frame.origin.y - notifcationDeltaY">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static HackPopStyle.GetStyledStoryCell(Story) -&gt; UITableViewCell:HackPopStyle.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PointsRetainer.value.getter:PointsRetainer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "_defaultValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PointSelectViewController.revealHomeVC(AnyObject) -&gt; ():PointSelectViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segueAnimationId">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

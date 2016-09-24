@@ -39,4 +39,24 @@ class HackPopStyle: NSObject {
         return cell
     
     }
+    
+    static func GetStyledStoryCell(_ story:Story) -> UITableViewCell {
+        
+        let text = "(\(story.points!)) \(story.title!)"
+        let cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: story.url?.absoluteString)
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = UITableViewCellSelectionStyle.none;
+        cell.textLabel?.attributedText = UnderlinedText(text, fontSize: 18)
+        cell.textLabel?.numberOfLines = 4
+        cell.textLabel?.layoutMargins = UIEdgeInsetsMake(30, 0, 30, 0);
+        return cell
+        
+    }
+    
+    static func StyleTopStoriesTableView(tableView:UITableView) {
+    
+        tableView.backgroundColor = UIColor.clear
+        tableView.contentInset = UIEdgeInsetsMake(-20, -15, 0, 0);
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+    }
 }

@@ -1,7 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "5e141c64779a9311ffe5ed447c9e3f2a"
-build_time: [527322816, 388898000]
-inputs:
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HomeViewController.swift": [527321437, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/AppDelegate.swift": [527225585, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [527321540, 0]

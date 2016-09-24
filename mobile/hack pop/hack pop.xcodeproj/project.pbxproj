@@ -10,12 +10,18 @@
 		7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */; };
 		7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */; };
 		7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */; };
+		7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D45519B1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
+		7D45519C1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
+		7D45519D1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
 		7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
 		7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
 		7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
-		7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
-		7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
-		7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
 		7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
 		7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
 		7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
@@ -46,6 +52,12 @@
 		7D63E4FC1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */; };
 		7D63E4FD1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
 		7D63E4FE1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
+		7D7D282D1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D282E1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D28311D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
+		7D7D28321D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
+		7D7D28331D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
 		7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
 		7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */; };
 		7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECFD1D8A3F2400A53ABF /* hack_pop.xcdatamodeld */; };
@@ -76,10 +88,12 @@
 		7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyleTests.swift; sourceTree = "<group>"; };
 		7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainerTests.swift; sourceTree = "<group>"; };
+		7D4551921D938A4D00A6D20E /* HackPopServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopServer.swift; sourceTree = "<group>"; };
+		7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStoriesListener.swift; sourceTree = "<group>"; };
+		7D45519A1D93AB0E00A6D20E /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainer.swift; sourceTree = "<group>"; };
 		7D4563B11D9117800083FEB0 /* HackPopStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyle.swift; sourceTree = "<group>"; };
 		7D4563B81D9124A10083FEB0 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
-		7D4563BB1D9125430083FEB0 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectViewController.swift; sourceTree = "<group>"; };
 		7D4A9E4C1D8D2FCA009A7A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectionSegue.swift; sourceTree = "<group>"; };
@@ -92,6 +106,8 @@
 		7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7D7D282C1D94DD20009334CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7D7D28301D963264009334CA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		7DE2ECF31D8A3F2400A53ABF /* hack pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hack pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +148,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D4551911D938A1C00A6D20E /* http */ = {
+			isa = PBXGroup;
+			children = (
+				7D4551921D938A4D00A6D20E /* HackPopServer.swift */,
+				7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */,
+				7D7D28301D963264009334CA /* Client.swift */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
 		7D4563B01D91174E0083FEB0 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */,
-				7D4563BB1D9125430083FEB0 /* Stories.swift */,
+				7D45519A1D93AB0E00A6D20E /* Story.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +188,7 @@
 			children = (
 				7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */,
 				7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */,
+				7D7D282C1D94DD20009334CA /* WebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +217,13 @@
 			name = fonts;
 			sourceTree = "<group>";
 		};
+		7D7D28271D94C719009334CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7DE2ECEA1D8A3F2400A53ABF = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +248,8 @@
 		7DE2ECF51D8A3F2400A53ABF /* hack pop */ = {
 			isa = PBXGroup;
 			children = (
+				7D7D28271D94C719009334CA /* Views */,
+				7D4551911D938A1C00A6D20E /* http */,
 				7D4563B71D911A390083FEB0 /* Models */,
 				7D4563B61D911A2B0083FEB0 /* Segues */,
 				7D4563B01D91174E0083FEB0 /* Styles */,
@@ -425,14 +461,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7D7D282D1D94DD20009334CA /* WebViewController.swift in Sources */,
+				7D7D28311D963264009334CA /* Client.swift in Sources */,
 				7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */,
-				7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */,
 				7D4A9E511D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
 				7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
 				7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */,
 				7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */,
 				7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D45519B1D93AB0E00A6D20E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,10 +485,14 @@
 				7DE2ED0F1D8A3F2500A53ABF /* hack_popTests.swift in Sources */,
 				7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */,
 				7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
-				7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7D7D28321D963264009334CA /* Client.swift in Sources */,
+				7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
+				7D7D282E1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */,
 				7D4A9E521D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
 				7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D45519C1D93AB0E00A6D20E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +501,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
+				7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7DE2ED1A1D8A3F2500A53ABF /* hack_popUITests.swift in Sources */,
 				7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */,
-				7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
+				7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */,
 				7D4A9E531D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
 				7D4A9E321D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D7D28331D963264009334CA /* Client.swift in Sources */,
+				7D45519D1D93AB0E00A6D20E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

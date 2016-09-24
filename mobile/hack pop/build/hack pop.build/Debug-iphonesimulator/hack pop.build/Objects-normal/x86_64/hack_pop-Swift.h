@@ -141,9 +141,30 @@ SWIFT_CLASS("_TtC8hack_pop11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC8hack_pop6Client")
+@interface Client : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSUserDefaults;
+
+SWIFT_CLASS("_TtC8hack_pop13HackPopServer")
+@interface HackPopServer : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HackPopServer * _Nullable _instance;)
++ (HackPopServer * _Nullable)_instance;
++ (void)set_instance:(HackPopServer * _Nullable)value;
++ (HackPopServer * _Nonnull)instance;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
+@property (nonatomic, copy) NSString * _Nonnull hostUrl;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class PointsRetainer;
 @class NSAttributedString;
 @class UITableViewCell;
+@class Story;
+@class UITableView;
 
 SWIFT_CLASS("_TtC8hack_pop12HackPopStyle")
 @interface HackPopStyle : NSObject
@@ -152,19 +173,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PointsRetain
 + (NSAttributedString * _Nonnull)UnderlinedText:(NSString * _Nonnull)string fontSize:(CGFloat)fontSize;
 + (NSAttributedString * _Nonnull)NormalText:(NSString * _Nonnull)string fontSize:(CGFloat)fontSize;
 + (UITableViewCell * _Nonnull)GetStyledPointSelectionCell:(id _Nonnull)pointValue;
++ (UITableViewCell * _Nonnull)GetStyledStoryCell:(Story * _Nonnull)story;
++ (void)StyleTopStoriesTableViewWithTableView:(UITableView * _Nonnull)tableView;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIStoryboardSegue;
 @class UIStackView;
-@class UITableView;
 @class UILabel;
 @class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC8hack_pop18HomeViewController")
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified titleViewContainer;
 @property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified notifyViewContainer;
 @property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified topStoriesContainerView;
@@ -172,12 +194,21 @@ SWIFT_CLASS("_TtC8hack_pop18HomeViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified topStoriesLabel;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified storyThresholdButton;
 @property (nonatomic, readonly, strong) PointsRetainer * _Nonnull pointRetainer;
+@property (nonatomic, readonly, strong) HackPopServer * _Nonnull hackPopServer;
+@property (nonatomic, copy) NSArray<Story *> * _Nullable stories;
+@property (nonatomic, copy) NSArray<Story *> * _Nullable filteredStories;
 - (void)viewDidLoad;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 - (void)didReceiveMemoryWarning;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 - (IBAction)revealPointSelectionVC:(id _Nonnull)sender;
+- (IBAction)openHackerNews:(id _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)onStoriesLoadedWithStories:(NSArray<Story *> * _Nonnull)stories;
+- (void)onStoriesLoadedErrorWithError:(NSError * _Nonnull)error;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -215,7 +246,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 @end
 
 @class NSArray;
-@class NSUserDefaults;
 
 SWIFT_CLASS("_TtC8hack_pop14PointsRetainer")
 @interface PointsRetainer : NSObject
@@ -229,6 +259,39 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PointsRetainer * _Null
 @property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
 @property (nonatomic) NSInteger value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop5Story")
+@interface Story : NSObject
+@property (nonatomic, copy) NSURL * _Nullable url;
+@property (nonatomic, copy) NSString * _Nullable title;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) Story * _Nullable current;)
++ (Story * _Nullable)current;
++ (void)setCurrent:(Story * _Nullable)value;
+- (nonnull instancetype)initWithUrl:(NSString * _Nonnull)url title:(NSString * _Nonnull)title points:(NSInteger)points OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)meetsThresholdWithThreshold:(NSInteger)threshold;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@class UIWebView;
+@class UIActivityIndicatorView;
+
+SWIFT_CLASS("_TtC8hack_pop17WebViewController")
+@interface WebViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified webViewIndicator;
+@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (void)loadWebView;
+- (IBAction)swipeBackHome:(id _Nonnull)sender;
+- (void)webView:(UIWebView * _Nonnull)webView didFailLoadWithError:(NSError * _Nonnull)error;
+- (void)webViewDidStartLoad:(UIWebView * _Nonnull)_;
+- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)_;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #pragma clang diagnostic pop
