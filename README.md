@@ -1,5 +1,7 @@
 # HackPop
 
+[![Build Status](https://travis-ci.org/jameskerr/hack_pop.svg?branch=master)](https://travis-ci.org/jameskerr/hack_pop)
+
 **TODO: Add description**
 
 ## Installation

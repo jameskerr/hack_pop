@@ -11,6 +11,7 @@ config :hack_pop, HackPop.Repo,
 
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
+config :plug, port: 3000
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
