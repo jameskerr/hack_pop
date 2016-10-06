@@ -11,7 +11,7 @@ config :hack_pop, HackPop.Repo,
 
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
-config :plug, port: 3000
+config :plug, port: 4001
 
 config :apns,
   pools: [
