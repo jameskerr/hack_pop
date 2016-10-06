@@ -23,6 +23,7 @@ defmodule HackPop.Mixfile do
                     :timex,
                     :cowboy,
                     :poison,
+                    :apns,
                     :plug],
      mod: {HackPop, []}]
   end
@@ -46,6 +47,7 @@ defmodule HackPop.Mixfile do
      {:plug, "~> 1.0"},
      {:poison, "~> 2.0"},
      {:exrm, "~> 1.0.6"},
+     {:apns, "~> 0.9.1"},
      {:exvcr, "~> 0.7", only: :test}]
   end
 end

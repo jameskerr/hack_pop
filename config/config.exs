@@ -11,7 +11,17 @@ config :hack_pop, HackPop.Repo,
 
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
-config :plug, port: 3000
+config :plug, port: 4001
+
+config :apns,
+  pools: [
+    dev_pool: [
+      env: :dev,
+      certfile: "secrets/apns_dev.pem"
+    ]
+  ]
+
+config :logger, level: :debug
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

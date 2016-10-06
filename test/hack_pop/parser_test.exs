@@ -1,5 +1,5 @@
 defmodule HackPopTest.ParserTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   setup_all do

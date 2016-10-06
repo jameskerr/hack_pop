@@ -1,6 +1,6 @@
 
 defmodule HackPop.StoryTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
   use Timex
 
   import Ecto.Query
