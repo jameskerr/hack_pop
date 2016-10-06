@@ -6,4 +6,7 @@ defmodule HackPop.Client do
     field :threshold, :integer
     timestamps
   end
+
+  def insert do
+  end
 end
