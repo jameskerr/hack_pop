@@ -8,3 +8,11 @@ config :hack_pop, HackPop.Repo,
   hostname: System.get_env("DB_HOST")
 
 config :plug, port: 80
+
+config :apns,
+  pools: [
+    dev_pool: [
+      env: :prod,
+      certfile: "secrets/apns_prod.pem"
+    ]
+  ]
