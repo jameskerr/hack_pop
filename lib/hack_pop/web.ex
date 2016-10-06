@@ -12,6 +12,11 @@ defmodule HackPop.Web do
     send_resp conn, 200, stories
   end
 
+  post "/clients/:client_id" do
+    {:ok, client } = HackPop.Repo.insert %HackPop.Client{ client_id: client_id, threshold: 300 }
+    send_resp conn, 201, Poison.encode!(client)
+  end
+
   get "/clients/:client_id/test" do
     query = from s in HackPop.Story, limit: 1,
                                      where: s.trending == true

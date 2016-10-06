@@ -7,7 +7,7 @@ otp_release:
 addons:
   s3_region: "us-east-1"
   artifacts:
-    key: AKIAJQKZSJ2BISWGYCNQ
+    key: AKIAJHTTJBIDKEDQVCOQ
     bucket: hack-pop-builds
     region: "us-east-1"
     paths:
