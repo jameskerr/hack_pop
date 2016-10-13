@@ -1,6 +1,6 @@
 defmodule HackPop.Web do
   use Plug.Router
-  import Ecto.Query, only: [from: 2]
+  import Ecto.Query, only: [from: 2, where: 2]
 
   alias HackPop.Repo
   alias HackPop.Client
@@ -35,9 +35,24 @@ defmodule HackPop.Web do
     end
   end
 
+  put "/clients/:client_id" do
+    client    = Client |> where(client_id: ^client_id) |> Repo.one
+    changeset = Client.changeset(client, %{threshold: conn.params["threshold"]})
+
+    case Repo.update(changeset) do
+      {:ok, _} -> send_resp conn, 204, ""
+      {:error, changeset} ->
+        errors = Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
+          Enum.reduce(opts, msg, fn {key, value}, acc ->
+            String.replace(msg, "%{#{key}}", to_string(value))
+          end)
+        end)
+        send_resp conn, 422, Poison.encode!(errors)
+    end
+  end
+
   get "/clients/:client_id/test" do
-    query = from s in Story, limit: 1,
-                                     where: s.trending == true
+    query = from s in Story, limit: 1, where: s.trending == true
     story = query |> Repo.one
     Pusher.push(story, client_id)
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
