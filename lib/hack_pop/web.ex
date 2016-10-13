@@ -2,26 +2,44 @@ defmodule HackPop.Web do
   use Plug.Router
   import Ecto.Query, only: [from: 2]
 
+  alias HackPop.Repo
+  alias HackPop.Client
+  alias HackPop.Story
+  alias HackPop.Pusher
+
+  plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   plug :match
   plug :dispatch
 
   get "/stories" do
-    query = from s in HackPop.Story, where:    s.trending == true,
+    query = from s in Story, where:    s.trending == true,
                                      order_by: [desc: :points]
-    stories = query |> HackPop.Repo.all |> Poison.encode!
+    stories = query |> Repo.all |> Poison.encode!
     send_resp conn, 200, stories
   end
 
-  post "/clients/:client_id" do
-    {:ok, client } = HackPop.Repo.insert %HackPop.Client{ client_id: client_id, threshold: 300 }
-    send_resp conn, 201, Poison.encode!(client)
+  post "/clients" do
+    params    = %{client_id: conn.params["client_id"]}
+    changeset = Client.changeset(%Client{}, params)
+
+    case Repo.insert(changeset) do
+      {:ok,    client }   -> send_resp conn, 201, Poison.encode!(client)
+      {:error, changeset} ->
+
+        errors = Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
+          Enum.reduce(opts, msg, fn {key, value}, acc ->
+            String.replace(msg, "%{#{key}}", to_string(value))
+          end)
+        end)
+        send_resp conn, 422, Poison.encode!(errors)
+    end
   end
 
   get "/clients/:client_id/test" do
-    query = from s in HackPop.Story, limit: 1,
+    query = from s in Story, limit: 1,
                                      where: s.trending == true
-    story = query |> HackPop.Repo.one
-    HackPop.Pusher.push(story, client_id)
+    story = query |> Repo.one
+    Pusher.push(story, client_id)
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
   end
 
