@@ -1,45 +1,71 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "RequestError"
 - "HackPopServer"
+- "=="
 provides-nominal:
+- "O8hack_pop12RequestError"
 - "C8hack_pop13HackPopServer"
 - "VC8hack_pop13HackPopServer12defaultsKeys"
 - "VC8hack_pop13HackPopServer9EndPoints"
 provides-member:
+- ["O8hack_pop12RequestError", ""]
 - ["C8hack_pop13HackPopServer", ""]
 - ["VC8hack_pop13HackPopServer12defaultsKeys", ""]
 - ["VC8hack_pop13HackPopServer9EndPoints", ""]
 provides-dynamic-lookup:
+- "defaults"
 - "instance"
 - "_instance"
-- "defaults"
+- "shouldRequestNewStories"
 - "hostUrl"
 depends-top-level:
-- !private "Story"
-- !private "NSURLRequest"
-- "UserDefaults"
-- !private "URL"
-- "Int"
-- !private "!="
-- "NSObject"
-- "StringLiteralType"
-- !private "NSError"
-- "HttpStoriesListener"
 - "HackPopServer"
+- !private "BooleanLiteralType"
+- "Error"
+- "Bool"
+- !private "||"
+- !private "NSURLRequest"
+- !private "!="
 - !private "JSONSerialization"
-- "String"
-- !private "CastingPrecedence"
-- !private "=="
-- "AssignmentPrecedence"
 - !private "URLSession"
+- !private "<"
+- !private "Client"
+- "NSDate"
 - "URLRequest"
+- "StringLiteralType"
+- !private "URL"
+- "HttpStoriesListener"
+- "HttpClientCreateListener"
+- !private "NSError"
+- "RequestError"
+- "Int"
+- "UserDefaults"
+- "=="
+- "AssignmentPrecedence"
+- !private "Double"
+- "CastingPrecedence"
+- !private ">="
+- "Story"
+- "HttpSetThresholdListener"
+- "NSObject"
+- !private "-"
+- !private "!"
+- !private "PointsRetainer"
+- "String"
+- !private ">"
+- !private "HTTPURLResponse"
 depends-member:
 - !private ["Ps9AnyObject", "CachePolicy"]
+- !private ["Ps9AnyObject", "Client"]
 - !private ["Ps9AnyObject", "Encoding"]
 - !private ["Ps9AnyObject", "EndPoints"]
 - !private ["Ps9AnyObject", "HackPopServer"]
 - !private ["Ps9AnyObject", "JSONSerialization"]
+- !private ["Ps9AnyObject", "NSDate"]
 - !private ["Ps9AnyObject", "NSURLRequest"]
+- !private ["Ps9AnyObject", "PointsRetainer"]
+- !private ["Ps9AnyObject", "RequestError"]
 - !private ["Ps9AnyObject", "Story"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "URL"]
@@ -47,6 +73,7 @@ depends-member:
 - !private ["Ps9AnyObject", "URLSession"]
 - ["Ps9AnyObject", "UserDefaults"]
 - ["Ps9AnyObject", "_instance"]
+- ["Ps9AnyObject", "cachedStories"]
 - !private ["Ps9AnyObject", "data"]
 - !private ["Ps9AnyObject", "dataTask"]
 - ["Ps9AnyObject", "defaults"]
@@ -56,11 +83,19 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "instance"]
 - !private ["Ps9AnyObject", "jsonObject"]
+- ["Ps9AnyObject", "lastRequestTime"]
 - ["Ps9AnyObject", "processStories"]
 - !private ["Ps9AnyObject", "resume"]
+- ["Ps9AnyObject", "setClient"]
+- ["Ps9AnyObject", "setTheshold"]
 - !private ["Ps9AnyObject", "shared"]
+- ["Ps9AnyObject", "shouldRequestNewStories"]
 - ["Ps9AnyObject", "standard"]
+- !private ["Ps9AnyObject", "statusCode"]
 - !private ["Ps9AnyObject", "string"]
+- !private ["Ps9AnyObject", "successfullySetId"]
+- !private ["Ps9AnyObject", "timeIntervalSinceNow"]
+- !private ["Ps9AnyObject", "value"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Iterator"]
 - !private ["Sa", "_Element"]
@@ -72,16 +107,21 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "Iterator"]
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "append"]
+- !private ["Ps17BitwiseOperations", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["Ps7CVarArg", "CachePolicy"]
+- !private ["Ps7CVarArg", "Client"]
 - !private ["Ps7CVarArg", "Encoding"]
 - !private ["Ps7CVarArg", "EndPoints"]
 - !private ["Ps7CVarArg", "HackPopServer"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "JSONSerialization"]
+- !private ["Ps7CVarArg", "NSDate"]
 - !private ["Ps7CVarArg", "NSURLRequest"]
+- !private ["Ps7CVarArg", "PointsRetainer"]
+- !private ["Ps7CVarArg", "RequestError"]
 - !private ["Ps7CVarArg", "Story"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
@@ -92,25 +132,38 @@ depends-member:
 - !private ["Ps7CVarArg", "_Element"]
 - ["Ps7CVarArg", "_instance"]
 - !private ["Ps7CVarArg", "append"]
+- ["Ps7CVarArg", "cachedStories"]
 - !private ["Ps7CVarArg", "data"]
 - !private ["Ps7CVarArg", "dataTask"]
 - ["Ps7CVarArg", "defaults"]
 - !private ["Ps7CVarArg", "defaultsKeys"]
 - ["Ps7CVarArg", "getStories"]
+- !private ["Ps7CVarArg", "hashValue"]
 - ["Ps7CVarArg", "hostUrl"]
 - ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "instance"]
 - !private ["Ps7CVarArg", "jsonObject"]
+- ["Ps7CVarArg", "lastRequestTime"]
 - ["Ps7CVarArg", "processStories"]
 - !private ["Ps7CVarArg", "resume"]
+- ["Ps7CVarArg", "setClient"]
+- ["Ps7CVarArg", "setTheshold"]
 - !private ["Ps7CVarArg", "shared"]
+- ["Ps7CVarArg", "shouldRequestNewStories"]
 - ["Ps7CVarArg", "standard"]
+- !private ["Ps7CVarArg", "statusCode"]
 - !private ["Ps7CVarArg", "string"]
 - !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "successfullySetId"]
+- !private ["Ps7CVarArg", "timeIntervalSinceNow"]
+- !private ["Ps7CVarArg", "value"]
 - ["Ps7CVarArg", ""]
 - ["OCSo12NSURLRequest11CachePolicy", "deinit"]
 - !private ["OCSo12NSURLRequest11CachePolicy", "reloadIgnoringCacheData"]
 - !private ["Vs9Character", "deinit"]
+- ["C8hack_pop6Client", "deinit"]
+- !private ["C8hack_pop6Client", "instance"]
+- !private ["C8hack_pop6Client", "successfullySetId"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "Iterator"]
 - !private ["Ps10Collection", "SubSequence"]
@@ -119,15 +172,20 @@ depends-member:
 - !private ["Ps10Collection", "subscript"]
 - !private ["Ps10Comparable", "Encoding"]
 - !private ["Ps10Comparable", "data"]
+- !private ["Ps10Comparable", "hashValue"]
 - ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "CachePolicy"]
+- !private ["Ps28CustomDebugStringConvertible", "Client"]
 - !private ["Ps28CustomDebugStringConvertible", "Encoding"]
 - !private ["Ps28CustomDebugStringConvertible", "EndPoints"]
 - !private ["Ps28CustomDebugStringConvertible", "HackPopServer"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "JSONSerialization"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDate"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURLRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "PointsRetainer"]
+- !private ["Ps28CustomDebugStringConvertible", "RequestError"]
 - !private ["Ps28CustomDebugStringConvertible", "Story"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -137,8 +195,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "UserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "_instance"]
+- !private ["Ps28CustomDebugStringConvertible", "addValue"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "cachePolicy"]
+- ["Ps28CustomDebugStringConvertible", "cachedStories"]
 - !private ["Ps28CustomDebugStringConvertible", "data"]
 - !private ["Ps28CustomDebugStringConvertible", "dataTask"]
 - ["Ps28CustomDebugStringConvertible", "defaults"]
@@ -150,40 +210,56 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "instance"]
 - !private ["Ps28CustomDebugStringConvertible", "jsonObject"]
+- ["Ps28CustomDebugStringConvertible", "lastRequestTime"]
 - ["Ps28CustomDebugStringConvertible", "processStories"]
 - !private ["Ps28CustomDebugStringConvertible", "resume"]
+- ["Ps28CustomDebugStringConvertible", "setClient"]
+- ["Ps28CustomDebugStringConvertible", "setTheshold"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
+- ["Ps28CustomDebugStringConvertible", "shouldRequestNewStories"]
 - ["Ps28CustomDebugStringConvertible", "some"]
 - ["Ps28CustomDebugStringConvertible", "standard"]
+- !private ["Ps28CustomDebugStringConvertible", "statusCode"]
 - !private ["Ps28CustomDebugStringConvertible", "string"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "successfullySetId"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSinceNow"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Encoding"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "data"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSinceNow"]
 - !private ["Ps17CustomReflectable", "Encoding"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "Iterator"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "addValue"]
 - !private ["Ps17CustomReflectable", "append"]
 - !private ["Ps17CustomReflectable", "cachePolicy"]
 - !private ["Ps17CustomReflectable", "data"]
+- !private ["Ps17CustomReflectable", "hashValue"]
 - !private ["Ps17CustomReflectable", "httpBody"]
 - !private ["Ps17CustomReflectable", "httpMethod"]
 - ["Ps17CustomReflectable", "init"]
 - ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "CachePolicy"]
+- !private ["Ps23CustomStringConvertible", "Client"]
 - !private ["Ps23CustomStringConvertible", "Encoding"]
 - !private ["Ps23CustomStringConvertible", "EndPoints"]
 - !private ["Ps23CustomStringConvertible", "HackPopServer"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "JSONSerialization"]
+- !private ["Ps23CustomStringConvertible", "NSDate"]
 - !private ["Ps23CustomStringConvertible", "NSURLRequest"]
+- !private ["Ps23CustomStringConvertible", "PointsRetainer"]
+- !private ["Ps23CustomStringConvertible", "RequestError"]
 - !private ["Ps23CustomStringConvertible", "Story"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
@@ -194,33 +270,44 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "_instance"]
+- !private ["Ps23CustomStringConvertible", "addValue"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "cachePolicy"]
+- ["Ps23CustomStringConvertible", "cachedStories"]
 - !private ["Ps23CustomStringConvertible", "data"]
 - !private ["Ps23CustomStringConvertible", "dataTask"]
 - ["Ps23CustomStringConvertible", "defaults"]
 - !private ["Ps23CustomStringConvertible", "defaultsKeys"]
 - ["Ps23CustomStringConvertible", "getStories"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
 - ["Ps23CustomStringConvertible", "hostUrl"]
 - !private ["Ps23CustomStringConvertible", "httpBody"]
 - !private ["Ps23CustomStringConvertible", "httpMethod"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "instance"]
 - !private ["Ps23CustomStringConvertible", "jsonObject"]
+- ["Ps23CustomStringConvertible", "lastRequestTime"]
 - ["Ps23CustomStringConvertible", "processStories"]
 - !private ["Ps23CustomStringConvertible", "resume"]
+- ["Ps23CustomStringConvertible", "setClient"]
+- ["Ps23CustomStringConvertible", "setTheshold"]
 - !private ["Ps23CustomStringConvertible", "shared"]
+- ["Ps23CustomStringConvertible", "shouldRequestNewStories"]
 - ["Ps23CustomStringConvertible", "standard"]
+- !private ["Ps23CustomStringConvertible", "statusCode"]
 - !private ["Ps23CustomStringConvertible", "string"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "successfullySetId"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSinceNow"]
 - !private ["Ps23CustomStringConvertible", "utf8"]
+- !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["V10Foundation4Data", "deinit"]
 - !private ["Vs10Dictionary", "Index"]
 - !private ["Vs10Dictionary", "SubSequence"]
 - !private ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["Sd", "deinit"]
+- ["Sd", "deinit"]
 - ["VE10FoundationSS8Encoding", "deinit"]
 - !private ["VE10FoundationSS8Encoding", "utf8"]
 - ["VC8hack_pop13HackPopServer9EndPoints", "CreateClient"]
@@ -234,41 +321,70 @@ depends-member:
 - ["VC8hack_pop13HackPopServer9EndPoints", "UpdateThreshold"]
 - ["VC8hack_pop13HackPopServer9EndPoints", "init"]
 - !private ["Ps9Equatable", "CachePolicy"]
+- !private ["Ps9Equatable", "Client"]
 - !private ["Ps9Equatable", "Encoding"]
 - !private ["Ps9Equatable", "EndPoints"]
 - !private ["Ps9Equatable", "HackPopServer"]
+- !private ["Ps9Equatable", "InvalidStatusCode"]
 - !private ["Ps9Equatable", "JSONSerialization"]
+- !private ["Ps9Equatable", "NSDate"]
 - !private ["Ps9Equatable", "NSURLRequest"]
+- !private ["Ps9Equatable", "PointsRetainer"]
+- !private ["Ps9Equatable", "RequestError"]
 - !private ["Ps9Equatable", "Story"]
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "URL"]
 - !private ["Ps9Equatable", "URLRequest"]
 - !private ["Ps9Equatable", "URLSession"]
 - ["Ps9Equatable", "UserDefaults"]
+- ["Ps9Equatable", "_code"]
+- ["Ps9Equatable", "_domain"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_getEmbeddedNSError"]
 - ["Ps9Equatable", "_instance"]
+- ["Ps9Equatable", "_toAnyHashable"]
+- ["Ps9Equatable", "_userInfo"]
+- !private ["Ps9Equatable", "addValue"]
 - !private ["Ps9Equatable", "allowFragments"]
 - !private ["Ps9Equatable", "cachePolicy"]
+- ["Ps9Equatable", "cachedStories"]
 - !private ["Ps9Equatable", "data"]
 - !private ["Ps9Equatable", "dataTask"]
 - ["Ps9Equatable", "defaults"]
 - !private ["Ps9Equatable", "defaultsKeys"]
 - ["Ps9Equatable", "getStories"]
+- ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "hostUrl"]
 - !private ["Ps9Equatable", "httpBody"]
 - !private ["Ps9Equatable", "httpMethod"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "instance"]
 - !private ["Ps9Equatable", "jsonObject"]
+- ["Ps9Equatable", "lastRequestTime"]
 - ["Ps9Equatable", "processStories"]
 - !private ["Ps9Equatable", "reloadIgnoringCacheData"]
 - !private ["Ps9Equatable", "resume"]
+- ["Ps9Equatable", "setClient"]
+- ["Ps9Equatable", "setTheshold"]
 - !private ["Ps9Equatable", "shared"]
+- ["Ps9Equatable", "shouldRequestNewStories"]
 - ["Ps9Equatable", "standard"]
+- !private ["Ps9Equatable", "statusCode"]
 - !private ["Ps9Equatable", "string"]
+- !private ["Ps9Equatable", "successfullySetId"]
+- !private ["Ps9Equatable", "timeIntervalSinceNow"]
 - !private ["Ps9Equatable", "utf8"]
+- !private ["Ps9Equatable", "value"]
 - ["Ps9Equatable", ""]
+- !private ["Ps5Error", "InvalidStatusCode"]
+- ["Ps5Error", "_code"]
+- ["Ps5Error", "_domain"]
+- ["Ps5Error", "_getEmbeddedNSError"]
+- ["Ps5Error", "_toAnyHashable"]
+- ["Ps5Error", "_userInfo"]
 - !private ["Ps5Error", "deinit"]
+- ["Ps5Error", "hashValue"]
+- ["Ps5Error", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "allowFragments"]
@@ -280,6 +396,7 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "Encoding"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "data"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
 - ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "Encoding"]
 - !private ["Ps32ExpressibleByStringInterpolation", "data"]
@@ -291,20 +408,32 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "data"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["CSo15HTTPURLResponse", "deinit"]
+- !private ["CSo15HTTPURLResponse", "statusCode"]
+- ["C8hack_pop13HackPopServer", "Bool"]
+- !private ["C8hack_pop13HackPopServer", "Client"]
+- !private ["C8hack_pop13HackPopServer", "Double"]
 - ["C8hack_pop13HackPopServer", "EndPoints"]
+- !private ["C8hack_pop13HackPopServer", "HTTPURLResponse"]
 - ["C8hack_pop13HackPopServer", "HackPopServer"]
+- ["C8hack_pop13HackPopServer", "HttpClientCreateListener"]
+- ["C8hack_pop13HackPopServer", "HttpSetThresholdListener"]
 - ["C8hack_pop13HackPopServer", "HttpStoriesListener"]
 - ["C8hack_pop13HackPopServer", "Int"]
 - !private ["C8hack_pop13HackPopServer", "JSONSerialization"]
+- ["C8hack_pop13HackPopServer", "NSDate"]
 - !private ["C8hack_pop13HackPopServer", "NSError"]
 - !private ["C8hack_pop13HackPopServer", "NSURLRequest"]
-- !private ["C8hack_pop13HackPopServer", "Story"]
+- !private ["C8hack_pop13HackPopServer", "PointsRetainer"]
+- !private ["C8hack_pop13HackPopServer", "RequestError"]
+- ["C8hack_pop13HackPopServer", "Story"]
 - ["C8hack_pop13HackPopServer", "String"]
 - !private ["C8hack_pop13HackPopServer", "URL"]
 - ["C8hack_pop13HackPopServer", "URLRequest"]
 - !private ["C8hack_pop13HackPopServer", "URLSession"]
 - ["C8hack_pop13HackPopServer", "UserDefaults"]
 - ["C8hack_pop13HackPopServer", "_instance"]
+- !private ["C8hack_pop13HackPopServer", "cachedStories"]
 - ["C8hack_pop13HackPopServer", "defaults"]
 - ["C8hack_pop13HackPopServer", "defaultsKeys"]
 - ["C8hack_pop13HackPopServer", "deinit"]
@@ -312,42 +441,73 @@ depends-member:
 - ["C8hack_pop13HackPopServer", "hostUrl"]
 - ["C8hack_pop13HackPopServer", "init"]
 - ["C8hack_pop13HackPopServer", "instance"]
+- !private ["C8hack_pop13HackPopServer", "lastRequestTime"]
 - !private ["C8hack_pop13HackPopServer", "processStories"]
+- ["C8hack_pop13HackPopServer", "setClient"]
+- ["C8hack_pop13HackPopServer", "setTheshold"]
+- ["C8hack_pop13HackPopServer", "shouldRequestNewStories"]
 - !private ["Ps8Hashable", "CachePolicy"]
+- !private ["Ps8Hashable", "Client"]
 - !private ["Ps8Hashable", "Encoding"]
 - !private ["Ps8Hashable", "EndPoints"]
 - !private ["Ps8Hashable", "HackPopServer"]
+- !private ["Ps8Hashable", "InvalidStatusCode"]
 - !private ["Ps8Hashable", "JSONSerialization"]
+- !private ["Ps8Hashable", "NSDate"]
 - !private ["Ps8Hashable", "NSURLRequest"]
+- !private ["Ps8Hashable", "PointsRetainer"]
+- !private ["Ps8Hashable", "RequestError"]
 - !private ["Ps8Hashable", "Story"]
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "URL"]
 - !private ["Ps8Hashable", "URLRequest"]
 - !private ["Ps8Hashable", "URLSession"]
 - ["Ps8Hashable", "UserDefaults"]
+- ["Ps8Hashable", "_code"]
+- ["Ps8Hashable", "_domain"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_getEmbeddedNSError"]
 - ["Ps8Hashable", "_instance"]
+- ["Ps8Hashable", "_toAnyHashable"]
+- ["Ps8Hashable", "_userInfo"]
+- !private ["Ps8Hashable", "addValue"]
 - !private ["Ps8Hashable", "cachePolicy"]
+- ["Ps8Hashable", "cachedStories"]
 - !private ["Ps8Hashable", "data"]
 - !private ["Ps8Hashable", "dataTask"]
 - ["Ps8Hashable", "defaults"]
 - !private ["Ps8Hashable", "defaultsKeys"]
 - ["Ps8Hashable", "getStories"]
+- ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "hostUrl"]
 - !private ["Ps8Hashable", "httpBody"]
 - !private ["Ps8Hashable", "httpMethod"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "instance"]
 - !private ["Ps8Hashable", "jsonObject"]
+- ["Ps8Hashable", "lastRequestTime"]
 - ["Ps8Hashable", "processStories"]
 - !private ["Ps8Hashable", "reloadIgnoringCacheData"]
 - !private ["Ps8Hashable", "resume"]
+- ["Ps8Hashable", "setClient"]
+- ["Ps8Hashable", "setTheshold"]
 - !private ["Ps8Hashable", "shared"]
+- ["Ps8Hashable", "shouldRequestNewStories"]
 - ["Ps8Hashable", "standard"]
+- !private ["Ps8Hashable", "statusCode"]
 - !private ["Ps8Hashable", "string"]
+- !private ["Ps8Hashable", "successfullySetId"]
+- !private ["Ps8Hashable", "timeIntervalSinceNow"]
 - !private ["Ps8Hashable", "utf8"]
+- !private ["Ps8Hashable", "value"]
 - ["Ps8Hashable", ""]
-- !private ["P8hack_pop19HttpStoriesListener", "deinit"]
+- !private ["P8hack_pop24HttpClientCreateListener", "deinit"]
+- !private ["P8hack_pop24HttpClientCreateListener", "onClientCreated"]
+- !private ["P8hack_pop24HttpClientCreateListener", "onClientCreatedFailed"]
+- ["P8hack_pop24HttpSetThresholdListener", "deinit"]
+- !private ["P8hack_pop24HttpSetThresholdListener", "onThresholdSet"]
+- !private ["P8hack_pop24HttpSetThresholdListener", "onThresholdSetFailed"]
+- ["P8hack_pop19HttpStoriesListener", "deinit"]
 - !private ["P8hack_pop19HttpStoriesListener", "onStoriesLoaded"]
 - !private ["P8hack_pop19HttpStoriesListener", "onStoriesLoadedError"]
 - !private ["Ps9Indexable", "Index"]
@@ -364,10 +524,13 @@ depends-member:
 - !private ["Ps13IndexableBase", "subscript"]
 - !private ["Vs16IndexingIterator", "Element"]
 - ["Si", "deinit"]
+- !private ["Si", "hashValue"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
+- !private ["Ps7Integer", "hashValue"]
+- !private ["Ps17IntegerArithmetic", "hashValue"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["CSo17JSONSerialization", "jsonObject"]
 - !private ["Ps25LosslessStringConvertible", "Encoding"]
@@ -376,6 +539,7 @@ depends-member:
 - ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "Encoding"]
 - !private ["Ps10MirrorPath", "data"]
+- !private ["Ps10MirrorPath", "hashValue"]
 - ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "Iterator"]
 - !private ["Ps17MutableCollection", "_Element"]
@@ -387,32 +551,49 @@ depends-member:
 - !private ["PSo8NSCoding", "Encoding"]
 - !private ["PSo8NSCoding", "data"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "statusCode"]
+- !private ["PSo8NSCoding", "timeIntervalSinceNow"]
 - !private ["PSo9NSCopying", "CachePolicy"]
 - !private ["PSo9NSCopying", "Encoding"]
 - !private ["PSo9NSCopying", "data"]
 - ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "resume"]
+- !private ["PSo9NSCopying", "statusCode"]
+- !private ["PSo9NSCopying", "timeIntervalSinceNow"]
+- ["CSo6NSDate", "deinit"]
+- !private ["CSo6NSDate", "init"]
+- !private ["CSo6NSDate", "timeIntervalSinceNow"]
 - ["CSo7NSError", "deinit"]
 - !private ["PSo16NSMutableCopying", "CachePolicy"]
 - !private ["PSo16NSMutableCopying", "Encoding"]
 - !private ["PSo16NSMutableCopying", "data"]
 - ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CachePolicy"]
+- !private ["CSo8NSObject", "Client"]
+- !private ["CSo8NSObject", "Double"]
 - !private ["CSo8NSObject", "Encoding"]
 - !private ["CSo8NSObject", "EndPoints"]
+- !private ["CSo8NSObject", "HTTPURLResponse"]
 - ["CSo8NSObject", "HackPopServer"]
+- ["CSo8NSObject", "HttpClientCreateListener"]
+- ["CSo8NSObject", "HttpSetThresholdListener"]
 - ["CSo8NSObject", "HttpStoriesListener"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "JSONSerialization"]
+- ["CSo8NSObject", "NSDate"]
 - !private ["CSo8NSObject", "NSError"]
 - !private ["CSo8NSObject", "NSURLRequest"]
-- !private ["CSo8NSObject", "Story"]
+- !private ["CSo8NSObject", "PointsRetainer"]
+- !private ["CSo8NSObject", "RequestError"]
+- ["CSo8NSObject", "Story"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "URL"]
 - ["CSo8NSObject", "URLRequest"]
 - !private ["CSo8NSObject", "URLSession"]
 - ["CSo8NSObject", "UserDefaults"]
 - ["CSo8NSObject", "_instance"]
+- ["CSo8NSObject", "cachedStories"]
 - !private ["CSo8NSObject", "data"]
 - !private ["CSo8NSObject", "dataTask"]
 - ["CSo8NSObject", "defaults"]
@@ -423,18 +604,30 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "instance"]
 - !private ["CSo8NSObject", "jsonObject"]
+- ["CSo8NSObject", "lastRequestTime"]
 - ["CSo8NSObject", "processStories"]
 - !private ["CSo8NSObject", "resume"]
+- ["CSo8NSObject", "setClient"]
+- ["CSo8NSObject", "setTheshold"]
 - !private ["CSo8NSObject", "shared"]
+- ["CSo8NSObject", "shouldRequestNewStories"]
 - ["CSo8NSObject", "standard"]
+- !private ["CSo8NSObject", "statusCode"]
 - !private ["CSo8NSObject", "string"]
+- !private ["CSo8NSObject", "successfullySetId"]
+- !private ["CSo8NSObject", "timeIntervalSinceNow"]
+- !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "CachePolicy"]
+- !private ["PSo16NSObjectProtocol", "Client"]
 - !private ["PSo16NSObjectProtocol", "Encoding"]
 - !private ["PSo16NSObjectProtocol", "EndPoints"]
 - !private ["PSo16NSObjectProtocol", "HackPopServer"]
 - !private ["PSo16NSObjectProtocol", "JSONSerialization"]
+- !private ["PSo16NSObjectProtocol", "NSDate"]
 - !private ["PSo16NSObjectProtocol", "NSURLRequest"]
+- !private ["PSo16NSObjectProtocol", "PointsRetainer"]
+- !private ["PSo16NSObjectProtocol", "RequestError"]
 - !private ["PSo16NSObjectProtocol", "Story"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "URL"]
@@ -442,6 +635,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "URLSession"]
 - ["PSo16NSObjectProtocol", "UserDefaults"]
 - ["PSo16NSObjectProtocol", "_instance"]
+- ["PSo16NSObjectProtocol", "cachedStories"]
 - !private ["PSo16NSObjectProtocol", "data"]
 - !private ["PSo16NSObjectProtocol", "dataTask"]
 - ["PSo16NSObjectProtocol", "defaults"]
@@ -451,16 +645,26 @@ depends-member:
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "instance"]
 - !private ["PSo16NSObjectProtocol", "jsonObject"]
+- ["PSo16NSObjectProtocol", "lastRequestTime"]
 - ["PSo16NSObjectProtocol", "processStories"]
 - !private ["PSo16NSObjectProtocol", "resume"]
+- ["PSo16NSObjectProtocol", "setClient"]
+- ["PSo16NSObjectProtocol", "setTheshold"]
 - !private ["PSo16NSObjectProtocol", "shared"]
+- ["PSo16NSObjectProtocol", "shouldRequestNewStories"]
 - ["PSo16NSObjectProtocol", "standard"]
+- !private ["PSo16NSObjectProtocol", "statusCode"]
 - !private ["PSo16NSObjectProtocol", "string"]
+- !private ["PSo16NSObjectProtocol", "successfullySetId"]
+- !private ["PSo16NSObjectProtocol", "timeIntervalSinceNow"]
+- !private ["PSo16NSObjectProtocol", "value"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CachePolicy"]
 - !private ["PSo14NSSecureCoding", "Encoding"]
 - !private ["PSo14NSSecureCoding", "data"]
 - ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "statusCode"]
+- !private ["PSo14NSSecureCoding", "timeIntervalSinceNow"]
 - !private ["CSo8NSString", "Encoding"]
 - !private ["CSo8NSString", "data"]
 - ["CSo8NSString", "init"]
@@ -468,6 +672,9 @@ depends-member:
 - !private ["Ps9OptionSet", "allowFragments"]
 - ["Sq", "deinit"]
 - ["Sq", "some"]
+- ["C8hack_pop14PointsRetainer", "deinit"]
+- !private ["C8hack_pop14PointsRetainer", "instance"]
+- !private ["C8hack_pop14PointsRetainer", "value"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
@@ -485,10 +692,20 @@ depends-member:
 - !private ["Ps16RawRepresentable", "utf8"]
 - !private ["VCSo17JSONSerialization14ReadingOptions", "allowFragments"]
 - !private ["VCSo17JSONSerialization14ReadingOptions", "deinit"]
+- !private ["P10Foundation20ReferenceConvertible", "addValue"]
 - !private ["P10Foundation20ReferenceConvertible", "cachePolicy"]
 - !private ["P10Foundation20ReferenceConvertible", "httpBody"]
 - !private ["P10Foundation20ReferenceConvertible", "httpMethod"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
+- ["O8hack_pop12RequestError", "=="]
+- ["O8hack_pop12RequestError", "InvalidStatusCode"]
+- ["O8hack_pop12RequestError", "_code"]
+- ["O8hack_pop12RequestError", "_domain"]
+- ["O8hack_pop12RequestError", "_getEmbeddedNSError"]
+- ["O8hack_pop12RequestError", "_toAnyHashable"]
+- ["O8hack_pop12RequestError", "_userInfo"]
+- ["O8hack_pop12RequestError", "deinit"]
+- ["O8hack_pop12RequestError", "hashValue"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
 - !private ["Ps8Sequence", "Iterator"]
@@ -497,12 +714,15 @@ depends-member:
 - !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "subscript"]
 - !private ["Ps10SetAlgebra", "allowFragments"]
+- !private ["Ps13SignedInteger", "hashValue"]
+- !private ["Ps12SignedNumber", "hashValue"]
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "Iterator"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
 - !private ["C8hack_pop5Story", "deinit"]
 - !private ["C8hack_pop5Story", "init"]
+- !private ["Ps10Strideable", "hashValue"]
 - !private ["SS", "Encoding"]
 - !private ["SS", "data"]
 - ["SS", "deinit"]
@@ -520,11 +740,13 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - ["V10Foundation3URL", "deinit"]
 - !private ["V10Foundation3URL", "init"]
+- !private ["V10Foundation10URLRequest", "addValue"]
 - !private ["V10Foundation10URLRequest", "cachePolicy"]
 - ["V10Foundation10URLRequest", "deinit"]
 - !private ["V10Foundation10URLRequest", "httpBody"]
 - !private ["V10Foundation10URLRequest", "httpMethod"]
 - !private ["V10Foundation10URLRequest", "init"]
+- !private ["CSo11URLResponse", "statusCode"]
 - !private ["CSo10URLSession", "dataTask"]
 - ["CSo10URLSession", "deinit"]
 - !private ["CSo10URLSession", "shared"]
@@ -545,6 +767,7 @@ depends-member:
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "Encoding"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "data"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "Encoding"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "data"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
@@ -559,54 +782,83 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "Encoding"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "data"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "timeIntervalSinceNow"]
 - !private ["Ps9_Hashable", "CachePolicy"]
+- !private ["Ps9_Hashable", "Client"]
 - !private ["Ps9_Hashable", "Encoding"]
 - !private ["Ps9_Hashable", "EndPoints"]
 - !private ["Ps9_Hashable", "HackPopServer"]
+- !private ["Ps9_Hashable", "InvalidStatusCode"]
 - !private ["Ps9_Hashable", "JSONSerialization"]
+- !private ["Ps9_Hashable", "NSDate"]
 - !private ["Ps9_Hashable", "NSURLRequest"]
+- !private ["Ps9_Hashable", "PointsRetainer"]
+- !private ["Ps9_Hashable", "RequestError"]
 - !private ["Ps9_Hashable", "Story"]
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "URL"]
 - !private ["Ps9_Hashable", "URLRequest"]
 - !private ["Ps9_Hashable", "URLSession"]
 - ["Ps9_Hashable", "UserDefaults"]
+- ["Ps9_Hashable", "_code"]
+- ["Ps9_Hashable", "_domain"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_getEmbeddedNSError"]
 - ["Ps9_Hashable", "_instance"]
+- ["Ps9_Hashable", "_toAnyHashable"]
+- ["Ps9_Hashable", "_userInfo"]
+- !private ["Ps9_Hashable", "addValue"]
 - !private ["Ps9_Hashable", "cachePolicy"]
+- ["Ps9_Hashable", "cachedStories"]
 - !private ["Ps9_Hashable", "data"]
 - !private ["Ps9_Hashable", "dataTask"]
 - ["Ps9_Hashable", "defaults"]
 - !private ["Ps9_Hashable", "defaultsKeys"]
 - ["Ps9_Hashable", "getStories"]
+- ["Ps9_Hashable", "hashValue"]
 - ["Ps9_Hashable", "hostUrl"]
 - !private ["Ps9_Hashable", "httpBody"]
 - !private ["Ps9_Hashable", "httpMethod"]
 - ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "instance"]
 - !private ["Ps9_Hashable", "jsonObject"]
+- ["Ps9_Hashable", "lastRequestTime"]
 - ["Ps9_Hashable", "processStories"]
 - !private ["Ps9_Hashable", "reloadIgnoringCacheData"]
 - !private ["Ps9_Hashable", "resume"]
+- ["Ps9_Hashable", "setClient"]
+- ["Ps9_Hashable", "setTheshold"]
 - !private ["Ps9_Hashable", "shared"]
+- ["Ps9_Hashable", "shouldRequestNewStories"]
 - ["Ps9_Hashable", "standard"]
+- !private ["Ps9_Hashable", "statusCode"]
 - !private ["Ps9_Hashable", "string"]
+- !private ["Ps9_Hashable", "successfullySetId"]
+- !private ["Ps9_Hashable", "timeIntervalSinceNow"]
 - !private ["Ps9_Hashable", "utf8"]
+- !private ["Ps9_Hashable", "value"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps8_Integer", "hashValue"]
+- !private ["Ps18_IntegerArithmetic", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "Encoding"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "addValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "append"]
 - !private ["Ps21_ObjectiveCBridgeable", "cachePolicy"]
 - !private ["Ps21_ObjectiveCBridgeable", "data"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "httpBody"]
 - !private ["Ps21_ObjectiveCBridgeable", "httpMethod"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps14_SignedInteger", "hashValue"]
+- !private ["Ps11_Strideable", "hashValue"]
 - ["VC8hack_pop13HackPopServer12defaultsKeys", "HackPopUrl"]
 - ["VC8hack_pop13HackPopServer12defaultsKeys", "init"]
 depends-nominal:
@@ -614,10 +866,12 @@ depends-nominal:
 - !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
+- !private "Ps17BitwiseOperations"
 - "Sb"
 - "Ps7CVarArg"
 - "OCSo12NSURLRequest11CachePolicy"
 - !private "Vs9Character"
+- "C8hack_pop6Client"
 - !private "Ps10Collection"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
@@ -626,23 +880,27 @@ depends-nominal:
 - "Ps23CustomStringConvertible"
 - !private "V10Foundation4Data"
 - !private "Vs10Dictionary"
-- !private "Sd"
+- "Sd"
 - "VE10FoundationSS8Encoding"
 - "VC8hack_pop13HackPopServer9EndPoints"
 - "Ps9Equatable"
-- !private "Ps5Error"
+- "Ps5Error"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
 - "Ps23ExpressibleByNilLiteral"
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "CSo15HTTPURLResponse"
 - "C8hack_pop13HackPopServer"
 - "Ps8Hashable"
-- !private "P8hack_pop19HttpStoriesListener"
+- !private "P8hack_pop24HttpClientCreateListener"
+- "P8hack_pop24HttpSetThresholdListener"
+- "P8hack_pop19HttpStoriesListener"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
@@ -651,6 +909,8 @@ depends-nominal:
 - !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "CSo17JSONSerialization"
 - "Ps25LosslessStringConvertible"
@@ -659,6 +919,7 @@ depends-nominal:
 - !private "Ps16MutableIndexable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
+- "CSo6NSDate"
 - "CSo7NSError"
 - "PSo16NSMutableCopying"
 - "CSo8NSObject"
@@ -668,6 +929,7 @@ depends-nominal:
 - !private "CSo12NSURLRequest"
 - !private "Ps9OptionSet"
 - "Sq"
+- "C8hack_pop14PointsRetainer"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Ps26RangeReplaceableCollection"
@@ -675,10 +937,14 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - !private "VCSo17JSONSerialization14ReadingOptions"
 - !private "P10Foundation20ReferenceConvertible"
+- "O8hack_pop12RequestError"
 - !private "Ps8Sequence"
 - !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
 - !private "Vs5Slice"
 - !private "C8hack_pop5Story"
+- !private "Ps10Strideable"
 - "SS"
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
@@ -689,6 +955,7 @@ depends-nominal:
 - !private "Vs5UInt8"
 - "V10Foundation3URL"
 - "V10Foundation10URLRequest"
+- !private "CSo11URLResponse"
 - "CSo10URLSession"
 - "CSo18URLSessionDataTask"
 - !private "CSo14URLSessionTask"
@@ -698,14 +965,20 @@ depends-nominal:
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - !private "Ps34_ExpressibleByFileReferenceLiteral"
 - "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
 - "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
 - "VC8hack_pop13HackPopServer12defaultsKeys"
 depends-dynamic-lookup:
 depends-external:
@@ -719,4 +992,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "ed6f5982ebcc4e695808f3f0b015c519"
+interface-hash: "6436f3b44400edf8203d4b7c996ff187"

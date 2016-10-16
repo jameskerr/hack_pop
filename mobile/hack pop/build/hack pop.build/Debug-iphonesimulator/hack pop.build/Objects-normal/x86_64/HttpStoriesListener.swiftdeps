@@ -7,9 +7,9 @@ provides-member:
 - ["P8hack_pop19HttpStoriesListener", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Error"
 - "Story"
 - "Void"
+- "Error"
 - "HttpStoriesListener"
 depends-member:
 - ["P8hack_pop19HttpStoriesListener", "Error"]

@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        CookieStore.loadCookies()
+        registerForPushNotifications(application: application)
         return true
     }
 
@@ -28,20 +30,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        CookieStore.saveCookies()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        CookieStore.loadCookies()
+        registerForPushNotifications(application: application)
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        CookieStore.loadCookies()
+        registerForPushNotifications(application: application)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+        CookieStore.saveCookies()
     }
 
     // MARK: - Core Data stack
@@ -106,6 +114,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
 
+        print(userInfo)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+
+        //add to local database here
+        print(userInfo)
+    }
+    
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        if notificationSettings.types != .none {
+            application.registerForRemoteNotifications()
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        var token = ""
+        for i in 0..<deviceToken.count {
+            token += String(format: "%02.2hhx", arguments: [deviceToken[i]])
+        }
+        if let oldToken = Client.instance().storedToken,
+            oldToken == token {
+            let client =  Client.instance()
+            client.token = token
+            client.successfullySetId = true
+        } else {
+           HackPopServer.setClient(id: token, delegate: self)
+        }
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        showFailedAlert(title:"Cannot Set Notifications", message:"Hacker News Alerts will not be able to set a point threshold for you or send you notifications unless you enable notifications for Hacker News Alerts.")
+    }
+    
+    func registerForPushNotifications(application: UIApplication) {
+        let notificationSettings = UIUserNotificationSettings(types: [.badge, .alert], categories: nil)
+        application.registerUserNotificationSettings(notificationSettings)
+    }
+    
+    func showFailedAlert(title:String, message:String) {
+        let alert = HackPopStyle.CreateAlertMessage(title: title, message: message)
+        if let viewController = self.window?.rootViewController {
+            AppDelegate.delay(delay: 0.4) {
+                viewController.present(alert, animated: false, completion: nil)
+            }
+        }
+    }
+    
+    static func delay(delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) { closure() }
+    }
+}
+
+extension AppDelegate: HttpClientCreateListener {
+    
+    func onClientCreated(id:String) {
+        Client.instance().storedToken = id
+    }
+    
+    func onClientCreatedFailed(error: Error) {
+        Client.instance().successfullySetId = false
+        showFailedAlert(title:"Failed To Connect To Server", message:"If you are offline, please try restarting Hacker News Alerts when you have an internet connection.")
+    }
 }
 

@@ -1,0 +1,594 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CookieStore"
+provides-nominal:
+- "C8hack_pop11CookieStore"
+provides-member:
+- ["C8hack_pop11CookieStore", ""]
+provides-dynamic-lookup:
+- "loadCookies"
+- "saveCookies"
+depends-top-level:
+- "CastingPrecedence"
+- !private "NSDate"
+- !private "HTTPCookiePropertyKey"
+- !private "String"
+- !private "TimeInterval"
+- !private "UserDefaults"
+- !private "HTTPCookie"
+- !private "NSDictionary"
+- !private "NSMutableDictionary"
+- !private "NSMutableArray"
+- "CookieStore"
+- !private "HTTPCookieStorage"
+- "NSObject"
+- !private "StringLiteralType"
+- !private "!="
+depends-member:
+- !private ["Ps16AbsoluteValuable", "infinity"]
+- !private ["Ps9AnyObject", "Element"]
+- !private ["Ps9AnyObject", "HTTPCookie"]
+- !private ["Ps9AnyObject", "HTTPCookiePropertyKey"]
+- !private ["Ps9AnyObject", "HTTPCookieStorage"]
+- !private ["Ps9AnyObject", "Iterator"]
+- !private ["Ps9AnyObject", "NSDate"]
+- !private ["Ps9AnyObject", "NSMutableArray"]
+- !private ["Ps9AnyObject", "NSMutableDictionary"]
+- !private ["Ps9AnyObject", "TimeInterval"]
+- !private ["Ps9AnyObject", "UserDefaults"]
+- !private ["Ps9AnyObject", "add"]
+- !private ["Ps9AnyObject", "addingTimeInterval"]
+- !private ["Ps9AnyObject", "cookies"]
+- !private ["Ps9AnyObject", "domain"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "loadCookies"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "path"]
+- ["Ps9AnyObject", "saveCookies"]
+- !private ["Ps9AnyObject", "setCookie"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "shared"]
+- !private ["Ps9AnyObject", "standard"]
+- !private ["Ps9AnyObject", "synchronize"]
+- !private ["Ps9AnyObject", "value"]
+- !private ["Ps9AnyObject", "version"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Iterator"]
+- !private ["Sa", "_Element"]
+- ["Sa", "deinit"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- !private ["Ps19BinaryFloatingPoint", "infinity"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "HTTPCookie"]
+- !private ["Ps7CVarArg", "HTTPCookiePropertyKey"]
+- !private ["Ps7CVarArg", "HTTPCookieStorage"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "NSDate"]
+- !private ["Ps7CVarArg", "NSMutableArray"]
+- !private ["Ps7CVarArg", "NSMutableDictionary"]
+- !private ["Ps7CVarArg", "TimeInterval"]
+- !private ["Ps7CVarArg", "UserDefaults"]
+- !private ["Ps7CVarArg", "_Element"]
+- !private ["Ps7CVarArg", "add"]
+- !private ["Ps7CVarArg", "addingTimeInterval"]
+- !private ["Ps7CVarArg", "cookies"]
+- !private ["Ps7CVarArg", "domain"]
+- !private ["Ps7CVarArg", "infinity"]
+- !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "loadCookies"]
+- !private ["Ps7CVarArg", "name"]
+- !private ["Ps7CVarArg", "path"]
+- ["Ps7CVarArg", "saveCookies"]
+- !private ["Ps7CVarArg", "setCookie"]
+- !private ["Ps7CVarArg", "setValue"]
+- !private ["Ps7CVarArg", "shared"]
+- !private ["Ps7CVarArg", "standard"]
+- !private ["Ps7CVarArg", "synchronize"]
+- !private ["Ps7CVarArg", "value"]
+- !private ["Ps7CVarArg", "version"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Comparable", "domain"]
+- !private ["Ps10Comparable", "expires"]
+- !private ["Ps10Comparable", "infinity"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "name"]
+- !private ["Ps10Comparable", "path"]
+- !private ["Ps10Comparable", "rawValue"]
+- !private ["Ps10Comparable", "value"]
+- !private ["Ps10Comparable", "version"]
+- !private ["C8hack_pop11CookieStore", "HTTPCookie"]
+- !private ["C8hack_pop11CookieStore", "HTTPCookiePropertyKey"]
+- !private ["C8hack_pop11CookieStore", "HTTPCookieStorage"]
+- !private ["C8hack_pop11CookieStore", "NSDate"]
+- !private ["C8hack_pop11CookieStore", "NSDictionary"]
+- !private ["C8hack_pop11CookieStore", "NSMutableArray"]
+- !private ["C8hack_pop11CookieStore", "NSMutableDictionary"]
+- !private ["C8hack_pop11CookieStore", "String"]
+- !private ["C8hack_pop11CookieStore", "TimeInterval"]
+- !private ["C8hack_pop11CookieStore", "UserDefaults"]
+- ["C8hack_pop11CookieStore", "deinit"]
+- ["C8hack_pop11CookieStore", "init"]
+- ["C8hack_pop11CookieStore", "loadCookies"]
+- ["C8hack_pop11CookieStore", "saveCookies"]
+- !private ["Ps28CustomDebugStringConvertible", "HTTPCookie"]
+- !private ["Ps28CustomDebugStringConvertible", "HTTPCookiePropertyKey"]
+- !private ["Ps28CustomDebugStringConvertible", "HTTPCookieStorage"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDate"]
+- !private ["Ps28CustomDebugStringConvertible", "NSMutableArray"]
+- !private ["Ps28CustomDebugStringConvertible", "NSMutableDictionary"]
+- !private ["Ps28CustomDebugStringConvertible", "TimeInterval"]
+- !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "add"]
+- !private ["Ps28CustomDebugStringConvertible", "addingTimeInterval"]
+- !private ["Ps28CustomDebugStringConvertible", "cookies"]
+- !private ["Ps28CustomDebugStringConvertible", "domain"]
+- !private ["Ps28CustomDebugStringConvertible", "infinity"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "loadCookies"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "path"]
+- ["Ps28CustomDebugStringConvertible", "saveCookies"]
+- !private ["Ps28CustomDebugStringConvertible", "setCookie"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "shared"]
+- !private ["Ps28CustomDebugStringConvertible", "standard"]
+- !private ["Ps28CustomDebugStringConvertible", "synchronize"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps28CustomDebugStringConvertible", "version"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "addingTimeInterval"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "infinity"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_Element"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "add"]
+- !private ["Ps17CustomReflectable", "infinity"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "setValue"]
+- !private ["Ps23CustomStringConvertible", "HTTPCookie"]
+- !private ["Ps23CustomStringConvertible", "HTTPCookiePropertyKey"]
+- !private ["Ps23CustomStringConvertible", "HTTPCookieStorage"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "NSDate"]
+- !private ["Ps23CustomStringConvertible", "NSMutableArray"]
+- !private ["Ps23CustomStringConvertible", "NSMutableDictionary"]
+- !private ["Ps23CustomStringConvertible", "TimeInterval"]
+- !private ["Ps23CustomStringConvertible", "UserDefaults"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "add"]
+- !private ["Ps23CustomStringConvertible", "addingTimeInterval"]
+- !private ["Ps23CustomStringConvertible", "cookies"]
+- !private ["Ps23CustomStringConvertible", "domain"]
+- !private ["Ps23CustomStringConvertible", "infinity"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "loadCookies"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "path"]
+- ["Ps23CustomStringConvertible", "saveCookies"]
+- !private ["Ps23CustomStringConvertible", "setCookie"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "shared"]
+- !private ["Ps23CustomStringConvertible", "standard"]
+- !private ["Ps23CustomStringConvertible", "synchronize"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "version"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Vs10Dictionary", "deinit"]
+- ["Sd", "deinit"]
+- !private ["Sd", "infinity"]
+- !private ["Ps9Equatable", "HTTPCookie"]
+- !private ["Ps9Equatable", "HTTPCookiePropertyKey"]
+- !private ["Ps9Equatable", "HTTPCookieStorage"]
+- !private ["Ps9Equatable", "Iterator"]
+- !private ["Ps9Equatable", "NSDate"]
+- !private ["Ps9Equatable", "NSMutableArray"]
+- !private ["Ps9Equatable", "NSMutableDictionary"]
+- !private ["Ps9Equatable", "TimeInterval"]
+- !private ["Ps9Equatable", "UserDefaults"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "add"]
+- !private ["Ps9Equatable", "addingTimeInterval"]
+- !private ["Ps9Equatable", "cookies"]
+- !private ["Ps9Equatable", "domain"]
+- !private ["Ps9Equatable", "expires"]
+- !private ["Ps9Equatable", "infinity"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "loadCookies"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "path"]
+- !private ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "saveCookies"]
+- !private ["Ps9Equatable", "setCookie"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "shared"]
+- !private ["Ps9Equatable", "standard"]
+- !private ["Ps9Equatable", "synchronize"]
+- !private ["Ps9Equatable", "value"]
+- !private ["Ps9Equatable", "version"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "add"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "setValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "infinity"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "infinity"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps13FloatingPoint", "infinity"]
+- ["CSo10HTTPCookie", "deinit"]
+- !private ["CSo10HTTPCookie", "domain"]
+- !private ["CSo10HTTPCookie", "init"]
+- !private ["CSo10HTTPCookie", "name"]
+- !private ["CSo10HTTPCookie", "path"]
+- !private ["CSo10HTTPCookie", "value"]
+- !private ["CSo10HTTPCookie", "version"]
+- ["VSC21HTTPCookiePropertyKey", "deinit"]
+- !private ["VSC21HTTPCookiePropertyKey", "domain"]
+- !private ["VSC21HTTPCookiePropertyKey", "expires"]
+- !private ["VSC21HTTPCookiePropertyKey", "name"]
+- !private ["VSC21HTTPCookiePropertyKey", "path"]
+- !private ["VSC21HTTPCookiePropertyKey", "rawValue"]
+- !private ["VSC21HTTPCookiePropertyKey", "value"]
+- !private ["VSC21HTTPCookiePropertyKey", "version"]
+- !private ["CSo17HTTPCookieStorage", "cookies"]
+- ["CSo17HTTPCookieStorage", "deinit"]
+- !private ["CSo17HTTPCookieStorage", "setCookie"]
+- !private ["CSo17HTTPCookieStorage", "shared"]
+- !private ["Ps8Hashable", "HTTPCookie"]
+- !private ["Ps8Hashable", "HTTPCookiePropertyKey"]
+- !private ["Ps8Hashable", "HTTPCookieStorage"]
+- !private ["Ps8Hashable", "Iterator"]
+- !private ["Ps8Hashable", "NSDate"]
+- !private ["Ps8Hashable", "NSMutableArray"]
+- !private ["Ps8Hashable", "NSMutableDictionary"]
+- !private ["Ps8Hashable", "TimeInterval"]
+- !private ["Ps8Hashable", "UserDefaults"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "add"]
+- !private ["Ps8Hashable", "addingTimeInterval"]
+- !private ["Ps8Hashable", "cookies"]
+- !private ["Ps8Hashable", "domain"]
+- !private ["Ps8Hashable", "expires"]
+- !private ["Ps8Hashable", "infinity"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "loadCookies"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "path"]
+- !private ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "saveCookies"]
+- !private ["Ps8Hashable", "setCookie"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "shared"]
+- !private ["Ps8Hashable", "standard"]
+- !private ["Ps8Hashable", "synchronize"]
+- !private ["Ps8Hashable", "value"]
+- !private ["Ps8Hashable", "version"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Vs16IndexingIterator", "Element"]
+- ["Si", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "infinity"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Iterator"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps16MutableIndexable", "Iterator"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["CSo7NSArray", "Iterator"]
+- !private ["CSo7NSArray", "add"]
+- !private ["CSo7NSArray", "init"]
+- !private ["PSo8NSCoding", "Iterator"]
+- !private ["PSo8NSCoding", "add"]
+- !private ["PSo8NSCoding", "addingTimeInterval"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "setValue"]
+- !private ["PSo9NSCopying", "Iterator"]
+- !private ["PSo9NSCopying", "add"]
+- !private ["PSo9NSCopying", "addingTimeInterval"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "setValue"]
+- !private ["CSo6NSDate", "addingTimeInterval"]
+- ["CSo6NSDate", "deinit"]
+- !private ["CSo6NSDate", "init"]
+- ["CSo12NSDictionary", "deinit"]
+- !private ["CSo12NSDictionary", "init"]
+- !private ["CSo12NSDictionary", "setValue"]
+- !private ["PSo17NSFastEnumeration", "Iterator"]
+- !private ["PSo17NSFastEnumeration", "add"]
+- !private ["PSo17NSFastEnumeration", "init"]
+- !private ["PSo17NSFastEnumeration", "setValue"]
+- !private ["C10Foundation25NSFastEnumerationIterator", "Element"]
+- !private ["PSo20NSFetchRequestResult", "init"]
+- !private ["PSo20NSFetchRequestResult", "setValue"]
+- !private ["CSo14NSMutableArray", "Iterator"]
+- !private ["CSo14NSMutableArray", "add"]
+- ["CSo14NSMutableArray", "deinit"]
+- !private ["CSo14NSMutableArray", "init"]
+- !private ["PSo16NSMutableCopying", "Iterator"]
+- !private ["PSo16NSMutableCopying", "add"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "setValue"]
+- ["CSo19NSMutableDictionary", "deinit"]
+- !private ["CSo19NSMutableDictionary", "init"]
+- !private ["CSo19NSMutableDictionary", "setValue"]
+- !private ["CSo8NSObject", "HTTPCookie"]
+- !private ["CSo8NSObject", "HTTPCookiePropertyKey"]
+- !private ["CSo8NSObject", "HTTPCookieStorage"]
+- !private ["CSo8NSObject", "Iterator"]
+- !private ["CSo8NSObject", "NSDate"]
+- !private ["CSo8NSObject", "NSDictionary"]
+- !private ["CSo8NSObject", "NSMutableArray"]
+- !private ["CSo8NSObject", "NSMutableDictionary"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "TimeInterval"]
+- !private ["CSo8NSObject", "UserDefaults"]
+- !private ["CSo8NSObject", "add"]
+- !private ["CSo8NSObject", "addingTimeInterval"]
+- !private ["CSo8NSObject", "cookies"]
+- ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "domain"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "loadCookies"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "path"]
+- ["CSo8NSObject", "saveCookies"]
+- !private ["CSo8NSObject", "setCookie"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "shared"]
+- !private ["CSo8NSObject", "standard"]
+- !private ["CSo8NSObject", "synchronize"]
+- !private ["CSo8NSObject", "value"]
+- !private ["CSo8NSObject", "version"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "HTTPCookie"]
+- !private ["PSo16NSObjectProtocol", "HTTPCookiePropertyKey"]
+- !private ["PSo16NSObjectProtocol", "HTTPCookieStorage"]
+- !private ["PSo16NSObjectProtocol", "Iterator"]
+- !private ["PSo16NSObjectProtocol", "NSDate"]
+- !private ["PSo16NSObjectProtocol", "NSMutableArray"]
+- !private ["PSo16NSObjectProtocol", "NSMutableDictionary"]
+- !private ["PSo16NSObjectProtocol", "TimeInterval"]
+- !private ["PSo16NSObjectProtocol", "UserDefaults"]
+- !private ["PSo16NSObjectProtocol", "add"]
+- !private ["PSo16NSObjectProtocol", "addingTimeInterval"]
+- !private ["PSo16NSObjectProtocol", "cookies"]
+- !private ["PSo16NSObjectProtocol", "domain"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "loadCookies"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "path"]
+- ["PSo16NSObjectProtocol", "saveCookies"]
+- !private ["PSo16NSObjectProtocol", "setCookie"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "shared"]
+- !private ["PSo16NSObjectProtocol", "standard"]
+- !private ["PSo16NSObjectProtocol", "synchronize"]
+- !private ["PSo16NSObjectProtocol", "value"]
+- !private ["PSo16NSObjectProtocol", "version"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "Iterator"]
+- !private ["PSo14NSSecureCoding", "add"]
+- !private ["PSo14NSSecureCoding", "addingTimeInterval"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "setValue"]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "Iterator"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps16RawRepresentable", "domain"]
+- !private ["Ps16RawRepresentable", "expires"]
+- !private ["Ps16RawRepresentable", "name"]
+- !private ["Ps16RawRepresentable", "path"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["Ps16RawRepresentable", "value"]
+- !private ["Ps16RawRepresentable", "version"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "add"]
+- !private ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "setValue"]
+- !private ["Ps12SignedNumber", "infinity"]
+- !private ["Ps10Strideable", "infinity"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- ["CSo12UserDefaults", "deinit"]
+- !private ["CSo12UserDefaults", "setValue"]
+- !private ["CSo12UserDefaults", "standard"]
+- !private ["CSo12UserDefaults", "synchronize"]
+- !private ["CSo12UserDefaults", "value"]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
+- !private ["Ps15_CVarArgAligned", "infinity"]
+- !private ["Ps22_CVarArgPassedAsDouble", "infinity"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "infinity"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "infinity"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "addingTimeInterval"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "HTTPCookie"]
+- !private ["Ps9_Hashable", "HTTPCookiePropertyKey"]
+- !private ["Ps9_Hashable", "HTTPCookieStorage"]
+- !private ["Ps9_Hashable", "Iterator"]
+- !private ["Ps9_Hashable", "NSDate"]
+- !private ["Ps9_Hashable", "NSMutableArray"]
+- !private ["Ps9_Hashable", "NSMutableDictionary"]
+- !private ["Ps9_Hashable", "TimeInterval"]
+- !private ["Ps9_Hashable", "UserDefaults"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "add"]
+- !private ["Ps9_Hashable", "addingTimeInterval"]
+- !private ["Ps9_Hashable", "cookies"]
+- !private ["Ps9_Hashable", "domain"]
+- !private ["Ps9_Hashable", "expires"]
+- !private ["Ps9_Hashable", "infinity"]
+- !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "loadCookies"]
+- !private ["Ps9_Hashable", "name"]
+- !private ["Ps9_Hashable", "path"]
+- !private ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "saveCookies"]
+- !private ["Ps9_Hashable", "setCookie"]
+- !private ["Ps9_Hashable", "setValue"]
+- !private ["Ps9_Hashable", "shared"]
+- !private ["Ps9_Hashable", "standard"]
+- !private ["Ps9_Hashable", "synchronize"]
+- !private ["Ps9_Hashable", "value"]
+- !private ["Ps9_Hashable", "version"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "domain"]
+- !private ["Ps21_ObjectiveCBridgeable", "expires"]
+- !private ["Ps21_ObjectiveCBridgeable", "infinity"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "name"]
+- !private ["Ps21_ObjectiveCBridgeable", "path"]
+- !private ["Ps21_ObjectiveCBridgeable", "rawValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "value"]
+- !private ["Ps21_ObjectiveCBridgeable", "version"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps11_Strideable", "infinity"]
+- !private ["Ps20_SwiftNewtypeWrapper", "domain"]
+- !private ["Ps20_SwiftNewtypeWrapper", "expires"]
+- !private ["Ps20_SwiftNewtypeWrapper", "name"]
+- !private ["Ps20_SwiftNewtypeWrapper", "path"]
+- !private ["Ps20_SwiftNewtypeWrapper", "rawValue"]
+- !private ["Ps20_SwiftNewtypeWrapper", "value"]
+- !private ["Ps20_SwiftNewtypeWrapper", "version"]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- !private "Ps19BinaryFloatingPoint"
+- "Sb"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "C8hack_pop11CookieStore"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- "Sd"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps13FloatingPoint"
+- "CSo10HTTPCookie"
+- "VSC21HTTPCookiePropertyKey"
+- "CSo17HTTPCookieStorage"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- "Si"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- !private "CSo7NSArray"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo6NSDate"
+- "CSo12NSDictionary"
+- !private "PSo17NSFastEnumeration"
+- !private "C10Foundation25NSFastEnumerationIterator"
+- !private "PSo20NSFetchRequestResult"
+- "CSo14NSMutableArray"
+- !private "PSo16NSMutableCopying"
+- "CSo19NSMutableDictionary"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
+- !private "Ps8Sequence"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- "CSo12UserDefaults"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps11_Strideable"
+- !private "Ps20_SwiftNewtypeWrapper"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "803e859ec53432d7646d12065ee07a50"

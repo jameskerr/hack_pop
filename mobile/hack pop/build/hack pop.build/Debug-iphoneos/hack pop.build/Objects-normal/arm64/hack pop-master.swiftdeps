@@ -1,23 +1,21 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "779a3a616ab6ebf97541261beee9642a"
-<<<<<<< HEAD
-build_time: [527826683, 88929000]
+options: "fa9057b09cee5f0221c6ea36d5e38bed"
+build_time: [529924920, 96806000]
 inputs:
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HomeViewController.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Stories.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectionSegue.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopStyle.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/AppDelegate.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointsRetainer.swift": [527826679, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [527826679, 0]
-=======
-build_time: [527826416, 366276000]
-inputs:
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HomeViewController.swift": [527760813, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Stories.swift": [527756421, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectionSegue.swift": [527764026, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopStyle.swift": [527761713, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/AppDelegate.swift": [527758582, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointsRetainer.swift": [527825696, 0]
-  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [527761967, 0]
->>>>>>> added-a-table-view-to-storyboard
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopServer.swift": [529924919, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/WebViewController.swift": [529919436, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/CookieStore.swift": [528275700, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Client.swift": [529836040, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HttpClientCreateListener.swift": [529640098, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HomeViewController.swift": [529924059, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HttpStoriesListener.swift": [527840106, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Interactor.swift": [529917890, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/RecentStoriesViewController.swift": [529922687, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HackPopStyle.swift": [529647372, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/AppDelegate.swift": [529842305, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointsRetainer.swift": [528004965, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/PointSelectViewController.swift": [529919463, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/NotifyThresholdAnimationTransition.swift": [529136202, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/RecentStories.swift": [528359887, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/Story.swift": [529902838, 0]
+  "/Users/jamie/git/hack_pop/mobile/hack pop/hack pop/HttpSetThresholdListener.swift": [529647372, 0]

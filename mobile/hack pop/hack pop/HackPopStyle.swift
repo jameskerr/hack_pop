@@ -46,9 +46,8 @@ class HackPopStyle: NSObject {
         let cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: story.url?.absoluteString)
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none;
-        cell.textLabel?.attributedText = UnderlinedText(text, fontSize: 18)
+        cell.textLabel?.attributedText = UnderlinedText(text, fontSize: 17)
         cell.textLabel?.numberOfLines = 4
-        cell.textLabel?.layoutMargins = UIEdgeInsetsMake(30, 0, 30, 0);
         return cell
         
     }
@@ -56,7 +55,13 @@ class HackPopStyle: NSObject {
     static func StyleTopStoriesTableView(tableView:UITableView) {
     
         tableView.backgroundColor = UIColor.clear
-        tableView.contentInset = UIEdgeInsetsMake(-20, -15, 0, 0);
+        tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0);
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+    }
+    
+    static func CreateAlertMessage(title:String, message:String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+        return alert
     }
 }

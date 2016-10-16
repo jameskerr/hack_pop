@@ -3,14 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>D46864E29W.com.hack-pop</string>
+	<string>2HNWN92429.com.hacker.news.alerts</string>
+	<key>aps-environment</key>
+	<string>development</string>
 	<key>com.apple.developer.team-identifier</key>
-	<string>D46864E29W</string>
+	<string>2HNWN92429</string>
 	<key>get-task-allow</key>
 	<true/>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>D46864E29W.com.hack-pop</string>
-	</array>
 </dict>
 </plist>
