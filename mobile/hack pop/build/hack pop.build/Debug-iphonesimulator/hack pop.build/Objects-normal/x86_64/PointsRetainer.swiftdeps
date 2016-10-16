@@ -8,29 +8,30 @@ provides-member:
 - ["C8hack_pop14PointsRetainer", ""]
 - ["VC8hack_pop14PointsRetainer12defaultsKeys", ""]
 provides-dynamic-lookup:
-- "instance"
 - "_instance"
-- "value"
-- "pointSelectionValues"
 - "initialDefaultValue"
+- "pointSelectionValues"
+- "instance"
+- "value"
 - "defaults"
 depends-top-level:
-- "NSArray"
-- "Int"
 - "PointsRetainer"
-- !private "!="
-- "StringLiteralType"
-- !private "=="
-- "UserDefaults"
-- "AssignmentPrecedence"
 - "NSObject"
+- "StringLiteralType"
+- "Int"
+- "NSArray"
+- !private "!="
+- !private "=="
+- "AssignmentPrecedence"
 - "Array"
+- "UserDefaults"
 depends-member:
 - ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "PointsRetainer"]
 - ["Ps9AnyObject", "UserDefaults"]
 - ["Ps9AnyObject", "_instance"]
 - ["Ps9AnyObject", "_value"]
+- ["Ps9AnyObject", "actualValue"]
 - ["Ps9AnyObject", "defaults"]
 - !private ["Ps9AnyObject", "defaultsKeys"]
 - ["Ps9AnyObject", "init"]
@@ -50,6 +51,7 @@ depends-member:
 - ["Ps7CVarArg", "UserDefaults"]
 - ["Ps7CVarArg", "_instance"]
 - ["Ps7CVarArg", "_value"]
+- ["Ps7CVarArg", "actualValue"]
 - ["Ps7CVarArg", "defaults"]
 - !private ["Ps7CVarArg", "defaultsKeys"]
 - ["Ps7CVarArg", "init"]
@@ -68,6 +70,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "UserDefaults"]
 - ["Ps28CustomDebugStringConvertible", "_instance"]
 - ["Ps28CustomDebugStringConvertible", "_value"]
+- ["Ps28CustomDebugStringConvertible", "actualValue"]
 - ["Ps28CustomDebugStringConvertible", "defaults"]
 - !private ["Ps28CustomDebugStringConvertible", "defaultsKeys"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -93,6 +96,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "_instance"]
 - ["Ps23CustomStringConvertible", "_value"]
+- ["Ps23CustomStringConvertible", "actualValue"]
 - ["Ps23CustomStringConvertible", "defaults"]
 - !private ["Ps23CustomStringConvertible", "defaultsKeys"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -111,6 +115,7 @@ depends-member:
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "_instance"]
 - ["Ps9Equatable", "_value"]
+- ["Ps9Equatable", "actualValue"]
 - ["Ps9Equatable", "defaults"]
 - !private ["Ps9Equatable", "defaultsKeys"]
 - ["Ps9Equatable", "init"]
@@ -136,6 +141,7 @@ depends-member:
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "_instance"]
 - ["Ps8Hashable", "_value"]
+- ["Ps8Hashable", "actualValue"]
 - ["Ps8Hashable", "defaults"]
 - !private ["Ps8Hashable", "defaultsKeys"]
 - ["Ps8Hashable", "init"]
@@ -168,6 +174,7 @@ depends-member:
 - ["CSo8NSObject", "UserDefaults"]
 - ["CSo8NSObject", "_instance"]
 - ["CSo8NSObject", "_value"]
+- ["CSo8NSObject", "actualValue"]
 - ["CSo8NSObject", "defaults"]
 - !private ["CSo8NSObject", "defaultsKeys"]
 - ["CSo8NSObject", "deinit"]
@@ -186,6 +193,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "UserDefaults"]
 - ["PSo16NSObjectProtocol", "_instance"]
 - ["PSo16NSObjectProtocol", "_value"]
+- ["PSo16NSObjectProtocol", "actualValue"]
 - ["PSo16NSObjectProtocol", "defaults"]
 - !private ["PSo16NSObjectProtocol", "defaultsKeys"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -209,6 +217,7 @@ depends-member:
 - ["C8hack_pop14PointsRetainer", "UserDefaults"]
 - ["C8hack_pop14PointsRetainer", "_instance"]
 - ["C8hack_pop14PointsRetainer", "_value"]
+- ["C8hack_pop14PointsRetainer", "actualValue"]
 - ["C8hack_pop14PointsRetainer", "defaults"]
 - ["C8hack_pop14PointsRetainer", "defaultsKeys"]
 - ["C8hack_pop14PointsRetainer", "deinit"]
@@ -239,6 +248,7 @@ depends-member:
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - ["Ps9_Hashable", "_instance"]
 - ["Ps9_Hashable", "_value"]
+- ["Ps9_Hashable", "actualValue"]
 - ["Ps9_Hashable", "defaults"]
 - !private ["Ps9_Hashable", "defaultsKeys"]
 - ["Ps9_Hashable", "init"]
@@ -315,4 +325,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "6c09d2d20301e6e0ed15dbbe9e0dd12f"
+interface-hash: "801a6ea66a8c383dd7c7fd8886a61e8e"

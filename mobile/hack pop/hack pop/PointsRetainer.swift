@@ -19,6 +19,7 @@ class PointsRetainer: NSObject {
     
     let pointSelectionValues:NSArray = [100, 200, 300, 400, 500, 750, 1000]
     let initialDefaultValue = 300
+    var actualValue:Int? = nil
     
     struct defaultsKeys {
         static let PointsValue = "point_value"
@@ -33,6 +34,7 @@ class PointsRetainer: NSObject {
                 if let defaultsValue:Int = defaults.integer(forKey: defaultsKeys.PointsValue) {
                     if defaultsValue != 0 {
                         _value = defaultsValue
+                        self.actualValue = _value
                     } else {
                         defaults.setValue(initialDefaultValue, forKey: defaultsKeys.PointsValue)
                         defaults.synchronize()

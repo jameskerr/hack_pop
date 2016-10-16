@@ -1,0 +1,34 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HttpClientCreateListener"
+provides-nominal:
+- "P8hack_pop24HttpClientCreateListener"
+provides-member:
+- ["P8hack_pop24HttpClientCreateListener", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Void"
+- "Error"
+- "HttpClientCreateListener"
+- "String"
+depends-member:
+- ["P8hack_pop24HttpClientCreateListener", "Error"]
+- ["P8hack_pop24HttpClientCreateListener", "String"]
+- ["P8hack_pop24HttpClientCreateListener", "Void"]
+- ["P8hack_pop24HttpClientCreateListener", "onClientCreated"]
+- ["P8hack_pop24HttpClientCreateListener", "onClientCreatedFailed"]
+depends-nominal:
+- "P8hack_pop24HttpClientCreateListener"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "b7c7faf43bc585809a12ded77e659843"

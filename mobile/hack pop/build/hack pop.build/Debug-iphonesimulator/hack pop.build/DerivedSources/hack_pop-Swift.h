@@ -123,6 +123,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSManagedObjectModel;
 @class NSPersistentStoreCoordinator;
 @class NSManagedObjectContext;
+@class UIUserNotificationSettings;
 
 SWIFT_CLASS("_TtC8hack_pop11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -138,12 +139,67 @@ SWIFT_CLASS("_TtC8hack_pop11AppDelegate")
 @property (nonatomic, strong) NSPersistentStoreCoordinator * _Nonnull persistentStoreCoordinator;
 @property (nonatomic, strong) NSManagedObjectContext * _Nonnull managedObjectContext;
 - (void)saveContext;
+- (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
+- (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult))completionHandler;
+- (void)application:(UIApplication * _Nonnull)application didRegisterUserNotificationSettings:(UIUserNotificationSettings * _Nonnull)notificationSettings;
+- (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
+- (void)application:(UIApplication * _Nonnull)application didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
+- (void)registerForPushNotificationsWithApplication:(UIApplication * _Nonnull)application;
+- (void)showFailedAlertWithTitle:(NSString * _Nonnull)title message:(NSString * _Nonnull)message;
++ (void)delayWithDelay:(double)delay closure:(void (^ _Nonnull)(void))closure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AppDelegate (SWIFT_EXTENSION(hack_pop))
+- (void)onClientCreatedWithId:(NSString * _Nonnull)id;
+- (void)onClientCreatedFailedWithError:(NSError * _Nonnull)error;
+@end
+
+@class NSUserDefaults;
+
+SWIFT_CLASS("_TtC8hack_pop6Client")
+@interface Client : NSObject
+@property (nonatomic, copy) NSString * _Nullable token;
+@property (nonatomic) BOOL successfullySetId;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) Client * _Nullable _instance;)
++ (Client * _Nullable)_instance;
++ (void)set_instance:(Client * _Nullable)value;
++ (Client * _Nonnull)instance;
+@property (nonatomic, copy) NSString * _Nullable _storedToken;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
+@property (nonatomic, copy) NSString * _Nullable storedToken;
+- (void)save;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop11CookieStore")
+@interface CookieStore : NSObject
++ (void)loadCookies;
++ (void)saveCookies;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop13HackPopServer")
+@interface HackPopServer : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HackPopServer * _Nullable _instance;)
++ (HackPopServer * _Nullable)_instance;
++ (void)set_instance:(HackPopServer * _Nullable)value;
++ (HackPopServer * _Nonnull)instance;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
+@property (nonatomic, copy) NSString * _Nonnull hostUrl;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (BOOL)shouldRequestNewStories;
 @end
 
 @class PointsRetainer;
 @class NSAttributedString;
 @class UITableViewCell;
+@class Story;
+@class UITableView;
+@class UIAlertController;
 
 SWIFT_CLASS("_TtC8hack_pop12HackPopStyle")
 @interface HackPopStyle : NSObject
@@ -152,70 +208,165 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PointsRetain
 + (NSAttributedString * _Nonnull)UnderlinedText:(NSString * _Nonnull)string fontSize:(CGFloat)fontSize;
 + (NSAttributedString * _Nonnull)NormalText:(NSString * _Nonnull)string fontSize:(CGFloat)fontSize;
 + (UITableViewCell * _Nonnull)GetStyledPointSelectionCell:(id _Nonnull)pointValue;
++ (UITableViewCell * _Nonnull)GetStyledStoryCell:(Story * _Nonnull)story;
++ (void)StyleTopStoriesTableViewWithTableView:(UITableView * _Nonnull)tableView;
++ (UIAlertController * _Nonnull)CreateAlertMessageWithTitle:(NSString * _Nonnull)title message:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
-@class UIStackView;
-@class UITableView;
+@class NotifyThresholdAnimationTransition;
+@class Interactor;
+@class UIPanGestureRecognizer;
+@class UIView;
+@class UIControl;
 @class UILabel;
-@class UIButton;
+@class UIScrollView;
+@class UIActivityIndicatorView;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC8hack_pop18HomeViewController")
-@interface HomeViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified titleViewContainer;
-@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified notifyViewContainer;
-@property (nonatomic, weak) IBOutlet UIStackView * _Null_unspecified topStoriesContainerView;
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified topStoriesTable;
+@interface HomeViewController : UIViewController <UINavigationControllerDelegate>
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified titleViewContainer;
+@property (nonatomic, weak) IBOutlet UIControl * _Null_unspecified notifyViewController;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentPointValueLabel;
+@property (nonatomic, weak) IBOutlet UIControl * _Null_unspecified notifyThresholdContainer;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified topStoriesContainer;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified topStoriesLabel;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified storyThresholdButton;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified connectionFailedView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified thesholdTooLowView;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified topStoriesTable;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loadingIndicator;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified topStoriesTableWrapper;
 @property (nonatomic, readonly, strong) PointsRetainer * _Nonnull pointRetainer;
-- (void)viewDidLoad;
+@property (nonatomic, readonly, strong) HackPopServer * _Nonnull hackPopServer;
+@property (nonatomic, readonly, strong) NotifyThresholdAnimationTransition * _Nonnull notifyThresholdAnimator;
+@property (nonatomic, copy) NSArray<Story *> * _Nullable stories;
+@property (nonatomic, copy) NSArray<Story *> * _Nullable filteredStories;
+@property (nonatomic, readonly) CGFloat cellHeight;
+@property (nonatomic, strong) Interactor * _Nullable recentStoriesInteractor;
+@property (nonatomic, strong) Interactor * _Nullable webViewInteractor;
+@property (nonatomic, strong) Interactor * _Nullable currentInteractor;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
-- (void)didReceiveMemoryWarning;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
-- (IBAction)revealPointSelectionVC:(id _Nonnull)sender;
-- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (void)viewDidLoad;
+- (IBAction)changeThreshold:(id _Nonnull)sender;
+- (IBAction)openHackerNews:(id _Nonnull)sender;
+- (IBAction)handleSwipe:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)setCurrentInteractorWithSender:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)resetViewLoadingState;
+- (void)updateFinishedView;
+- (void)displayFailedToLoad;
+- (void)displayStories;
+- (void)eitherDisplayTooFewStoriesOrShowTableView;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface HomeViewController (SWIFT_EXTENSION(hack_pop)) <UIScrollViewDelegate>
+- (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface HomeViewController (SWIFT_EXTENSION(hack_pop))
+- (void)onThresholdSetWithThreshold:(NSInteger)threshold;
+- (void)onThresholdSetFailedWithError:(NSError * _Nullable)error threshold:(NSInteger)threshold;
+@end
+
+
+@interface HomeViewController (SWIFT_EXTENSION(hack_pop))
+- (void)onStoriesLoadedWithStories:(NSArray<Story *> * _Nonnull)stories;
+- (void)onStoriesLoadedErrorWithError:(NSError * _Nonnull)error;
+@end
+
+
+@interface HomeViewController (SWIFT_EXTENSION(hack_pop)) <UITableViewDelegate, UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop10Interactor")
+@interface Interactor : UIPercentDrivenInteractiveTransition
+@property (nonatomic) BOOL hasStarted;
+@property (nonatomic) BOOL shouldFinish;
+@property (nonatomic, strong) UIViewController * _Null_unspecified delegateViewController;
+@property (nonatomic, copy) NSString * _Null_unspecified destinationIdentifier;
+@property (nonatomic, copy) void (^ _Nullable complete)(UIViewController * _Nonnull);
+@property (nonatomic, copy) void (^ _Nullable beforeInteractiveTransition)(void);
+- (void)animateTransitionWithRunBeforeInteractiveTransitionBlock:(BOOL)runBeforeInteractiveTransitionBlock;
+- (void)updateGestureMotionWithSender:(UIPanGestureRecognizer * _Nonnull)sender;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@protocol UIViewControllerContextTransitioning;
+
+@interface Interactor (SWIFT_EXTENSION(hack_pop)) <UIViewControllerAnimatedTransitioning>
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext;
+- (void)setInitialViewStateToViewController:(UIViewController * _Nonnull)toViewController;
+- (CGRect)getFinalViewFrameOfSourceWithSource:(UIViewController * _Nonnull)source;
+- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+@end
+
+@protocol UIViewControllerInteractiveTransitioning;
+
+@interface Interactor (SWIFT_EXTENSION(hack_pop)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Null_unspecified)animationControllerForDismissedControllerWithDismissed:(UIViewController * _Null_unspecified)dismissed;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedControllerWithPresented:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed;
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator;
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator;
+@end
+
+@class PointSelectViewController;
+
+SWIFT_CLASS("_TtC8hack_pop34NotifyThresholdAnimationTransition")
+@interface NotifyThresholdAnimationTransition : NSObject <UIViewControllerAnimatedTransitioning>
+@property (nonatomic, strong) HomeViewController * _Nullable homeViewController;
+@property (nonatomic, strong) PointSelectViewController * _Nullable pointSelectionViewController;
+@property (nonatomic, strong) UIView * _Nullable containerView;
+- (id <UIViewControllerAnimatedTransitioning> _Null_unspecified)animationControllerForPresentedControllerWithPresented:(UIViewController * _Null_unspecified)presented presentingController:(UIViewController * _Null_unspecified)presenting sourceController:(UIViewController * _Null_unspecified)source;
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning> _Nullable)transitionContext;
+- (void)createTransitionContextWithHomeViewTransitionKey:(UITransitionContextViewControllerKey _Nonnull)homeViewTransitionKey pointSelectionTransitionKey:(UITransitionContextViewControllerKey _Nonnull)pointSelectionTransitionKey transitionContext:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (void)animateTransition:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (void)setHomeControllerClosedStateWithHomeViewController:(HomeViewController * _Nonnull)homeViewController pointSelectionViewController:(PointSelectViewController * _Nonnull)pointSelectionViewController;
+- (void)openUsing:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (void)closeUsing:(id <UIViewControllerContextTransitioning> _Nonnull)transitionContext;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface NotifyThresholdAnimationTransition (SWIFT_EXTENSION(hack_pop)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Null_unspecified)animationControllerForDismissedControllerWithDismissed:(UIViewController * _Null_unspecified)dismissed;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed;
 @end
 
 
 SWIFT_CLASS("_TtC8hack_pop25PointSelectViewController")
 @interface PointSelectViewController : UIViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified pointSelectionCloseButton;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified pointSelectionLabel;
+@property (nonatomic, weak) IBOutlet UIControl * _Null_unspecified notifyThresholdView;
+@property (nonatomic, readonly, strong) NotifyThresholdAnimationTransition * _Nonnull notifyThresholdAnimator;
 @property (nonatomic, readonly, strong) PointsRetainer * _Nonnull pointRetainer;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
-- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (IBAction)closePointSelection:(id _Nonnull)sender;
+- (void)closeWithRequestToServer:(BOOL)withRequestToServer threshold:(NSInteger)threshold;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8hack_pop19PointSelectionSegue")
-@interface PointSelectionSegue : UIStoryboardSegue
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull SegueId;)
-+ (NSString * _Nonnull)SegueId;
-@property (nonatomic, readonly) CGFloat yTitleTopOffset;
-@property (nonatomic, readonly) NSTimeInterval animationDuration;
-- (void)perform;
-- (void)open;
-- (void)close;
-- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier source:(UIViewController * _Nonnull)source destination:(UIViewController * _Nonnull)destination OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class NSArray;
-@class NSUserDefaults;
 
 SWIFT_CLASS("_TtC8hack_pop14PointsRetainer")
 @interface PointsRetainer : NSObject
@@ -229,6 +380,109 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PointsRetainer * _Null
 @property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
 @property (nonatomic) NSInteger value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop13RecentStories")
+@interface RecentStories : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImageView;
+
+SWIFT_CLASS("_TtC8hack_pop27RecentStoriesViewController")
+@interface RecentStoriesViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified recentStoriesTable;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified noUnreadStoriesContainer;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified unreadStoriesLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified sunImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified leftBigCloud;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightBigCloudTop;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified rightBigCloudBottom;
+@property (nonatomic, copy) NSArray<Story *> * _Nullable stories;
+@property (nonatomic, strong) Interactor * _Null_unspecified homeViewInteractor;
+@property (nonatomic, strong) Interactor * _Null_unspecified webViewInteractor;
+@property (nonatomic, readonly) CGFloat cellHeight;
+- (void)viewDidLoad;
+- (void)startAnimation;
+- (void)moveClouds;
+- (void)spinSun;
+- (IBAction)handleSwipe:(UIPanGestureRecognizer * _Nonnull)sender;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (IBAction)returnToHomeViewController:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface RecentStoriesViewController (SWIFT_EXTENSION(hack_pop)) <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+SWIFT_CLASS("_TtC8hack_pop5Story")
+@interface Story : NSObject
+@property (nonatomic, copy) NSURL * _Nullable url;
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) NSURL * _Nullable commentsUrl;
+@property (nonatomic) BOOL isHackerNews;
+@property (nonatomic) BOOL isUnreadStory;
+@property (nonatomic) BOOL markedForDeletion;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull hackerNewsUrl;)
++ (NSString * _Nonnull)hackerNewsUrl;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) Story * _Nullable current;)
++ (Story * _Nullable)current;
++ (void)setCurrent:(Story * _Nullable)value;
++ (void)setCurrentStoryToDefault;
++ (BOOL)isRelativeUrlStringWithString:(NSString * _Nonnull)string;
+- (BOOL)meetsThresholdWithThreshold:(NSInteger)threshold;
+- (id _Nonnull)copy;
+- (void)save;
+- (void)updateSeen;
+- (void)delete;
++ (NSArray<Story *> * _Nonnull)getSavedStories;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@class UIWebView;
+@class UIButton;
+
+SWIFT_CLASS("_TtC8hack_pop17WebViewController")
+@interface WebViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified webViewIndicator;
+@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified shareButton;
+@property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified connectionFailureView;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified backButtonImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified forwardButtonImage;
+@property (nonatomic, strong) Story * _Nullable originalStory;
+@property (nonatomic) BOOL hasLoadedOnce;
+@property (nonatomic, strong) Interactor * _Null_unspecified homeViewInteractor;
+@property (nonatomic, readonly) NSInteger fourOhFour;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (void)loadWebView;
+- (void)updateNavigationButtonImages;
+- (IBAction)handleSwiipe:(UIPanGestureRecognizer * _Nonnull)sender;
+- (IBAction)goBack;
+- (IBAction)swipeBackHome:(id _Nonnull)sender;
+- (IBAction)historyGoBack;
+- (IBAction)historyGoForward;
+- (IBAction)shareArticle;
+- (void)webView:(UIWebView * _Nonnull)webView didFailLoadWithError:(NSError * _Nonnull)error;
+- (void)webViewDidStartLoad:(UIWebView * _Nonnull)_;
+- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)_;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface WebViewController (SWIFT_EXTENSION(hack_pop)) <UIScrollViewDelegate>
+- (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
 @end
 
 #pragma clang diagnostic pop

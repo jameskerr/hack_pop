@@ -7,27 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D101B941D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
+		7D101B951D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
+		7D101B961D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
+		7D101B9E1D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
+		7D101B9F1D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
+		7D101BA01D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
+		7D101BA21D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
+		7D101BA31D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
+		7D101BA41D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
+		7D101BAB1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
+		7D101BAC1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
+		7D101BAD1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
 		7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */; };
 		7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */; };
 		7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */; };
+		7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
+		7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */; };
+		7D45519B1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
+		7D45519C1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
+		7D45519D1D93AB0E00A6D20E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D45519A1D93AB0E00A6D20E /* Story.swift */; };
 		7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
 		7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
 		7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */; };
-		7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
-		7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
-		7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563BB1D9125430083FEB0 /* Stories.swift */; };
 		7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
 		7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
 		7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4563B11D9117800083FEB0 /* HackPopStyle.swift */; };
 		7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
 		7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
 		7D4A9E321D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */; };
-		7D4A9E4D1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
-		7D4A9E4E1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
-		7D4A9E4F1D8D2FCA009A7A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */; };
-		7D4A9E511D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
-		7D4A9E521D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
-		7D4A9E531D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */; };
 		7D63E4ED1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */; };
 		7D63E4EE1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */; };
 		7D63E4EF1D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */; };
@@ -46,6 +58,20 @@
 		7D63E4FC1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */; };
 		7D63E4FD1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
 		7D63E4FE1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */; };
+		7D7D282D1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D282E1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D282C1D94DD20009334CA /* WebViewController.swift */; };
+		7D7D28311D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
+		7D7D28321D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
+		7D7D28331D963264009334CA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D28301D963264009334CA /* Client.swift */; };
+		7D7D28381D967A06009334CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */; };
+		7D7D28391D967A06009334CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */; };
+		7D7D283C1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
+		7D7D283D1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
+		7D7D283E1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
+		7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
+		7DD6D93A1DA4E1120062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
+		7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
 		7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
 		7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */; };
 		7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECFD1D8A3F2400A53ABF /* hack_pop.xcdatamodeld */; };
@@ -53,6 +79,16 @@
 		7DE2ED041D8A3F2400A53ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2ED021D8A3F2400A53ABF /* LaunchScreen.storyboard */; };
 		7DE2ED0F1D8A3F2500A53ABF /* hack_popTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ED0E1D8A3F2500A53ABF /* hack_popTests.swift */; };
 		7DE2ED1A1D8A3F2500A53ABF /* hack_popUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ED191D8A3F2500A53ABF /* hack_popUITests.swift */; };
+		7DEEB8C61DAE0BA1000F2789 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEEB8C41DAE0BA1000F2789 /* SQLite.framework */; };
+		7DEEB8C71DAE0BA1000F2789 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEEB8C41DAE0BA1000F2789 /* SQLite.framework */; };
+		7DEEB8D81DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */; };
+		7DEEB8D91DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */; };
+		7DEEB8DA1DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */; };
+		7DEEB8DC1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */; };
+		7DEEB8DD1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */; };
+		7DEEB8DE1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */; };
+		7DEEB8E51DB22685000F2789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
+		7DEEB8E61DB22685000F2789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,19 +106,37 @@
 			remoteGlobalIDString = 7DE2ECF21D8A3F2400A53ABF;
 			remoteInfo = "hack pop";
 		};
+		7DEEB8CE1DAE129E000F2789 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9E93E57F645DE404CACD48763EC004FC;
+			remoteInfo = GRDB.swift;
+		};
+		7DEEB8D01DAE129E000F2789 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39E86639C403ACB11883141627C8C4B4;
+			remoteInfo = "Pods-hack pop";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D101B931D9A451400C89D5A /* CookieStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieStore.swift; sourceTree = "<group>"; };
+		7D101B971D9B849000C89D5A /* hack pop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hack pop.entitlements"; sourceTree = "<group>"; };
+		7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentStories.swift; sourceTree = "<group>"; };
+		7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentStoriesViewController.swift; sourceTree = "<group>"; };
+		7D101BAA1D9BB47A00C89D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyleTests.swift; sourceTree = "<group>"; };
 		7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainerTests.swift; sourceTree = "<group>"; };
+		7D4551921D938A4D00A6D20E /* HackPopServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopServer.swift; sourceTree = "<group>"; };
+		7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStoriesListener.swift; sourceTree = "<group>"; };
+		7D45519A1D93AB0E00A6D20E /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainer.swift; sourceTree = "<group>"; };
 		7D4563B11D9117800083FEB0 /* HackPopStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyle.swift; sourceTree = "<group>"; };
-		7D4563B81D9124A10083FEB0 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
-		7D4563BB1D9125430083FEB0 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectViewController.swift; sourceTree = "<group>"; };
-		7D4A9E4C1D8D2FCA009A7A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSelectionSegue.swift; sourceTree = "<group>"; };
 		7D63E4E41D8A5A5600AE27D1 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
 		7D63E4E51D8A5A5600AE27D1 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		7D63E4E61D8A5A5600AE27D1 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
@@ -92,6 +146,10 @@
 		7D63E4EA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		7D63E4EB1D8A5A5600AE27D1 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		7D63E4EC1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7D7D282C1D94DD20009334CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7D7D28301D963264009334CA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyThresholdAnimationTransition.swift; sourceTree = "<group>"; };
+		7DD6D9341DA4E0DD0062A69C /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		7DE2ECF31D8A3F2400A53ABF /* hack pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hack pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +163,13 @@
 		7DE2ED151D8A3F2500A53ABF /* hack popUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hack popUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ED191D8A3F2500A53ABF /* hack_popUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hack_popUITests.swift; sourceTree = "<group>"; };
 		7DE2ED1B1D8A3F2500A53ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DEEB8C41DAE0BA1000F2789 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientCreateListener.swift; sourceTree = "<group>"; };
+		7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpSetThresholdListener.swift; sourceTree = "<group>"; };
+		932293C6D2D53C65E85B530E /* Pods-hack pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack pop.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack pop/Pods-hack pop.release.xcconfig"; sourceTree = "<group>"; };
+		D97CBB3A7ABFB40AB2FDAA00 /* Pods-hack pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack pop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack pop/Pods-hack pop.debug.xcconfig"; sourceTree = "<group>"; };
+		DBEEBE9859E6A4BCD31E598A /* Pods_hack_pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hack_pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEEB8C61DAE0BA1000F2789 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +192,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEEB8C71DAE0BA1000F2789 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08EC694081A2A71866B1E65C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */,
+				7DEEB8C41DAE0BA1000F2789 /* SQLite.framework */,
+				DBEEBE9859E6A4BCD31E598A /* Pods_hack_pop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D101B9C1D9B9CBB00C89D5A /* local */ = {
+			isa = PBXGroup;
+			children = (
+				7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */,
+			);
+			name = local;
+			sourceTree = "<group>";
+		};
+		7D4551911D938A1C00A6D20E /* http */ = {
+			isa = PBXGroup;
+			children = (
+				7D4551921D938A4D00A6D20E /* HackPopServer.swift */,
+				7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */,
+				7D7D28301D963264009334CA /* Client.swift */,
+				7D101B931D9A451400C89D5A /* CookieStore.swift */,
+				7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */,
+				7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
 		7D4563B01D91174E0083FEB0 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,19 +238,11 @@
 			name = Styles;
 			sourceTree = "<group>";
 		};
-		7D4563B61D911A2B0083FEB0 /* Segues */ = {
-			isa = PBXGroup;
-			children = (
-				7D4A9E501D8D4D8E009A7A61 /* PointSelectionSegue.swift */,
-			);
-			name = Segues;
-			sourceTree = "<group>";
-		};
 		7D4563B71D911A390083FEB0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7D4563AC1D910AA00083FEB0 /* PointsRetainer.swift */,
-				7D4563BB1D9125430083FEB0 /* Stories.swift */,
+				7D45519A1D93AB0E00A6D20E /* Story.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +252,8 @@
 			children = (
 				7DE2ECF81D8A3F2400A53ABF /* HomeViewController.swift */,
 				7D4A9E2F1D8BC4A5009A7A61 /* PointSelectViewController.swift */,
+				7D7D282C1D94DD20009334CA /* WebViewController.swift */,
+				7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -190,14 +282,24 @@
 			name = fonts;
 			sourceTree = "<group>";
 		};
+		7D7D283A1D97294E009334CA /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */,
+				7DD6D9341DA4E0DD0062A69C /* Interactor.swift */,
+			);
+			name = Animators;
+			sourceTree = "<group>";
+		};
 		7DE2ECEA1D8A3F2400A53ABF = {
 			isa = PBXGroup;
 			children = (
-				7D4563B81D9124A10083FEB0 /* SQLite.framework */,
 				7DE2ECF51D8A3F2400A53ABF /* hack pop */,
 				7DE2ED0D1D8A3F2500A53ABF /* hack popTests */,
 				7DE2ED181D8A3F2500A53ABF /* hack popUITests */,
 				7DE2ECF41D8A3F2400A53ABF /* Products */,
+				A597770B96AFBD0932B62B40 /* Pods */,
+				08EC694081A2A71866B1E65C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,15 +316,18 @@
 		7DE2ECF51D8A3F2400A53ABF /* hack pop */ = {
 			isa = PBXGroup;
 			children = (
+				7D101B9C1D9B9CBB00C89D5A /* local */,
+				7D101B971D9B849000C89D5A /* hack pop.entitlements */,
+				7D7D283A1D97294E009334CA /* Animators */,
+				7D4551911D938A1C00A6D20E /* http */,
 				7D4563B71D911A390083FEB0 /* Models */,
-				7D4563B61D911A2B0083FEB0 /* Segues */,
 				7D4563B01D91174E0083FEB0 /* Styles */,
 				7D4A9E431D8BDD40009A7A61 /* View Controllers */,
 				7D63E49A1D8A58EE00AE27D1 /* Resources */,
 				7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */,
 				7DE2ED001D8A3F2400A53ABF /* Assets.xcassets */,
+				7D101BA91D9BB47A00C89D5A /* Main.storyboard */,
 				7DE2ED021D8A3F2400A53ABF /* LaunchScreen.storyboard */,
-				7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */,
 				7DE2ED051D8A3F2400A53ABF /* Info.plist */,
 				7DE2ECFD1D8A3F2400A53ABF /* hack_pop.xcdatamodeld */,
 			);
@@ -250,6 +355,24 @@
 			path = "hack popUITests";
 			sourceTree = "<group>";
 		};
+		7DEEB8CA1DAE129E000F2789 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DEEB8CF1DAE129E000F2789 /* GRDB.framework */,
+				7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A597770B96AFBD0932B62B40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D97CBB3A7ABFB40AB2FDAA00 /* Pods-hack pop.debug.xcconfig */,
+				932293C6D2D53C65E85B530E /* Pods-hack pop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +384,7 @@
 				7DE2ECF01D8A3F2400A53ABF /* Frameworks */,
 				7DE2ECF11D8A3F2400A53ABF /* Resources */,
 				7D4563BA1D9124C70083FEB0 /* ShellScript */,
+				34894C5FF73118A683C5322A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,8 +443,14 @@
 				TargetAttributes = {
 					7DE2ECF21D8A3F2400A53ABF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = D46864E29W;
+						DevelopmentTeam = 2HNWN92429;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					7DE2ED091D8A3F2500A53ABF = {
 						CreatedOnToolsVersion = 7.3;
@@ -347,6 +477,12 @@
 			mainGroup = 7DE2ECEA1D8A3F2400A53ABF;
 			productRefGroup = 7DE2ECF41D8A3F2400A53ABF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7DEEB8CA1DAE129E000F2789 /* Products */;
+					ProjectRef = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7DE2ECF21D8A3F2400A53ABF /* hack pop */,
@@ -356,6 +492,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		7DEEB8CF1DAE129E000F2789 /* GRDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GRDB.framework;
+			remoteRef = 7DEEB8CE1DAE129E000F2789 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_hack_pop.framework;
+			remoteRef = 7DEEB8D01DAE129E000F2789 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		7DE2ECF11D8A3F2400A53ABF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -364,7 +517,7 @@
 				7DE2ED041D8A3F2400A53ABF /* LaunchScreen.storyboard in Resources */,
 				7D63E4F71D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */,
 				7D63E4F51D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */,
-				7D4A9E4D1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
+				7D101BAB1D9BB47A00C89D5A /* Main.storyboard in Resources */,
 				7D63E4F31D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */,
 				7D63E4F11D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */,
 				7DE2ED011D8A3F2400A53ABF /* Assets.xcassets in Resources */,
@@ -380,7 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D4A9E4E1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
+				7D101BAC1D9BB47A00C89D5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D63E4F41D8A5A5600AE27D1 /* Raleway-Heavy.ttf in Resources */,
-				7D4A9E4F1D8D2FCA009A7A61 /* Main.storyboard in Resources */,
+				7D101BAD1D9BB47A00C89D5A /* Main.storyboard in Resources */,
 				7D63E4FC1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */,
 				7D63E4FE1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */,
 				7D63E4F81D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */,
@@ -404,6 +557,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		34894C5FF73118A683C5322A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
+		};
 		7D4563BA1D9124C70083FEB0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,14 +594,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7D7D282D1D94DD20009334CA /* WebViewController.swift in Sources */,
+				7D101B941D9A451400C89D5A /* CookieStore.swift in Sources */,
+				7D7D28311D963264009334CA /* Client.swift in Sources */,
+				7DEEB8D81DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
 				7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */,
-				7D4563BC1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
+				7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */,
+				7D101BA21D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
 				7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */,
-				7D4A9E511D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
 				7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
 				7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */,
 				7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */,
 				7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D7D283C1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
+				7D101B9E1D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
+				7D45519B1D93AB0E00A6D20E /* Story.swift in Sources */,
+				7DEEB8DC1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,15 +619,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEEB8E51DB22685000F2789 /* AppDelegate.swift in Sources */,
 				7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */,
+				7D101BA31D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
+				7DEEB8DD1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 				7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
 				7DE2ED0F1D8A3F2500A53ABF /* hack_popTests.swift in Sources */,
+				7D101B9F1D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
 				7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */,
+				7D7D283D1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
 				7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
-				7D4563BD1D9125430083FEB0 /* Stories.swift in Sources */,
+				7D7D28381D967A06009334CA /* HomeViewController.swift in Sources */,
+				7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7DEEB8D91DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
+				7D7D28321D963264009334CA /* Client.swift in Sources */,
+				7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
+				7D7D282E1D94DD20009334CA /* WebViewController.swift in Sources */,
+				7D101B951D9A451400C89D5A /* CookieStore.swift in Sources */,
+				7DD6D93A1DA4E1120062A69C /* Interactor.swift in Sources */,
 				7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */,
-				7D4A9E521D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
 				7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D45519C1D93AB0E00A6D20E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +648,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
+				7DEEB8E61DB22685000F2789 /* AppDelegate.swift in Sources */,
+				7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */,
+				7DEEB8DE1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 				7DE2ED1A1D8A3F2500A53ABF /* hack_popUITests.swift in Sources */,
 				7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */,
-				7D4563BE1D9125430083FEB0 /* Stories.swift in Sources */,
-				7D4A9E531D8D4D8F009A7A61 /* PointSelectionSegue.swift in Sources */,
+				7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
+				7DEEB8DA1DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
+				7D101BA41D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
+				7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */,
+				7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7D7D283E1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
 				7D4A9E321D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
+				7D7D28331D963264009334CA /* Client.swift in Sources */,
+				7D45519D1D93AB0E00A6D20E /* Story.swift in Sources */,
+				7D7D28391D967A06009334CA /* HomeViewController.swift in Sources */,
+				7D101BA01D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
+				7D101B961D9A451400C89D5A /* CookieStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,10 +684,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7D4A9E4B1D8D2FCA009A7A61 /* Main.storyboard */ = {
+		7D101BA91D9BB47A00C89D5A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7D4A9E4C1D8D2FCA009A7A61 /* Base */,
+				7D101BAA1D9BB47A00C89D5A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -520,6 +723,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -544,6 +748,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -584,25 +789,26 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		7DE2ED1F1D8A3F2500A53ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97CBB3A7ABFB40AB2FDAA00 /* Pods-hack pop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "hack pop/hack pop.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: james sunderland (G37NH6Z449)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = D46864E29W;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = 2HNWN92429;
 				INFOPLIST_FILE = "hack pop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-pop";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hacker.news.alerts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -611,19 +817,19 @@
 		};
 		7DE2ED201D8A3F2500A53ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 932293C6D2D53C65E85B530E /* Pods-hack pop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "hack pop/hack pop.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: james sunderland (G37NH6Z449)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = D46864E29W;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = 2HNWN92429;
 				INFOPLIST_FILE = "hack pop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hack-pop";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hacker.news.alerts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -706,7 +912,7 @@
 				7DE2ED1D1D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7DE2ED1E1D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack pop" */ = {
 			isa = XCConfigurationList;
@@ -715,7 +921,7 @@
 				7DE2ED201D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7DE2ED211D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popTests" */ = {
 			isa = XCConfigurationList;
@@ -724,7 +930,7 @@
 				7DE2ED231D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7DE2ED241D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popUITests" */ = {
 			isa = XCConfigurationList;
@@ -733,7 +939,7 @@
 				7DE2ED261D8A3F2500A53ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

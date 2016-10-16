@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+
+target 'hack pop' do
+	pod 'GRDB.swift'
+end
+
+target 'hack popTests' do
+
+end
+
+target 'hack popUITests' do
+
+end
+

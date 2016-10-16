@@ -6,50 +6,89 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "managedObjectContext"
-- "applicationWillEnterForeground"
-- "applicationDidEnterBackground"
-- "persistentStoreCoordinator"
-- "application"
-- "applicationWillResignActive"
-- "saveContext"
 - "managedObjectModel"
 - "applicationDocumentsDirectory"
+- "application"
+- "application"
+- "application"
+- "application"
+- "application"
+- "application"
+- "delay"
+- "persistentStoreCoordinator"
+- "onClientCreatedFailed"
+- "showFailedAlert"
+- "applicationWillResignActive"
+- "applicationDidBecomeActive"
+- "saveContext"
+- "applicationDidEnterBackground"
 - "applicationWillTerminate"
 - "window"
+- "applicationWillEnterForeground"
+- "registerForPushNotifications"
+- "onClientCreated"
+- "managedObjectContext"
 depends-top-level:
-- !private "NSError"
-- "UIApplicationDelegate"
-- "NSManagedObjectContext"
-- !private "BooleanLiteralType"
-- "NSManagedObjectModel"
-- !private "NSLocalizedDescriptionKey"
-- "URL"
-- !private "-"
-- "UIApplicationLaunchOptionsKey"
 - "NSPersistentStoreCoordinator"
+- !private "!="
+- !private "..<"
+- "UIUserNotificationSettings"
+- !private "Array"
+- "AnyHashable"
 - "AppDelegate"
-- !private "FileManager"
-- !private "NSSQLiteStoreType"
-- !private "NSLocalizedFailureReasonErrorKey"
-- !private "StringLiteralType"
-- "UIResponder"
-- !private "AnyObject"
-- !private "String"
-- "UIWindow"
-- !private "Bundle"
+- "String"
 - "CastingPrecedence"
+- !private "=="
+- "AssignmentPrecedence"
+- !private "NSSQLiteStoreType"
+- "NSManagedObjectModel"
+- !private "HackPopServer"
+- !private "NSLocalizedFailureReasonErrorKey"
+- !private "Client"
+- "URL"
+- !private "StringLiteralType"
+- !private "-"
+- !private "HackPopStyle"
+- !private "CookieStore"
+- !private "AnyObject"
+- "UIResponder"
+- "UIBackgroundFetchResult"
+- !private "FileManager"
 - "Bool"
-- !private "NSLog"
-- !private "AssignmentPrecedence"
-- "UIApplication"
 - !private "abort"
 - !private "NSUnderlyingErrorKey"
+- !private "Bundle"
+- !private "BooleanLiteralType"
+- "UIApplication"
+- "UIApplicationLaunchOptionsKey"
+- !private "DispatchQueue"
+- "Error"
+- "Double"
+- !private "NSError"
+- "Data"
+- !private "print"
+- "UIApplicationDelegate"
+- !private "DispatchTime"
+- !private "NSLog"
+- "NSManagedObjectContext"
+- "HttpClientCreateListener"
+- !private "NSLocalizedDescriptionKey"
+- !private "+"
+- "Void"
+- "UIWindow"
+- !private "+="
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
+- !private ["Ps9AnyObject", "AppDelegate"]
 - !private ["Ps9AnyObject", "Bundle"]
+- !private ["Ps9AnyObject", "Client"]
+- !private ["Ps9AnyObject", "CookieStore"]
+- !private ["Ps9AnyObject", "CreateAlertMessage"]
+- !private ["Ps9AnyObject", "DispatchQueue"]
+- !private ["Ps9AnyObject", "DispatchTime"]
 - !private ["Ps9AnyObject", "FileManager"]
+- !private ["Ps9AnyObject", "HackPopServer"]
+- !private ["Ps9AnyObject", "HackPopStyle"]
 - !private ["Ps9AnyObject", "NSError"]
 - !private ["Ps9AnyObject", "NSLocalizedDescriptionKey"]
 - !private ["Ps9AnyObject", "NSLocalizedFailureReasonErrorKey"]
@@ -60,6 +99,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSSQLiteStoreType"]
 - !private ["Ps9AnyObject", "NSUnderlyingErrorKey"]
 - !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UIUserNotificationSettings"]
 - !private ["Ps9AnyObject", "abort"]
 - !private ["Ps9AnyObject", "addPersistentStore"]
 - ["Ps9AnyObject", "application"]
@@ -76,28 +116,58 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillEnterForeground"]
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
+- !private ["Ps9AnyObject", "asyncAfter"]
 - !private ["Ps9AnyObject", "default"]
 - !private ["Ps9AnyObject", "deinit"]
+- ["Ps9AnyObject", "delay"]
 - !private ["Ps9AnyObject", "hasChanges"]
 - !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instance"]
+- !private ["Ps9AnyObject", "loadCookies"]
 - !private ["Ps9AnyObject", "main"]
 - ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "managedObjectContext.storage"]
 - ["Ps9AnyObject", "managedObjectModel"]
 - ["Ps9AnyObject", "managedObjectModel.storage"]
+- ["Ps9AnyObject", "onClientCreated"]
+- ["Ps9AnyObject", "onClientCreatedFailed"]
 - ["Ps9AnyObject", "persistentStoreCoordinator"]
 - ["Ps9AnyObject", "persistentStoreCoordinator.storage"]
+- !private ["Ps9AnyObject", "present"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "registerForPushNotifications"]
+- !private ["Ps9AnyObject", "registerForRemoteNotifications"]
+- !private ["Ps9AnyObject", "registerUserNotificationSettings"]
+- !private ["Ps9AnyObject", "rootViewController"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "saveContext"]
+- !private ["Ps9AnyObject", "saveCookies"]
+- !private ["Ps9AnyObject", "setClient"]
+- ["Ps9AnyObject", "showFailedAlert"]
+- !private ["Ps9AnyObject", "storedToken"]
+- !private ["Ps9AnyObject", "successfullySetId"]
+- !private ["Ps9AnyObject", "token"]
+- !private ["Ps9AnyObject", "types"]
 - !private ["Ps9AnyObject", "url"]
 - !private ["Ps9AnyObject", "urls"]
 - !private ["Ps9AnyObject", "userInfo"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
+- ["C8hack_pop11AppDelegate", "AnyHashable"]
 - !private ["C8hack_pop11AppDelegate", "AnyObject"]
+- !private ["C8hack_pop11AppDelegate", "AppDelegate"]
 - ["C8hack_pop11AppDelegate", "Bool"]
 - !private ["C8hack_pop11AppDelegate", "Bundle"]
+- !private ["C8hack_pop11AppDelegate", "Client"]
+- !private ["C8hack_pop11AppDelegate", "CookieStore"]
+- ["C8hack_pop11AppDelegate", "Data"]
+- !private ["C8hack_pop11AppDelegate", "DispatchQueue"]
+- !private ["C8hack_pop11AppDelegate", "DispatchTime"]
+- ["C8hack_pop11AppDelegate", "Double"]
+- ["C8hack_pop11AppDelegate", "Error"]
 - !private ["C8hack_pop11AppDelegate", "FileManager"]
+- !private ["C8hack_pop11AppDelegate", "HackPopServer"]
+- !private ["C8hack_pop11AppDelegate", "HackPopStyle"]
 - !private ["C8hack_pop11AppDelegate", "NSError"]
 - !private ["C8hack_pop11AppDelegate", "NSLocalizedDescriptionKey"]
 - !private ["C8hack_pop11AppDelegate", "NSLocalizedFailureReasonErrorKey"]
@@ -107,11 +177,14 @@ depends-member:
 - ["C8hack_pop11AppDelegate", "NSPersistentStoreCoordinator"]
 - !private ["C8hack_pop11AppDelegate", "NSSQLiteStoreType"]
 - !private ["C8hack_pop11AppDelegate", "NSUnderlyingErrorKey"]
-- !private ["C8hack_pop11AppDelegate", "String"]
+- ["C8hack_pop11AppDelegate", "String"]
 - ["C8hack_pop11AppDelegate", "UIApplication"]
 - ["C8hack_pop11AppDelegate", "UIApplicationLaunchOptionsKey"]
+- ["C8hack_pop11AppDelegate", "UIBackgroundFetchResult"]
+- ["C8hack_pop11AppDelegate", "UIUserNotificationSettings"]
 - ["C8hack_pop11AppDelegate", "UIWindow"]
 - ["C8hack_pop11AppDelegate", "URL"]
+- ["C8hack_pop11AppDelegate", "Void"]
 - !private ["C8hack_pop11AppDelegate", "abort"]
 - ["C8hack_pop11AppDelegate", "application"]
 - ["C8hack_pop11AppDelegate", "applicationDidBecomeActive"]
@@ -128,22 +201,30 @@ depends-member:
 - ["C8hack_pop11AppDelegate", "applicationWillResignActive"]
 - ["C8hack_pop11AppDelegate", "applicationWillTerminate"]
 - ["C8hack_pop11AppDelegate", "deinit"]
+- ["C8hack_pop11AppDelegate", "delay"]
 - ["C8hack_pop11AppDelegate", "init"]
 - ["C8hack_pop11AppDelegate", "managedObjectContext"]
 - !private ["C8hack_pop11AppDelegate", "managedObjectContext.storage"]
 - ["C8hack_pop11AppDelegate", "managedObjectModel"]
 - !private ["C8hack_pop11AppDelegate", "managedObjectModel.storage"]
+- ["C8hack_pop11AppDelegate", "onClientCreated"]
+- ["C8hack_pop11AppDelegate", "onClientCreatedFailed"]
 - ["C8hack_pop11AppDelegate", "persistentStoreCoordinator"]
 - !private ["C8hack_pop11AppDelegate", "persistentStoreCoordinator.storage"]
+- !private ["C8hack_pop11AppDelegate", "print"]
+- ["C8hack_pop11AppDelegate", "registerForPushNotifications"]
 - ["C8hack_pop11AppDelegate", "saveContext"]
+- ["C8hack_pop11AppDelegate", "showFailedAlert"]
 - ["C8hack_pop11AppDelegate", "window"]
+- !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "IndexDistance"]
 - !private ["Sa", "SubSequence"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "count"]
-- !private ["Sa", "deinit"]
+- ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -152,6 +233,7 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "count"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Indices"]
@@ -174,9 +256,19 @@ depends-member:
 - !private ["CSo6Bundle", "deinit"]
 - !private ["CSo6Bundle", "main"]
 - !private ["CSo6Bundle", "url"]
+- !private ["PSo15CALayerDelegate", "rootViewController"]
 - !private ["Ps7CVarArg", "AnyObject"]
+- !private ["Ps7CVarArg", "AppDelegate"]
 - !private ["Ps7CVarArg", "Bundle"]
+- !private ["Ps7CVarArg", "Client"]
+- !private ["Ps7CVarArg", "CookieStore"]
+- !private ["Ps7CVarArg", "CreateAlertMessage"]
+- !private ["Ps7CVarArg", "DispatchQueue"]
+- !private ["Ps7CVarArg", "DispatchTime"]
+- !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "FileManager"]
+- !private ["Ps7CVarArg", "HackPopServer"]
+- !private ["Ps7CVarArg", "HackPopStyle"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
@@ -192,6 +284,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
+- !private ["Ps7CVarArg", "UIUserNotificationSettings"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "abort"]
@@ -210,26 +303,51 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillEnterForeground"]
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
+- !private ["Ps7CVarArg", "asyncAfter"]
 - !private ["Ps7CVarArg", "count"]
 - !private ["Ps7CVarArg", "default"]
+- ["Ps7CVarArg", "delay"]
 - !private ["Ps7CVarArg", "hasChanges"]
 - !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "instance"]
+- !private ["Ps7CVarArg", "loadCookies"]
 - !private ["Ps7CVarArg", "main"]
 - ["Ps7CVarArg", "managedObjectContext"]
 - ["Ps7CVarArg", "managedObjectContext.storage"]
 - ["Ps7CVarArg", "managedObjectModel"]
 - ["Ps7CVarArg", "managedObjectModel.storage"]
+- ["Ps7CVarArg", "onClientCreated"]
+- ["Ps7CVarArg", "onClientCreatedFailed"]
 - ["Ps7CVarArg", "persistentStoreCoordinator"]
 - ["Ps7CVarArg", "persistentStoreCoordinator.storage"]
+- !private ["Ps7CVarArg", "present"]
+- !private ["Ps7CVarArg", "print"]
+- ["Ps7CVarArg", "registerForPushNotifications"]
+- !private ["Ps7CVarArg", "registerForRemoteNotifications"]
+- !private ["Ps7CVarArg", "registerUserNotificationSettings"]
+- !private ["Ps7CVarArg", "rootViewController"]
 - !private ["Ps7CVarArg", "save"]
 - ["Ps7CVarArg", "saveContext"]
+- !private ["Ps7CVarArg", "saveCookies"]
+- !private ["Ps7CVarArg", "setClient"]
+- ["Ps7CVarArg", "showFailedAlert"]
+- !private ["Ps7CVarArg", "storedToken"]
 - !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "successfullySetId"]
+- !private ["Ps7CVarArg", "token"]
+- !private ["Ps7CVarArg", "types"]
 - !private ["Ps7CVarArg", "url"]
 - !private ["Ps7CVarArg", "urls"]
 - !private ["Ps7CVarArg", "userInfo"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
+- ["C8hack_pop6Client", "deinit"]
+- !private ["C8hack_pop6Client", "instance"]
+- !private ["C8hack_pop6Client", "storedToken"]
+- !private ["C8hack_pop6Client", "successfullySetId"]
+- !private ["C8hack_pop6Client", "token"]
+- !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Indices"]
@@ -243,11 +361,27 @@ depends-member:
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "now"]
+- !private ["C8hack_pop11CookieStore", "loadCookies"]
+- !private ["C8hack_pop11CookieStore", "saveCookies"]
+- !private ["Vs14CountableRange", "Iterator"]
+- !private ["Vs14CountableRange", "_Element"]
+- ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "AnyObject"]
+- !private ["Ps28CustomDebugStringConvertible", "AppDelegate"]
 - !private ["Ps28CustomDebugStringConvertible", "Bundle"]
+- !private ["Ps28CustomDebugStringConvertible", "Client"]
+- !private ["Ps28CustomDebugStringConvertible", "CookieStore"]
+- !private ["Ps28CustomDebugStringConvertible", "CreateAlertMessage"]
+- !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
+- !private ["Ps28CustomDebugStringConvertible", "DispatchTime"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "FileManager"]
+- !private ["Ps28CustomDebugStringConvertible", "HackPopServer"]
+- !private ["Ps28CustomDebugStringConvertible", "HackPopStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "NSError"]
 - !private ["Ps28CustomDebugStringConvertible", "NSLocalizedDescriptionKey"]
 - !private ["Ps28CustomDebugStringConvertible", "NSLocalizedFailureReasonErrorKey"]
@@ -259,6 +393,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSUnderlyingErrorKey"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIUserNotificationSettings"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "abort"]
 - !private ["Ps28CustomDebugStringConvertible", "addPersistentStore"]
@@ -277,20 +412,41 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- !private ["Ps28CustomDebugStringConvertible", "asyncAfter"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
+- ["Ps28CustomDebugStringConvertible", "delay"]
 - !private ["Ps28CustomDebugStringConvertible", "hasChanges"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instance"]
+- !private ["Ps28CustomDebugStringConvertible", "loadCookies"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectContext"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectContext.storage"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectModel"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectModel.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "none"]
+- ["Ps28CustomDebugStringConvertible", "onClientCreated"]
+- ["Ps28CustomDebugStringConvertible", "onClientCreatedFailed"]
 - ["Ps28CustomDebugStringConvertible", "persistentStoreCoordinator"]
 - ["Ps28CustomDebugStringConvertible", "persistentStoreCoordinator.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "present"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- ["Ps28CustomDebugStringConvertible", "registerForPushNotifications"]
+- !private ["Ps28CustomDebugStringConvertible", "registerForRemoteNotifications"]
+- !private ["Ps28CustomDebugStringConvertible", "registerUserNotificationSettings"]
+- !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "saveContext"]
+- !private ["Ps28CustomDebugStringConvertible", "saveCookies"]
+- !private ["Ps28CustomDebugStringConvertible", "setClient"]
+- ["Ps28CustomDebugStringConvertible", "showFailedAlert"]
+- ["Ps28CustomDebugStringConvertible", "some"]
+- !private ["Ps28CustomDebugStringConvertible", "storedToken"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "successfullySetId"]
+- !private ["Ps28CustomDebugStringConvertible", "token"]
+- !private ["Ps28CustomDebugStringConvertible", "types"]
 - !private ["Ps28CustomDebugStringConvertible", "url"]
 - !private ["Ps28CustomDebugStringConvertible", "urls"]
 - !private ["Ps28CustomDebugStringConvertible", "userInfo"]
@@ -302,9 +458,11 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "appendingPathComponent"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
+- !private ["Ps17CustomReflectable", "Iterator"]
 - !private ["Ps17CustomReflectable", "Stride"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
 - !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
@@ -312,13 +470,25 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "none"]
+- ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "AnyObject"]
+- !private ["Ps23CustomStringConvertible", "AppDelegate"]
 - !private ["Ps23CustomStringConvertible", "Bundle"]
+- !private ["Ps23CustomStringConvertible", "Client"]
+- !private ["Ps23CustomStringConvertible", "CookieStore"]
+- !private ["Ps23CustomStringConvertible", "CreateAlertMessage"]
+- !private ["Ps23CustomStringConvertible", "DispatchQueue"]
+- !private ["Ps23CustomStringConvertible", "DispatchTime"]
+- !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "FileManager"]
+- !private ["Ps23CustomStringConvertible", "HackPopServer"]
+- !private ["Ps23CustomStringConvertible", "HackPopStyle"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "NSError"]
 - !private ["Ps23CustomStringConvertible", "NSLocalizedDescriptionKey"]
 - !private ["Ps23CustomStringConvertible", "NSLocalizedFailureReasonErrorKey"]
@@ -331,6 +501,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIUserNotificationSettings"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -351,25 +522,51 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["Ps23CustomStringConvertible", "asyncAfter"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "default"]
+- ["Ps23CustomStringConvertible", "delay"]
 - !private ["Ps23CustomStringConvertible", "hasChanges"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instance"]
+- !private ["Ps23CustomStringConvertible", "loadCookies"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - ["Ps23CustomStringConvertible", "managedObjectContext"]
 - ["Ps23CustomStringConvertible", "managedObjectContext.storage"]
 - ["Ps23CustomStringConvertible", "managedObjectModel"]
 - ["Ps23CustomStringConvertible", "managedObjectModel.storage"]
+- ["Ps23CustomStringConvertible", "onClientCreated"]
+- ["Ps23CustomStringConvertible", "onClientCreatedFailed"]
 - ["Ps23CustomStringConvertible", "persistentStoreCoordinator"]
 - ["Ps23CustomStringConvertible", "persistentStoreCoordinator.storage"]
+- !private ["Ps23CustomStringConvertible", "present"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- ["Ps23CustomStringConvertible", "registerForPushNotifications"]
+- !private ["Ps23CustomStringConvertible", "registerForRemoteNotifications"]
+- !private ["Ps23CustomStringConvertible", "registerUserNotificationSettings"]
+- !private ["Ps23CustomStringConvertible", "rootViewController"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "saveContext"]
+- !private ["Ps23CustomStringConvertible", "saveCookies"]
+- !private ["Ps23CustomStringConvertible", "setClient"]
+- ["Ps23CustomStringConvertible", "showFailedAlert"]
+- !private ["Ps23CustomStringConvertible", "storedToken"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "successfullySetId"]
+- !private ["Ps23CustomStringConvertible", "token"]
+- !private ["Ps23CustomStringConvertible", "types"]
 - !private ["Ps23CustomStringConvertible", "url"]
 - !private ["Ps23CustomStringConvertible", "urls"]
 - !private ["Ps23CustomStringConvertible", "userInfo"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["V10Foundation4Data", "Index"]
+- !private ["V10Foundation4Data", "IndexDistance"]
+- !private ["V10Foundation4Data", "SubSequence"]
+- !private ["V10Foundation4Data", "_Element"]
+- !private ["V10Foundation4Data", "count"]
+- ["V10Foundation4Data", "deinit"]
+- !private ["V10Foundation4Data", "subscript"]
 - !private ["Vs27DefaultBidirectionalIndices", "Index"]
 - !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
 - !private ["Vs27DefaultBidirectionalIndices", "SubSequence"]
@@ -383,11 +580,30 @@ depends-member:
 - ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "init"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["Sd", "deinit"]
+- !private ["CSo14DispatchObject", "asyncAfter"]
+- !private ["CSo14DispatchObject", "main"]
+- !private ["CSo13DispatchQueue", "asyncAfter"]
+- ["CSo13DispatchQueue", "deinit"]
+- !private ["CSo13DispatchQueue", "main"]
+- ["V8Dispatch12DispatchTime", "deinit"]
+- !private ["V8Dispatch12DispatchTime", "now"]
+- ["Sd", "deinit"]
 - !private ["Ps9Equatable", "AnyObject"]
+- !private ["Ps9Equatable", "AppDelegate"]
 - !private ["Ps9Equatable", "Bundle"]
+- !private ["Ps9Equatable", "Client"]
+- !private ["Ps9Equatable", "CookieStore"]
+- !private ["Ps9Equatable", "CreateAlertMessage"]
+- !private ["Ps9Equatable", "DispatchQueue"]
+- !private ["Ps9Equatable", "DispatchTime"]
+- !private ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "FileManager"]
+- !private ["Ps9Equatable", "HackPopServer"]
+- !private ["Ps9Equatable", "HackPopStyle"]
+- !private ["Ps9Equatable", "Index"]
+- !private ["Ps9Equatable", "IndexDistance"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Iterator"]
 - !private ["Ps9Equatable", "NSError"]
 - !private ["Ps9Equatable", "NSLocalizedDescriptionKey"]
 - !private ["Ps9Equatable", "NSLocalizedFailureReasonErrorKey"]
@@ -397,12 +613,17 @@ depends-member:
 - !private ["Ps9Equatable", "NSPersistentStoreCoordinator"]
 - !private ["Ps9Equatable", "NSSQLiteStoreType"]
 - !private ["Ps9Equatable", "NSUnderlyingErrorKey"]
+- !private ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "SubSequence"]
+- !private ["Ps9Equatable", "UIUserNotificationSettings"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "abort"]
 - !private ["Ps9Equatable", "addPersistentStore"]
+- !private ["Ps9Equatable", "alert"]
 - !private ["Ps9Equatable", "appendingPathComponent"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
@@ -418,20 +639,44 @@ depends-member:
 - ["Ps9Equatable", "applicationWillEnterForeground"]
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
+- !private ["Ps9Equatable", "asyncAfter"]
+- !private ["Ps9Equatable", "badge"]
+- !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "default"]
+- ["Ps9Equatable", "delay"]
 - !private ["Ps9Equatable", "documentDirectory"]
 - !private ["Ps9Equatable", "hasChanges"]
 - !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instance"]
+- !private ["Ps9Equatable", "loadCookies"]
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "mainQueueConcurrencyType"]
 - ["Ps9Equatable", "managedObjectContext"]
 - ["Ps9Equatable", "managedObjectContext.storage"]
 - ["Ps9Equatable", "managedObjectModel"]
 - ["Ps9Equatable", "managedObjectModel.storage"]
+- !private ["Ps9Equatable", "none"]
+- !private ["Ps9Equatable", "now"]
+- ["Ps9Equatable", "onClientCreated"]
+- ["Ps9Equatable", "onClientCreatedFailed"]
 - ["Ps9Equatable", "persistentStoreCoordinator"]
 - ["Ps9Equatable", "persistentStoreCoordinator.storage"]
+- !private ["Ps9Equatable", "present"]
+- !private ["Ps9Equatable", "print"]
+- ["Ps9Equatable", "registerForPushNotifications"]
+- !private ["Ps9Equatable", "registerForRemoteNotifications"]
+- !private ["Ps9Equatable", "registerUserNotificationSettings"]
+- !private ["Ps9Equatable", "rootViewController"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "saveContext"]
+- !private ["Ps9Equatable", "saveCookies"]
+- !private ["Ps9Equatable", "setClient"]
+- ["Ps9Equatable", "showFailedAlert"]
+- !private ["Ps9Equatable", "storedToken"]
+- !private ["Ps9Equatable", "subscript"]
+- !private ["Ps9Equatable", "successfullySetId"]
+- !private ["Ps9Equatable", "token"]
+- !private ["Ps9Equatable", "types"]
 - !private ["Ps9Equatable", "url"]
 - !private ["Ps9Equatable", "urls"]
 - !private ["Ps9Equatable", "userDomainMask"]
@@ -441,11 +686,16 @@ depends-member:
 - ["Ps5Error", "deinit"]
 - !private ["Ps5Error", "init"]
 - !private ["Ps5Error", "userInfo"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
+- !private ["Ps25ExpressibleByArrayLiteral", "RawValue"]
 - !private ["Ps25ExpressibleByArrayLiteral", "SubSequence"]
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "alert"]
+- !private ["Ps25ExpressibleByArrayLiteral", "badge"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "none"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
 - !private ["Ps25ExpressibleByArrayLiteral", "userDomainMask"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
@@ -455,6 +705,8 @@ depends-member:
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
+- !private ["Ps23ExpressibleByNilLiteral", "none"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
@@ -462,9 +714,21 @@ depends-member:
 - !private ["CSo11FileManager", "deinit"]
 - !private ["CSo11FileManager", "urls"]
 - !private ["Sf", "deinit"]
+- !private ["C8hack_pop13HackPopServer", "setClient"]
+- !private ["C8hack_pop12HackPopStyle", "CreateAlertMessage"]
 - !private ["Ps8Hashable", "AnyObject"]
+- !private ["Ps8Hashable", "AppDelegate"]
 - !private ["Ps8Hashable", "Bundle"]
+- !private ["Ps8Hashable", "Client"]
+- !private ["Ps8Hashable", "CookieStore"]
+- !private ["Ps8Hashable", "CreateAlertMessage"]
+- !private ["Ps8Hashable", "DispatchQueue"]
+- !private ["Ps8Hashable", "DispatchTime"]
 - !private ["Ps8Hashable", "FileManager"]
+- !private ["Ps8Hashable", "HackPopServer"]
+- !private ["Ps8Hashable", "HackPopStyle"]
+- !private ["Ps8Hashable", "Index"]
+- !private ["Ps8Hashable", "IndexDistance"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSError"]
 - !private ["Ps8Hashable", "NSLocalizedDescriptionKey"]
@@ -477,7 +741,10 @@ depends-member:
 - !private ["Ps8Hashable", "NSUnderlyingErrorKey"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "SubSequence"]
+- !private ["Ps8Hashable", "UIUserNotificationSettings"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
+- !private ["Ps8Hashable", "_Element"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "abort"]
 - !private ["Ps8Hashable", "addPersistentStore"]
@@ -496,25 +763,94 @@ depends-member:
 - ["Ps8Hashable", "applicationWillEnterForeground"]
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
+- !private ["Ps8Hashable", "asyncAfter"]
+- !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "default"]
+- ["Ps8Hashable", "delay"]
 - !private ["Ps8Hashable", "documentDirectory"]
 - !private ["Ps8Hashable", "hasChanges"]
 - !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instance"]
+- !private ["Ps8Hashable", "loadCookies"]
 - !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "mainQueueConcurrencyType"]
 - ["Ps8Hashable", "managedObjectContext"]
 - ["Ps8Hashable", "managedObjectContext.storage"]
 - ["Ps8Hashable", "managedObjectModel"]
 - ["Ps8Hashable", "managedObjectModel.storage"]
+- ["Ps8Hashable", "onClientCreated"]
+- ["Ps8Hashable", "onClientCreatedFailed"]
 - ["Ps8Hashable", "persistentStoreCoordinator"]
 - ["Ps8Hashable", "persistentStoreCoordinator.storage"]
+- !private ["Ps8Hashable", "present"]
+- !private ["Ps8Hashable", "print"]
+- ["Ps8Hashable", "registerForPushNotifications"]
+- !private ["Ps8Hashable", "registerForRemoteNotifications"]
+- !private ["Ps8Hashable", "registerUserNotificationSettings"]
+- !private ["Ps8Hashable", "rootViewController"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "saveContext"]
+- !private ["Ps8Hashable", "saveCookies"]
+- !private ["Ps8Hashable", "setClient"]
+- ["Ps8Hashable", "showFailedAlert"]
+- !private ["Ps8Hashable", "storedToken"]
+- !private ["Ps8Hashable", "subscript"]
+- !private ["Ps8Hashable", "successfullySetId"]
+- !private ["Ps8Hashable", "token"]
+- !private ["Ps8Hashable", "types"]
 - !private ["Ps8Hashable", "url"]
 - !private ["Ps8Hashable", "urls"]
 - !private ["Ps8Hashable", "userInfo"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- !private ["P8hack_pop24HttpClientCreateListener", "AnyObject"]
+- !private ["P8hack_pop24HttpClientCreateListener", "AppDelegate"]
+- !private ["P8hack_pop24HttpClientCreateListener", "Bundle"]
+- !private ["P8hack_pop24HttpClientCreateListener", "Client"]
+- !private ["P8hack_pop24HttpClientCreateListener", "CookieStore"]
+- !private ["P8hack_pop24HttpClientCreateListener", "DispatchQueue"]
+- !private ["P8hack_pop24HttpClientCreateListener", "DispatchTime"]
+- !private ["P8hack_pop24HttpClientCreateListener", "FileManager"]
+- !private ["P8hack_pop24HttpClientCreateListener", "HackPopServer"]
+- !private ["P8hack_pop24HttpClientCreateListener", "HackPopStyle"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSError"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSLocalizedDescriptionKey"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSLocalizedFailureReasonErrorKey"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSLog"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSManagedObjectContext"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSManagedObjectModel"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSPersistentStoreCoordinator"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSSQLiteStoreType"]
+- !private ["P8hack_pop24HttpClientCreateListener", "NSUnderlyingErrorKey"]
+- !private ["P8hack_pop24HttpClientCreateListener", "String"]
+- !private ["P8hack_pop24HttpClientCreateListener", "UIUserNotificationSettings"]
+- !private ["P8hack_pop24HttpClientCreateListener", "abort"]
+- ["P8hack_pop24HttpClientCreateListener", "application"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationDidBecomeActive"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationDidEnterBackground"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationDidFinishLaunching"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationDidReceiveMemoryWarning"]
+- !private ["P8hack_pop24HttpClientCreateListener", "applicationDocumentsDirectory"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationProtectedDataDidBecomeAvailable"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationProtectedDataWillBecomeUnavailable"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationShouldRequestHealthAuthorization"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationSignificantTimeChange"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationWillEnterForeground"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationWillResignActive"]
+- ["P8hack_pop24HttpClientCreateListener", "applicationWillTerminate"]
+- !private ["P8hack_pop24HttpClientCreateListener", "delay"]
+- !private ["P8hack_pop24HttpClientCreateListener", "managedObjectContext"]
+- !private ["P8hack_pop24HttpClientCreateListener", "managedObjectModel"]
+- ["P8hack_pop24HttpClientCreateListener", "onClientCreated"]
+- ["P8hack_pop24HttpClientCreateListener", "onClientCreatedFailed"]
+- !private ["P8hack_pop24HttpClientCreateListener", "persistentStoreCoordinator"]
+- !private ["P8hack_pop24HttpClientCreateListener", "print"]
+- !private ["P8hack_pop24HttpClientCreateListener", "registerForPushNotifications"]
+- !private ["P8hack_pop24HttpClientCreateListener", "saveContext"]
+- !private ["P8hack_pop24HttpClientCreateListener", "showFailedAlert"]
+- ["P8hack_pop24HttpClientCreateListener", "window"]
+- ["P8hack_pop24HttpClientCreateListener", ""]
+- !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Indices"]
@@ -524,6 +860,7 @@ depends-member:
 - !private ["Ps9Indexable", "count"]
 - !private ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "subscript"]
+- !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Indices"]
@@ -537,7 +874,7 @@ depends-member:
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
-- !private ["Si", "deinit"]
+- ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
@@ -555,12 +892,14 @@ depends-member:
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "SubSequence"]
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "subscript"]
+- !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
@@ -570,6 +909,8 @@ depends-member:
 - !private ["PSo8NSCoding", "hasChanges"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "persistentStoreCoordinator"]
+- !private ["PSo8NSCoding", "present"]
+- !private ["PSo8NSCoding", "rootViewController"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo8NSCoding", "userInfo"]
 - !private ["PSo9NSCopying", "init"]
@@ -577,6 +918,7 @@ depends-member:
 - ["CSo7NSError", "deinit"]
 - !private ["CSo7NSError", "init"]
 - !private ["CSo7NSError", "userInfo"]
+- !private ["PSo26NSExtensionRequestHandling", "present"]
 - !private ["PSo17NSFastEnumeration", "init"]
 - !private ["PSo9NSLocking", "addPersistentStore"]
 - !private ["PSo9NSLocking", "hasChanges"]
@@ -593,10 +935,22 @@ depends-member:
 - ["CSo20NSManagedObjectModel", "deinit"]
 - !private ["CSo20NSManagedObjectModel", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "AnyHashable"]
 - !private ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "AppDelegate"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Bundle"]
+- !private ["CSo8NSObject", "Client"]
+- !private ["CSo8NSObject", "CookieStore"]
+- !private ["CSo8NSObject", "CreateAlertMessage"]
+- ["CSo8NSObject", "Data"]
+- !private ["CSo8NSObject", "DispatchQueue"]
+- !private ["CSo8NSObject", "DispatchTime"]
+- ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "Error"]
 - !private ["CSo8NSObject", "FileManager"]
+- !private ["CSo8NSObject", "HackPopServer"]
+- !private ["CSo8NSObject", "HackPopStyle"]
 - !private ["CSo8NSObject", "NSError"]
 - !private ["CSo8NSObject", "NSLocalizedDescriptionKey"]
 - !private ["CSo8NSObject", "NSLocalizedFailureReasonErrorKey"]
@@ -606,11 +960,14 @@ depends-member:
 - ["CSo8NSObject", "NSPersistentStoreCoordinator"]
 - !private ["CSo8NSObject", "NSSQLiteStoreType"]
 - !private ["CSo8NSObject", "NSUnderlyingErrorKey"]
-- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
+- ["CSo8NSObject", "UIBackgroundFetchResult"]
+- ["CSo8NSObject", "UIUserNotificationSettings"]
 - ["CSo8NSObject", "UIWindow"]
 - ["CSo8NSObject", "URL"]
+- ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "abort"]
 - !private ["CSo8NSObject", "addPersistentStore"]
 - ["CSo8NSObject", "application"]
@@ -627,25 +984,52 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "asyncAfter"]
 - !private ["CSo8NSObject", "default"]
+- ["CSo8NSObject", "delay"]
 - !private ["CSo8NSObject", "hasChanges"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instance"]
+- !private ["CSo8NSObject", "loadCookies"]
 - !private ["CSo8NSObject", "main"]
 - ["CSo8NSObject", "managedObjectContext"]
 - ["CSo8NSObject", "managedObjectContext.storage"]
 - ["CSo8NSObject", "managedObjectModel"]
 - ["CSo8NSObject", "managedObjectModel.storage"]
+- ["CSo8NSObject", "onClientCreated"]
+- ["CSo8NSObject", "onClientCreatedFailed"]
 - ["CSo8NSObject", "persistentStoreCoordinator"]
 - ["CSo8NSObject", "persistentStoreCoordinator.storage"]
+- !private ["CSo8NSObject", "present"]
+- !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "registerForPushNotifications"]
+- !private ["CSo8NSObject", "registerForRemoteNotifications"]
+- !private ["CSo8NSObject", "registerUserNotificationSettings"]
+- !private ["CSo8NSObject", "rootViewController"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveContext"]
+- !private ["CSo8NSObject", "saveCookies"]
+- !private ["CSo8NSObject", "setClient"]
+- ["CSo8NSObject", "showFailedAlert"]
+- !private ["CSo8NSObject", "storedToken"]
+- !private ["CSo8NSObject", "successfullySetId"]
+- !private ["CSo8NSObject", "token"]
+- !private ["CSo8NSObject", "types"]
 - !private ["CSo8NSObject", "url"]
 - !private ["CSo8NSObject", "urls"]
 - !private ["CSo8NSObject", "userInfo"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "AnyObject"]
+- !private ["PSo16NSObjectProtocol", "AppDelegate"]
 - !private ["PSo16NSObjectProtocol", "Bundle"]
+- !private ["PSo16NSObjectProtocol", "Client"]
+- !private ["PSo16NSObjectProtocol", "CookieStore"]
+- !private ["PSo16NSObjectProtocol", "CreateAlertMessage"]
+- !private ["PSo16NSObjectProtocol", "DispatchQueue"]
+- !private ["PSo16NSObjectProtocol", "DispatchTime"]
 - !private ["PSo16NSObjectProtocol", "FileManager"]
+- !private ["PSo16NSObjectProtocol", "HackPopServer"]
+- !private ["PSo16NSObjectProtocol", "HackPopStyle"]
 - !private ["PSo16NSObjectProtocol", "NSError"]
 - !private ["PSo16NSObjectProtocol", "NSLocalizedDescriptionKey"]
 - !private ["PSo16NSObjectProtocol", "NSLocalizedFailureReasonErrorKey"]
@@ -656,6 +1040,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSSQLiteStoreType"]
 - !private ["PSo16NSObjectProtocol", "NSUnderlyingErrorKey"]
 - !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UIUserNotificationSettings"]
 - !private ["PSo16NSObjectProtocol", "abort"]
 - !private ["PSo16NSObjectProtocol", "addPersistentStore"]
 - ["PSo16NSObjectProtocol", "application"]
@@ -672,18 +1057,37 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "asyncAfter"]
 - !private ["PSo16NSObjectProtocol", "default"]
+- ["PSo16NSObjectProtocol", "delay"]
 - !private ["PSo16NSObjectProtocol", "hasChanges"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instance"]
+- !private ["PSo16NSObjectProtocol", "loadCookies"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - ["PSo16NSObjectProtocol", "managedObjectContext"]
 - ["PSo16NSObjectProtocol", "managedObjectContext.storage"]
 - ["PSo16NSObjectProtocol", "managedObjectModel"]
 - ["PSo16NSObjectProtocol", "managedObjectModel.storage"]
+- ["PSo16NSObjectProtocol", "onClientCreated"]
+- ["PSo16NSObjectProtocol", "onClientCreatedFailed"]
 - ["PSo16NSObjectProtocol", "persistentStoreCoordinator"]
 - ["PSo16NSObjectProtocol", "persistentStoreCoordinator.storage"]
+- !private ["PSo16NSObjectProtocol", "present"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- ["PSo16NSObjectProtocol", "registerForPushNotifications"]
+- !private ["PSo16NSObjectProtocol", "registerForRemoteNotifications"]
+- !private ["PSo16NSObjectProtocol", "registerUserNotificationSettings"]
+- !private ["PSo16NSObjectProtocol", "rootViewController"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveContext"]
+- !private ["PSo16NSObjectProtocol", "saveCookies"]
+- !private ["PSo16NSObjectProtocol", "setClient"]
+- ["PSo16NSObjectProtocol", "showFailedAlert"]
+- !private ["PSo16NSObjectProtocol", "storedToken"]
+- !private ["PSo16NSObjectProtocol", "successfullySetId"]
+- !private ["PSo16NSObjectProtocol", "token"]
+- !private ["PSo16NSObjectProtocol", "types"]
 - !private ["PSo16NSObjectProtocol", "url"]
 - !private ["PSo16NSObjectProtocol", "urls"]
 - !private ["PSo16NSObjectProtocol", "userInfo"]
@@ -697,8 +1101,18 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "userInfo"]
 - !private ["CSo8NSString", "init"]
 - ["Os5Never", "deinit"]
+- !private ["CSo9OS_object", "asyncAfter"]
+- !private ["CSo9OS_object", "main"]
+- !private ["Ps9OptionSet", "Element"]
+- !private ["Ps9OptionSet", "RawValue"]
+- !private ["Ps9OptionSet", "alert"]
+- !private ["Ps9OptionSet", "badge"]
+- !private ["Ps9OptionSet", "none"]
 - !private ["Ps9OptionSet", "userDomainMask"]
 - ["Sq", "deinit"]
+- !private ["Sq", "none"]
+- ["Sq", "some"]
+- !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -707,6 +1121,7 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "count"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Indices"]
@@ -721,22 +1136,37 @@ depends-member:
 - !private ["Vs17RandomAccessSlice", "Iterator"]
 - !private ["Vs17RandomAccessSlice", "SubSequence"]
 - !private ["Vs17RandomAccessSlice", "_Element"]
+- !private ["Vs5Range", "Iterator"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Index"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "SubSequence"]
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
+- !private ["Ps16RawRepresentable", "Element"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "alert"]
+- !private ["Ps16RawRepresentable", "badge"]
 - !private ["Ps16RawRepresentable", "documentDirectory"]
 - !private ["Ps16RawRepresentable", "mainQueueConcurrencyType"]
+- !private ["Ps16RawRepresentable", "none"]
 - !private ["Ps16RawRepresentable", "userDomainMask"]
+- !private ["P10Foundation20ReferenceConvertible", "Index"]
+- !private ["P10Foundation20ReferenceConvertible", "IndexDistance"]
+- !private ["P10Foundation20ReferenceConvertible", "SubSequence"]
+- !private ["P10Foundation20ReferenceConvertible", "_Element"]
 - !private ["P10Foundation20ReferenceConvertible", "appendingPathComponent"]
+- !private ["P10Foundation20ReferenceConvertible", "count"]
+- !private ["P10Foundation20ReferenceConvertible", "subscript"]
 - !private ["OCSo11FileManager19SearchPathDirectory", "deinit"]
 - !private ["OCSo11FileManager19SearchPathDirectory", "documentDirectory"]
 - !private ["VCSo11FileManager20SearchPathDomainMask", "deinit"]
@@ -751,6 +1181,11 @@ depends-member:
 - !private ["Ps8Sequence", "count"]
 - !private ["Ps8Sequence", "init"]
 - !private ["Ps8Sequence", "subscript"]
+- !private ["Ps10SetAlgebra", "Element"]
+- !private ["Ps10SetAlgebra", "RawValue"]
+- !private ["Ps10SetAlgebra", "alert"]
+- !private ["Ps10SetAlgebra", "badge"]
+- !private ["Ps10SetAlgebra", "none"]
 - !private ["Ps10SetAlgebra", "userDomainMask"]
 - !private ["Ps13SignedInteger", "IntegerLiteralType"]
 - !private ["Ps13SignedInteger", "Stride"]
@@ -769,9 +1204,24 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
+- ["CSo17UIAlertController", "deinit"]
+- !private ["PSo12UIAppearance", "rootViewController"]
+- !private ["PSo21UIAppearanceContainer", "present"]
+- !private ["PSo21UIAppearanceContainer", "rootViewController"]
+- ["CSo13UIApplication", "deinit"]
+- !private ["CSo13UIApplication", "registerForRemoteNotifications"]
+- !private ["CSo13UIApplication", "registerUserNotificationSettings"]
 - !private ["PSo21UIApplicationDelegate", "AnyObject"]
+- !private ["PSo21UIApplicationDelegate", "AppDelegate"]
 - !private ["PSo21UIApplicationDelegate", "Bundle"]
+- !private ["PSo21UIApplicationDelegate", "Client"]
+- !private ["PSo21UIApplicationDelegate", "CookieStore"]
+- !private ["PSo21UIApplicationDelegate", "DispatchQueue"]
+- !private ["PSo21UIApplicationDelegate", "DispatchTime"]
 - !private ["PSo21UIApplicationDelegate", "FileManager"]
+- !private ["PSo21UIApplicationDelegate", "HackPopServer"]
+- !private ["PSo21UIApplicationDelegate", "HackPopStyle"]
 - !private ["PSo21UIApplicationDelegate", "NSError"]
 - !private ["PSo21UIApplicationDelegate", "NSLocalizedDescriptionKey"]
 - !private ["PSo21UIApplicationDelegate", "NSLocalizedFailureReasonErrorKey"]
@@ -782,6 +1232,7 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "NSSQLiteStoreType"]
 - !private ["PSo21UIApplicationDelegate", "NSUnderlyingErrorKey"]
 - !private ["PSo21UIApplicationDelegate", "String"]
+- !private ["PSo21UIApplicationDelegate", "UIUserNotificationSettings"]
 - !private ["PSo21UIApplicationDelegate", "abort"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
@@ -796,16 +1247,39 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "delay"]
 - !private ["PSo21UIApplicationDelegate", "managedObjectContext"]
 - !private ["PSo21UIApplicationDelegate", "managedObjectModel"]
+- ["PSo21UIApplicationDelegate", "onClientCreated"]
+- ["PSo21UIApplicationDelegate", "onClientCreatedFailed"]
 - !private ["PSo21UIApplicationDelegate", "persistentStoreCoordinator"]
+- !private ["PSo21UIApplicationDelegate", "print"]
+- !private ["PSo21UIApplicationDelegate", "registerForPushNotifications"]
 - !private ["PSo21UIApplicationDelegate", "saveContext"]
+- !private ["PSo21UIApplicationDelegate", "showFailedAlert"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- !private ["PSo18UIContentContainer", "present"]
+- !private ["PSo17UICoordinateSpace", "rootViewController"]
+- !private ["PSo13UIDynamicItem", "rootViewController"]
+- !private ["PSo18UIFocusEnvironment", "present"]
+- !private ["PSo18UIFocusEnvironment", "rootViewController"]
+- !private ["PSo11UIFocusItem", "rootViewController"]
+- ["CSo11UIResponder", "AnyHashable"]
 - !private ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "AppDelegate"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "Bundle"]
+- !private ["CSo11UIResponder", "Client"]
+- !private ["CSo11UIResponder", "CookieStore"]
+- ["CSo11UIResponder", "Data"]
+- !private ["CSo11UIResponder", "DispatchQueue"]
+- !private ["CSo11UIResponder", "DispatchTime"]
+- ["CSo11UIResponder", "Double"]
+- ["CSo11UIResponder", "Error"]
 - !private ["CSo11UIResponder", "FileManager"]
+- !private ["CSo11UIResponder", "HackPopServer"]
+- !private ["CSo11UIResponder", "HackPopStyle"]
 - !private ["CSo11UIResponder", "NSError"]
 - !private ["CSo11UIResponder", "NSLocalizedDescriptionKey"]
 - !private ["CSo11UIResponder", "NSLocalizedFailureReasonErrorKey"]
@@ -815,11 +1289,14 @@ depends-member:
 - ["CSo11UIResponder", "NSPersistentStoreCoordinator"]
 - !private ["CSo11UIResponder", "NSSQLiteStoreType"]
 - !private ["CSo11UIResponder", "NSUnderlyingErrorKey"]
-- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
+- ["CSo11UIResponder", "UIBackgroundFetchResult"]
+- ["CSo11UIResponder", "UIUserNotificationSettings"]
 - ["CSo11UIResponder", "UIWindow"]
 - ["CSo11UIResponder", "URL"]
+- ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "abort"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
@@ -836,19 +1313,36 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
 - ["CSo11UIResponder", "deinit"]
+- ["CSo11UIResponder", "delay"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "managedObjectContext"]
 - ["CSo11UIResponder", "managedObjectContext.storage"]
 - ["CSo11UIResponder", "managedObjectModel"]
 - ["CSo11UIResponder", "managedObjectModel.storage"]
+- ["CSo11UIResponder", "onClientCreated"]
+- ["CSo11UIResponder", "onClientCreatedFailed"]
 - ["CSo11UIResponder", "persistentStoreCoordinator"]
 - ["CSo11UIResponder", "persistentStoreCoordinator.storage"]
+- !private ["CSo11UIResponder", "present"]
+- !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "registerForPushNotifications"]
+- !private ["CSo11UIResponder", "registerForRemoteNotifications"]
+- !private ["CSo11UIResponder", "registerUserNotificationSettings"]
+- !private ["CSo11UIResponder", "rootViewController"]
 - ["CSo11UIResponder", "saveContext"]
+- ["CSo11UIResponder", "showFailedAlert"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["PSo30UIResponderStandardEditActions", "AnyObject"]
+- !private ["PSo30UIResponderStandardEditActions", "AppDelegate"]
 - !private ["PSo30UIResponderStandardEditActions", "Bundle"]
+- !private ["PSo30UIResponderStandardEditActions", "Client"]
+- !private ["PSo30UIResponderStandardEditActions", "CookieStore"]
+- !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
+- !private ["PSo30UIResponderStandardEditActions", "DispatchTime"]
 - !private ["PSo30UIResponderStandardEditActions", "FileManager"]
+- !private ["PSo30UIResponderStandardEditActions", "HackPopServer"]
+- !private ["PSo30UIResponderStandardEditActions", "HackPopStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "NSError"]
 - !private ["PSo30UIResponderStandardEditActions", "NSLocalizedDescriptionKey"]
 - !private ["PSo30UIResponderStandardEditActions", "NSLocalizedFailureReasonErrorKey"]
@@ -859,6 +1353,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "NSSQLiteStoreType"]
 - !private ["PSo30UIResponderStandardEditActions", "NSUnderlyingErrorKey"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "UIUserNotificationSettings"]
 - !private ["PSo30UIResponderStandardEditActions", "abort"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
@@ -874,30 +1369,59 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "applicationWillEnterForeground"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
+- ["PSo30UIResponderStandardEditActions", "delay"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - ["PSo30UIResponderStandardEditActions", "managedObjectContext"]
 - ["PSo30UIResponderStandardEditActions", "managedObjectContext.storage"]
 - ["PSo30UIResponderStandardEditActions", "managedObjectModel"]
 - ["PSo30UIResponderStandardEditActions", "managedObjectModel.storage"]
+- ["PSo30UIResponderStandardEditActions", "onClientCreated"]
+- ["PSo30UIResponderStandardEditActions", "onClientCreatedFailed"]
 - ["PSo30UIResponderStandardEditActions", "persistentStoreCoordinator"]
 - ["PSo30UIResponderStandardEditActions", "persistentStoreCoordinator.storage"]
+- !private ["PSo30UIResponderStandardEditActions", "present"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
+- ["PSo30UIResponderStandardEditActions", "registerForPushNotifications"]
+- !private ["PSo30UIResponderStandardEditActions", "registerForRemoteNotifications"]
+- !private ["PSo30UIResponderStandardEditActions", "registerUserNotificationSettings"]
+- !private ["PSo30UIResponderStandardEditActions", "rootViewController"]
 - ["PSo30UIResponderStandardEditActions", "saveContext"]
+- ["PSo30UIResponderStandardEditActions", "showFailedAlert"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "present"]
+- !private ["PSo18UITraitEnvironment", "present"]
+- !private ["PSo18UITraitEnvironment", "rootViewController"]
+- ["CSo26UIUserNotificationSettings", "deinit"]
+- !private ["CSo26UIUserNotificationSettings", "init"]
+- !private ["CSo26UIUserNotificationSettings", "types"]
+- !private ["VSC22UIUserNotificationType", "Element"]
+- !private ["VSC22UIUserNotificationType", "RawValue"]
+- !private ["VSC22UIUserNotificationType", "alert"]
+- !private ["VSC22UIUserNotificationType", "badge"]
+- ["VSC22UIUserNotificationType", "deinit"]
+- !private ["VSC22UIUserNotificationType", "none"]
+- !private ["CSo6UIView", "rootViewController"]
+- !private ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "present"]
+- !private ["CSo8UIWindow", "rootViewController"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
+- ["Vs5UInt8", "deinit"]
 - !private ["V10Foundation3URL", "appendingPathComponent"]
 - ["V10Foundation3URL", "deinit"]
 - !private ["Sc", "deinit"]
+- !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "count"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "rootViewController"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
@@ -915,8 +1439,18 @@ depends-member:
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "appendingPathComponent"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "AnyObject"]
+- !private ["Ps9_Hashable", "AppDelegate"]
 - !private ["Ps9_Hashable", "Bundle"]
+- !private ["Ps9_Hashable", "Client"]
+- !private ["Ps9_Hashable", "CookieStore"]
+- !private ["Ps9_Hashable", "CreateAlertMessage"]
+- !private ["Ps9_Hashable", "DispatchQueue"]
+- !private ["Ps9_Hashable", "DispatchTime"]
 - !private ["Ps9_Hashable", "FileManager"]
+- !private ["Ps9_Hashable", "HackPopServer"]
+- !private ["Ps9_Hashable", "HackPopStyle"]
+- !private ["Ps9_Hashable", "Index"]
+- !private ["Ps9_Hashable", "IndexDistance"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
 - !private ["Ps9_Hashable", "NSError"]
 - !private ["Ps9_Hashable", "NSLocalizedDescriptionKey"]
@@ -929,7 +1463,10 @@ depends-member:
 - !private ["Ps9_Hashable", "NSUnderlyingErrorKey"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "SubSequence"]
+- !private ["Ps9_Hashable", "UIUserNotificationSettings"]
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
+- !private ["Ps9_Hashable", "_Element"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "abort"]
 - !private ["Ps9_Hashable", "addPersistentStore"]
@@ -948,20 +1485,41 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillEnterForeground"]
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
+- !private ["Ps9_Hashable", "asyncAfter"]
+- !private ["Ps9_Hashable", "count"]
 - !private ["Ps9_Hashable", "default"]
+- ["Ps9_Hashable", "delay"]
 - !private ["Ps9_Hashable", "documentDirectory"]
 - !private ["Ps9_Hashable", "hasChanges"]
 - !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "instance"]
+- !private ["Ps9_Hashable", "loadCookies"]
 - !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "mainQueueConcurrencyType"]
 - ["Ps9_Hashable", "managedObjectContext"]
 - ["Ps9_Hashable", "managedObjectContext.storage"]
 - ["Ps9_Hashable", "managedObjectModel"]
 - ["Ps9_Hashable", "managedObjectModel.storage"]
+- ["Ps9_Hashable", "onClientCreated"]
+- ["Ps9_Hashable", "onClientCreatedFailed"]
 - ["Ps9_Hashable", "persistentStoreCoordinator"]
 - ["Ps9_Hashable", "persistentStoreCoordinator.storage"]
+- !private ["Ps9_Hashable", "present"]
+- !private ["Ps9_Hashable", "print"]
+- ["Ps9_Hashable", "registerForPushNotifications"]
+- !private ["Ps9_Hashable", "registerForRemoteNotifications"]
+- !private ["Ps9_Hashable", "registerUserNotificationSettings"]
+- !private ["Ps9_Hashable", "rootViewController"]
 - !private ["Ps9_Hashable", "save"]
 - ["Ps9_Hashable", "saveContext"]
+- !private ["Ps9_Hashable", "saveCookies"]
+- !private ["Ps9_Hashable", "setClient"]
+- ["Ps9_Hashable", "showFailedAlert"]
+- !private ["Ps9_Hashable", "storedToken"]
+- !private ["Ps9_Hashable", "subscript"]
+- !private ["Ps9_Hashable", "successfullySetId"]
+- !private ["Ps9_Hashable", "token"]
+- !private ["Ps9_Hashable", "types"]
 - !private ["Ps9_Hashable", "url"]
 - !private ["Ps9_Hashable", "urls"]
 - !private ["Ps9_Hashable", "userInfo"]
@@ -976,6 +1534,13 @@ depends-member:
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
+- !private ["P10Foundation18_MutablePairBoxing", "Index"]
+- !private ["P10Foundation18_MutablePairBoxing", "IndexDistance"]
+- !private ["P10Foundation18_MutablePairBoxing", "SubSequence"]
+- !private ["P10Foundation18_MutablePairBoxing", "_Element"]
+- !private ["P10Foundation18_MutablePairBoxing", "count"]
+- !private ["P10Foundation18_MutablePairBoxing", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
@@ -988,6 +1553,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "none"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
@@ -997,25 +1563,33 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "C8hack_pop11AppDelegate"
-- !private "Sa"
+- "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Vs18BidirectionalSlice"
 - !private "Ps17BitwiseOperations"
 - "Sb"
 - !private "CSo6Bundle"
+- !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
 - !private "Vs9Character"
+- "C8hack_pop6Client"
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
+- !private "C8hack_pop11CookieStore"
+- "Vs14CountableRange"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
+- "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- "V10Foundation4Data"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - "Vs10Dictionary"
-- !private "Sd"
+- !private "CSo14DispatchObject"
+- "CSo13DispatchQueue"
+- "V8Dispatch12DispatchTime"
+- "Sd"
 - "Ps9Equatable"
 - "Ps5Error"
 - !private "Ps25ExpressibleByArrayLiteral"
@@ -1023,16 +1597,20 @@ depends-nominal:
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
+- "Ps23ExpressibleByNilLiteral"
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "CSo11FileManager"
 - !private "Sf"
+- !private "C8hack_pop13HackPopServer"
+- !private "C8hack_pop12HackPopStyle"
 - "Ps8Hashable"
+- "P8hack_pop24HttpClientCreateListener"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
-- !private "Si"
+- "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
 - !private "Vs5Int64"
@@ -1047,6 +1625,7 @@ depends-nominal:
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo7NSError"
+- !private "PSo26NSExtensionRequestHandling"
 - !private "PSo17NSFastEnumeration"
 - !private "PSo9NSLocking"
 - "CSo22NSManagedObjectContext"
@@ -1060,11 +1639,13 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "Os5Never"
+- !private "CSo9OS_object"
 - !private "Ps9OptionSet"
 - "Sq"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
+- !private "Vs5Range"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
 - !private "Ps16RawRepresentable"
@@ -1080,17 +1661,35 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- "CSo17UIAlertController"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- "CSo13UIApplication"
 - "PSo21UIApplicationDelegate"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
+- !private "PSo16UIStateRestoring"
+- !private "PSo18UITraitEnvironment"
+- "CSo26UIUserNotificationSettings"
+- "VSC22UIUserNotificationType"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- !private "CSo8UIWindow"
 - !private "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
-- !private "Vs5UInt8"
+- "Vs5UInt8"
 - "V10Foundation3URL"
 - !private "Sc"
 - !private "Ps14_ArrayProtocol"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
@@ -1104,7 +1703,9 @@ depends-nominal:
 - !private "Ps14_Incrementable"
 - !private "Ps8_Integer"
 - !private "Ps18_IntegerArithmetic"
+- !private "P10Foundation18_MutablePairBoxing"
 - !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
 - !private "Ps14_SignedInteger"
 - !private "Ps11_Strideable"
 depends-dynamic-lookup:
@@ -1119,4 +1720,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "6a9010ff4a2ee09755868e35b1f60eba"
+interface-hash: "1be62da4423aeb8c05727ee9b64c345a"

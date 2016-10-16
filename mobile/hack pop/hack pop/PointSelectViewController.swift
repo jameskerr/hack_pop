@@ -12,35 +12,31 @@ import UIKit
 class PointSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var pointSelectionCloseButton: UIButton!
-
-    let pointRetainer = PointsRetainer.instance()
+    @IBOutlet weak var pointSelectionLabel: UILabel!
+    @IBOutlet weak var notifyThresholdView: UIControl!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.backgroundColor = UIColor.clear
-        tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0);
-        let attributedString = HackPopStyle.UnderlinedText("\(pointRetainer.value) Points", fontSize: 18)
-        pointSelectionCloseButton.setAttributedTitle(attributedString, for: UIControlState())
-    }
+    public let notifyThresholdAnimator = NotifyThresholdAnimationTransition()
+    public let pointRetainer = PointsRetainer.instance()
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // set to portrait mode always
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask(rawValue: UIInterfaceOrientationMask.portrait.rawValue)
     }
     
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent;
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.layer.borderColor = UIColor.clear.cgColor
+        
+        tableView.backgroundColor = UIColor.clear
+        tableView.contentInset = UIEdgeInsetsMake(0, -10, 0, 0);
+        let attributedString = HackPopStyle.UnderlinedText("\(pointRetainer.value) Points", fontSize: 18)
+        pointSelectionLabel.attributedText = attributedString
+        notifyThresholdAnimator.presenting = .close
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue is PointSelectionSegue {
-            (segue as! PointSelectionSegue).animationType = .closePointSelection
-        }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
@@ -48,19 +44,45 @@ class PointSelectViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pointRetainer.value = (pointRetainer.pointSelectionValues.object(at: (indexPath as NSIndexPath).row)  as? Int)!
-        let attributedString = HackPopStyle.UnderlinedText("\(pointRetainer.value) Points", fontSize: 18)
-        pointSelectionCloseButton.setAttributedTitle(attributedString, for: UIControlState())
-        performSegue(withIdentifier: PointSelectionSegue.SegueId, sender: nil)
+        let selectedPointThreshold = (pointRetainer.pointSelectionValues.object(at: (indexPath as NSIndexPath).row)  as? Int)!
+        let attributedString = HackPopStyle.UnderlinedText("\(selectedPointThreshold) Points", fontSize: 18)
+        pointSelectionLabel.attributedText = attributedString
+        close(withRequestToServer:true, threshold:selectedPointThreshold)
     }
     
     @IBAction func closePointSelection(_ sender: AnyObject) {
-        performSegue(withIdentifier: PointSelectionSegue.SegueId, sender: nil)
+        close(withRequestToServer:false, threshold: pointRetainer.value)
     }
-
+    
+    func close(withRequestToServer:Bool, threshold:Int) {
+        let homeViewController =  storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        homeViewController.transitioningDelegate = notifyThresholdAnimator
+        if (withRequestToServer) {
+                //set the delegate to the new view controller
+            let clientToken = Client.instance().token
+            
+            let madeRequest = HackPopServer.setTheshold(id:clientToken,
+                                         threshold: threshold,
+                                         delegate: homeViewController as HttpSetThresholdListener)
+            if madeRequest {
+                pointRetainer.value = threshold
+            }
+            present(homeViewController, animated: true, completion: {
+                if !madeRequest {
+                    let alert = HackPopStyle.CreateAlertMessage(title: "Could Not Set Points Theshold",
+                                                                message: "Your client has not been set yet. Please restart Hacker News Alerts while connected to the internet with notifications enabled.")
+                    homeViewController.present(alert, animated:true, completion: nil)
+                }
+            })
+            
+        } else {
+            present(homeViewController, animated: true, completion: nil)
+        }
+    
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let pointValue = pointRetainer.pointSelectionValues.object(at: (indexPath as NSIndexPath).row)
         return HackPopStyle.GetStyledPointSelectionCell(pointValue as AnyObject);
-    
     }
 }
