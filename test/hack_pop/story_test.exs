@@ -1,9 +1,9 @@
-
 defmodule HackPop.StoryTest do
   use ExUnit.Case
   use Timex
 
   import Ecto.Query
+
   alias HackPop.Repo
   alias HackPop.Story
 
