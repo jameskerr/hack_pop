@@ -7,8 +7,8 @@ provides-member:
 - ["C8hack_pop13RecentStories", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "RecentStories"
 - "NSObject"
+- "RecentStories"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", ""]

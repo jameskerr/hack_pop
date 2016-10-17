@@ -8,24 +8,24 @@ provides-member:
 - ["C8hack_pop6Client", ""]
 - ["VC8hack_pop6Client12defaultsKeys", ""]
 provides-dynamic-lookup:
+- "instance"
 - "defaults"
 - "save"
+- "_instance"
+- "storedToken"
+- "token"
 - "_storedToken"
 - "successfullySetId"
-- "_instance"
-- "token"
-- "storedToken"
-- "instance"
 depends-top-level:
-- "BooleanLiteralType"
-- "String"
-- "StringLiteralType"
-- "UserDefaults"
-- "Client"
-- "NSObject"
 - !private "=="
 - "AssignmentPrecedence"
+- "UserDefaults"
+- "String"
+- "NSObject"
 - "Bool"
+- "Client"
+- "BooleanLiteralType"
+- "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "Client"]
 - ["Ps9AnyObject", "UserDefaults"]

@@ -7,10 +7,10 @@ provides-member:
 - ["P8hack_pop24HttpClientCreateListener", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Void"
 - "Error"
-- "HttpClientCreateListener"
+- "Void"
 - "String"
+- "HttpClientCreateListener"
 depends-member:
 - ["P8hack_pop24HttpClientCreateListener", "Error"]
 - ["P8hack_pop24HttpClientCreateListener", "String"]

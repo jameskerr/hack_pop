@@ -7,10 +7,10 @@ provides-member:
 - ["P8hack_pop24HttpSetThresholdListener", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Void"
-- "Error"
 - "HttpSetThresholdListener"
 - "Int"
+- "Void"
+- "Error"
 depends-member:
 - ["P8hack_pop24HttpSetThresholdListener", "Error"]
 - ["P8hack_pop24HttpSetThresholdListener", "Int"]
