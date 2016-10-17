@@ -22,6 +22,7 @@ defmodule HackPop.Story do
     ids = Enum.map(stories, fn story -> story.id end)
     from(s in Story, where: not s.id in ^ids and s.trending == true)
     |> Repo.update_all(set: [trending: false])
+    stories
   end
 
   def save_all(stories) do
