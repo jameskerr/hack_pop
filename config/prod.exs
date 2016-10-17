@@ -13,6 +13,6 @@ config :apns,
   pools: [
     dev_pool: [
       env: :prod,
-      certfile: "secrets/apns_prod.pem"
+      certfile: "secrets/apns_dev.pem"
     ]
   ]
