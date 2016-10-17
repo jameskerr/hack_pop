@@ -1,4 +1,5 @@
 # Xcode
+keys.plist
 .DS_Store
 build/
 *.pbxuser
