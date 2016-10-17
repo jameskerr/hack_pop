@@ -25,7 +25,7 @@ defmodule HackPop.Pusher do
       |> Map.put(:token, client.client_id)
       |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
       |> Map.put(:badge, 0)
-      |> Map.put(:"content-available", 1)
+      |> Map.put(:content_available, 1)
       |> Map.put(:extra, %{
         url: story.url,
         points: story.points
