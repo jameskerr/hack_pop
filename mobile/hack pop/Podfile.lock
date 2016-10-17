@@ -1,0 +1,10 @@
+PODS:
+  - Flurry-iOS-SDK/FlurrySDK (7.8.0)
+
+DEPENDENCIES:
+  - Flurry-iOS-SDK/FlurrySDK
+
+SPEC CHECKSUMS:
+  Flurry-iOS-SDK: 388df247b9d92659527b608c891c7e474cd9d00e
+
+COCOAPODS: 0.39.0

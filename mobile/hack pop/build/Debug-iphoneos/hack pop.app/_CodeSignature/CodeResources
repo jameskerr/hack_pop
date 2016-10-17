@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		GGItGQlwSIv/nN7Em/+SzEdrNV8=
+		FTLzhvePpxJlLXYtoW5AbTqJAzs=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
@@ -43,7 +43,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5r7iPUFsgM8VgZfidYZ2nPjAVGw=
+			kcuKWXCFWThv/sLwtxBfIBIBftc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -52,7 +52,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DoB2ifR7fgOJ8uiXKZQQ8PKtuV8=
+			PHFM5PC7u/bNvolny1mytPtXpcU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hg9Wi5m3G7WfubPxshLeolA4epU=
+			xGPHvwfksYRWvhQZIp1mr7+1PAE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EpmmEw6Gbt2RZWyKIhSBLZmCoVM=
+			sfadcKTHnjNJtGJMjM3d2zRGHmE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -88,7 +88,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9PDT7r+OijK9nxxlgkc7VwvjKyY=
+			zkRy4YjwlY3KVdTcnOxbWu4Ld/s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -97,7 +97,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UwAefTeiIp3lqLkssaE2EFv1Dog=
+			dxBAsrNjtijfvXwKOdXDcjUIrY0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -106,7 +106,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D95aQw++3o31+Bix37CR59CSIrk=
+			LI7YtTMbDxU2LJvzTIRUTTencaY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -115,11 +115,23 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6eBygV2PmlVpmA/PQgpxTXR5Op8=
+			gO0qR+j/Udxov6udcm56UCNLknQ=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/Flurry_iOS_SDK.framework/Flurry_iOS_SDK</key>
+		<data>
+		PQai5vKSoW/n740JMoTBLqUnFFk=
+		</data>
+		<key>Frameworks/Flurry_iOS_SDK.framework/Info.plist</key>
+		<data>
+		0sqCeFk+S9yqBai7QjP9O+uK2Es=
+		</data>
+		<key>Frameworks/Flurry_iOS_SDK.framework/_CodeSignature/CodeResources</key>
+		<data>
+		wdgyAj4oc1YONHVgb3QLpbJ/tCk=
+		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		HabjYqsfOR6/ZOyBqI9UR2P/BeA=
@@ -232,6 +244,10 @@
 		<data>
 		TH2gLgRQZxqhv8P4WPKSE3InN1w=
 		</data>
+		<key>keys.plist</key>
+		<data>
+		0bAcMceT0Za8FEoWYf8SF4dsMq4=
+		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
 		MsIcUqmJN0JaYX6TgW+wYsQpXko=
@@ -254,11 +270,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GGItGQlwSIv/nN7Em/+SzEdrNV8=
+			FTLzhvePpxJlLXYtoW5AbTqJAzs=
 			</data>
 			<key>hash2</key>
 			<data>
-			5avUJSRe0IVota7w00Du2SCnHDcTEpnx+C0ZQ53HWGw=
+			Nq8aq9sHR8asK8RzFTucIvj5DtByXP6x/xVqo6fXCtM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -304,11 +320,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5r7iPUFsgM8VgZfidYZ2nPjAVGw=
+			kcuKWXCFWThv/sLwtxBfIBIBftc=
 			</data>
 			<key>hash2</key>
 			<data>
-			i8ZHQee3ks2zhIopie/kykOQJFiD4KkUIPx4bJsYHOY=
+			r7zhhQvH+RJi0cTWGBeNjPdH0XpEWyF9aOVXfio5UFU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -317,11 +333,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DoB2ifR7fgOJ8uiXKZQQ8PKtuV8=
+			PHFM5PC7u/bNvolny1mytPtXpcU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5hxiTKtYAzZtvBahkzdiAPkmyE8z5MhIbQfhTT1R6po=
+			3L1W66Bk6HyU6IumC7R+4C5HESGfkzqAp4k38ub5IwY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -343,11 +359,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hg9Wi5m3G7WfubPxshLeolA4epU=
+			xGPHvwfksYRWvhQZIp1mr7+1PAE=
 			</data>
 			<key>hash2</key>
 			<data>
-			axGad4MH9c2X4w72INY2fgPNXMlIQ+pLGGu2Bhg/6zQ=
+			Nbb7O0pjAaau1+4xfba7xwg9G9kpgE5FOdaE8kjx8Qg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -356,11 +372,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EpmmEw6Gbt2RZWyKIhSBLZmCoVM=
+			sfadcKTHnjNJtGJMjM3d2zRGHmE=
 			</data>
 			<key>hash2</key>
 			<data>
-			kIhaEjHMF79zHrEZUXxgSVGhWozUjEmOuOC03daJrNM=
+			Qiza+uK2wyIqZGj5hRVQWoJsSoShP3agwqXWEwVRIlI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -369,11 +385,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9PDT7r+OijK9nxxlgkc7VwvjKyY=
+			zkRy4YjwlY3KVdTcnOxbWu4Ld/s=
 			</data>
 			<key>hash2</key>
 			<data>
-			avQUOyZiVJfRgeP3pkqHHnEok4KXXnaEixkHmUoW8fY=
+			2L0+X6D9mbFLjPHXN7/q785jlVodkkPxeGqKtxi5aBc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -382,11 +398,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UwAefTeiIp3lqLkssaE2EFv1Dog=
+			dxBAsrNjtijfvXwKOdXDcjUIrY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			I/BEuypstylItZon0SuFXJq7MteOQKQGgXJJ/wsrPuQ=
+			i8UfmQjsvvANmoCgd/RV8EkAzvvDnQNBNgHgETgmpRk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -395,11 +411,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D95aQw++3o31+Bix37CR59CSIrk=
+			LI7YtTMbDxU2LJvzTIRUTTencaY=
 			</data>
 			<key>hash2</key>
 			<data>
-			IxPRPUApTf+T7GBS2F/Ie449aFGAcnYuwR2mM5N9mO0=
+			Yvf2UyJYVehzGWLfx8y3Qn9P2vPwYPzuRo/7n0dSFA4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -408,14 +424,47 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6eBygV2PmlVpmA/PQgpxTXR5Op8=
+			gO0qR+j/Udxov6udcm56UCNLknQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			mvjgVcIORZ/sNIrLpk5Qm2KQiM1G+Z0CttWQMd2SDog=
+			ACMyLjTKUejY2XsWe06AoFJ0i5evA7lpz7IQY7L1boQ=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>Frameworks/Flurry_iOS_SDK.framework/Flurry_iOS_SDK</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PQai5vKSoW/n740JMoTBLqUnFFk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Pn71yk2PHl8PflE0spwJ9B8HTpNSsKJ8G1ebEnMv4aU=
+			</data>
+		</dict>
+		<key>Frameworks/Flurry_iOS_SDK.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0sqCeFk+S9yqBai7QjP9O+uK2Es=
+			</data>
+			<key>hash2</key>
+			<data>
+			P0UYUaRW4JqbONWuiw8ash+G9ILggiR3LH0D9jtyYus=
+			</data>
+		</dict>
+		<key>Frameworks/Flurry_iOS_SDK.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wdgyAj4oc1YONHVgb3QLpbJ/tCk=
+			</data>
+			<key>hash2</key>
+			<data>
+			1vKDJILASgLDiU7BGhRA1VCcKagxBwjOxGQAKPq/qjA=
+			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<dict>
@@ -701,6 +750,17 @@
 			<key>hash2</key>
 			<data>
 			/jhO+/tJW4KPaqhc2R4ag8U9EEzw78Qc1Pb54eZY9xs=
+			</data>
+		</dict>
+		<key>keys.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0bAcMceT0Za8FEoWYf8SF4dsMq4=
+			</data>
+			<key>hash2</key>
+			<data>
+			m8vV1sV21BCkKGrjdGEYocqJpUDBYsqAij7f3M2jKM4=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

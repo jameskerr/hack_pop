@@ -7,8 +7,8 @@ provides-member:
 - ["P8hack_pop19HttpStoriesListener", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "HttpStoriesListener"
 - "Error"
+- "HttpStoriesListener"
 - "Story"
 - "Void"
 depends-member:
@@ -31,4 +31,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 interface-hash: "1c342250367a37a710a7f99bdac1988f"

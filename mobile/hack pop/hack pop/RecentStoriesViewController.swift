@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class RecentStoriesViewController: UIViewController {
     
@@ -32,6 +33,9 @@ class RecentStoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Flurry.logEvent("opened recent stories view controller")
+        
         setup()
         
         homeViewInteractor = Interactor(delegateViewController:self,
@@ -138,6 +142,7 @@ extension RecentStoriesViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let story = stories?[(indexPath as NSIndexPath).row]
+        Flurry.logEvent("opened story from recent stories table")
         Story.current = story
         webViewInteractor?.animateTransition()
     }

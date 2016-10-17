@@ -6,52 +6,54 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop25PointSelectViewController", ""]
 provides-dynamic-lookup:
-- "close"
 - "notifyThresholdAnimator"
 - "pointRetainer"
-- "supportedInterfaceOrientations"
-- "notifyThresholdView"
+- "preferredStatusBarStyle"
 - "closePointSelection"
+- "pointSelectionLabel"
+- "supportedInterfaceOrientations"
+- "close"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "viewDidLoad"
-- "pointSelectionLabel"
-- "preferredStatusBarStyle"
+- "notifyThresholdView"
 depends-top-level:
-- !private "HackPopStyle"
-- !private "HomeViewController"
-- "UIViewController"
-- "UITableView"
-- "PointsRetainer"
-- !private "BooleanLiteralType"
 - "AnyObject"
-- !private "HttpSetThresholdListener"
+- !private "UIColor"
+- "UITableViewCell"
+- "Bool"
+- "PointSelectViewController"
 - !private "!"
 - "NotifyThresholdAnimationTransition"
+- !private "HomeViewController"
+- "PointsRetainer"
 - !private "StringLiteralType"
-- !private "UIColor"
+- !private "BooleanLiteralType"
+- !private "HackPopServer"
+- !private "Flurry"
+- "UIControl"
 - "UIInterfaceOrientationMask"
-- "UIStatusBarStyle"
-- "Bool"
-- !private "UIEdgeInsetsMake"
+- "UITableViewDelegate"
+- "UIViewController"
 - !private "Client"
+- "Int"
+- "UITableViewDataSource"
+- !private "UIEdgeInsetsMake"
+- "IndexPath"
+- "UITableView"
+- "UILabel"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- "UITableViewDelegate"
-- "UILabel"
-- "UITableViewCell"
-- "Int"
-- !private "HackPopServer"
-- "PointSelectViewController"
-- "UITableViewDataSource"
-- "UIControl"
+- !private "HttpSetThresholdListener"
+- !private "HackPopStyle"
 - !private "NSIndexPath"
-- "IndexPath"
+- "UIStatusBarStyle"
 depends-member:
 - !private ["Ps9AnyObject", "Client"]
 - !private ["Ps9AnyObject", "CreateAlertMessage"]
+- !private ["Ps9AnyObject", "Flurry"]
 - !private ["Ps9AnyObject", "GetStyledPointSelectionCell"]
 - !private ["Ps9AnyObject", "HackPopServer"]
 - !private ["Ps9AnyObject", "HackPopStyle"]
@@ -78,6 +80,7 @@ depends-member:
 - ["Ps9AnyObject", "instance"]
 - !private ["Ps9AnyObject", "instantiateViewController"]
 - !private ["Ps9AnyObject", "layer"]
+- !private ["Ps9AnyObject", "logEvent"]
 - ["Ps9AnyObject", "notifyThresholdAnimator"]
 - ["Ps9AnyObject", "notifyThresholdView"]
 - ["Ps9AnyObject", "numberOfSections"]
@@ -129,6 +132,7 @@ depends-member:
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps7CVarArg", "Client"]
 - !private ["Ps7CVarArg", "CreateAlertMessage"]
+- !private ["Ps7CVarArg", "Flurry"]
 - !private ["Ps7CVarArg", "GetStyledPointSelectionCell"]
 - !private ["Ps7CVarArg", "HackPopServer"]
 - !private ["Ps7CVarArg", "HackPopStyle"]
@@ -154,6 +158,7 @@ depends-member:
 - ["Ps7CVarArg", "instance"]
 - !private ["Ps7CVarArg", "instantiateViewController"]
 - !private ["Ps7CVarArg", "layer"]
+- !private ["Ps7CVarArg", "logEvent"]
 - ["Ps7CVarArg", "notifyThresholdAnimator"]
 - ["Ps7CVarArg", "notifyThresholdView"]
 - ["Ps7CVarArg", "numberOfSections"]
@@ -199,6 +204,7 @@ depends-member:
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Client"]
 - !private ["Ps28CustomDebugStringConvertible", "CreateAlertMessage"]
+- !private ["Ps28CustomDebugStringConvertible", "Flurry"]
 - !private ["Ps28CustomDebugStringConvertible", "GetStyledPointSelectionCell"]
 - !private ["Ps28CustomDebugStringConvertible", "HackPopServer"]
 - !private ["Ps28CustomDebugStringConvertible", "HackPopStyle"]
@@ -224,6 +230,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "instance"]
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "layer"]
+- !private ["Ps28CustomDebugStringConvertible", "logEvent"]
 - ["Ps28CustomDebugStringConvertible", "notifyThresholdAnimator"]
 - ["Ps28CustomDebugStringConvertible", "notifyThresholdView"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
@@ -270,6 +277,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "object"]
 - !private ["Ps23CustomStringConvertible", "Client"]
 - !private ["Ps23CustomStringConvertible", "CreateAlertMessage"]
+- !private ["Ps23CustomStringConvertible", "Flurry"]
 - !private ["Ps23CustomStringConvertible", "GetStyledPointSelectionCell"]
 - !private ["Ps23CustomStringConvertible", "HackPopServer"]
 - !private ["Ps23CustomStringConvertible", "HackPopStyle"]
@@ -296,6 +304,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "instance"]
 - !private ["Ps23CustomStringConvertible", "instantiateViewController"]
 - !private ["Ps23CustomStringConvertible", "layer"]
+- !private ["Ps23CustomStringConvertible", "logEvent"]
 - ["Ps23CustomStringConvertible", "notifyThresholdAnimator"]
 - ["Ps23CustomStringConvertible", "notifyThresholdView"]
 - ["Ps23CustomStringConvertible", "numberOfSections"]
@@ -337,6 +346,7 @@ depends-member:
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Client"]
 - !private ["Ps9Equatable", "CreateAlertMessage"]
+- !private ["Ps9Equatable", "Flurry"]
 - !private ["Ps9Equatable", "GetStyledPointSelectionCell"]
 - !private ["Ps9Equatable", "HackPopServer"]
 - !private ["Ps9Equatable", "HackPopStyle"]
@@ -364,6 +374,7 @@ depends-member:
 - !private ["Ps9Equatable", "instantiateViewController"]
 - !private ["Ps9Equatable", "layer"]
 - !private ["Ps9Equatable", "lightContent"]
+- !private ["Ps9Equatable", "logEvent"]
 - ["Ps9Equatable", "notifyThresholdAnimator"]
 - ["Ps9Equatable", "notifyThresholdView"]
 - ["Ps9Equatable", "numberOfSections"]
@@ -415,12 +426,15 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["CSo6Flurry", "logEvent"]
+- ["VSC23FlurryEventRecordStatus", "deinit"]
 - !private ["C8hack_pop13HackPopServer", "setTheshold"]
 - !private ["C8hack_pop12HackPopStyle", "CreateAlertMessage"]
 - !private ["C8hack_pop12HackPopStyle", "GetStyledPointSelectionCell"]
 - !private ["C8hack_pop12HackPopStyle", "UnderlinedText"]
 - !private ["Ps8Hashable", "Client"]
 - !private ["Ps8Hashable", "CreateAlertMessage"]
+- !private ["Ps8Hashable", "Flurry"]
 - !private ["Ps8Hashable", "GetStyledPointSelectionCell"]
 - !private ["Ps8Hashable", "HackPopServer"]
 - !private ["Ps8Hashable", "HackPopStyle"]
@@ -448,6 +462,7 @@ depends-member:
 - !private ["Ps8Hashable", "instantiateViewController"]
 - !private ["Ps8Hashable", "layer"]
 - !private ["Ps8Hashable", "lightContent"]
+- !private ["Ps8Hashable", "logEvent"]
 - ["Ps8Hashable", "notifyThresholdAnimator"]
 - ["Ps8Hashable", "notifyThresholdView"]
 - ["Ps8Hashable", "numberOfSections"]
@@ -510,6 +525,7 @@ depends-member:
 - ["CSo18NSAttributedString", "deinit"]
 - ["CSo7NSCoder", "deinit"]
 - !private ["PSo8NSCoding", "Client"]
+- !private ["PSo8NSCoding", "Flurry"]
 - !private ["PSo8NSCoding", "HackPopServer"]
 - !private ["PSo8NSCoding", "HackPopStyle"]
 - ["PSo8NSCoding", "NotifyThresholdAnimationTransition"]
@@ -571,6 +587,7 @@ depends-member:
 - !private ["PSo9NSCopying", "object"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo26NSExtensionRequestHandling", "Client"]
+- !private ["PSo26NSExtensionRequestHandling", "Flurry"]
 - !private ["PSo26NSExtensionRequestHandling", "HackPopServer"]
 - !private ["PSo26NSExtensionRequestHandling", "HackPopStyle"]
 - ["PSo26NSExtensionRequestHandling", "NotifyThresholdAnimationTransition"]
@@ -626,6 +643,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "Client"]
 - !private ["CSo8NSObject", "CreateAlertMessage"]
+- !private ["CSo8NSObject", "Flurry"]
 - !private ["CSo8NSObject", "GetStyledPointSelectionCell"]
 - !private ["CSo8NSObject", "HackPopServer"]
 - !private ["CSo8NSObject", "HackPopStyle"]
@@ -660,6 +678,7 @@ depends-member:
 - ["CSo8NSObject", "instance"]
 - !private ["CSo8NSObject", "instantiateViewController"]
 - !private ["CSo8NSObject", "layer"]
+- !private ["CSo8NSObject", "logEvent"]
 - ["CSo8NSObject", "notifyThresholdAnimator"]
 - ["CSo8NSObject", "notifyThresholdView"]
 - ["CSo8NSObject", "numberOfSections"]
@@ -699,6 +718,7 @@ depends-member:
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - !private ["PSo16NSObjectProtocol", "Client"]
 - !private ["PSo16NSObjectProtocol", "CreateAlertMessage"]
+- !private ["PSo16NSObjectProtocol", "Flurry"]
 - !private ["PSo16NSObjectProtocol", "GetStyledPointSelectionCell"]
 - !private ["PSo16NSObjectProtocol", "HackPopServer"]
 - !private ["PSo16NSObjectProtocol", "HackPopStyle"]
@@ -724,6 +744,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "instance"]
 - !private ["PSo16NSObjectProtocol", "instantiateViewController"]
 - !private ["PSo16NSObjectProtocol", "layer"]
+- !private ["PSo16NSObjectProtocol", "logEvent"]
 - ["PSo16NSObjectProtocol", "notifyThresholdAnimator"]
 - ["PSo16NSObjectProtocol", "notifyThresholdView"]
 - ["PSo16NSObjectProtocol", "numberOfSections"]
@@ -779,6 +800,7 @@ depends-member:
 - ["C8hack_pop25PointSelectViewController", "AnyObject"]
 - ["C8hack_pop25PointSelectViewController", "Bool"]
 - !private ["C8hack_pop25PointSelectViewController", "Client"]
+- !private ["C8hack_pop25PointSelectViewController", "Flurry"]
 - !private ["C8hack_pop25PointSelectViewController", "HackPopServer"]
 - !private ["C8hack_pop25PointSelectViewController", "HackPopStyle"]
 - !private ["C8hack_pop25PointSelectViewController", "HomeViewController"]
@@ -860,6 +882,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "contentInset"]
 - !private ["PSo12UIAppearance", "layer"]
 - !private ["PSo21UIAppearanceContainer", "Client"]
+- !private ["PSo21UIAppearanceContainer", "Flurry"]
 - !private ["PSo21UIAppearanceContainer", "HackPopServer"]
 - !private ["PSo21UIAppearanceContainer", "HackPopStyle"]
 - ["PSo21UIAppearanceContainer", "NotifyThresholdAnimationTransition"]
@@ -912,6 +935,7 @@ depends-member:
 - !private ["CSo7UIColor", "clear"]
 - ["CSo7UIColor", "deinit"]
 - !private ["PSo18UIContentContainer", "Client"]
+- !private ["PSo18UIContentContainer", "Flurry"]
 - !private ["PSo18UIContentContainer", "HackPopServer"]
 - !private ["PSo18UIContentContainer", "HackPopStyle"]
 - ["PSo18UIContentContainer", "NotifyThresholdAnimationTransition"]
@@ -967,6 +991,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "layer"]
 - ["VSC12UIEdgeInsets", "deinit"]
 - !private ["PSo18UIFocusEnvironment", "Client"]
+- !private ["PSo18UIFocusEnvironment", "Flurry"]
 - !private ["PSo18UIFocusEnvironment", "HackPopServer"]
 - !private ["PSo18UIFocusEnvironment", "HackPopStyle"]
 - ["PSo18UIFocusEnvironment", "NotifyThresholdAnimationTransition"]
@@ -1029,6 +1054,7 @@ depends-member:
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "Client"]
+- !private ["CSo11UIResponder", "Flurry"]
 - !private ["CSo11UIResponder", "HackPopServer"]
 - !private ["CSo11UIResponder", "HackPopStyle"]
 - !private ["CSo11UIResponder", "HomeViewController"]
@@ -1086,6 +1112,7 @@ depends-member:
 - ["CSo11UIResponder", "viewForZooming"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
 - !private ["PSo30UIResponderStandardEditActions", "Client"]
+- !private ["PSo30UIResponderStandardEditActions", "Flurry"]
 - !private ["PSo30UIResponderStandardEditActions", "HackPopServer"]
 - !private ["PSo30UIResponderStandardEditActions", "HackPopStyle"]
 - ["PSo30UIResponderStandardEditActions", "NotifyThresholdAnimationTransition"]
@@ -1137,6 +1164,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "backgroundColor"]
 - !private ["CSo12UIScrollView", "contentInset"]
 - !private ["PSo20UIScrollViewDelegate", "Client"]
+- !private ["PSo20UIScrollViewDelegate", "Flurry"]
 - !private ["PSo20UIScrollViewDelegate", "HackPopServer"]
 - !private ["PSo20UIScrollViewDelegate", "HackPopStyle"]
 - ["PSo20UIScrollViewDelegate", "NotifyThresholdAnimationTransition"]
@@ -1176,6 +1204,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
 - !private ["PSo16UIStateRestoring", "Client"]
+- !private ["PSo16UIStateRestoring", "Flurry"]
 - !private ["PSo16UIStateRestoring", "HackPopServer"]
 - !private ["PSo16UIStateRestoring", "HackPopStyle"]
 - ["PSo16UIStateRestoring", "NotifyThresholdAnimationTransition"]
@@ -1228,6 +1257,7 @@ depends-member:
 - !private ["CSo11UITableView", "contentInset"]
 - ["CSo15UITableViewCell", "deinit"]
 - !private ["PSo21UITableViewDataSource", "Client"]
+- !private ["PSo21UITableViewDataSource", "Flurry"]
 - !private ["PSo21UITableViewDataSource", "HackPopServer"]
 - !private ["PSo21UITableViewDataSource", "HackPopStyle"]
 - ["PSo21UITableViewDataSource", "NotifyThresholdAnimationTransition"]
@@ -1267,6 +1297,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewForZoomingInScrollView"]
 - ["PSo21UITableViewDataSource", ""]
 - !private ["PSo19UITableViewDelegate", "Client"]
+- !private ["PSo19UITableViewDelegate", "Flurry"]
 - !private ["PSo19UITableViewDelegate", "HackPopServer"]
 - !private ["PSo19UITableViewDelegate", "HackPopStyle"]
 - ["PSo19UITableViewDelegate", "NotifyThresholdAnimationTransition"]
@@ -1306,6 +1337,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo19UITableViewDelegate", ""]
 - !private ["PSo18UITraitEnvironment", "Client"]
+- !private ["PSo18UITraitEnvironment", "Flurry"]
 - !private ["PSo18UITraitEnvironment", "HackPopServer"]
 - !private ["PSo18UITraitEnvironment", "HackPopStyle"]
 - ["PSo18UITraitEnvironment", "NotifyThresholdAnimationTransition"]
@@ -1361,6 +1393,7 @@ depends-member:
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "Client"]
+- !private ["CSo16UIViewController", "Flurry"]
 - !private ["CSo16UIViewController", "HackPopServer"]
 - !private ["CSo16UIViewController", "HackPopStyle"]
 - !private ["CSo16UIViewController", "HomeViewController"]
@@ -1440,6 +1473,7 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "row"]
 - !private ["Ps9_Hashable", "Client"]
 - !private ["Ps9_Hashable", "CreateAlertMessage"]
+- !private ["Ps9_Hashable", "Flurry"]
 - !private ["Ps9_Hashable", "GetStyledPointSelectionCell"]
 - !private ["Ps9_Hashable", "HackPopServer"]
 - !private ["Ps9_Hashable", "HackPopStyle"]
@@ -1467,6 +1501,7 @@ depends-member:
 - !private ["Ps9_Hashable", "instantiateViewController"]
 - !private ["Ps9_Hashable", "layer"]
 - !private ["Ps9_Hashable", "lightContent"]
+- !private ["Ps9_Hashable", "logEvent"]
 - ["Ps9_Hashable", "notifyThresholdAnimator"]
 - ["Ps9_Hashable", "notifyThresholdView"]
 - ["Ps9_Hashable", "numberOfSections"]
@@ -1532,6 +1567,8 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "CSo6Flurry"
+- "VSC23FlurryEventRecordStatus"
 - !private "C8hack_pop13HackPopServer"
 - !private "C8hack_pop12HackPopStyle"
 - "Ps8Hashable"
@@ -1630,5 +1667,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "24f7d83db98c4bf48e0f82e2597018a2"
+interface-hash: "9a63de61ec1efc67960e4f49a7146889"
