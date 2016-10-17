@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37B553494E8F323E04E88181 /* Pods_hack_pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEEBE9859E6A4BCD31E598A /* Pods_hack_pop.framework */; };
 		7D101B941D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
 		7D101B951D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
 		7D101B961D9A451400C89D5A /* CookieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B931D9A451400C89D5A /* CookieStore.swift */; };
-		7D101B9E1D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
-		7D101B9F1D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
-		7D101BA01D9B9CCF00C89D5A /* RecentStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */; };
 		7D101BA21D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
 		7D101BA31D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
 		7D101BA41D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */; };
 		7D101BAB1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
 		7D101BAC1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
 		7D101BAD1D9BB47A00C89D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D101BA91D9BB47A00C89D5A /* Main.storyboard */; };
+		7D2A5D581DB4551600E24A44 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A5D571DB4551600E24A44 /* keys.plist */; };
+		7D2A5D591DB4551700E24A44 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A5D571DB4551600E24A44 /* keys.plist */; };
+		7D2A5D5A1DB4551700E24A44 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A5D571DB4551600E24A44 /* keys.plist */; };
+		7D2A5D5C1DB457B200E24A44 /* KeyFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A5D5B1DB457B200E24A44 /* KeyFetcher.swift */; };
+		7D2A5D5D1DB457B200E24A44 /* KeyFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A5D5B1DB457B200E24A44 /* KeyFetcher.swift */; };
+		7D2A5D5E1DB457B200E24A44 /* KeyFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A5D5B1DB457B200E24A44 /* KeyFetcher.swift */; };
 		7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */; };
 		7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */; };
 		7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */; };
@@ -89,9 +93,32 @@
 		7DEEB8DE1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */; };
 		7DEEB8E51DB22685000F2789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
 		7DEEB8E61DB22685000F2789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */; };
+		8FDBD100337737A4E6F3C6D5 /* Pods_hack_popUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46AC31700262475A2B6FEEB /* Pods_hack_popUITests.framework */; };
+		FC790C22FE6517AE52582C36 /* Pods_hack_popTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DA8FE9081C14E6EA0B4C7E /* Pods_hack_popTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7D2A5D511DB454F100E24A44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B69616F91DDDBA362A95A4265C677C9;
+			remoteInfo = "Flurry-iOS-SDK";
+		};
+		7D2A5D531DB454F100E24A44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 98C68B177BF5AAD39B7C84317C8EFBC3;
+			remoteInfo = "Pods-hack popTests";
+		};
+		7D2A5D551DB454F100E24A44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C83E095DD56EBA12F44194AF9416F970;
+			remoteInfo = "Pods-hack popUITests";
+		};
 		7DE2ED0B1D8A3F2500A53ABF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DE2ECEB1D8A3F2400A53ABF /* Project object */;
@@ -106,13 +133,6 @@
 			remoteGlobalIDString = 7DE2ECF21D8A3F2400A53ABF;
 			remoteInfo = "hack pop";
 		};
-		7DEEB8CE1DAE129E000F2789 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9E93E57F645DE404CACD48763EC004FC;
-			remoteInfo = GRDB.swift;
-		};
 		7DEEB8D01DAE129E000F2789 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
@@ -123,11 +143,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047AFD15B73B92024EC9B58B /* Pods-hack popUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack popUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack popUITests/Pods-hack popUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C8650CB55CB95ABA783AC67 /* Pods-hack popTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack popTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack popTests/Pods-hack popTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D9353ADBCF3E0BCD3B9B3C6 /* Pods-hack popUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack popUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack popUITests/Pods-hack popUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		64DA8FE9081C14E6EA0B4C7E /* Pods_hack_popTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hack_popTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D101B931D9A451400C89D5A /* CookieStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieStore.swift; sourceTree = "<group>"; };
 		7D101B971D9B849000C89D5A /* hack pop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hack pop.entitlements"; sourceTree = "<group>"; };
-		7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentStories.swift; sourceTree = "<group>"; };
 		7D101BA11D9B9D4700C89D5A /* RecentStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentStoriesViewController.swift; sourceTree = "<group>"; };
 		7D101BAA1D9BB47A00C89D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D2A5D571DB4551600E24A44 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		7D2A5D5B1DB457B200E24A44 /* KeyFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFetcher.swift; sourceTree = "<group>"; };
 		7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyleTests.swift; sourceTree = "<group>"; };
 		7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainerTests.swift; sourceTree = "<group>"; };
@@ -168,8 +193,10 @@
 		7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientCreateListener.swift; sourceTree = "<group>"; };
 		7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpSetThresholdListener.swift; sourceTree = "<group>"; };
 		932293C6D2D53C65E85B530E /* Pods-hack pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack pop.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack pop/Pods-hack pop.release.xcconfig"; sourceTree = "<group>"; };
+		C46AC31700262475A2B6FEEB /* Pods_hack_popUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hack_popUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97CBB3A7ABFB40AB2FDAA00 /* Pods-hack pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack pop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack pop/Pods-hack pop.debug.xcconfig"; sourceTree = "<group>"; };
 		DBEEBE9859E6A4BCD31E598A /* Pods_hack_pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hack_pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55D46A25FBD75DAF1AE047F /* Pods-hack popTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack popTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack popTests/Pods-hack popTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B553494E8F323E04E88181 /* Pods_hack_pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEEB8C61DAE0BA1000F2789 /* SQLite.framework in Frameworks */,
+				FC790C22FE6517AE52582C36 /* Pods_hack_popTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEEB8C71DAE0BA1000F2789 /* SQLite.framework in Frameworks */,
+				8FDBD100337737A4E6F3C6D5 /* Pods_hack_popUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,16 +235,18 @@
 				7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */,
 				7DEEB8C41DAE0BA1000F2789 /* SQLite.framework */,
 				DBEEBE9859E6A4BCD31E598A /* Pods_hack_pop.framework */,
+				64DA8FE9081C14E6EA0B4C7E /* Pods_hack_popTests.framework */,
+				C46AC31700262475A2B6FEEB /* Pods_hack_popUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7D101B9C1D9B9CBB00C89D5A /* local */ = {
+		7D101B9C1D9B9CBB00C89D5A /* config */ = {
 			isa = PBXGroup;
 			children = (
-				7D101B9D1D9B9CCF00C89D5A /* RecentStories.swift */,
+				7D2A5D5B1DB457B200E24A44 /* KeyFetcher.swift */,
 			);
-			name = local;
+			name = config;
 			sourceTree = "<group>";
 		};
 		7D4551911D938A1C00A6D20E /* http */ = {
@@ -294,6 +326,7 @@
 		7DE2ECEA1D8A3F2400A53ABF = {
 			isa = PBXGroup;
 			children = (
+				7D2A5D571DB4551600E24A44 /* keys.plist */,
 				7DE2ECF51D8A3F2400A53ABF /* hack pop */,
 				7DE2ED0D1D8A3F2500A53ABF /* hack popTests */,
 				7DE2ED181D8A3F2500A53ABF /* hack popUITests */,
@@ -316,7 +349,7 @@
 		7DE2ECF51D8A3F2400A53ABF /* hack pop */ = {
 			isa = PBXGroup;
 			children = (
-				7D101B9C1D9B9CBB00C89D5A /* local */,
+				7D101B9C1D9B9CBB00C89D5A /* config */,
 				7D101B971D9B849000C89D5A /* hack pop.entitlements */,
 				7D7D283A1D97294E009334CA /* Animators */,
 				7D4551911D938A1C00A6D20E /* http */,
@@ -358,8 +391,10 @@
 		7DEEB8CA1DAE129E000F2789 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DEEB8CF1DAE129E000F2789 /* GRDB.framework */,
+				7D2A5D521DB454F100E24A44 /* Flurry_iOS_SDK.framework */,
 				7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */,
+				7D2A5D541DB454F100E24A44 /* Pods_hack_popTests.framework */,
+				7D2A5D561DB454F100E24A44 /* Pods_hack_popUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -369,6 +404,10 @@
 			children = (
 				D97CBB3A7ABFB40AB2FDAA00 /* Pods-hack pop.debug.xcconfig */,
 				932293C6D2D53C65E85B530E /* Pods-hack pop.release.xcconfig */,
+				F55D46A25FBD75DAF1AE047F /* Pods-hack popTests.debug.xcconfig */,
+				1C8650CB55CB95ABA783AC67 /* Pods-hack popTests.release.xcconfig */,
+				3D9353ADBCF3E0BCD3B9B3C6 /* Pods-hack popUITests.debug.xcconfig */,
+				047AFD15B73B92024EC9B58B /* Pods-hack popUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -380,11 +419,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE2ED1E1D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack pop" */;
 			buildPhases = (
+				60213B012EF59D55CDB0BB91 /* Check Pods Manifest.lock */,
 				7DE2ECEF1D8A3F2400A53ABF /* Sources */,
 				7DE2ECF01D8A3F2400A53ABF /* Frameworks */,
 				7DE2ECF11D8A3F2400A53ABF /* Resources */,
 				7D4563BA1D9124C70083FEB0 /* ShellScript */,
 				34894C5FF73118A683C5322A /* Embed Pods Frameworks */,
+				D95D90E9F8EBA7795896A236 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,9 +440,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE2ED211D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popTests" */;
 			buildPhases = (
+				3B81A30D9B09C96721E6F098 /* Check Pods Manifest.lock */,
 				7DE2ED061D8A3F2500A53ABF /* Sources */,
 				7DE2ED071D8A3F2500A53ABF /* Frameworks */,
 				7DE2ED081D8A3F2500A53ABF /* Resources */,
+				C730C1BC20EC945F1380BDE4 /* Embed Pods Frameworks */,
+				D4A824BBAA9CC43585CDA172 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -417,9 +461,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE2ED241D8A3F2500A53ABF /* Build configuration list for PBXNativeTarget "hack popUITests" */;
 			buildPhases = (
+				A01BCB530E1E3DF407FCAFC0 /* Check Pods Manifest.lock */,
 				7DE2ED111D8A3F2500A53ABF /* Sources */,
 				7DE2ED121D8A3F2500A53ABF /* Frameworks */,
 				7DE2ED131D8A3F2500A53ABF /* Resources */,
+				A1782A2A47132844E2231398 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -493,11 +539,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7DEEB8CF1DAE129E000F2789 /* GRDB.framework */ = {
+		7D2A5D521DB454F100E24A44 /* Flurry_iOS_SDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GRDB.framework;
-			remoteRef = 7DEEB8CE1DAE129E000F2789 /* PBXContainerItemProxy */;
+			path = Flurry_iOS_SDK.framework;
+			remoteRef = 7D2A5D511DB454F100E24A44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7D2A5D541DB454F100E24A44 /* Pods_hack_popTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_hack_popTests.framework;
+			remoteRef = 7D2A5D531DB454F100E24A44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7D2A5D561DB454F100E24A44 /* Pods_hack_popUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_hack_popUITests.framework;
+			remoteRef = 7D2A5D551DB454F100E24A44 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */ = {
@@ -524,6 +584,7 @@
 				7D63E4F91D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */,
 				7D63E4FD1D8A5A5600AE27D1 /* Raleway-ExtraLight.ttf in Resources */,
 				7D63E4ED1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */,
+				7D2A5D581DB4551600E24A44 /* keys.plist in Resources */,
 				7D63E4EF1D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */,
 				7D63E4FB1D8A5A5600AE27D1 /* Raleway-Thin.ttf in Resources */,
 			);
@@ -533,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2A5D591DB4551700E24A44 /* keys.plist in Resources */,
 				7D101BAC1D9BB47A00C89D5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +610,7 @@
 				7D63E4F81D8A5A5600AE27D1 /* Raleway-Bold.ttf in Resources */,
 				7D63E4EE1D8A5A5600AE27D1 /* Raleway-Light.ttf in Resources */,
 				7D63E4F61D8A5A5600AE27D1 /* Raleway-Medium.ttf in Resources */,
+				7D2A5D5A1DB4551700E24A44 /* keys.plist in Resources */,
 				7D63E4F21D8A5A5600AE27D1 /* Raleway-Regular.ttf in Resources */,
 				7D63E4F01D8A5A5600AE27D1 /* Raleway-SemiBold.ttf in Resources */,
 				7D63E4FA1D8A5A5600AE27D1 /* Raleway-ExtraBold.ttf in Resources */,
@@ -569,8 +632,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hack pop/Pods-hack pop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B81A30D9B09C96721E6F098 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60213B012EF59D55CDB0BB91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7D4563BA1D9124C70083FEB0 /* ShellScript */ = {
@@ -587,6 +679,81 @@
 			shellPath = /bin/sh;
 			shellScript = "";
 		};
+		A01BCB530E1E3DF407FCAFC0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1782A2A47132844E2231398 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hack popUITests/Pods-hack popUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C730C1BC20EC945F1380BDE4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hack popTests/Pods-hack popTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4A824BBAA9CC43585CDA172 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hack popTests/Pods-hack popTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D95D90E9F8EBA7795896A236 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hack pop/Pods-hack pop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -599,6 +766,7 @@
 				7D101B941D9A451400C89D5A /* CookieStore.swift in Sources */,
 				7D7D28311D963264009334CA /* Client.swift in Sources */,
 				7DEEB8D81DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
+				7D2A5D5C1DB457B200E24A44 /* KeyFetcher.swift in Sources */,
 				7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */,
 				7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */,
@@ -609,7 +777,6 @@
 				7D4563AD1D910AA00083FEB0 /* PointsRetainer.swift in Sources */,
 				7D4A9E301D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
 				7D7D283C1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
-				7D101B9E1D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
 				7D45519B1D93AB0E00A6D20E /* Story.swift in Sources */,
 				7DEEB8DC1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 			);
@@ -625,12 +792,12 @@
 				7DEEB8DD1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 				7D4563AE1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
 				7DE2ED0F1D8A3F2500A53ABF /* hack_popTests.swift in Sources */,
-				7D101B9F1D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
 				7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */,
 				7D7D283D1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
 				7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
 				7D7D28381D967A06009334CA /* HomeViewController.swift in Sources */,
 				7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7D2A5D5D1DB457B200E24A44 /* KeyFetcher.swift in Sources */,
 				7DEEB8D91DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
 				7D7D28321D963264009334CA /* Client.swift in Sources */,
 				7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
@@ -652,6 +819,7 @@
 				7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7DEEB8DE1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
 				7DE2ED1A1D8A3F2500A53ABF /* hack_popUITests.swift in Sources */,
+				7D2A5D5E1DB457B200E24A44 /* KeyFetcher.swift in Sources */,
 				7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */,
 				7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DEEB8DA1DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
@@ -663,7 +831,6 @@
 				7D7D28331D963264009334CA /* Client.swift in Sources */,
 				7D45519D1D93AB0E00A6D20E /* Story.swift in Sources */,
 				7D7D28391D967A06009334CA /* HomeViewController.swift in Sources */,
-				7D101BA01D9B9CCF00C89D5A /* RecentStories.swift in Sources */,
 				7D101B961D9A451400C89D5A /* CookieStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,6 +1005,7 @@
 		};
 		7DE2ED221D8A3F2500A53ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F55D46A25FBD75DAF1AE047F /* Pods-hack popTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -855,6 +1023,7 @@
 		};
 		7DE2ED231D8A3F2500A53ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C8650CB55CB95ABA783AC67 /* Pods-hack popTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -872,6 +1041,7 @@
 		};
 		7DE2ED251D8A3F2500A53ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9353ADBCF3E0BCD3B9B3C6 /* Pods-hack popUITests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,6 +1058,7 @@
 		};
 		7DE2ED261D8A3F2500A53ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047AFD15B73B92024EC9B58B /* Pods-hack popUITests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

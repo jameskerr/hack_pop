@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 enum HomeTransitions : Int {
     case PointSelection
@@ -55,6 +56,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Flurry.logEvent("opened home view controller")
+        
         createSwipeInteractors()
         view.layer.borderColor = UIColor.clear.cgColor
         setup()
@@ -101,7 +105,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func changeThreshold(_ sender: AnyObject) {
-
+        
+        Flurry.logEvent("pressed change threshold button")
+        
         let pointSelectionViewController = storyboard?.instantiateViewController(withIdentifier: "pointSelecitonViewController") as! PointSelectViewController
         pointSelectionViewController.transitioningDelegate = notifyThresholdAnimator
         present(pointSelectionViewController, animated: true, completion: nil)
@@ -220,9 +226,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Flurry.logEvent("opened story from home view stories")
         let story = filteredStories?[(indexPath as NSIndexPath).row]
         Story.current = story
-        story?.save()
         webViewInteractor?.animateTransition()
     }
     

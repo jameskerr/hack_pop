@@ -1,6 +1,11 @@
 require Logger
 
 defmodule HackPop.Pinger do
+  alias HackPop.Parser
+  alias HackPop.Story
+  alias HackPop.Pusher
+
+
   @url "https://news.ycombinator.com"
   @interval 60_000 * 5
 
@@ -26,9 +31,10 @@ defmodule HackPop.Pinger do
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
-    HackPop.Parser.find_stories(body)
-    |> HackPop.Story.save_all
-    |> HackPop.Story.set_trending
+    Parser.find_stories(body)
+    |> Story.save_all
+    |> Story.set_trending
+    |> Pusher.push_to_all_clients
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: status_code}}) do

@@ -47,6 +47,14 @@ class Story: NSObject {
         self.points = points
     }
     
+    static func storyFromPush(pushData:[AnyHashable : Any]) -> Story {
+        let urlString = pushData["url"] as! String?
+        let title = pushData["title"] as! String?
+        let points = pushData["points"] as! Int?
+        
+        return Story(urlString: urlString!, title: title, points: points)
+    }
+    
     static func isRelativeUrlString(string:String) -> Bool {
         return string.range(of: "^https?:\\/\\/", options: .regularExpression) == nil
     }
