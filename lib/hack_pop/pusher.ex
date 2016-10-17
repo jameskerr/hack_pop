@@ -43,7 +43,9 @@ defmodule HackPop.Pusher do
       |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
       |> Map.put(:badge, 0)
       |> Map.put(:extra, %{
-        url: story.url,
+        title:  story.title,
+        url:    story.url,
+        comments_url: nil,
         points: story.points
       })
       APNS.push(:dev_pool, message)
