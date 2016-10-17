@@ -19,7 +19,7 @@ defmodule HackPop.Story do
   end
 
   def set_trending(stories) do
-    ids   = Enum.map(stories, fn story -> story.id end)
+    ids = Enum.map(stories, fn story -> story.id end)
     from(s in Story, where: not s.id in ^ids and s.trending == true)
     |> Repo.update_all(set: [trending: false])
   end

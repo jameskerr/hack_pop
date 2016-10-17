@@ -14,6 +14,7 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 config :plug, port: 4001
 
 config :apns,
+  callback_module: HackPop.Pusher,
   pools: [
     dev_pool: [
       env: :dev,

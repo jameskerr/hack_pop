@@ -54,7 +54,7 @@ defmodule HackPop.Web do
   get "/clients/:client_id/test" do
     query = from s in Story, limit: 1, where: s.trending == true
     story = query |> Repo.one
-    Pusher.push(story, client_id)
+    Pusher.push_test(story, client_id)
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
   end
 

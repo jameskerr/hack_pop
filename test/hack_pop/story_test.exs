@@ -42,8 +42,8 @@ defmodule HackPop.StoryTest do
 
     test "save_all with existing data but over 72 hours old" do
     four_days_ago = Timex.shift(Timex.now, days: -3, hours: -1)
-                     |> Timex.to_erl
-                     |> Ecto.DateTime.from_erl
+                    |> Timex.to_erl
+                    |> Ecto.DateTime.from_erl
 
     [%Story{ title: "A", url: "a.com", points: 1, inserted_at: four_days_ago }]
     |> Story.save_all
