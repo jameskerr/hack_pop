@@ -9,70 +9,72 @@ provides-member:
 - ["O8hack_pop9Direction", ""]
 - ["C8hack_pop10Interactor", ""]
 provides-dynamic-lookup:
-- "beforeInteractiveTransition"
-- "setInitialViewState"
-- "hasStarted"
-- "updateGestureMotion"
-- "transitionDuration"
-- "animateTransition"
-- "animateTransition"
-- "getFinalViewFrameOfSource"
 - "shouldFinish"
-- "destinationIdentifier"
-- "complete"
 - "animationControllerForDismissedController"
-- "animationController"
-- "animationController"
+- "setInitialViewState"
+- "transitionDuration"
 - "animationControllerForPresentedController"
 - "interactionControllerForPresentation"
+- "getFinalViewFrameOfSource"
 - "delegateViewController"
 - "interactionControllerForDismissal"
+- "beforeInteractiveTransition"
+- "destinationIdentifier"
+- "updateGestureMotion"
+- "animateTransition"
+- "animateTransition"
+- "animationController"
+- "animationController"
+- "hasStarted"
+- "complete"
 depends-top-level:
-- "CGRect"
-- !private "&&"
-- "UIViewControllerTransitioningDelegate"
-- !private "Float"
-- "Direction"
-- "BooleanLiteralType"
-- "TimeInterval"
-- "UIViewControllerAnimatedTransitioning"
-- "Void"
-- "Int"
-- !private "CGPoint"
-- !private "UIView"
-- !private "fmaxf"
-- !private "abs"
-- "UIPanGestureRecognizer"
-- "UIPercentDrivenInteractiveTransition"
-- !private "!="
-- !private "!"
-- !private "UIScreen"
-- !private "-"
-- !private "StringLiteralType"
-- "UIViewControllerInteractiveTransitioning"
-- !private "fminf"
-- "String"
-- !private "~="
-- "Bool"
-- !private "/"
-- "Interactor"
-- "=="
-- "AssignmentPrecedence"
-- "CastingPrecedence"
-- !private "CGFloat"
 - !private "*"
-- !private ">"
-- "TernaryPrecedence"
+- !private "~="
+- "String"
+- !private "Flurry"
+- "Direction"
 - !private "UITransitionContextViewControllerKey"
+- "AssignmentPrecedence"
+- "=="
+- "UIPanGestureRecognizer"
+- "Int"
+- !private "UIView"
+- "TimeInterval"
+- !private "!"
+- "CastingPrecedence"
+- "TernaryPrecedence"
+- !private "CGFloat"
+- !private "-"
+- !private ">"
+- "Void"
+- "UIViewControllerAnimatedTransitioning"
+- !private "/"
+- "BooleanLiteralType"
 - !private "||"
+- "Interactor"
+- !private "CGPoint"
+- "UIViewControllerTransitioningDelegate"
+- !private "&&"
+- !private "!="
+- "Bool"
+- !private "fminf"
+- "UIPercentDrivenInteractiveTransition"
 - "UIViewController"
+- !private "abs"
+- !private "fmaxf"
+- "UIViewControllerInteractiveTransitioning"
+- "StringLiteralType"
+- !private "UIScreen"
 - "UIViewControllerContextTransitioning"
+- !private "Float"
+- "CGRect"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGFloat"]
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "Float"]
+- !private ["Ps9AnyObject", "Flurry"]
 - !private ["Ps9AnyObject", "UIScreen"]
 - !private ["Ps9AnyObject", "UITransitionContextViewControllerKey"]
 - !private ["Ps9AnyObject", "UIView"]
@@ -104,6 +106,7 @@ depends-member:
 - ["Ps9AnyObject", "interactionControllerForPresentation"]
 - ["Ps9AnyObject", "interruptibleAnimator"]
 - ["Ps9AnyObject", "interruptibleAnimatorForTransition"]
+- !private ["Ps9AnyObject", "logEvent"]
 - !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "present"]
 - ["Ps9AnyObject", "presentationController"]
@@ -144,6 +147,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CGPoint"]
 - !private ["Ps7CVarArg", "CGRect"]
 - !private ["Ps7CVarArg", "Float"]
+- !private ["Ps7CVarArg", "Flurry"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "UIScreen"]
 - !private ["Ps7CVarArg", "UITransitionContextViewControllerKey"]
@@ -177,6 +181,7 @@ depends-member:
 - ["Ps7CVarArg", "interactionControllerForPresentation"]
 - ["Ps7CVarArg", "interruptibleAnimator"]
 - ["Ps7CVarArg", "interruptibleAnimatorForTransition"]
+- !private ["Ps7CVarArg", "logEvent"]
 - !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "present"]
 - ["Ps7CVarArg", "presentationController"]
@@ -193,6 +198,7 @@ depends-member:
 - !private ["Ps7CVarArg", "velocity"]
 - !private ["Ps7CVarArg", "view"]
 - ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
 - !private ["Vs11ClosedRange", "deinit"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "from"]
@@ -205,6 +211,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "Float"]
+- !private ["Ps28CustomDebugStringConvertible", "Flurry"]
 - !private ["Ps28CustomDebugStringConvertible", "LeftToRight"]
 - !private ["Ps28CustomDebugStringConvertible", "RightToLeft"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
@@ -238,6 +245,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "interactionControllerForPresentation"]
 - ["Ps28CustomDebugStringConvertible", "interruptibleAnimator"]
 - ["Ps28CustomDebugStringConvertible", "interruptibleAnimatorForTransition"]
+- !private ["Ps28CustomDebugStringConvertible", "logEvent"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "origin"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
@@ -282,6 +290,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGPoint"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "Float"]
+- !private ["Ps23CustomStringConvertible", "Flurry"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "UITransitionContextViewControllerKey"]
@@ -316,6 +325,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "interactionControllerForPresentation"]
 - ["Ps23CustomStringConvertible", "interruptibleAnimator"]
 - ["Ps23CustomStringConvertible", "interruptibleAnimatorForTransition"]
+- !private ["Ps23CustomStringConvertible", "logEvent"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - ["Ps23CustomStringConvertible", "presentationController"]
@@ -345,6 +355,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGPoint"]
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "Float"]
+- !private ["Ps9Equatable", "Flurry"]
 - !private ["Ps9Equatable", "LeftToRight"]
 - ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "RightToLeft"]
@@ -387,6 +398,7 @@ depends-member:
 - ["Ps9Equatable", "interactionControllerForPresentation"]
 - ["Ps9Equatable", "interruptibleAnimator"]
 - ["Ps9Equatable", "interruptibleAnimatorForTransition"]
+- !private ["Ps9Equatable", "logEvent"]
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "origin"]
 - !private ["Ps9Equatable", "present"]
@@ -418,15 +430,19 @@ depends-member:
 - !private ["Ps23ExpressibleByNilLiteral", "LeftToRight"]
 - !private ["Ps23ExpressibleByNilLiteral", "RightToLeft"]
 - ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["Sf", "deinit"]
 - !private ["Sf", "init"]
 - !private ["Ps13FloatingPoint", "init"]
+- !private ["CSo6Flurry", "logEvent"]
+- !private ["VSC23FlurryEventRecordStatus", "deinit"]
 - !private ["Ps8Hashable", "CGFloat"]
 - !private ["Ps8Hashable", "CGPoint"]
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "Float"]
+- !private ["Ps8Hashable", "Flurry"]
 - !private ["Ps8Hashable", "LeftToRight"]
 - ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "RightToLeft"]
@@ -469,6 +485,7 @@ depends-member:
 - ["Ps8Hashable", "interactionControllerForPresentation"]
 - ["Ps8Hashable", "interruptibleAnimator"]
 - ["Ps8Hashable", "interruptibleAnimatorForTransition"]
+- !private ["Ps8Hashable", "logEvent"]
 - !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "present"]
 - ["Ps8Hashable", "presentationController"]
@@ -491,6 +508,10 @@ depends-member:
 - !private ["Si", "Stride"]
 - ["Si", "deinit"]
 - !private ["Si", "hashValue"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "hashValue"]
 - !private ["Ps17IntegerArithmetic", "Stride"]
@@ -501,6 +522,7 @@ depends-member:
 - ["C8hack_pop10Interactor", "CGRect"]
 - ["C8hack_pop10Interactor", "Direction"]
 - !private ["C8hack_pop10Interactor", "Float"]
+- !private ["C8hack_pop10Interactor", "Flurry"]
 - ["C8hack_pop10Interactor", "String"]
 - ["C8hack_pop10Interactor", "TimeInterval"]
 - ["C8hack_pop10Interactor", "UIPanGestureRecognizer"]
@@ -547,24 +569,29 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "hashValue"]
+- !private ["Ps10MirrorPath", "init"]
 - !private ["PSo8NSCoding", "animate"]
 - !private ["PSo8NSCoding", "bounds"]
 - !private ["PSo8NSCoding", "frame"]
+- !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "insertSubview"]
 - !private ["PSo8NSCoding", "present"]
 - !private ["PSo8NSCoding", "storyboard"]
 - !private ["PSo8NSCoding", "transitioningDelegate"]
 - !private ["PSo8NSCoding", "view"]
+- !private ["PSo9NSCopying", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
 - !private ["PSo26NSExtensionRequestHandling", "storyboard"]
 - !private ["PSo26NSExtensionRequestHandling", "transitioningDelegate"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CGPoint"]
 - ["CSo8NSObject", "CGRect"]
 - ["CSo8NSObject", "Direction"]
 - !private ["CSo8NSObject", "Float"]
+- !private ["CSo8NSObject", "Flurry"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "TimeInterval"]
 - ["CSo8NSObject", "UIPanGestureRecognizer"]
@@ -604,6 +631,7 @@ depends-member:
 - ["CSo8NSObject", "interactionControllerForPresentation"]
 - ["CSo8NSObject", "interruptibleAnimator"]
 - ["CSo8NSObject", "interruptibleAnimatorForTransition"]
+- !private ["CSo8NSObject", "logEvent"]
 - !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "present"]
 - ["CSo8NSObject", "presentationController"]
@@ -623,6 +651,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGPoint"]
 - !private ["PSo16NSObjectProtocol", "CGRect"]
 - !private ["PSo16NSObjectProtocol", "Float"]
+- !private ["PSo16NSObjectProtocol", "Flurry"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "UITransitionContextViewControllerKey"]
 - !private ["PSo16NSObjectProtocol", "UIView"]
@@ -656,6 +685,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "interactionControllerForPresentation"]
 - ["PSo16NSObjectProtocol", "interruptibleAnimator"]
 - ["PSo16NSObjectProtocol", "interruptibleAnimatorForTransition"]
+- !private ["PSo16NSObjectProtocol", "logEvent"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - ["PSo16NSObjectProtocol", "presentationController"]
@@ -674,6 +704,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "view"]
 - !private ["PSo16NSObjectProtocol", "viewController"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
 - ["Os5Never", "deinit"]
 - !private ["Sq", "LeftToRight"]
 - !private ["Sq", "RightToLeft"]
@@ -704,6 +736,9 @@ depends-member:
 - !private ["Ps10Strideable", "hashValue"]
 - !private ["Ps10Strideable", "init"]
 - ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "animate"]
 - !private ["PSo29UIAccessibilityIdentification", "bounds"]
 - !private ["PSo29UIAccessibilityIdentification", "frame"]
@@ -761,6 +796,7 @@ depends-member:
 - ["CSo36UIPercentDrivenInteractiveTransition", "CGRect"]
 - ["CSo36UIPercentDrivenInteractiveTransition", "Direction"]
 - !private ["CSo36UIPercentDrivenInteractiveTransition", "Float"]
+- !private ["CSo36UIPercentDrivenInteractiveTransition", "Flurry"]
 - ["CSo36UIPercentDrivenInteractiveTransition", "String"]
 - ["CSo36UIPercentDrivenInteractiveTransition", "TimeInterval"]
 - ["CSo36UIPercentDrivenInteractiveTransition", "UIPanGestureRecognizer"]
@@ -855,6 +891,7 @@ depends-member:
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "CGPoint"]
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "CGRect"]
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "Float"]
+- !private ["PSo37UIViewControllerAnimatedTransitioning", "Flurry"]
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "UIScreen"]
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "UITransitionContextViewControllerKey"]
 - !private ["PSo37UIViewControllerAnimatedTransitioning", "UIView"]
@@ -896,6 +933,7 @@ depends-member:
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "CGPoint"]
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "CGRect"]
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "Float"]
+- !private ["PSo40UIViewControllerInteractiveTransitioning", "Flurry"]
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "UIScreen"]
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "UITransitionContextViewControllerKey"]
 - !private ["PSo40UIViewControllerInteractiveTransitioning", "UIView"]
@@ -934,6 +972,7 @@ depends-member:
 - !private ["PSo37UIViewControllerTransitioningDelegate", "CGPoint"]
 - !private ["PSo37UIViewControllerTransitioningDelegate", "CGRect"]
 - !private ["PSo37UIViewControllerTransitioningDelegate", "Float"]
+- !private ["PSo37UIViewControllerTransitioningDelegate", "Flurry"]
 - !private ["PSo37UIViewControllerTransitioningDelegate", "UIScreen"]
 - !private ["PSo37UIViewControllerTransitioningDelegate", "UITransitionContextViewControllerKey"]
 - !private ["PSo37UIViewControllerTransitioningDelegate", "UIView"]
@@ -967,6 +1006,11 @@ depends-member:
 - !private ["PSo37UIViewControllerTransitioningDelegate", "update"]
 - ["PSo37UIViewControllerTransitioningDelegate", ""]
 - ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "animate"]
@@ -980,11 +1024,14 @@ depends-member:
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "CGPoint"]
 - !private ["Ps9_Hashable", "CGRect"]
 - !private ["Ps9_Hashable", "Float"]
+- !private ["Ps9_Hashable", "Flurry"]
 - !private ["Ps9_Hashable", "LeftToRight"]
 - ["Ps9_Hashable", "RawValue"]
 - !private ["Ps9_Hashable", "RightToLeft"]
@@ -1027,6 +1074,7 @@ depends-member:
 - ["Ps9_Hashable", "interactionControllerForPresentation"]
 - ["Ps9_Hashable", "interruptibleAnimator"]
 - ["Ps9_Hashable", "interruptibleAnimatorForTransition"]
+- !private ["Ps9_Hashable", "logEvent"]
 - !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "present"]
 - ["Ps9_Hashable", "presentationController"]
@@ -1079,6 +1127,7 @@ depends-nominal:
 - "VSC6CGRect"
 - "VSC6CGSize"
 - "Ps7CVarArg"
+- !private "Vs9Character"
 - !private "Vs11ClosedRange"
 - !private "Ps10Comparable"
 - !private "Vs20CountableClosedRange"
@@ -1095,22 +1144,33 @@ depends-nominal:
 - !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
 - "Ps23ExpressibleByNilLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Sf"
 - !private "Ps13FloatingPoint"
+- !private "CSo6Flurry"
+- !private "VSC23FlurryEventRecordStatus"
 - "Ps8Hashable"
 - "SQ"
 - "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - "C8hack_pop10Interactor"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
 - !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
 - !private "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - "Os5Never"
 - "Sq"
 - !private "Vs5Range"
@@ -1120,6 +1180,8 @@ depends-nominal:
 - "Vs12StaticString"
 - !private "Ps10Strideable"
 - "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
@@ -1146,6 +1208,11 @@ depends-nominal:
 - "PSo40UIViewControllerInteractiveTransitioning"
 - "PSo37UIViewControllerTransitioningDelegate"
 - "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
 - !private "Ps15_CVarArgAligned"
 - !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
@@ -1154,7 +1221,9 @@ depends-nominal:
 - !private "Ps33_ExpressibleByBuiltinFloatLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
 - !private "Ps8_Integer"
@@ -1175,5 +1244,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "22aea6cb16c36c94614f959c1133c17a"
+interface-hash: "8caec9d13a741d148e22ee11bde65dfd"

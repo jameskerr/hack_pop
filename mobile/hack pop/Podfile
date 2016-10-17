@@ -3,14 +3,14 @@ use_frameworks!
 
 
 target 'hack pop' do
-	pod 'GRDB.swift'
+	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
 end
 
 target 'hack popTests' do
-
+	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
 end
 
 target 'hack popUITests' do
-
+	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
 end
 

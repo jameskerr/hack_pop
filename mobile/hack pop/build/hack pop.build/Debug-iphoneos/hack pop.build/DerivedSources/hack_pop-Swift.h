@@ -324,6 +324,13 @@ SWIFT_CLASS("_TtC8hack_pop10Interactor")
 - (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator;
 @end
 
+
+SWIFT_CLASS("_TtC8hack_pop10KeyFetcher")
+@interface KeyFetcher : NSObject
++ (id _Nullable)getApiKeyWithKey:(NSString * _Nonnull)key;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class PointSelectViewController;
 
 SWIFT_CLASS("_TtC8hack_pop34NotifyThresholdAnimationTransition")
@@ -384,12 +391,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) PointsRetainer * _Null
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC8hack_pop13RecentStories")
-@interface RecentStories : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIImageView;
 
 SWIFT_CLASS("_TtC8hack_pop27RecentStoriesViewController")
@@ -441,6 +442,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) Story * _Nullable curr
 + (Story * _Nullable)current;
 + (void)setCurrent:(Story * _Nullable)value;
 + (void)setCurrentStoryToDefault;
++ (Story * _Nonnull)storyFromPushWithPushData:(NSDictionary * _Nonnull)pushData;
 + (BOOL)isRelativeUrlStringWithString:(NSString * _Nonnull)string;
 - (BOOL)meetsThresholdWithThreshold:(NSInteger)threshold;
 - (id _Nonnull)copy;

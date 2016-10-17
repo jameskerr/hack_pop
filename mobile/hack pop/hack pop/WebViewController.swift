@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webViewIndicator: UIActivityIndicatorView!
@@ -28,6 +29,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         Flurry.logEvent("opened webview view controller")
         
         view.layer.borderColor = UIColor.clear.cgColor
         

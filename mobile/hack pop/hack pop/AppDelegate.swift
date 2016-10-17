@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Flurry_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         CookieStore.loadCookies()
         registerForPushNotifications(application: application)
+        let flurryApiKey = KeyFetcher.getApiKey(key: "Flurry Api Key") as! String?
+        if let flurryApiKey = flurryApiKey {
+            Flurry.startSession(flurryApiKey)
+            Flurry.setCrashReportingEnabled(true)
+            Flurry.setEventLoggingEnabled(true)
+        }
         return true
     }
 
@@ -123,7 +130,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
         //add to local database here
-        print(userInfo)
+        let story = Story.storyFromPush(pushData: userInfo)
+        story.save()
     }
     
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
@@ -137,6 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for i in 0..<deviceToken.count {
             token += String(format: "%02.2hhx", arguments: [deviceToken[i]])
         }
+        Flurry.setUserID(token)
         if let oldToken = Client.instance().storedToken,
             oldToken == token {
             let client =  Client.instance()

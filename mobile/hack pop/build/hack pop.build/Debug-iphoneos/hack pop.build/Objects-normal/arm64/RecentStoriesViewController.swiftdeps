@@ -6,75 +6,77 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop27RecentStoriesViewController", ""]
 provides-dynamic-lookup:
-- "handleSwipe"
-- "startAnimation"
-- "recentStoriesTable"
-- "rightBigCloudTop"
-- "stories"
-- "cellHeight"
-- "moveClouds"
-- "sunImage"
-- "webViewInteractor"
 - "noUnreadStoriesContainer"
-- "homeViewInteractor"
-- "viewDidLoad"
-- "rightBigCloudBottom"
-- "supportedInterfaceOrientations"
-- "leftBigCloud"
 - "preferredStatusBarStyle"
+- "rightBigCloudBottom"
+- "webViewInteractor"
 - "spinSun"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "setup"
-- "loadedOnce"
+- "cellHeight"
+- "leftBigCloud"
+- "supportedInterfaceOrientations"
+- "homeViewInteractor"
 - "unreadStoriesLabel"
+- "recentStoriesTable"
+- "loadedOnce"
+- "setup"
+- "stories"
+- "startAnimation"
+- "rightBigCloudTop"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "sunImage"
+- "viewDidLoad"
+- "moveClouds"
+- "handleSwipe"
 depends-top-level:
+- "UIViewController"
+- !private "UIColor"
+- !private "M_PI"
+- "UITableViewDelegate"
+- "UIView"
+- "CGFloat"
+- !private "UIViewAnimationOptions"
+- "UITableViewDataSource"
+- !private "CGAffineTransform"
+- "UITableViewCell"
 - "Story"
 - !private "NSNotification"
-- "BooleanLiteralType"
-- !private "UIViewAnimationOptions"
-- !private "DispatchQueue"
-- "UITableView"
-- "UIPanGestureRecognizer"
-- !private "NotificationCenter"
-- !private "UIColor"
-- "RecentStoriesViewController"
 - !private "*"
-- "UIImageView"
-- "UIStatusBarStyle"
+- "IndexPath"
+- !private "Array"
 - "Int"
-- !private "StringLiteralType"
-- "Interactor"
-- !private "/"
-- "UIView"
-- "UITableViewDelegate"
-- !private "AppDelegate"
-- "UIInterfaceOrientationMask"
+- !private "Flurry"
+- "AssignmentPrecedence"
+- !private "=="
 - "UILabel"
 - !private "NSIndexPath"
-- !private "=="
-- "UITableViewDataSource"
-- "AssignmentPrecedence"
-- "IndexPath"
-- "CGFloat"
-- !private "HackPopStyle"
-- !private "UIScreen"
-- "UIViewController"
-- !private "Array"
-- !private "M_PI"
-- !private "-"
-- !private "CGAffineTransform"
 - "CastingPrecedence"
-- "UITableViewCell"
 - !private "TimeInterval"
+- !private "/"
+- "UITableView"
+- !private "StringLiteralType"
+- "UIImageView"
+- !private "DispatchQueue"
+- !private "AppDelegate"
+- !private "-"
+- "RecentStoriesViewController"
+- "UIInterfaceOrientationMask"
+- "UIStatusBarStyle"
+- "Interactor"
+- !private "UIScreen"
+- "UIPanGestureRecognizer"
+- !private "HackPopStyle"
+- !private "NotificationCenter"
+- "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "AppDelegate"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGFloat"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
+- !private ["Ps9AnyObject", "Flurry"]
 - !private ["Ps9AnyObject", "GetStyledStoryCell"]
 - !private ["Ps9AnyObject", "HackPopStyle"]
 - !private ["Ps9AnyObject", "Interactor"]
@@ -113,6 +115,7 @@ depends-member:
 - !private ["Ps9AnyObject", "layer"]
 - ["Ps9AnyObject", "leftBigCloud"]
 - ["Ps9AnyObject", "loadedOnce"]
+- !private ["Ps9AnyObject", "logEvent"]
 - !private ["Ps9AnyObject", "main"]
 - ["Ps9AnyObject", "moveClouds"]
 - ["Ps9AnyObject", "noUnreadStoriesContainer"]
@@ -216,6 +219,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CGAffineTransform"]
 - !private ["Ps7CVarArg", "CGFloat"]
 - !private ["Ps7CVarArg", "DispatchQueue"]
+- !private ["Ps7CVarArg", "Flurry"]
 - !private ["Ps7CVarArg", "GetStyledStoryCell"]
 - !private ["Ps7CVarArg", "HackPopStyle"]
 - !private ["Ps7CVarArg", "Index"]
@@ -262,6 +266,7 @@ depends-member:
 - !private ["Ps7CVarArg", "layer"]
 - ["Ps7CVarArg", "leftBigCloud"]
 - ["Ps7CVarArg", "loadedOnce"]
+- !private ["Ps7CVarArg", "logEvent"]
 - !private ["Ps7CVarArg", "main"]
 - ["Ps7CVarArg", "moveClouds"]
 - ["Ps7CVarArg", "noUnreadStoriesContainer"]
@@ -322,6 +327,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGAffineTransform"]
 - !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
 - !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
+- !private ["Ps28CustomDebugStringConvertible", "Flurry"]
 - !private ["Ps28CustomDebugStringConvertible", "GetStyledStoryCell"]
 - !private ["Ps28CustomDebugStringConvertible", "HackPopStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
@@ -365,6 +371,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "layer"]
 - ["Ps28CustomDebugStringConvertible", "leftBigCloud"]
 - ["Ps28CustomDebugStringConvertible", "loadedOnce"]
+- !private ["Ps28CustomDebugStringConvertible", "logEvent"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - ["Ps28CustomDebugStringConvertible", "moveClouds"]
 - ["Ps28CustomDebugStringConvertible", "noUnreadStoriesContainer"]
@@ -440,6 +447,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGAffineTransform"]
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
 - !private ["Ps23CustomStringConvertible", "DispatchQueue"]
+- !private ["Ps23CustomStringConvertible", "Flurry"]
 - !private ["Ps23CustomStringConvertible", "GetStyledStoryCell"]
 - !private ["Ps23CustomStringConvertible", "HackPopStyle"]
 - !private ["Ps23CustomStringConvertible", "Index"]
@@ -487,6 +495,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "layer"]
 - ["Ps23CustomStringConvertible", "leftBigCloud"]
 - ["Ps23CustomStringConvertible", "loadedOnce"]
+- !private ["Ps23CustomStringConvertible", "logEvent"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - ["Ps23CustomStringConvertible", "moveClouds"]
 - ["Ps23CustomStringConvertible", "noUnreadStoriesContainer"]
@@ -553,6 +562,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "DispatchQueue"]
 - !private ["Ps9Equatable", "Element"]
+- !private ["Ps9Equatable", "Flurry"]
 - !private ["Ps9Equatable", "GetStyledStoryCell"]
 - !private ["Ps9Equatable", "HackPopStyle"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
@@ -599,6 +609,7 @@ depends-member:
 - ["Ps9Equatable", "leftBigCloud"]
 - !private ["Ps9Equatable", "lightContent"]
 - ["Ps9Equatable", "loadedOnce"]
+- !private ["Ps9Equatable", "logEvent"]
 - !private ["Ps9Equatable", "main"]
 - ["Ps9Equatable", "moveClouds"]
 - ["Ps9Equatable", "noUnreadStoriesContainer"]
@@ -669,12 +680,15 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps13FloatingPoint", "init"]
+- !private ["CSo6Flurry", "logEvent"]
+- ["VSC23FlurryEventRecordStatus", "deinit"]
 - !private ["C8hack_pop12HackPopStyle", "GetStyledStoryCell"]
 - !private ["C8hack_pop12HackPopStyle", "StyleTopStoriesTableView"]
 - !private ["Ps8Hashable", "AppDelegate"]
 - !private ["Ps8Hashable", "CGAffineTransform"]
 - !private ["Ps8Hashable", "CGFloat"]
 - !private ["Ps8Hashable", "DispatchQueue"]
+- !private ["Ps8Hashable", "Flurry"]
 - !private ["Ps8Hashable", "GetStyledStoryCell"]
 - !private ["Ps8Hashable", "HackPopStyle"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
@@ -720,6 +734,7 @@ depends-member:
 - ["Ps8Hashable", "leftBigCloud"]
 - !private ["Ps8Hashable", "lightContent"]
 - ["Ps8Hashable", "loadedOnce"]
+- !private ["Ps8Hashable", "logEvent"]
 - !private ["Ps8Hashable", "main"]
 - ["Ps8Hashable", "moveClouds"]
 - ["Ps8Hashable", "noUnreadStoriesContainer"]
@@ -820,6 +835,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGAffineTransform"]
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "DispatchQueue"]
+- !private ["PSo8NSCoding", "Flurry"]
 - !private ["PSo8NSCoding", "HackPopStyle"]
 - !private ["PSo8NSCoding", "Interactor"]
 - !private ["PSo8NSCoding", "M_PI"]
@@ -897,6 +913,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGAffineTransform"]
 - !private ["PSo26NSExtensionRequestHandling", "CGFloat"]
 - !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
+- !private ["PSo26NSExtensionRequestHandling", "Flurry"]
 - !private ["PSo26NSExtensionRequestHandling", "HackPopStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "Interactor"]
 - !private ["PSo26NSExtensionRequestHandling", "M_PI"]
@@ -961,6 +978,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGAffineTransform"]
 - ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "DispatchQueue"]
+- !private ["CSo8NSObject", "Flurry"]
 - !private ["CSo8NSObject", "GetStyledStoryCell"]
 - !private ["CSo8NSObject", "HackPopStyle"]
 - ["CSo8NSObject", "IndexPath"]
@@ -1008,6 +1026,7 @@ depends-member:
 - !private ["CSo8NSObject", "layer"]
 - ["CSo8NSObject", "leftBigCloud"]
 - ["CSo8NSObject", "loadedOnce"]
+- !private ["CSo8NSObject", "logEvent"]
 - !private ["CSo8NSObject", "main"]
 - ["CSo8NSObject", "moveClouds"]
 - ["CSo8NSObject", "noUnreadStoriesContainer"]
@@ -1053,6 +1072,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGAffineTransform"]
 - !private ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "DispatchQueue"]
+- !private ["PSo16NSObjectProtocol", "Flurry"]
 - !private ["PSo16NSObjectProtocol", "GetStyledStoryCell"]
 - !private ["PSo16NSObjectProtocol", "HackPopStyle"]
 - !private ["PSo16NSObjectProtocol", "Interactor"]
@@ -1091,6 +1111,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "layer"]
 - ["PSo16NSObjectProtocol", "leftBigCloud"]
 - ["PSo16NSObjectProtocol", "loadedOnce"]
+- !private ["PSo16NSObjectProtocol", "logEvent"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - ["PSo16NSObjectProtocol", "moveClouds"]
 - ["PSo16NSObjectProtocol", "noUnreadStoriesContainer"]
@@ -1197,6 +1218,7 @@ depends-member:
 - !private ["C8hack_pop27RecentStoriesViewController", "CGAffineTransform"]
 - ["C8hack_pop27RecentStoriesViewController", "CGFloat"]
 - !private ["C8hack_pop27RecentStoriesViewController", "DispatchQueue"]
+- !private ["C8hack_pop27RecentStoriesViewController", "Flurry"]
 - !private ["C8hack_pop27RecentStoriesViewController", "HackPopStyle"]
 - ["C8hack_pop27RecentStoriesViewController", "IndexPath"]
 - ["C8hack_pop27RecentStoriesViewController", "Int"]
@@ -1317,6 +1339,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGAffineTransform"]
 - !private ["PSo21UIAppearanceContainer", "CGFloat"]
 - !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
+- !private ["PSo21UIAppearanceContainer", "Flurry"]
 - !private ["PSo21UIAppearanceContainer", "HackPopStyle"]
 - !private ["PSo21UIAppearanceContainer", "Interactor"]
 - !private ["PSo21UIAppearanceContainer", "M_PI"]
@@ -1388,6 +1411,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGAffineTransform"]
 - !private ["PSo18UIContentContainer", "CGFloat"]
 - !private ["PSo18UIContentContainer", "DispatchQueue"]
+- !private ["PSo18UIContentContainer", "Flurry"]
 - !private ["PSo18UIContentContainer", "HackPopStyle"]
 - !private ["PSo18UIContentContainer", "Interactor"]
 - !private ["PSo18UIContentContainer", "M_PI"]
@@ -1463,6 +1487,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGAffineTransform"]
 - !private ["PSo18UIFocusEnvironment", "CGFloat"]
 - !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
+- !private ["PSo18UIFocusEnvironment", "Flurry"]
 - !private ["PSo18UIFocusEnvironment", "HackPopStyle"]
 - !private ["PSo18UIFocusEnvironment", "Interactor"]
 - !private ["PSo18UIFocusEnvironment", "M_PI"]
@@ -1547,6 +1572,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGAffineTransform"]
 - ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "DispatchQueue"]
+- !private ["CSo11UIResponder", "Flurry"]
 - !private ["CSo11UIResponder", "HackPopStyle"]
 - ["CSo11UIResponder", "IndexPath"]
 - ["CSo11UIResponder", "Int"]
@@ -1623,6 +1649,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "CGAffineTransform"]
 - !private ["PSo30UIResponderStandardEditActions", "CGFloat"]
 - !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
+- !private ["PSo30UIResponderStandardEditActions", "Flurry"]
 - !private ["PSo30UIResponderStandardEditActions", "HackPopStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "Interactor"]
 - !private ["PSo30UIResponderStandardEditActions", "M_PI"]
@@ -1696,6 +1723,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CGAffineTransform"]
 - !private ["PSo20UIScrollViewDelegate", "CGFloat"]
 - !private ["PSo20UIScrollViewDelegate", "DispatchQueue"]
+- !private ["PSo20UIScrollViewDelegate", "Flurry"]
 - !private ["PSo20UIScrollViewDelegate", "HackPopStyle"]
 - !private ["PSo20UIScrollViewDelegate", "Interactor"]
 - !private ["PSo20UIScrollViewDelegate", "M_PI"]
@@ -1749,6 +1777,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGAffineTransform"]
 - !private ["PSo16UIStateRestoring", "CGFloat"]
 - !private ["PSo16UIStateRestoring", "DispatchQueue"]
+- !private ["PSo16UIStateRestoring", "Flurry"]
 - !private ["PSo16UIStateRestoring", "HackPopStyle"]
 - !private ["PSo16UIStateRestoring", "Interactor"]
 - !private ["PSo16UIStateRestoring", "M_PI"]
@@ -1814,6 +1843,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "CGAffineTransform"]
 - !private ["PSo21UITableViewDataSource", "CGFloat"]
 - !private ["PSo21UITableViewDataSource", "DispatchQueue"]
+- !private ["PSo21UITableViewDataSource", "Flurry"]
 - !private ["PSo21UITableViewDataSource", "HackPopStyle"]
 - !private ["PSo21UITableViewDataSource", "Interactor"]
 - !private ["PSo21UITableViewDataSource", "M_PI"]
@@ -1867,6 +1897,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "CGAffineTransform"]
 - !private ["PSo19UITableViewDelegate", "CGFloat"]
 - !private ["PSo19UITableViewDelegate", "DispatchQueue"]
+- !private ["PSo19UITableViewDelegate", "Flurry"]
 - !private ["PSo19UITableViewDelegate", "HackPopStyle"]
 - !private ["PSo19UITableViewDelegate", "Interactor"]
 - !private ["PSo19UITableViewDelegate", "M_PI"]
@@ -1920,6 +1951,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGAffineTransform"]
 - !private ["PSo18UITraitEnvironment", "CGFloat"]
 - !private ["PSo18UITraitEnvironment", "DispatchQueue"]
+- !private ["PSo18UITraitEnvironment", "Flurry"]
 - !private ["PSo18UITraitEnvironment", "HackPopStyle"]
 - !private ["PSo18UITraitEnvironment", "Interactor"]
 - !private ["PSo18UITraitEnvironment", "M_PI"]
@@ -1999,6 +2031,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGAffineTransform"]
 - ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "DispatchQueue"]
+- !private ["CSo16UIViewController", "Flurry"]
 - !private ["CSo16UIViewController", "HackPopStyle"]
 - ["CSo16UIViewController", "IndexPath"]
 - ["CSo16UIViewController", "Int"]
@@ -2113,6 +2146,7 @@ depends-member:
 - !private ["Ps9_Hashable", "CGAffineTransform"]
 - !private ["Ps9_Hashable", "CGFloat"]
 - !private ["Ps9_Hashable", "DispatchQueue"]
+- !private ["Ps9_Hashable", "Flurry"]
 - !private ["Ps9_Hashable", "GetStyledStoryCell"]
 - !private ["Ps9_Hashable", "HackPopStyle"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
@@ -2158,6 +2192,7 @@ depends-member:
 - ["Ps9_Hashable", "leftBigCloud"]
 - !private ["Ps9_Hashable", "lightContent"]
 - ["Ps9_Hashable", "loadedOnce"]
+- !private ["Ps9_Hashable", "logEvent"]
 - !private ["Ps9_Hashable", "main"]
 - ["Ps9_Hashable", "moveClouds"]
 - ["Ps9_Hashable", "noUnreadStoriesContainer"]
@@ -2273,6 +2308,8 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Ps13FloatingPoint"
+- !private "CSo6Flurry"
+- "VSC23FlurryEventRecordStatus"
 - !private "C8hack_pop12HackPopStyle"
 - "Ps8Hashable"
 - !private "P8hack_pop24HttpClientCreateListener"
@@ -2392,5 +2429,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "cc7a84f9370c868136f348246bbb9930"
+interface-hash: "e059b22b2982b29c8a6ad5c9b860fd58"
