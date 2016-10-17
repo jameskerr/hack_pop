@@ -166,13 +166,18 @@ class Story: NSObject {
             
             let results = try context.fetch(request)
             for result in results as! [NSManagedObject] {
-                let title:String = result.value(forKey: "title") as! String
-                let url:String = result.value(forKey: "url") as! String
+                let title:String? = result.value(forKey: "title") as? String
+                let url:String? = result.value(forKey: "url") as? String
                 //let commentsUrl:String = result.value(forKey: "commentsUrl") as! String
-                let points:Int = result.value(forKey: "points") as! Int
-                let story = Story(urlString: url, title: title, points: points)
-                story.isUnreadStory = true
-                stories.append(story)
+                let points:Int? = result.value(forKey: "points") as? Int
+                if let title = title,
+                    let url = url,
+                    
+                    let points = points {
+                    let story = Story(urlString: url, title: title, points: points)
+                    story.isUnreadStory = true
+                    stories.append(story)
+                }
             }
             
         } catch {

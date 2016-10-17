@@ -123,8 +123,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-
-        print(userInfo)
+        //received when opening
+        let story = Story.storyFromPush(pushData: userInfo)
+        story.isUnreadStory = true
+        Story.current = story
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = webViewController
+        window?.makeKeyAndVisible()
+        
+        
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -162,8 +171,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerForPushNotifications(application: UIApplication) {
-        let notificationSettings = UIUserNotificationSettings(types: [.badge, .alert], categories: nil)
+        let notificationSettings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
     }
     
     func showFailedAlert(title:String, message:String) {
