@@ -16,3 +16,6 @@ config :apns,
       certfile: "secrets/apns_dev.pem"
     ]
   ]
+
+config :bugsnag, api_key: System.get_env("BUGSNAG_API_KEY")
+config :bugsnag, release_stage: "prod"
