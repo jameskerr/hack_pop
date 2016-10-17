@@ -12,7 +12,7 @@ config :plug, port: 80
 config :apns,
   pools: [
     dev_pool: [
-      env: :prod,
+      env: :dev,
       certfile: "secrets/apns_dev.pem"
     ]
   ]
