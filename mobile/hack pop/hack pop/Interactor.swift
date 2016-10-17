@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 enum Direction: Int {
     case LeftToRight
@@ -46,6 +47,7 @@ class Interactor: UIPercentDrivenInteractiveTransition {
         let destinationViewController = delegateViewController.storyboard?.instantiateViewController(withIdentifier: destinationIdentifier) as UIViewController!
         destinationViewController?.transitioningDelegate = self
         delegateViewController.present(destinationViewController!, animated: true, completion: {
+            Flurry.logEvent("completed open from iteractor for \(self.destinationIdentifier)")
             if destinationViewController != nil && self.complete != nil {
                 self.complete!(destinationViewController!)
             }

@@ -6,66 +6,68 @@ provides-nominal:
 provides-member:
 - ["C8hack_pop17WebViewController", ""]
 provides-dynamic-lookup:
+- "webView"
+- "webView"
+- "viewDidLoad"
+- "fourOhFour"
+- "loadWebView"
+- "originalStory"
+- "webViewDidFinishLoad"
+- "homeViewInteractor"
+- "webViewDidStartLoad"
+- "forwardButtonImage"
+- "viewDidAppear"
+- "preferredStatusBarStyle"
+- "shareArticle"
+- "connectionFailureView"
+- "supportedInterfaceOrientations"
+- "shareButton"
 - "historyGoForward"
 - "webViewIndicator"
-- "backButtonImage"
-- "fourOhFour"
-- "webViewDidStartLoad"
-- "connectionFailureView"
-- "originalStory"
-- "shareButton"
-- "viewDidLoad"
-- "updateNavigationButtonImages"
-- "homeViewInteractor"
-- "loadWebView"
-- "historyGoBack"
-- "handleSwiipe"
-- "shareArticle"
-- "forwardButtonImage"
-- "preferredStatusBarStyle"
-- "webView"
-- "webView"
-- "viewDidAppear"
-- "supportedInterfaceOrientations"
-- "webViewDidFinishLoad"
-- "swipeBackHome"
 - "goBack"
+- "swipeBackHome"
+- "updateNavigationButtonImages"
 - "hasLoadedOnce"
+- "historyGoBack"
+- "backButtonImage"
+- "handleSwiipe"
 - "scrollViewDidEndDecelerating"
 depends-top-level:
-- "UIImageView"
-- "UIStatusBarStyle"
-- "BooleanLiteralType"
-- !private "Array"
-- "UIScrollViewDelegate"
-- "UIScrollView"
-- !private "UIActivityType"
-- "UIActivityIndicatorView"
-- "UIWebViewDelegate"
-- !private "UIActivityViewController"
-- !private "||"
-- !private "StringLiteralType"
-- "UIButton"
-- "Interactor"
-- "Story"
-- !private "RecentStoriesViewController"
-- "UIInterfaceOrientationMask"
-- "AnyObject"
-- !private "!"
-- "UIPanGestureRecognizer"
-- !private "UIColor"
-- "Error"
-- "UIWebView"
-- !private "_ImageLiteralType"
-- !private "=="
 - "AssignmentPrecedence"
-- "WebViewController"
-- "UIViewController"
+- !private "=="
 - "CastingPrecedence"
-- "TernaryPrecedence"
+- "UIScrollViewDelegate"
+- "UIActivityIndicatorView"
+- "Interactor"
+- "Error"
+- !private "!"
 - !private "URLRequest"
+- "UIButton"
+- !private "UIActivityViewController"
+- "UIImageView"
+- "WebViewController"
 - "Bool"
+- "AnyObject"
+- "UIPanGestureRecognizer"
+- "TernaryPrecedence"
+- "Story"
+- "UIInterfaceOrientationMask"
+- "UIWebViewDelegate"
+- "UIStatusBarStyle"
+- !private "Flurry"
+- !private "||"
+- "BooleanLiteralType"
+- !private "UIActivityType"
+- !private "_ImageLiteralType"
+- !private "StringLiteralType"
+- !private "UIColor"
+- !private "Array"
+- "UIWebView"
+- "UIViewController"
+- !private "RecentStoriesViewController"
+- "UIScrollView"
 depends-member:
+- !private ["Ps9AnyObject", "Flurry"]
 - !private ["Ps9AnyObject", "Interactor"]
 - !private ["Ps9AnyObject", "Story"]
 - !private ["Ps9AnyObject", "UIActivityType"]
@@ -108,6 +110,7 @@ depends-member:
 - !private ["Ps9AnyObject", "lightGray"]
 - !private ["Ps9AnyObject", "loadRequest"]
 - ["Ps9AnyObject", "loadWebView"]
+- !private ["Ps9AnyObject", "logEvent"]
 - ["Ps9AnyObject", "originalStory"]
 - ["Ps9AnyObject", "preferredStatusBarStyle"]
 - !private ["Ps9AnyObject", "present"]
@@ -173,6 +176,7 @@ depends-member:
 - !private ["PSo13CAMediaTiming", "borderColor"]
 - ["CSo7CGColor", "deinit"]
 - !private ["Ps7CVarArg", "Element"]
+- !private ["Ps7CVarArg", "Flurry"]
 - !private ["Ps7CVarArg", "Interactor"]
 - !private ["Ps7CVarArg", "Story"]
 - !private ["Ps7CVarArg", "UIActivityType"]
@@ -215,6 +219,7 @@ depends-member:
 - !private ["Ps7CVarArg", "lightGray"]
 - !private ["Ps7CVarArg", "loadRequest"]
 - ["Ps7CVarArg", "loadWebView"]
+- !private ["Ps7CVarArg", "logEvent"]
 - ["Ps7CVarArg", "originalStory"]
 - ["Ps7CVarArg", "preferredStatusBarStyle"]
 - !private ["Ps7CVarArg", "present"]
@@ -264,6 +269,7 @@ depends-member:
 - !private ["Ps10Comparable", "print"]
 - !private ["Ps10Comparable", "saveToCameraRoll"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Flurry"]
 - !private ["Ps28CustomDebugStringConvertible", "Interactor"]
 - !private ["Ps28CustomDebugStringConvertible", "Story"]
 - !private ["Ps28CustomDebugStringConvertible", "UIActivityType"]
@@ -306,6 +312,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "lightGray"]
 - !private ["Ps28CustomDebugStringConvertible", "loadRequest"]
 - ["Ps28CustomDebugStringConvertible", "loadWebView"]
+- !private ["Ps28CustomDebugStringConvertible", "logEvent"]
 - ["Ps28CustomDebugStringConvertible", "originalStory"]
 - ["Ps28CustomDebugStringConvertible", "preferredStatusBarStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
@@ -353,6 +360,7 @@ depends-member:
 - ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "url"]
 - !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Flurry"]
 - !private ["Ps23CustomStringConvertible", "Interactor"]
 - !private ["Ps23CustomStringConvertible", "Story"]
 - !private ["Ps23CustomStringConvertible", "UIActivityType"]
@@ -396,6 +404,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "lightGray"]
 - !private ["Ps23CustomStringConvertible", "loadRequest"]
 - ["Ps23CustomStringConvertible", "loadWebView"]
+- !private ["Ps23CustomStringConvertible", "logEvent"]
 - ["Ps23CustomStringConvertible", "originalStory"]
 - ["Ps23CustomStringConvertible", "preferredStatusBarStyle"]
 - !private ["Ps23CustomStringConvertible", "present"]
@@ -436,6 +445,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", ""]
 - !private ["O8hack_pop9Direction", "LeftToRight"]
 - ["O8hack_pop9Direction", "deinit"]
+- !private ["Ps9Equatable", "Flurry"]
 - !private ["Ps9Equatable", "Interactor"]
 - !private ["Ps9Equatable", "LeftToRight"]
 - !private ["Ps9Equatable", "Story"]
@@ -483,6 +493,7 @@ depends-member:
 - !private ["Ps9Equatable", "lightGray"]
 - !private ["Ps9Equatable", "loadRequest"]
 - ["Ps9Equatable", "loadWebView"]
+- !private ["Ps9Equatable", "logEvent"]
 - !private ["Ps9Equatable", "openInIBooks"]
 - ["Ps9Equatable", "originalStory"]
 - !private ["Ps9Equatable", "portrait"]
@@ -541,6 +552,9 @@ depends-member:
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["CSo6Flurry", "logEvent"]
+- ["VSC23FlurryEventRecordStatus", "deinit"]
+- !private ["Ps8Hashable", "Flurry"]
 - !private ["Ps8Hashable", "Interactor"]
 - !private ["Ps8Hashable", "LeftToRight"]
 - !private ["Ps8Hashable", "Story"]
@@ -588,6 +602,7 @@ depends-member:
 - !private ["Ps8Hashable", "lightGray"]
 - !private ["Ps8Hashable", "loadRequest"]
 - ["Ps8Hashable", "loadWebView"]
+- !private ["Ps8Hashable", "logEvent"]
 - !private ["Ps8Hashable", "openInIBooks"]
 - ["Ps8Hashable", "originalStory"]
 - !private ["Ps8Hashable", "postToFlickr"]
@@ -646,6 +661,7 @@ depends-member:
 - !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps16MutableIndexable", "Element"]
 - ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "Flurry"]
 - !private ["PSo8NSCoding", "Interactor"]
 - !private ["PSo8NSCoding", "Story"]
 - !private ["PSo8NSCoding", "UIActivityType"]
@@ -721,6 +737,7 @@ depends-member:
 - !private ["PSo9NSCopying", "clear"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "lightGray"]
+- !private ["PSo26NSExtensionRequestHandling", "Flurry"]
 - !private ["PSo26NSExtensionRequestHandling", "Interactor"]
 - !private ["PSo26NSExtensionRequestHandling", "Story"]
 - !private ["PSo26NSExtensionRequestHandling", "UIActivityType"]
@@ -777,6 +794,7 @@ depends-member:
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Error"]
+- !private ["CSo8NSObject", "Flurry"]
 - ["CSo8NSObject", "Interactor"]
 - !private ["CSo8NSObject", "RecentStoriesViewController"]
 - ["CSo8NSObject", "Story"]
@@ -826,6 +844,7 @@ depends-member:
 - !private ["CSo8NSObject", "lightGray"]
 - !private ["CSo8NSObject", "loadRequest"]
 - ["CSo8NSObject", "loadWebView"]
+- !private ["CSo8NSObject", "logEvent"]
 - ["CSo8NSObject", "originalStory"]
 - ["CSo8NSObject", "preferredStatusBarStyle"]
 - !private ["CSo8NSObject", "present"]
@@ -863,6 +882,7 @@ depends-member:
 - ["CSo8NSObject", "webViewDidFinishLoad"]
 - ["CSo8NSObject", "webViewDidStartLoad"]
 - ["CSo8NSObject", "webViewIndicator"]
+- !private ["PSo16NSObjectProtocol", "Flurry"]
 - !private ["PSo16NSObjectProtocol", "Interactor"]
 - !private ["PSo16NSObjectProtocol", "Story"]
 - !private ["PSo16NSObjectProtocol", "UIActivityType"]
@@ -905,6 +925,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "lightGray"]
 - !private ["PSo16NSObjectProtocol", "loadRequest"]
 - ["PSo16NSObjectProtocol", "loadWebView"]
+- !private ["PSo16NSObjectProtocol", "logEvent"]
 - ["PSo16NSObjectProtocol", "originalStory"]
 - ["PSo16NSObjectProtocol", "preferredStatusBarStyle"]
 - !private ["PSo16NSObjectProtocol", "present"]
@@ -1036,6 +1057,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "startAnimating"]
 - !private ["PSo12UIAppearance", "stopAnimating"]
 - !private ["PSo12UIAppearance", "stringByEvaluatingJavaScript"]
+- !private ["PSo21UIAppearanceContainer", "Flurry"]
 - !private ["PSo21UIAppearanceContainer", "Interactor"]
 - !private ["PSo21UIAppearanceContainer", "Story"]
 - !private ["PSo21UIAppearanceContainer", "UIActivityType"]
@@ -1107,6 +1129,7 @@ depends-member:
 - !private ["CSo7UIColor", "clear"]
 - ["CSo7UIColor", "deinit"]
 - !private ["CSo7UIColor", "lightGray"]
+- !private ["PSo18UIContentContainer", "Flurry"]
 - !private ["PSo18UIContentContainer", "Interactor"]
 - !private ["PSo18UIContentContainer", "Story"]
 - !private ["PSo18UIContentContainer", "UIActivityType"]
@@ -1191,6 +1214,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "startAnimating"]
 - !private ["PSo13UIDynamicItem", "stopAnimating"]
 - !private ["PSo13UIDynamicItem", "stringByEvaluatingJavaScript"]
+- !private ["PSo18UIFocusEnvironment", "Flurry"]
 - !private ["PSo18UIFocusEnvironment", "Interactor"]
 - !private ["PSo18UIFocusEnvironment", "Story"]
 - !private ["PSo18UIFocusEnvironment", "UIActivityType"]
@@ -1286,6 +1310,7 @@ depends-member:
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "Error"]
+- !private ["CSo11UIResponder", "Flurry"]
 - ["CSo11UIResponder", "Interactor"]
 - !private ["CSo11UIResponder", "RecentStoriesViewController"]
 - ["CSo11UIResponder", "Story"]
@@ -1359,6 +1384,7 @@ depends-member:
 - ["CSo11UIResponder", "webViewDidFinishLoad"]
 - ["CSo11UIResponder", "webViewDidStartLoad"]
 - ["CSo11UIResponder", "webViewIndicator"]
+- !private ["PSo30UIResponderStandardEditActions", "Flurry"]
 - !private ["PSo30UIResponderStandardEditActions", "Interactor"]
 - !private ["PSo30UIResponderStandardEditActions", "Story"]
 - !private ["PSo30UIResponderStandardEditActions", "UIActivityType"]
@@ -1427,6 +1453,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "webViewIndicator"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - !private ["CSo12UIScrollView", "isHidden"]
+- !private ["PSo20UIScrollViewDelegate", "Flurry"]
 - !private ["PSo20UIScrollViewDelegate", "Interactor"]
 - !private ["PSo20UIScrollViewDelegate", "Story"]
 - !private ["PSo20UIScrollViewDelegate", "UIActivityType"]
@@ -1478,6 +1505,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "webViewDidStartLoad"]
 - !private ["PSo20UIScrollViewDelegate", "webViewIndicator"]
 - ["PSo20UIScrollViewDelegate", ""]
+- !private ["PSo16UIStateRestoring", "Flurry"]
 - !private ["PSo16UIStateRestoring", "Interactor"]
 - !private ["PSo16UIStateRestoring", "Story"]
 - !private ["PSo16UIStateRestoring", "UIActivityType"]
@@ -1534,6 +1562,7 @@ depends-member:
 - !private ["OSC16UIStatusBarStyle", "lightContent"]
 - !private ["PSo21UITableViewDataSource", "startAnimation"]
 - !private ["PSo19UITableViewDelegate", "startAnimation"]
+- !private ["PSo18UITraitEnvironment", "Flurry"]
 - !private ["PSo18UITraitEnvironment", "Interactor"]
 - !private ["PSo18UITraitEnvironment", "Story"]
 - !private ["PSo18UITraitEnvironment", "UIActivityType"]
@@ -1620,6 +1649,7 @@ depends-member:
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "Error"]
+- !private ["CSo16UIViewController", "Flurry"]
 - ["CSo16UIViewController", "Interactor"]
 - !private ["CSo16UIViewController", "RecentStoriesViewController"]
 - ["CSo16UIViewController", "Story"]
@@ -1702,6 +1732,7 @@ depends-member:
 - !private ["CSo9UIWebView", "loadRequest"]
 - !private ["CSo9UIWebView", "request"]
 - !private ["CSo9UIWebView", "stringByEvaluatingJavaScript"]
+- !private ["PSo17UIWebViewDelegate", "Flurry"]
 - !private ["PSo17UIWebViewDelegate", "Interactor"]
 - !private ["PSo17UIWebViewDelegate", "Story"]
 - !private ["PSo17UIWebViewDelegate", "UIActivityType"]
@@ -1748,6 +1779,7 @@ depends-member:
 - ["C8hack_pop17WebViewController", "AnyObject"]
 - ["C8hack_pop17WebViewController", "Bool"]
 - ["C8hack_pop17WebViewController", "Error"]
+- !private ["C8hack_pop17WebViewController", "Flurry"]
 - ["C8hack_pop17WebViewController", "Interactor"]
 - !private ["C8hack_pop17WebViewController", "RecentStoriesViewController"]
 - ["C8hack_pop17WebViewController", "Story"]
@@ -1832,6 +1864,7 @@ depends-member:
 - !private ["Ps26_ExpressibleByColorLiteral", "clear"]
 - !private ["Ps26_ExpressibleByColorLiteral", "lightGray"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Flurry"]
 - !private ["Ps9_Hashable", "Interactor"]
 - !private ["Ps9_Hashable", "LeftToRight"]
 - !private ["Ps9_Hashable", "Story"]
@@ -1879,6 +1912,7 @@ depends-member:
 - !private ["Ps9_Hashable", "lightGray"]
 - !private ["Ps9_Hashable", "loadRequest"]
 - ["Ps9_Hashable", "loadWebView"]
+- !private ["Ps9_Hashable", "logEvent"]
 - !private ["Ps9_Hashable", "openInIBooks"]
 - ["Ps9_Hashable", "originalStory"]
 - !private ["Ps9_Hashable", "postToFlickr"]
@@ -1970,6 +2004,8 @@ depends-nominal:
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "CSo6Flurry"
+- "VSC23FlurryEventRecordStatus"
 - "Ps8Hashable"
 - "SQ"
 - !private "Ps9Indexable"
@@ -2065,5 +2101,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "6952bd702e3219b2d7dab7b6cf91c204"
+interface-hash: "d6335794945c41349dd660b9858aa01f"

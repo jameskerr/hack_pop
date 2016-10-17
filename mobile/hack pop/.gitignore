@@ -1,6 +1,9 @@
 # Xcode
+keys.plist
 .DS_Store
 build/
+/build
+/Pods
 *.pbxuser
 !default.pbxuser
 *.mode1v3

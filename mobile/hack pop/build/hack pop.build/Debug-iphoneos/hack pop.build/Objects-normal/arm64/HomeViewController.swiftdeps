@@ -10,104 +10,106 @@ provides-member:
 - ["C8hack_pop18HomeViewController", ""]
 provides-dynamic-lookup:
 - "thesholdTooLowView"
-- "hackPopServer"
-- "changeThreshold"
-- "reset"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "onThresholdSet"
-- "notifyThresholdContainer"
-- "setCurrentInteractor"
-- "preferredStatusBarStyle"
-- "scrollViewDidEndDecelerating"
-- "supportedInterfaceOrientations"
-- "topStoriesTable"
-- "recentStoriesInteractor"
-- "connectionFailedView"
-- "pointRetainer"
-- "onStoriesLoaded"
-- "displayFailedToLoad"
-- "filteredStories"
+- "eitherDisplayTooFewStoriesOrShowTableView"
 - "cellHeight"
 - "handleSwipe"
+- "reset"
 - "currentPointValueLabel"
-- "viewDidLoad"
-- "titleViewContainer"
-- "displayStories"
-- "onStoriesLoadedError"
-- "topStoriesLabel"
-- "resetViewLoadingState"
-- "stories"
-- "currentInteractor"
-- "setup"
-- "topStoriesTableWrapper"
-- "eitherDisplayTooFewStoriesOrShowTableView"
-- "notifyViewController"
-- "updateFinishedView"
-- "notifyThresholdAnimator"
-- "openHackerNews"
+- "pointRetainer"
 - "onThresholdSetFailed"
+- "onStoriesLoaded"
+- "viewDidLoad"
+- "topStoriesTable"
+- "onStoriesLoadedError"
+- "supportedInterfaceOrientations"
+- "recentStoriesInteractor"
+- "scrollViewDidEndDecelerating"
+- "notifyThresholdContainer"
+- "hackPopServer"
+- "displayFailedToLoad"
+- "setCurrentInteractor"
+- "titleViewContainer"
+- "openHackerNews"
 - "topStoriesContainer"
-- "webViewInteractor"
 - "loadingIndicator"
+- "setup"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "notifyThresholdAnimator"
+- "changeThreshold"
+- "notifyViewController"
+- "webViewInteractor"
+- "filteredStories"
+- "resetViewLoadingState"
+- "preferredStatusBarStyle"
+- "connectionFailedView"
+- "displayStories"
+- "onThresholdSet"
+- "topStoriesLabel"
+- "stories"
+- "updateFinishedView"
+- "currentInteractor"
+- "topStoriesTableWrapper"
 depends-top-level:
-- "UITableViewCell"
-- !private "RecentStoriesViewController"
-- !private "!"
-- "Error"
-- !private "StringLiteralType"
-- !private "<"
-- !private "HackPopStyle"
-- "UIInterfaceOrientationMask"
-- !private "CATransaction"
-- "UITableViewDataSource"
-- "PointsRetainer"
-- !private "BooleanLiteralType"
-- "UIActivityIndicatorView"
-- "UIControl"
-- !private ">"
-- "UITableViewDelegate"
-- !private "PointSelectViewController"
-- !private "!="
-- "CGFloat"
-- "AnyObject"
-- !private "NotificationCenter"
-- "UIStatusBarStyle"
-- !private "AppDelegate"
-- "UILabel"
-- "Interactor"
-- "UIView"
-- "Int"
-- "IndexPath"
-- !private "NSNotification"
-- "Story"
-- "UIPanGestureRecognizer"
-- "HttpSetThresholdListener"
-- !private "DispatchQueue"
 - !private "NSIndexPath"
-- "HomeTransitions"
-- "HomeViewController"
-- "HackPopServer"
+- "Error"
+- !private "NotificationCenter"
+- !private "!="
+- "Story"
 - "UIScrollViewDelegate"
-- "HttpStoriesListener"
-- "UIScrollView"
-- !private "~="
-- "UINavigationControllerDelegate"
-- !private "&&"
-- "CastingPrecedence"
-- "UITableView"
+- !private "PointSelectViewController"
+- !private "AppDelegate"
+- "HttpSetThresholdListener"
+- "UIPanGestureRecognizer"
 - "AssignmentPrecedence"
 - "=="
+- "CastingPrecedence"
+- "UIStatusBarStyle"
+- !private "&&"
+- "Int"
+- "Interactor"
+- !private "~="
+- "IndexPath"
+- !private ">"
+- "UILabel"
+- !private "Flurry"
+- !private "!"
+- "HomeViewController"
+- !private "CATransaction"
+- !private "RecentStoriesViewController"
+- "UITableViewCell"
+- "PointsRetainer"
+- "HttpStoriesListener"
+- "CGFloat"
+- "UIInterfaceOrientationMask"
+- "NotifyThresholdAnimationTransition"
+- !private "NSNotification"
+- !private "HackPopStyle"
+- "UIControl"
+- "UINavigationControllerDelegate"
+- "UIActivityIndicatorView"
+- "UIView"
+- !private "StringLiteralType"
+- !private "<"
+- "AnyObject"
+- "UITableViewDelegate"
+- "UIScrollView"
+- "UITableView"
+- !private "DispatchQueue"
 - "UIViewController"
 - !private "UIColor"
-- "NotifyThresholdAnimationTransition"
+- "HackPopServer"
+- "HomeTransitions"
+- "UITableViewDataSource"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "AppDelegate"]
 - !private ["Ps9AnyObject", "CATransaction"]
 - !private ["Ps9AnyObject", "CreateAlertMessage"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
+- !private ["Ps9AnyObject", "Flurry"]
 - !private ["Ps9AnyObject", "GetStyledStoryCell"]
 - ["Ps9AnyObject", "HackPopServer"]
 - !private ["Ps9AnyObject", "HackPopStyle"]
@@ -158,6 +160,7 @@ depends-member:
 - !private ["Ps9AnyObject", "isHidden"]
 - !private ["Ps9AnyObject", "layer"]
 - ["Ps9AnyObject", "loadingIndicator"]
+- !private ["Ps9AnyObject", "logEvent"]
 - !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "meetsThreshold"]
 - ["Ps9AnyObject", "navigationController"]
@@ -181,7 +184,6 @@ depends-member:
 - ["Ps9AnyObject", "reset"]
 - ["Ps9AnyObject", "resetViewLoadingState"]
 - !private ["Ps9AnyObject", "row"]
-- !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "scrollViewDidEndDecelerating"]
 - ["Ps9AnyObject", "scrollViewDidEndDragging"]
 - ["Ps9AnyObject", "scrollViewDidEndScrollingAnimation"]
@@ -283,6 +285,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CATransaction"]
 - !private ["Ps7CVarArg", "CreateAlertMessage"]
 - !private ["Ps7CVarArg", "DispatchQueue"]
+- !private ["Ps7CVarArg", "Flurry"]
 - !private ["Ps7CVarArg", "GetStyledStoryCell"]
 - ["Ps7CVarArg", "HackPopServer"]
 - !private ["Ps7CVarArg", "HackPopStyle"]
@@ -344,6 +347,7 @@ depends-member:
 - !private ["Ps7CVarArg", "isHidden"]
 - !private ["Ps7CVarArg", "layer"]
 - ["Ps7CVarArg", "loadingIndicator"]
+- !private ["Ps7CVarArg", "logEvent"]
 - !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "meetsThreshold"]
 - ["Ps7CVarArg", "navigationController"]
@@ -367,7 +371,6 @@ depends-member:
 - ["Ps7CVarArg", "reset"]
 - ["Ps7CVarArg", "resetViewLoadingState"]
 - !private ["Ps7CVarArg", "row"]
-- !private ["Ps7CVarArg", "save"]
 - ["Ps7CVarArg", "scrollViewDidEndDecelerating"]
 - ["Ps7CVarArg", "scrollViewDidEndDragging"]
 - ["Ps7CVarArg", "scrollViewDidEndScrollingAnimation"]
@@ -434,6 +437,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CATransaction"]
 - !private ["Ps28CustomDebugStringConvertible", "CreateAlertMessage"]
 - !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
+- !private ["Ps28CustomDebugStringConvertible", "Flurry"]
 - !private ["Ps28CustomDebugStringConvertible", "GetStyledStoryCell"]
 - ["Ps28CustomDebugStringConvertible", "HackPopServer"]
 - !private ["Ps28CustomDebugStringConvertible", "HackPopStyle"]
@@ -491,6 +495,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "isHidden"]
 - !private ["Ps28CustomDebugStringConvertible", "layer"]
 - ["Ps28CustomDebugStringConvertible", "loadingIndicator"]
+- !private ["Ps28CustomDebugStringConvertible", "logEvent"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "meetsThreshold"]
 - ["Ps28CustomDebugStringConvertible", "navigationController"]
@@ -514,7 +519,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "reset"]
 - ["Ps28CustomDebugStringConvertible", "resetViewLoadingState"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
-- !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDragging"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndScrollingAnimation"]
@@ -587,6 +591,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CATransaction"]
 - !private ["Ps23CustomStringConvertible", "CreateAlertMessage"]
 - !private ["Ps23CustomStringConvertible", "DispatchQueue"]
+- !private ["Ps23CustomStringConvertible", "Flurry"]
 - !private ["Ps23CustomStringConvertible", "GetStyledStoryCell"]
 - ["Ps23CustomStringConvertible", "HackPopServer"]
 - !private ["Ps23CustomStringConvertible", "HackPopStyle"]
@@ -649,6 +654,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "isHidden"]
 - !private ["Ps23CustomStringConvertible", "layer"]
 - ["Ps23CustomStringConvertible", "loadingIndicator"]
+- !private ["Ps23CustomStringConvertible", "logEvent"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "meetsThreshold"]
 - ["Ps23CustomStringConvertible", "navigationController"]
@@ -672,7 +678,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "reset"]
 - ["Ps23CustomStringConvertible", "resetViewLoadingState"]
 - !private ["Ps23CustomStringConvertible", "row"]
-- !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDragging"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndScrollingAnimation"]
@@ -739,6 +744,7 @@ depends-member:
 - !private ["Ps9Equatable", "CATransaction"]
 - !private ["Ps9Equatable", "CreateAlertMessage"]
 - !private ["Ps9Equatable", "DispatchQueue"]
+- !private ["Ps9Equatable", "Flurry"]
 - !private ["Ps9Equatable", "GetStyledStoryCell"]
 - ["Ps9Equatable", "HackPopServer"]
 - !private ["Ps9Equatable", "HackPopStyle"]
@@ -800,6 +806,7 @@ depends-member:
 - !private ["Ps9Equatable", "layer"]
 - !private ["Ps9Equatable", "lightContent"]
 - ["Ps9Equatable", "loadingIndicator"]
+- !private ["Ps9Equatable", "logEvent"]
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "meetsThreshold"]
 - ["Ps9Equatable", "navigationController"]
@@ -825,7 +832,6 @@ depends-member:
 - ["Ps9Equatable", "reset"]
 - ["Ps9Equatable", "resetViewLoadingState"]
 - !private ["Ps9Equatable", "row"]
-- !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "scrollViewDidEndDecelerating"]
 - ["Ps9Equatable", "scrollViewDidEndDragging"]
 - ["Ps9Equatable", "scrollViewDidEndScrollingAnimation"]
@@ -891,6 +897,8 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
+- !private ["CSo6Flurry", "logEvent"]
+- ["VSC23FlurryEventRecordStatus", "deinit"]
 - ["C8hack_pop13HackPopServer", "deinit"]
 - !private ["C8hack_pop13HackPopServer", "getStories"]
 - ["C8hack_pop13HackPopServer", "instance"]
@@ -902,6 +910,7 @@ depends-member:
 - !private ["Ps8Hashable", "CATransaction"]
 - !private ["Ps8Hashable", "CreateAlertMessage"]
 - !private ["Ps8Hashable", "DispatchQueue"]
+- !private ["Ps8Hashable", "Flurry"]
 - !private ["Ps8Hashable", "GetStyledStoryCell"]
 - ["Ps8Hashable", "HackPopServer"]
 - !private ["Ps8Hashable", "HackPopStyle"]
@@ -963,6 +972,7 @@ depends-member:
 - !private ["Ps8Hashable", "layer"]
 - !private ["Ps8Hashable", "lightContent"]
 - ["Ps8Hashable", "loadingIndicator"]
+- !private ["Ps8Hashable", "logEvent"]
 - !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "meetsThreshold"]
 - ["Ps8Hashable", "navigationController"]
@@ -987,7 +997,6 @@ depends-member:
 - ["Ps8Hashable", "reset"]
 - ["Ps8Hashable", "resetViewLoadingState"]
 - !private ["Ps8Hashable", "row"]
-- !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps8Hashable", "scrollViewDidEndDragging"]
 - ["Ps8Hashable", "scrollViewDidEndScrollingAnimation"]
@@ -1046,6 +1055,7 @@ depends-member:
 - ["C8hack_pop18HomeViewController", "CGFloat"]
 - !private ["C8hack_pop18HomeViewController", "DispatchQueue"]
 - ["C8hack_pop18HomeViewController", "Error"]
+- !private ["C8hack_pop18HomeViewController", "Flurry"]
 - ["C8hack_pop18HomeViewController", "HackPopServer"]
 - !private ["C8hack_pop18HomeViewController", "HackPopStyle"]
 - ["C8hack_pop18HomeViewController", "IndexPath"]
@@ -1142,6 +1152,7 @@ depends-member:
 - !private ["P8hack_pop24HttpSetThresholdListener", "AppDelegate"]
 - !private ["P8hack_pop24HttpSetThresholdListener", "CATransaction"]
 - !private ["P8hack_pop24HttpSetThresholdListener", "DispatchQueue"]
+- !private ["P8hack_pop24HttpSetThresholdListener", "Flurry"]
 - ["P8hack_pop24HttpSetThresholdListener", "HackPopServer"]
 - !private ["P8hack_pop24HttpSetThresholdListener", "HackPopStyle"]
 - !private ["P8hack_pop24HttpSetThresholdListener", "Interactor"]
@@ -1213,6 +1224,7 @@ depends-member:
 - !private ["P8hack_pop19HttpStoriesListener", "AppDelegate"]
 - !private ["P8hack_pop19HttpStoriesListener", "CATransaction"]
 - !private ["P8hack_pop19HttpStoriesListener", "DispatchQueue"]
+- !private ["P8hack_pop19HttpStoriesListener", "Flurry"]
 - ["P8hack_pop19HttpStoriesListener", "HackPopServer"]
 - !private ["P8hack_pop19HttpStoriesListener", "HackPopStyle"]
 - !private ["P8hack_pop19HttpStoriesListener", "Interactor"]
@@ -1354,6 +1366,7 @@ depends-member:
 - !private ["PSo8NSCoding", "AppDelegate"]
 - !private ["PSo8NSCoding", "CATransaction"]
 - !private ["PSo8NSCoding", "DispatchQueue"]
+- !private ["PSo8NSCoding", "Flurry"]
 - ["PSo8NSCoding", "HackPopServer"]
 - !private ["PSo8NSCoding", "HackPopStyle"]
 - !private ["PSo8NSCoding", "Interactor"]
@@ -1456,6 +1469,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "AppDelegate"]
 - !private ["PSo26NSExtensionRequestHandling", "CATransaction"]
 - !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
+- !private ["PSo26NSExtensionRequestHandling", "Flurry"]
 - ["PSo26NSExtensionRequestHandling", "HackPopServer"]
 - !private ["PSo26NSExtensionRequestHandling", "HackPopStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "Interactor"]
@@ -1549,6 +1563,7 @@ depends-member:
 - !private ["CSo8NSObject", "CreateAlertMessage"]
 - !private ["CSo8NSObject", "DispatchQueue"]
 - ["CSo8NSObject", "Error"]
+- !private ["CSo8NSObject", "Flurry"]
 - !private ["CSo8NSObject", "GetStyledStoryCell"]
 - ["CSo8NSObject", "HackPopServer"]
 - !private ["CSo8NSObject", "HackPopStyle"]
@@ -1612,6 +1627,7 @@ depends-member:
 - !private ["CSo8NSObject", "isHidden"]
 - !private ["CSo8NSObject", "layer"]
 - ["CSo8NSObject", "loadingIndicator"]
+- !private ["CSo8NSObject", "logEvent"]
 - !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "meetsThreshold"]
 - ["CSo8NSObject", "navigationController"]
@@ -1635,7 +1651,6 @@ depends-member:
 - ["CSo8NSObject", "reset"]
 - ["CSo8NSObject", "resetViewLoadingState"]
 - !private ["CSo8NSObject", "row"]
-- !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
 - ["CSo8NSObject", "scrollViewDidEndDragging"]
 - ["CSo8NSObject", "scrollViewDidEndScrollingAnimation"]
@@ -1681,6 +1696,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CATransaction"]
 - !private ["PSo16NSObjectProtocol", "CreateAlertMessage"]
 - !private ["PSo16NSObjectProtocol", "DispatchQueue"]
+- !private ["PSo16NSObjectProtocol", "Flurry"]
 - !private ["PSo16NSObjectProtocol", "GetStyledStoryCell"]
 - ["PSo16NSObjectProtocol", "HackPopServer"]
 - !private ["PSo16NSObjectProtocol", "HackPopStyle"]
@@ -1731,6 +1747,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "isHidden"]
 - !private ["PSo16NSObjectProtocol", "layer"]
 - ["PSo16NSObjectProtocol", "loadingIndicator"]
+- !private ["PSo16NSObjectProtocol", "logEvent"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "meetsThreshold"]
 - ["PSo16NSObjectProtocol", "navigationController"]
@@ -1754,7 +1771,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "reset"]
 - ["PSo16NSObjectProtocol", "resetViewLoadingState"]
 - !private ["PSo16NSObjectProtocol", "row"]
-- !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndScrollingAnimation"]
@@ -1904,7 +1920,6 @@ depends-member:
 - !private ["C8hack_pop5Story", "current"]
 - ["C8hack_pop5Story", "deinit"]
 - !private ["C8hack_pop5Story", "meetsThreshold"]
-- !private ["C8hack_pop5Story", "save"]
 - !private ["C8hack_pop5Story", "setCurrentStoryToDefault"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Stride"]
@@ -1934,6 +1949,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "AppDelegate"]
 - !private ["PSo21UIAppearanceContainer", "CATransaction"]
 - !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
+- !private ["PSo21UIAppearanceContainer", "Flurry"]
 - ["PSo21UIAppearanceContainer", "HackPopServer"]
 - !private ["PSo21UIAppearanceContainer", "HackPopStyle"]
 - !private ["PSo21UIAppearanceContainer", "Interactor"]
@@ -2030,6 +2046,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "AppDelegate"]
 - !private ["PSo18UIContentContainer", "CATransaction"]
 - !private ["PSo18UIContentContainer", "DispatchQueue"]
+- !private ["PSo18UIContentContainer", "Flurry"]
 - ["PSo18UIContentContainer", "HackPopServer"]
 - !private ["PSo18UIContentContainer", "HackPopStyle"]
 - !private ["PSo18UIContentContainer", "Interactor"]
@@ -2131,6 +2148,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "AppDelegate"]
 - !private ["PSo18UIFocusEnvironment", "CATransaction"]
 - !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
+- !private ["PSo18UIFocusEnvironment", "Flurry"]
 - ["PSo18UIFocusEnvironment", "HackPopServer"]
 - !private ["PSo18UIFocusEnvironment", "HackPopStyle"]
 - !private ["PSo18UIFocusEnvironment", "Interactor"]
@@ -2239,6 +2257,7 @@ depends-member:
 - !private ["PSo30UINavigationControllerDelegate", "AppDelegate"]
 - !private ["PSo30UINavigationControllerDelegate", "CATransaction"]
 - !private ["PSo30UINavigationControllerDelegate", "DispatchQueue"]
+- !private ["PSo30UINavigationControllerDelegate", "Flurry"]
 - ["PSo30UINavigationControllerDelegate", "HackPopServer"]
 - !private ["PSo30UINavigationControllerDelegate", "HackPopStyle"]
 - !private ["PSo30UINavigationControllerDelegate", "Interactor"]
@@ -2319,6 +2338,7 @@ depends-member:
 - ["CSo11UIResponder", "CGFloat"]
 - !private ["CSo11UIResponder", "DispatchQueue"]
 - ["CSo11UIResponder", "Error"]
+- !private ["CSo11UIResponder", "Flurry"]
 - ["CSo11UIResponder", "HackPopServer"]
 - !private ["CSo11UIResponder", "HackPopStyle"]
 - ["CSo11UIResponder", "IndexPath"]
@@ -2424,6 +2444,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "AppDelegate"]
 - !private ["PSo30UIResponderStandardEditActions", "CATransaction"]
 - !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
+- !private ["PSo30UIResponderStandardEditActions", "Flurry"]
 - ["PSo30UIResponderStandardEditActions", "HackPopServer"]
 - !private ["PSo30UIResponderStandardEditActions", "HackPopStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "Interactor"]
@@ -2519,6 +2540,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "AppDelegate"]
 - !private ["PSo20UIScrollViewDelegate", "CATransaction"]
 - !private ["PSo20UIScrollViewDelegate", "DispatchQueue"]
+- !private ["PSo20UIScrollViewDelegate", "Flurry"]
 - ["PSo20UIScrollViewDelegate", "HackPopServer"]
 - !private ["PSo20UIScrollViewDelegate", "HackPopStyle"]
 - !private ["PSo20UIScrollViewDelegate", "Interactor"]
@@ -2592,6 +2614,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "AppDelegate"]
 - !private ["PSo16UIStateRestoring", "CATransaction"]
 - !private ["PSo16UIStateRestoring", "DispatchQueue"]
+- !private ["PSo16UIStateRestoring", "Flurry"]
 - ["PSo16UIStateRestoring", "HackPopServer"]
 - !private ["PSo16UIStateRestoring", "HackPopStyle"]
 - !private ["PSo16UIStateRestoring", "Interactor"]
@@ -2684,6 +2707,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "AppDelegate"]
 - !private ["PSo21UITableViewDataSource", "CATransaction"]
 - !private ["PSo21UITableViewDataSource", "DispatchQueue"]
+- !private ["PSo21UITableViewDataSource", "Flurry"]
 - ["PSo21UITableViewDataSource", "HackPopServer"]
 - !private ["PSo21UITableViewDataSource", "HackPopStyle"]
 - !private ["PSo21UITableViewDataSource", "Interactor"]
@@ -2757,6 +2781,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "AppDelegate"]
 - !private ["PSo19UITableViewDelegate", "CATransaction"]
 - !private ["PSo19UITableViewDelegate", "DispatchQueue"]
+- !private ["PSo19UITableViewDelegate", "Flurry"]
 - ["PSo19UITableViewDelegate", "HackPopServer"]
 - !private ["PSo19UITableViewDelegate", "HackPopStyle"]
 - !private ["PSo19UITableViewDelegate", "Interactor"]
@@ -2830,6 +2855,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "AppDelegate"]
 - !private ["PSo18UITraitEnvironment", "CATransaction"]
 - !private ["PSo18UITraitEnvironment", "DispatchQueue"]
+- !private ["PSo18UITraitEnvironment", "Flurry"]
 - ["PSo18UITraitEnvironment", "HackPopServer"]
 - !private ["PSo18UITraitEnvironment", "HackPopStyle"]
 - !private ["PSo18UITraitEnvironment", "Interactor"]
@@ -2932,6 +2958,7 @@ depends-member:
 - ["CSo16UIViewController", "CGFloat"]
 - !private ["CSo16UIViewController", "DispatchQueue"]
 - ["CSo16UIViewController", "Error"]
+- !private ["CSo16UIViewController", "Flurry"]
 - ["CSo16UIViewController", "HackPopServer"]
 - !private ["CSo16UIViewController", "HackPopStyle"]
 - ["CSo16UIViewController", "IndexPath"]
@@ -3090,6 +3117,7 @@ depends-member:
 - !private ["Ps9_Hashable", "CATransaction"]
 - !private ["Ps9_Hashable", "CreateAlertMessage"]
 - !private ["Ps9_Hashable", "DispatchQueue"]
+- !private ["Ps9_Hashable", "Flurry"]
 - !private ["Ps9_Hashable", "GetStyledStoryCell"]
 - ["Ps9_Hashable", "HackPopServer"]
 - !private ["Ps9_Hashable", "HackPopStyle"]
@@ -3151,6 +3179,7 @@ depends-member:
 - !private ["Ps9_Hashable", "layer"]
 - !private ["Ps9_Hashable", "lightContent"]
 - ["Ps9_Hashable", "loadingIndicator"]
+- !private ["Ps9_Hashable", "logEvent"]
 - !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "meetsThreshold"]
 - ["Ps9_Hashable", "navigationController"]
@@ -3175,7 +3204,6 @@ depends-member:
 - ["Ps9_Hashable", "reset"]
 - ["Ps9_Hashable", "resetViewLoadingState"]
 - !private ["Ps9_Hashable", "row"]
-- !private ["Ps9_Hashable", "save"]
 - ["Ps9_Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps9_Hashable", "scrollViewDidEndDragging"]
 - ["Ps9_Hashable", "scrollViewDidEndScrollingAnimation"]
@@ -3298,6 +3326,8 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
+- !private "CSo6Flurry"
+- "VSC23FlurryEventRecordStatus"
 - "C8hack_pop13HackPopServer"
 - !private "C8hack_pop12HackPopStyle"
 - "Ps8Hashable"
@@ -3437,5 +3467,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/FlurrySessionBuilder.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Headers/Flurry-iOS-SDK-umbrella.h"
+- "/Users/jamie/git/hack_pop/mobile/hack pop/build/Debug-iphoneos/Flurry_iOS_SDK.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "864d6fdbf9bc61eaa72e91766945e20b"
+interface-hash: "f51c791ea3691fc96b1d5a05c241a7e5"

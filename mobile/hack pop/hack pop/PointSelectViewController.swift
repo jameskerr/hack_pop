@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 
 class PointSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -25,6 +26,8 @@ class PointSelectViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Flurry.logEvent("opened point selection view controller")
         
         view.layer.borderColor = UIColor.clear.cgColor
         
@@ -47,10 +50,12 @@ class PointSelectViewController: UIViewController, UITableViewDelegate, UITableV
         let selectedPointThreshold = (pointRetainer.pointSelectionValues.object(at: (indexPath as NSIndexPath).row)  as? Int)!
         let attributedString = HackPopStyle.UnderlinedText("\(selectedPointThreshold) Points", fontSize: 18)
         pointSelectionLabel.attributedText = attributedString
+        Flurry.logEvent("changed point treshold from \(pointRetainer.value) to \(selectedPointThreshold)")
         close(withRequestToServer:true, threshold:selectedPointThreshold)
     }
     
     @IBAction func closePointSelection(_ sender: AnyObject) {
+        Flurry.logEvent("closed change threshold without changing threshold")
         close(withRequestToServer:false, threshold: pointRetainer.value)
     }
     
