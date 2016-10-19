@@ -25,7 +25,6 @@ defmodule HackPop.Pusher do
       |> Map.put(:token, client.client_id)
       |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
       |> Map.put(:badge, 0)
-      |> Map.put(:"content-available", 1)
       |> Map.put(:extra, %{
         url: story.url,
         points: story.points
@@ -33,7 +32,7 @@ defmodule HackPop.Pusher do
 
     case APNS.push(:dev_pool, message) do
       :ok ->
-        Repo.insert %Notification{client_id: client.id, story_id: story.id, status: 1}
+        Repo.insert %Notification{client_id: client.id, story_id: story.id}
     end
   end
 
