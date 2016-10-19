@@ -14,7 +14,6 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 config :plug, port: 4001
 
 config :apns,
-  callback_module: HackPop.Pusher,
   pools: [
     dev_pool: [
       env: :dev,
@@ -22,7 +21,7 @@ config :apns,
     ]
   ]
 
-config :logger, level: :debug
+config :logger, level: :error
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

@@ -8,8 +8,7 @@ defmodule HackPop.Pusher do
   import Ecto.Query
 
   def push_to_all_clients(stories) do
-    IO.inspect clients = Client |> Repo.all
-    IO.inspect stories
+    clients = Client |> Repo.all
 
     Enum.each(clients, fn client ->
       Enum.each(stories, fn story ->

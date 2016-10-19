@@ -7,6 +7,8 @@ defmodule HackPop.WebTest do
   alias HackPop.Repo
   alias HackPop.Client
   alias HackPop.Web
+  alias HackPop.Notification
+  alias HackPop.Story
 
   @opts Web.init([])
 
@@ -45,5 +47,29 @@ defmodule HackPop.WebTest do
 
     client = Client |> where(client_id: "123") |> Repo.one
     assert client.threshold == 1000
+  end
+
+  test "get /clients/:client_id/notifications 404" do
+    url  = "/clients/123/notifications"
+    conn = conn(:get, url) |> Web.call(@opts)
+
+    assert conn.state == :sent
+    assert conn.status == 404
+  end
+
+
+  test "get /clients/:client_id/notifications 200" do
+    client        = Repo.insert! %Client{client_id: "123"}
+    story         = Repo.insert! %Story{title: "Sup", url: "hi", points: 100}
+    _notification = Repo.insert! %Notification{client_id: client.id,
+                                              story_id: story.id}
+    url  = "/clients/123/notifications"
+    conn = conn(:get, url) |> Web.call(@opts)
+
+    response = Poison.Parser.parse!(conn.resp_body)
+
+    assert conn.state == :sent
+    assert conn.status == 200
+    assert response |> Enum.map(&Map.keys/1) |> List.flatten == ["id", "read", "story"]
   end
 end

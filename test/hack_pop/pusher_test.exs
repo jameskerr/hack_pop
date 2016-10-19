@@ -25,8 +25,8 @@ defmodule HackPopTest.PusherTest do
   end
 
   test "push_to_all_clients when already sent" do
-    stories = [ %Story{title: "Dinosaurs!", points: 301, id: 1} ]
-    client  = Repo.insert!(%Client{client_id: "123", threshold: 300})
+    stories  = [ %Story{title: "Dinosaurs!", points: 301, id: 1} ]
+    _client  = Repo.insert!(%Client{client_id: "123", threshold: 300})
     Pusher.push_to_all_clients(stories)
 
     before_count = notification_count
@@ -37,7 +37,7 @@ defmodule HackPopTest.PusherTest do
 
   test "push_to_all_clients when below threshold" do
     stories = [ %Story{title: "Dinosaurs!", points: 299, id: 1} ]
-    client = Repo.insert!(%Client{client_id: "123", threshold: 300})
+    _client = Repo.insert!(%Client{client_id: "123", threshold: 300})
 
     before_count = notification_count()
     Pusher.push_to_all_clients(stories)

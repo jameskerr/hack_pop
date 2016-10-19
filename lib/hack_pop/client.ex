@@ -1,6 +1,12 @@
 defmodule HackPop.Client do
   use Ecto.Schema
+
   import Ecto.Changeset
+  import Ecto.Query
+
+  alias HackPop.Repo
+  alias HackPop.Client
+  alias HackPop.Notification
 
   @derive { Poison.Encoder, only: [:client_id, :threshold] }
   schema "clients" do
@@ -15,6 +21,18 @@ defmodule HackPop.Client do
     |> unique_constraint(:client_id)
   end
 
-  def insert do
+  def find(client_id) do
+    Client |> where(client_id: ^client_id) |> Repo.one
+  end
+
+  def recent_unread_notifications(client) do
+    from(
+      n in Notification,
+        where: n.client_id   == ^client.id
+          and  n.read        == false
+          and  n.inserted_at >= ago(5, "day"),
+        limit: 15,
+        preload: [:story]
+    ) |> Repo.all
   end
 end

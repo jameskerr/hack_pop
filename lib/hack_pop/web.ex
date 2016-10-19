@@ -6,6 +6,7 @@ defmodule HackPop.Web do
   alias HackPop.Client
   alias HackPop.Story
   alias HackPop.Pusher
+  alias HackPop.Notification
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   plug :match
@@ -56,6 +57,16 @@ defmodule HackPop.Web do
     story = query |> Repo.one
     Pusher.push_test(story, client_id)
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
+  end
+
+  get "/clients/:client_id/notifications" do
+    case client = Client.find(client_id) do
+      %Client{} ->
+        notifications = client |> Client.recent_unread_notifications
+        send_resp conn, 200, notifications |> Poison.encode!
+      nil ->
+        send_resp conn, 404, "No client with #{inspect(client_id)}"
+    end
   end
 
   match _ do
