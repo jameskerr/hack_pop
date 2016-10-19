@@ -11,6 +11,9 @@ import Flurry_iOS_SDK
 
 class RecentStoriesViewController: UIViewController {
     
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var connectionFailureView: UIScrollView!
     @IBOutlet weak var recentStoriesTable: UITableView!
     @IBOutlet weak var noUnreadStoriesContainer: UIView!
     @IBOutlet weak var unreadStoriesLabel: UILabel!
@@ -36,8 +39,6 @@ class RecentStoriesViewController: UIViewController {
         
         Flurry.logEvent("opened recent stories view controller")
         
-        setup()
-        
         homeViewInteractor = Interactor(delegateViewController:self,
                                         dimissing:true,
                                         destinationIdentifier:"HomeViewController",
@@ -54,28 +55,70 @@ class RecentStoriesViewController: UIViewController {
                                                selector: #selector(setup),
                                                name: NSNotification.Name.UIApplicationDidBecomeActive,
                                                object: nil)
+        
+        DispatchQueue.main.async {
+            self.setup()
+        }
     }
     
     func setup() {
-        stories = Story.getSavedStories()
+        CATransaction.flush()
+        let token = Client.instance().token
+        HackPopServer.fetchNotifcations(id: token, delegate: self)
         
         view.layer.borderColor = UIColor.clear.cgColor
+        unreadStoriesLabel.text = "Loading Stories..."
+        loadingIndicator.startAnimating()
+        loadingView.isHidden = false
+        noUnreadStoriesContainer.isHidden = true
+        recentStoriesTable.isHidden = true
+        connectionFailureView.isHidden = true
         
-        if stories?.count == 0 {
-            recentStoriesTable.isHidden = true
-            noUnreadStoriesContainer.isHidden = false
-            unreadStoriesLabel.text = "No Unread Stories"
+    }
+    
+    func displayFailedToLoad() {
+        unreadStoriesLabel.text = "Couldn't Load Stories"
+        noUnreadStoriesContainer.isHidden = true
+        recentStoriesTable.isHidden = true
+        loadingView.isHidden = true
+        connectionFailureView.isHidden = false
+        
+    }
+    
+    func displayStoriesLoaded() {
+        loadingView.isHidden = true
+        
+        connectionFailureView.isHidden = true
+        if stories != nil && (stories?.count)! > 0 {
+            DispatchQueue.main.async {
+                self.loadingIndicator.stopAnimating()
+                self.showUnreadStories()
+            }
         } else {
-            recentStoriesTable.isHidden = false
-            noUnreadStoriesContainer.isHidden = true
-            unreadStoriesLabel.text = "Unread Stories"
+            DispatchQueue.main.async {
+                self.loadingIndicator.stopAnimating()
+                self.showNoUnreadStories()
+            }
         }
-        
-        
+    }
+    
+    func showUnreadStories() {
+        CATransaction.flush()
+        recentStoriesTable.isHidden = false
+        loadingView.isHidden = true
+        noUnreadStoriesContainer.isHidden = true
+        unreadStoriesLabel.text = "Unread Stories"
         DispatchQueue.main.async {
             self.recentStoriesTable.reloadData()
         }
-        
+    }
+    
+    func showNoUnreadStories() {
+        CATransaction.flush()
+        recentStoriesTable.isHidden = true
+        noUnreadStoriesContainer.isHidden = false
+        unreadStoriesLabel.text = "No Unread Stories"
+        startAnimation()
     }
     
     func startAnimation() {
@@ -132,7 +175,10 @@ class RecentStoriesViewController: UIViewController {
 extension RecentStoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
-        return stories!.count
+        if let stories = stories {
+            return stories.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -144,11 +190,40 @@ extension RecentStoriesViewController: UITableViewDelegate, UITableViewDataSourc
         let story = stories?[(indexPath as NSIndexPath).row]
         Flurry.logEvent("opened story from recent stories table")
         Story.current = story
+        Story.current?.isUnreadStory = true
         webViewInteractor?.animateTransition()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+    
+}
+
+extension RecentStoriesViewController: HttpNotificationsFetchListener {
+    func onFetchNotifcationsSuccess(stories: [Story]?) {
+        self.stories = stories
+        displayStoriesLoaded()
+    }
+    
+    func onFetchNotifcationsFailed(error: Error?) {
+        if let _ = error {
+            Flurry.logEvent("failed to load unread stories")
+        }
+        
+        displayFailedToLoad()
+        
+    }
+}
+
+extension RecentStoriesViewController: UIScrollViewDelegate{
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if (!connectionFailureView.isHidden) {
+            DispatchQueue.main.async {
+                self.setup()
+            }
+        }
     }
     
 }

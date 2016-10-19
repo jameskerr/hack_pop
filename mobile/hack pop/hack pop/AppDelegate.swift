@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Flurry.setCrashReportingEnabled(true)
             Flurry.setEventLoggingEnabled(true)
         }
+        
         return true
     }
 
@@ -123,15 +124,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-
-        print(userInfo)
+        //
+        let story = Story.storyFromPush(pushData: userInfo)
+        story.isUnreadStory = true
+        Story.current = story
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = webViewController
+        window?.makeKeyAndVisible()
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
-        //add to local database here
-        let story = Story.storyFromPush(pushData: userInfo)
-        story.save()
     }
     
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
