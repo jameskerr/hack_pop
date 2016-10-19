@@ -73,6 +73,9 @@
 		7D7D283C1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
 		7D7D283D1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
 		7D7D283E1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */; };
+		7DABDCA51DB714D80065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
+		7DABDCAA1DB720990065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
+		7DABDCAB1DB7209A0065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
 		7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
 		7DD6D93A1DA4E1120062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
 		7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
@@ -174,6 +177,7 @@
 		7D7D282C1D94DD20009334CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7D7D28301D963264009334CA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyThresholdAnimationTransition.swift; sourceTree = "<group>"; };
+		7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNotificationsFetchListener.swift; sourceTree = "<group>"; };
 		7DD6D9341DA4E0DD0062A69C /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		7DE2ECF31D8A3F2400A53ABF /* hack pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hack pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 				7D101B931D9A451400C89D5A /* CookieStore.swift */,
 				7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */,
 				7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */,
+				7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */,
 			);
 			name = http;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */,
 				7D101BA21D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
+				7DABDCA51DB714D80065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */,
 				7D4563C11D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
 				7DE2ECF71D8A3F2400A53ABF /* AppDelegate.swift in Sources */,
@@ -795,6 +801,7 @@
 				7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */,
 				7D7D283D1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
 				7D4563C21D92421A0083FEB0 /* HackPopStyle.swift in Sources */,
+				7DABDCAA1DB720990065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7D7D28381D967A06009334CA /* HomeViewController.swift in Sources */,
 				7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */,
 				7D2A5D5D1DB457B200E24A44 /* KeyFetcher.swift in Sources */,
@@ -824,6 +831,7 @@
 				7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DEEB8DA1DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
 				7D101BA41D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
+				7DABDCAB1DB7209A0065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */,
 				7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */,
 				7D7D283E1D97298D009334CA /* NotifyThresholdAnimationTransition.swift in Sources */,
