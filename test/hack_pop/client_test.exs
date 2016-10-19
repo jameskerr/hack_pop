@@ -4,6 +4,7 @@ defmodule HackPop.ClientTest do
   alias HackPop.Repo
   alias HackPop.Notification
   alias HackPop.Client
+  alias HackPop.Story
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
@@ -21,8 +22,9 @@ defmodule HackPop.ClientTest do
 
   test "recent_unread_notifications" do
     client        = Repo.insert! %Client{client_id: "123"}
+    story         = Repo.insert! %Story{title: "title", url: "url", points: 100}
     _notification = Repo.insert! %Notification{client_id: client.id,
-                                              story_id: 1}
+                                              story_id: story.id}
 
     assert 1 === Client.recent_unread_notifications(client) |> length
   end

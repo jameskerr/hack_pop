@@ -4,6 +4,7 @@ defmodule HackPop.Pusher do
   alias HackPop.Repo
   alias HackPop.Client
   alias HackPop.Notification
+  alias HackPop.StoryNotification
 
   import Ecto.Query
 
@@ -20,33 +21,15 @@ defmodule HackPop.Pusher do
   end
 
   def push(story, client) do
+    notification = Repo.insert! %Notification{client_id: client.id, story_id: story.id}
+
     message = APNS.Message.new
       |> Map.put(:token, client.client_id)
       |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
       |> Map.put(:badge, 0)
-      |> Map.put(:extra, %{
-        url: story.url,
-        points: story.points
-      })
+      |> Map.put(:extra, StoryNotification.cast(story, notification) |> Map.from_struct)
 
-    case APNS.push(:dev_pool, message) do
-      :ok ->
-        Repo.insert %Notification{client_id: client.id, story_id: story.id}
-    end
-  end
-
-  def push_test(story, client_id) do
-    message = APNS.Message.new
-      |> Map.put(:token, client_id)
-      |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
-      |> Map.put(:badge, 0)
-      |> Map.put(:extra, %{
-        title:  story.title,
-        url:    story.url,
-        comments_url: nil,
-        points: story.points
-      })
-      APNS.push(:dev_pool, message)
+    :ok = APNS.push(:dev_pool, message)
   end
 
   def error(error, _) do

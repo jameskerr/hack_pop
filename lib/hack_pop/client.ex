@@ -26,7 +26,7 @@ defmodule HackPop.Client do
   end
 
   def recent_unread_notifications(client) do
-    from(
+    notifications = from(
       n in Notification,
         where: n.client_id   == ^client.id
           and  n.read        == false
@@ -34,5 +34,9 @@ defmodule HackPop.Client do
         limit: 15,
         preload: [:story]
     ) |> Repo.all
+
+    Enum.map(notifications, fn notification ->
+      HackPop.StoryNotification.cast(notification.story, notification)
+    end)
   end
 end

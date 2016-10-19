@@ -7,6 +7,7 @@ defmodule HackPop.Web do
   alias HackPop.Story
   alias HackPop.Pusher
   alias HackPop.Notification
+  alias HackPop.StoryNotification
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   plug :match
@@ -55,8 +56,23 @@ defmodule HackPop.Web do
   get "/clients/:client_id/test" do
     query = from s in Story, limit: 1, where: s.trending == true, order_by: fragment("RANDOM()")
     story = query |> Repo.one
-    Pusher.push_test(story, client_id)
-    send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
+
+    case client = Client.find(client_id) do
+      %Client{} ->
+        notification = %Notification{client_id: client.id, story_id: story.id, id: 0}
+
+        message = APNS.Message.new
+          |> Map.put(:token, client.client_id)
+          |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
+          |> Map.put(:badge, 0)
+          |> Map.put(:extra, StoryNotification.cast(story, notification) |> Map.from_struct)
+
+        :ok = APNS.push(:dev_pool, message)
+
+        send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
+      nil ->
+        send_resp conn, 404, "No client with #{inspect(client_id)}"
+    end
   end
 
   get "/clients/:client_id/notifications" do

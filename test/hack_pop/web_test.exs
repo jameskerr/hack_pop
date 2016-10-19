@@ -70,6 +70,6 @@ defmodule HackPop.WebTest do
 
     assert conn.state == :sent
     assert conn.status == 200
-    assert response |> Enum.map(&Map.keys/1) |> List.flatten == ["id", "read", "story"]
+    assert response |> Enum.map(&Map.keys/1) |> List.flatten == ["notification_id", "points", "story_id", "title", "url"]
   end
 end
