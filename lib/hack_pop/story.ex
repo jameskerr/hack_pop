@@ -1,6 +1,8 @@
 defmodule HackPop.Story do
   use Ecto.Schema
+
   import Ecto.Query
+
   alias HackPop.Repo
   alias HackPop.Story
 
@@ -18,9 +20,13 @@ defmodule HackPop.Story do
     |> Ecto.Changeset.cast(params, [:points, :trending])
   end
 
+  def trending do
+    trending_query
+    |> Repo.all
+  end
+
   def set_trending(stories) do
-    ids = Enum.map(stories, fn story -> story.id end)
-    from(s in Story, where: not s.id in ^ids and s.trending == true)
+    stories_trending_besides(stories)
     |> Repo.update_all(set: [trending: false])
     stories
   end
@@ -30,20 +36,44 @@ defmodule HackPop.Story do
     |> Enum.map(&upsert/1)
   end
 
-  defp upsert(story) do
-    query = from s in Story,
-      where: s.title == ^story.title and
-             s.url   == ^story.url   and
-             s.inserted_at > datetime_add(^Ecto.DateTime.utc, -3, "day")
+  defp upsert(struct) do
+    case story = find_recent(struct) do
+      nil ->
+        struct
+        |> Repo.insert!
+      %Story{} ->
+        story
+        |> changeset(%{points: struct.points, trending: true})
+        |> Repo.update!
+    end
+  end
 
-    exists = Repo.one(query)
+  defp ids(stories) do
+    Enum.map stories, fn story -> story.id end
+  end
 
-    {:ok, story} =  case exists do
-                      nil ->
-                        Repo.insert(story)
-                      %Story{} ->
-                        Repo.update(Story.changeset(exists, %{points: story.points, trending: true}))
-                    end
+  defp trending_query do
+    from s in Story,
+      where: s.trending == true,
+      order_by: [desc: :points]
+  end
+
+  defp stories_trending_besides(stories) do
+    from s in Story,
+      where:  s.trending == true
+      and not s.id in ^ids(stories)
+  end
+
+  defp find_recent(story) do
     story
+    |> find_recent_query
+    |> Repo.one
+  end
+
+  defp find_recent_query(story) do
+    from s in Story,
+      where: s.title == ^story.title
+         and s.url   == ^story.url
+         and s.inserted_at > datetime_add(^Ecto.DateTime.utc, -3, "day")
   end
 end

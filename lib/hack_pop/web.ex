@@ -1,5 +1,6 @@
 defmodule HackPop.Web do
   use Plug.Router
+
   import Ecto.Query, only: [from: 2, where: 2]
 
   alias HackPop.Repo
@@ -13,27 +14,22 @@ defmodule HackPop.Web do
   plug :match
   plug :dispatch
 
+  #####################
+  # STORIES
+  #####################
+
   get "/stories" do
-    query = from s in Story, where:    s.trending == true,
-                                     order_by: [desc: :points]
-    stories = query |> Repo.all |> Poison.encode!
-    send_resp conn, 200, stories
+    send_resp conn, 200, Poison.encode!(Story.trending)
   end
 
+  #####################
+  # CLIENTS
+  #####################
+
   post "/clients" do
-    params    = %{client_id: conn.params["client_id"]}
-    changeset = Client.changeset(%Client{}, params)
-
-    case Repo.insert(changeset) do
+    case Client.create(%{client_id: conn.params["client_id"]}) do
       {:ok,    client }   -> send_resp conn, 201, Poison.encode!(client)
-      {:error, changeset} ->
-
-        errors = Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
-          Enum.reduce(opts, msg, fn {key, value}, acc ->
-            String.replace(msg, "%{#{key}}", to_string(value))
-          end)
-        end)
-        send_resp conn, 422, Poison.encode!(errors)
+      {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
 
@@ -42,14 +38,8 @@ defmodule HackPop.Web do
     changeset = Client.changeset(client, %{threshold: conn.params["threshold"]})
 
     case Repo.update(changeset) do
-      {:ok, _} -> send_resp conn, 204, ""
-      {:error, changeset} ->
-        errors = Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
-          Enum.reduce(opts, msg, fn {key, value}, acc ->
-            String.replace(msg, "%{#{key}}", to_string(value))
-          end)
-        end)
-        send_resp conn, 422, Poison.encode!(errors)
+      {:ok,    client}    -> send_resp conn, 204, Poison.encode!(client)
+      {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
 
@@ -78,14 +68,32 @@ defmodule HackPop.Web do
   get "/clients/:client_id/notifications" do
     case client = Client.find(client_id) do
       %Client{} ->
-        notifications = client |> Client.recent_unread_notifications
-        send_resp conn, 200, notifications |> Poison.encode!
+        json = client
+               |> Client.recent_unread_story_notifications
+               |> Poison.encode!
+        send_resp conn, 200, json
       nil ->
         send_resp conn, 404, "No client with #{inspect(client_id)}"
     end
   end
 
+  #####################
+  # CATCH ALL
+  #####################
+
   match _ do
     send_resp conn, 404, "Not Found"
+  end
+
+  #####################
+  # HELPERS
+  #####################
+
+  defp errors_json(changeset) do
+    Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
+      Enum.reduce(opts, msg, fn {key, value}, acc ->
+        String.replace(msg, "%{#{key}}", to_string(value))
+      end)
+    end) |> Poison.encode!
   end
 end

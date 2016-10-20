@@ -7,6 +7,7 @@ defmodule HackPop.Client do
   alias HackPop.Repo
   alias HackPop.Client
   alias HackPop.Notification
+  alias HackPop.StoryNotification
 
   @derive { Poison.Encoder, only: [:client_id, :threshold] }
   schema "clients" do
@@ -22,21 +23,34 @@ defmodule HackPop.Client do
   end
 
   def find(client_id) do
-    Client |> where(client_id: ^client_id) |> Repo.one
+    Client
+    |> where(client_id: ^client_id)
+    |> Repo.one
   end
 
-  def recent_unread_notifications(client) do
-    notifications = from(
-      n in Notification,
-        where: n.client_id   == ^client.id
-          and  n.read        == false
-          and  n.inserted_at >= ago(5, "day"),
-        limit: 15,
-        preload: [:story]
-    ) |> Repo.all
+  def create(params \\ %{}) do
+    %Client{}
+    |> changeset(params)
+    |> Repo.insert
+  end
 
-    Enum.map(notifications, fn notification ->
-      HackPop.StoryNotification.cast(notification.story, notification)
-    end)
+  def update(params \\ %{}) do
+
+  end
+
+  def recent_unread_story_notifications(client) do
+    recent_unread_notifications_query(client)
+    |> Repo.all
+    |> Enum.map(&StoryNotification.from_notification/1)
+  end
+
+  defp recent_unread_notifications_query(client) do
+    from n in Notification,
+      where:    n.client_id   == ^client.id
+        and     n.read        == false
+        and     n.inserted_at >= ago(5, "day"),
+      limit:    15,
+      order_by: [desc: :inserted_at],
+      preload:  [:story]
   end
 end

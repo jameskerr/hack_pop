@@ -12,4 +12,8 @@ defmodule HackPop.StoryNotification do
       notification_id: notification.id
     }
   end
+
+  def from_notification(notification) do
+    cast(notification.story, notification)
+  end
 end
