@@ -34,10 +34,6 @@ defmodule HackPop.Client do
     |> Repo.insert
   end
 
-  def update(params \\ %{}) do
-
-  end
-
   def recent_unread_story_notifications(client) do
     recent_unread_notifications_query(client)
     |> Repo.all

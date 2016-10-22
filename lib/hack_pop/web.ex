@@ -1,5 +1,6 @@
 defmodule HackPop.Web do
   use Plug.Router
+  use Plugsnag
 
   import Ecto.Query, only: [from: 2, where: 2]
 
