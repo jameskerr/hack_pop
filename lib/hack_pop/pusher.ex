@@ -22,18 +22,15 @@ defmodule HackPop.Pusher do
 
   def push(story, client) do
     notification = Repo.insert! %Notification{client_id: client.id, story_id: story.id}
-
     message = APNS.Message.new
       |> Map.put(:token, client.client_id)
-      |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
+      |> Map.put(:alert, story.title)
       |> Map.put(:badge, 0)
-      |> Map.put(:extra, StoryNotification.cast(story, notification) |> Map.from_struct)
-
+      |> Map.put(:extra, %{
+        url:             story.url,
+        notification_id: notification.id
+        })
     :ok = APNS.push(:dev_pool, message)
-  end
-
-  def error(error, _) do
-    Logger.error inspect(error)
   end
 
   defp already_sent?(client, story) do
