@@ -11,9 +11,9 @@ defmodule HackPop.ClientTest do
   end
 
   test "find when exists" do
-    Repo.insert! %Client{client_id: "123", threshold: 300}
+    Repo.insert! %Client{id: "123", threshold: 300}
 
-    assert Client.find("123").client_id == "123"
+    assert Client.find("123").id == "123"
   end
 
   test "find when does not exist" do
@@ -21,7 +21,7 @@ defmodule HackPop.ClientTest do
   end
 
   test "recent_unread_story_notifications" do
-    client        = Repo.insert! %Client{client_id: "123"}
+    client        = Repo.insert! %Client{id: "123"}
     story         = Repo.insert! %Story{title: "title", url: "url", points: 100}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
@@ -30,7 +30,7 @@ defmodule HackPop.ClientTest do
   end
 
   test "recent_unread_story_notifications excludes unread" do
-    client        = Repo.insert! %Client{client_id: "123"}
+    client        = Repo.insert! %Client{id: "123"}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                                story_id: 1,
                                                read: true}
@@ -39,7 +39,7 @@ defmodule HackPop.ClientTest do
   end
 
   test "recent_unread_story_notifications exludes older than 5 days" do
-    client       = Repo.insert! %Client{client_id: "123"}
+    client       = Repo.insert! %Client{id: "123"}
     _notificaion = Repo.insert! %Notification{client_id: client.id,
                                                story_id: 1,
                                                inserted_at: Ecto.DateTime.cast!({{2016, 09, 01}, {0,0,0}})}

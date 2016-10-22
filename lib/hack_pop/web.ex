@@ -27,32 +27,33 @@ defmodule HackPop.Web do
   #####################
 
   post "/clients" do
-    case Client.create(%{client_id: conn.params["client_id"]}) do
+    case Client.create(%{id: conn.params["client_id"]}) do
       {:ok,    client }   -> send_resp conn, 201, Poison.encode!(client)
       {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
 
-  put "/clients/:client_id" do
-    client    = Client |> where(client_id: ^client_id) |> Repo.one
-    changeset = Client.changeset(client, %{threshold: conn.params["threshold"]})
-
-    case Repo.update(changeset) do
+  put "/clients/:id" do
+    case (
+      Client.find(id)
+      |> Client.changeset(%{threshold: conn.params["threshold"]})
+      |> Repo.update
+    ) do
       {:ok,    client}    -> send_resp conn, 204, Poison.encode!(client)
       {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
 
-  get "/clients/:client_id/test" do
+  get "/clients/:id/test" do
     query = from s in Story, limit: 1, where: s.trending == true, order_by: fragment("RANDOM()")
     story = query |> Repo.one
 
-    case client = Client.find(client_id) do
+    case client = Client.find(id) do
       %Client{} ->
         notification = %Notification{client_id: client.id, story_id: story.id, id: 0}
 
         message = APNS.Message.new
-          |> Map.put(:token, client.client_id)
+          |> Map.put(:token, client.id)
           |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
           |> Map.put(:badge, 0)
           |> Map.put(:extra, StoryNotification.cast(story, notification) |> Map.from_struct)
@@ -61,7 +62,7 @@ defmodule HackPop.Web do
 
         send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
       nil ->
-        send_resp conn, 404, "No client with #{inspect(client_id)}"
+        send_resp conn, 404, "No client with #{inspect(id)}"
     end
   end
 

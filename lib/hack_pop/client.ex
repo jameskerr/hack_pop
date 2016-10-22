@@ -9,22 +9,22 @@ defmodule HackPop.Client do
   alias HackPop.Notification
   alias HackPop.StoryNotification
 
-  @derive { Poison.Encoder, only: [:client_id, :threshold] }
+  @derive { Poison.Encoder, only: [:id, :threshold] }
+  @primary_key {:id, :string, autogenerate: false}
   schema "clients" do
-    field :client_id
     field :threshold, :integer, default: 300
     timestamps
   end
 
   def changeset(client, params \\ %{}) do
     client
-    |> cast(params, [:client_id, :threshold])
-    |> unique_constraint(:client_id)
+    |> cast(params, [:id, :threshold])
+    |> unique_constraint(:id, name: "clients_pkey")
   end
 
-  def find(client_id) do
+  def find(id) do
     Client
-    |> where(client_id: ^client_id)
+    |> where(id: ^id)
     |> Repo.one
   end
 

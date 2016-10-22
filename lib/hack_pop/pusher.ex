@@ -23,7 +23,7 @@ defmodule HackPop.Pusher do
   def push(story, client) do
     notification = Repo.insert! %Notification{client_id: client.id, story_id: story.id}
     message = APNS.Message.new
-      |> Map.put(:token, client.client_id)
+      |> Map.put(:token, notification.client_id)
       |> Map.put(:alert, story.title)
       |> Map.put(:badge, 0)
       |> Map.put(:extra, %{

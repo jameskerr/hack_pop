@@ -22,22 +22,22 @@ defmodule HackPop.WebTest do
 
     assert conn.state == :sent
     assert conn.status == 201
-    assert conn.resp_body == "{\"threshold\":300,\"client_id\":\"123\"}"
+    assert conn.resp_body == "{\"threshold\":300,\"id\":\"123\"}"
   end
 
   test "post /clients already exists" do
-    {:ok, _client } = Repo.insert(%Client{ client_id: "123", threshold: 300 })
+    {:ok, _client } = Repo.insert %Client{id: "123", threshold: 300}
 
     conn = conn(:post, "/clients", %{client_id: "123"})
            |> Web.call(@opts)
 
     assert conn.state == :sent
     assert conn.status == 422
-    assert conn.resp_body == "{\"client_id\":[\"has already been taken\"]}"
+    assert conn.resp_body == "{\"id\":[\"has already been taken\"]}"
   end
 
   test "put /clients/:client_id" do
-    {:ok, _client} = Repo.insert(%Client{ client_id: "123", threshold: 300 })
+    {:ok, _client} = Repo.insert(%Client{id: "123", threshold: 300})
 
     conn = conn(:put, "/clients/123", %{threshold: 1000})
            |> Web.call(@opts)
@@ -45,7 +45,7 @@ defmodule HackPop.WebTest do
     assert conn.state == :sent
     assert conn.status == 204
 
-    client = Client |> where(client_id: "123") |> Repo.one
+    client = Client |> where(id: "123") |> Repo.one
     assert client.threshold == 1000
   end
 
@@ -59,7 +59,7 @@ defmodule HackPop.WebTest do
 
 
   test "get /clients/:client_id/notifications 200" do
-    client        = Repo.insert! %Client{client_id: "123"}
+    client        = Repo.insert! %Client{id: "123"}
     story         = Repo.insert! %Story{title: "Sup", url: "hi", points: 100}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
@@ -74,7 +74,7 @@ defmodule HackPop.WebTest do
   end
 
   test "put /clients/:client_id/notifications/:id updates read" do
-    client       = Repo.insert! %Client{client_id: "123"}
+    client       = Repo.insert! %Client{id: "123"}
     story        = Repo.insert! %Story{title: "Sup", url: "hi", points: 100}
     notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
