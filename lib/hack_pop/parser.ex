@@ -3,7 +3,8 @@ defmodule HackPop.Parser do
     list = List.zip([
       find_titles(body),
       find_urls(body),
-      find_points(body)
+      find_points(body),
+      find_comment_urls(body)
     ])
 
     Enum.map(list, &build_story/1)
@@ -11,8 +12,8 @@ defmodule HackPop.Parser do
 
   # PRIVATE
 
-  defp build_story({title, url, points}) do
-    %HackPop.Story{title: title, url: url, points: points}
+  defp build_story({title, url, points, comments_url}) do
+    %HackPop.Story{title: title, url: url, points: points, comments_url: comments_url}
   end
 
   defp find_titles(body) do
@@ -36,5 +37,12 @@ defmodule HackPop.Parser do
       {int, _} = Integer.parse(points)
       int
     end)
+  end
+
+  defp find_comment_urls(body) do
+    body
+    |> Floki.attribute(".subtext a", "href")
+    |> Enum.filter(fn link -> String.match?(link, ~r/^item\?id=\d+$/) end)
+    |> Enum.uniq
   end
 end

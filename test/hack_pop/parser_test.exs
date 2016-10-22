@@ -13,6 +13,7 @@ defmodule HackPopTest.ParserTest do
       expected = %HackPop.Story{
         title:  "Israel Proves the Desalination Era Is Here",
         url:    "http://www.scientificamerican.com/article/israel-proves-the-desalination-era-is-here/",
+        comments_url: "item?id=12191089",
         points: 136
       }
       assert expected == hd(stories)

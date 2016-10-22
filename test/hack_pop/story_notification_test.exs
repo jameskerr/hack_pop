@@ -7,6 +7,7 @@ defmodule HackPop.StoryNotificationTest do
     story = %HackPop.Story{
       title: "title",
       url:   "url",
+      comments_url: "comments_url",
       id: 1,
       points: 1000
     }
@@ -20,10 +21,8 @@ defmodule HackPop.StoryNotificationTest do
       url: "url",
       notification_id: 10,
       points: 1000,
-      story_id: 1
+      story_id: 1,
+      comments_url: "comments_url"
     }
-
-    json = "{\"url\":\"url\",\"title\":\"title\",\"story_id\":1,\"points\":1000,\"notification_id\":10}"
-    assert json == Poison.encode!(sn)
   end
 end
