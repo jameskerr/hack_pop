@@ -47,6 +47,19 @@ class HackPopServer: NSObject {
             
         }
         
+        static func GetNotifications(id:String) ->URLRequest {
+            let path = "/clients/\(id)/notifications"
+            let httpMethod = "GET"
+            let url:URL = URL(string: "\(HackPopServer.instance().hostUrl)\(path)")!
+            var request = URLRequest(url: url)
+            request.httpMethod = httpMethod
+            return request
+        }
+        
+        static func UpdateReadNotification(clientId:String, notificationId:String) {
+            
+        }
+        
         static func CreateClient(id:String) -> URLRequest {
             let path = "/clients"
             let httpMethod = "POST"
@@ -84,13 +97,14 @@ class HackPopServer: NSObject {
         }
     }
     
-    private func processStories(jsonArray:[[String:Any]]) -> [Story] {
+    static func processStories(jsonArray:[[String:Any]]) -> [Story] {
         var stories:[Story] = []
         for parsedStory in jsonArray {
             let url:String = parsedStory["url"] as! String
             let title:String = parsedStory["title"] as! String
             let points:Int = parsedStory["points"] as! Int
-            let story = Story(urlString: url, title:title, points: points)
+            let notificationId:Int? = (parsedStory["notification_id"] as? Int?)!
+            let story = Story(urlString: url, title:title, points: points, notificationId: notificationId)
             stories.append(story)
         }
         return stories
@@ -116,7 +130,7 @@ class HackPopServer: NSObject {
                         throw RequestError.InvalidStatusCode
                     }
                     let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:Any]]
-                    let stories = self.processStories(jsonArray: json)
+                    let stories = HackPopServer.processStories(jsonArray: json)
                     
                     // store the stories and update the cache
                     HackPopServer.cachedStories = stories
@@ -170,6 +184,41 @@ class HackPopServer: NSObject {
             }
         })
         task.resume()
+    }
+    
+    static func fetchNotifcations(id:String?, delegate:HttpNotificationsFetchListener) {
+        
+        var stories:[Story]? = nil
+        
+        if !Client.instance().successfullySetId ||  id == nil {
+            delegate.onFetchNotifcationsFailed(error: nil)
+            return
+        }
+        
+        let request = EndPoints.GetNotifications(id: id!)
+        let task = URLSession.shared.dataTask(with: request, completionHandler: {
+            (data, response, error) in
+            if error != nil {
+                delegate.onFetchNotifcationsFailed(error: error!)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                do {
+                    if (httpResponse?.statusCode)! < 200 || (httpResponse?.statusCode)! >= 300 {
+                        throw RequestError.InvalidStatusCode
+                    }
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String:Any]]
+                    stories = HackPopServer.processStories(jsonArray: json)
+                    delegate.onFetchNotifcationsSuccess(stories: stories)
+                    
+                } catch let error as NSError {
+    
+                    delegate.onFetchNotifcationsFailed(error: error)
+                    
+                }
+            }
+        })
+        task.resume()
+    
     }
     
     static func setTheshold(id:String?, threshold:Int, delegate:HttpSetThresholdListener) -> Bool {
