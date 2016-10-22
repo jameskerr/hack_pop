@@ -26,8 +26,8 @@ defmodule HackPop.Pusher do
       |> Map.put(:alert, story.title)
       |> Map.put(:badge, 0)
       |> Map.put(:extra, %{
-        url:             story.url,
-        notification_id: notification.id
+        url: story.url,
+        id:  notification.id
         })
     :ok = APNS.push(:dev_pool, message)
   end
