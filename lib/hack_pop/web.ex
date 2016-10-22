@@ -6,7 +6,6 @@ defmodule HackPop.Web do
   alias HackPop.Repo
   alias HackPop.Client
   alias HackPop.Story
-  alias HackPop.Pusher
   alias HackPop.Notification
   alias HackPop.StoryNotification
 
@@ -87,7 +86,7 @@ defmodule HackPop.Web do
           |> Notification.changeset(%{read: conn.params["read"]})
 
         case Repo.update(changeset) do
-          {:ok,    client}    -> send_resp conn, 204, ""
+          {:ok,    _client}   -> send_resp conn, 204, ""
           {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
         end
       nil ->
@@ -109,7 +108,7 @@ defmodule HackPop.Web do
 
   defp errors_json(changeset) do
     Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
-      Enum.reduce(opts, msg, fn {key, value}, acc ->
+      Enum.reduce(opts, msg, fn {key, value}, _acc ->
         String.replace(msg, "%{#{key}}", to_string(value))
       end)
     end) |> Poison.encode!

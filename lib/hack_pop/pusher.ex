@@ -4,7 +4,6 @@ defmodule HackPop.Pusher do
   alias HackPop.Repo
   alias HackPop.Client
   alias HackPop.Notification
-  alias HackPop.StoryNotification
 
   import Ecto.Query
 
