@@ -68,8 +68,35 @@ defmodule HackPop.WebTest do
 
     response = Poison.Parser.parse!(conn.resp_body)
 
-    assert conn.state == :sent
+    assert conn.state  == :sent
     assert conn.status == 200
     assert response |> Enum.map(&Map.keys/1) |> List.flatten == ["notification_id", "points", "story_id", "title", "url"]
+  end
+
+  test "put /clients/:client_id/notifications/:id updates read" do
+    client       = Repo.insert! %Client{client_id: "123"}
+    story        = Repo.insert! %Story{title: "Sup", url: "hi", points: 100}
+    notification = Repo.insert! %Notification{client_id: client.id,
+                                              story_id: story.id}
+
+    url  = "/clients/123/notifications/#{notification.id}"
+    conn = conn(:put, url, %{read: true}) |> Web.call(@opts)
+
+    assert conn.state  == :sent
+    assert conn.status == 204
+
+    notification = Notification
+      |> where(id: ^notification.id)
+      |> Repo.one
+
+    assert notification.read == true
+  end
+
+  test "put /clients/:client_id/notifications/:id with bad client_id" do
+    url  = "/clients/888/notifications/888"
+    conn = conn(:put, url, %{read: true}) |> Web.call(@opts)
+
+    assert conn.state  == :sent
+    assert conn.status == 404
   end
 end

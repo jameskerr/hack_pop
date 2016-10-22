@@ -77,6 +77,23 @@ defmodule HackPop.Web do
     end
   end
 
+  put "/clients/:client_id/notifications/:id" do
+    case client = Client.find(client_id) do
+      %Client{} ->
+        changeset = Notification
+          |> where(client_id: ^client.id, id: ^id)
+          |> Repo.one
+          |> Notification.changeset(%{read: conn.params["read"]})
+
+        case Repo.update(changeset) do
+          {:ok,    client}    -> send_resp conn, 204, ""
+          {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
+        end
+      nil ->
+        send_resp conn, 404, "No client with #{inspect(client_id)}"
+    end
+  end
+
   #####################
   # CATCH ALL
   #####################
