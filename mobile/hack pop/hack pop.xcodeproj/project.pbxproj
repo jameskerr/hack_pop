@@ -76,6 +76,9 @@
 		7DABDCA51DB714D80065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
 		7DABDCAA1DB720990065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
 		7DABDCAB1DB7209A0065B111 /* HttpNotificationsFetchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */; };
+		7DABDCAF1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */; };
+		7DABDCB01DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */; };
+		7DABDCB11DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */; };
 		7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
 		7DD6D93A1DA4E1120062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
 		7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6D9341DA4E0DD0062A69C /* Interactor.swift */; };
@@ -136,6 +139,20 @@
 			remoteGlobalIDString = 7DE2ECF21D8A3F2400A53ABF;
 			remoteInfo = "hack pop";
 		};
+		7DED35041DC1A4180072BC96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D230DE3230BD561A843BA7B6FFA93F3;
+			remoteInfo = Bugsnag;
+		};
+		7DED35061DC1A4180072BC96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9BD4CC0D223FAC73499E349BDE908318;
+			remoteInfo = KSCrash;
+		};
 		7DEEB8D01DAE129E000F2789 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DEEB8C91DAE129E000F2789 /* Pods.xcodeproj */;
@@ -178,6 +195,7 @@
 		7D7D28301D963264009334CA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		7D7D283B1D97298C009334CA /* NotifyThresholdAnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyThresholdAnimationTransition.swift; sourceTree = "<group>"; };
 		7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNotificationsFetchListener.swift; sourceTree = "<group>"; };
+		7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNotifcationConfirmListener.swift; sourceTree = "<group>"; };
 		7DD6D9341DA4E0DD0062A69C /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		7DE2ECF31D8A3F2400A53ABF /* hack pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hack pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE2ECF61D8A3F2400A53ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,7 +271,7 @@
 			name = config;
 			sourceTree = "<group>";
 		};
-		7D4551911D938A1C00A6D20E /* http */ = {
+		7D4551911D938A1C00A6D20E /* Http */ = {
 			isa = PBXGroup;
 			children = (
 				7D4551921D938A4D00A6D20E /* HackPopServer.swift */,
@@ -263,8 +281,9 @@
 				7DEEB8D71DAF226A000F2789 /* HttpClientCreateListener.swift */,
 				7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */,
 				7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */,
+				7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */,
 			);
-			name = http;
+			name = Http;
 			sourceTree = "<group>";
 		};
 		7D4563B01D91174E0083FEB0 /* Styles */ = {
@@ -357,7 +376,7 @@
 				7D101B9C1D9B9CBB00C89D5A /* config */,
 				7D101B971D9B849000C89D5A /* hack pop.entitlements */,
 				7D7D283A1D97294E009334CA /* Animators */,
-				7D4551911D938A1C00A6D20E /* http */,
+				7D4551911D938A1C00A6D20E /* Http */,
 				7D4563B71D911A390083FEB0 /* Models */,
 				7D4563B01D91174E0083FEB0 /* Styles */,
 				7D4A9E431D8BDD40009A7A61 /* View Controllers */,
@@ -396,7 +415,9 @@
 		7DEEB8CA1DAE129E000F2789 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				7DED35051DC1A4180072BC96 /* Bugsnag.framework */,
 				7D2A5D521DB454F100E24A44 /* Flurry_iOS_SDK.framework */,
+				7DED35071DC1A4180072BC96 /* KSCrash.framework */,
 				7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */,
 				7D2A5D541DB454F100E24A44 /* Pods_hack_popTests.framework */,
 				7D2A5D561DB454F100E24A44 /* Pods_hack_popUITests.framework */,
@@ -563,6 +584,20 @@
 			fileType = wrapper.framework;
 			path = Pods_hack_popUITests.framework;
 			remoteRef = 7D2A5D551DB454F100E24A44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7DED35051DC1A4180072BC96 /* Bugsnag.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bugsnag.framework;
+			remoteRef = 7DED35041DC1A4180072BC96 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7DED35071DC1A4180072BC96 /* KSCrash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KSCrash.framework;
+			remoteRef = 7DED35061DC1A4180072BC96 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		7DEEB8D11DAE129E000F2789 /* Pods_hack_pop.framework */ = {
@@ -767,6 +802,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7DABDCAF1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */,
 				7D7D282D1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7D101B941D9A451400C89D5A /* CookieStore.swift in Sources */,
 				7D7D28311D963264009334CA /* Client.swift in Sources */,
@@ -804,6 +840,7 @@
 				7DABDCAA1DB720990065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7D7D28381D967A06009334CA /* HomeViewController.swift in Sources */,
 				7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */,
+				7DABDCB01DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */,
 				7D2A5D5D1DB457B200E24A44 /* KeyFetcher.swift in Sources */,
 				7DEEB8D91DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
 				7D7D28321D963264009334CA /* Client.swift in Sources */,
@@ -822,6 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4563AF1D910CB10083FEB0 /* PointsRetainer.swift in Sources */,
+				7DABDCB11DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift in Sources */,
 				7DEEB8E61DB22685000F2789 /* AppDelegate.swift in Sources */,
 				7D7D282F1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7DEEB8DE1DAF3060000F2789 /* HttpSetThresholdListener.swift in Sources */,
@@ -983,6 +1021,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hacker.news.alerts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

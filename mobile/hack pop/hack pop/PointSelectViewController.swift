@@ -29,7 +29,9 @@ class PointSelectViewController: UIViewController, UITableViewDelegate, UITableV
         
         Flurry.logEvent("opened point selection view controller")
         
+        view.layer.masksToBounds = false
         view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.shadowColor = UIColor.clear.cgColor
         
         tableView.backgroundColor = UIColor.clear
         tableView.contentInset = UIEdgeInsetsMake(0, -10, 0, 0);

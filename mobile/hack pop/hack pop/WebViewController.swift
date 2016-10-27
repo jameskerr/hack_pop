@@ -16,6 +16,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var connectionFailureView: UIScrollView!
     @IBOutlet weak var backButtonImage: UIImageView!
     @IBOutlet weak var forwardButtonImage: UIImageView!
+    @IBOutlet weak var commentsImage: UIImageView!
+    @IBOutlet weak var storyImage: UIImageView!
+    @IBOutlet weak var commentsButton: UIControl!
     
     var originalStory:Story? = nil
     var hasLoadedOnce:Bool = false
@@ -30,9 +33,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         Flurry.logEvent("opened webview view controller")
+        Flurry.logEvent("opened webview view controller")
         
+        view.layer.masksToBounds = false
         view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.shadowColor = UIColor.clear.cgColor
         
         originalStory = Story.current?.copy() as? Story
         webView.backgroundColor = UIColor.lightGray
@@ -63,11 +68,16 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         return UIStatusBarStyle.lightContent;
     }
     
-    func loadWebView() {
-        if let url = Story.current?.url{
+    func loadWebView(ignoreReloading:Bool = false) {
+        if let url = Story.current?.url {
             let request = URLRequest(url: url)
             webView.delegate = self
-            webView.loadRequest(request)
+            
+            if let currentUrl = Story.current?.url!,
+                let currentUrlString = currentUrl.absoluteString as String?,
+                !hasLoadedOnce || url.absoluteString != currentUrlString || ignoreReloading {
+                webView.loadRequest(request)
+            }
         }
     }
     
@@ -91,10 +101,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
     
     @IBAction func goBack() {
+        webView.stopLoading()
         homeViewInteractor.animateTransition()
     }
     
     @IBAction func swipeBackHome(_ sender: AnyObject) {
+        webView.stopLoading()
         homeViewInteractor.animateTransition()
     }
     
@@ -115,7 +127,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
     
     @IBAction func shareArticle() {
-        if let story = Story.current {
+        if let story = originalStory {
             let shareContent:[Any] = [story.title, story.url!]
 
             let activityViewController = UIActivityViewController(activityItems: shareContent, applicationActivities: nil)
@@ -131,6 +143,21 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 UIActivityType.postToTencentWeibo
             ]
             present(activityViewController, animated: true, completion: {})
+        }
+    }
+    
+    @IBAction func openCommentsOrStory(_ sender: AnyObject) {
+        
+        if let storyUrlString = webView.request?.url?.absoluteString,
+            let originalStoryCommentsUrlString = originalStory?.commentsUrl?.absoluteString  {
+            if storyUrlString == originalStoryCommentsUrlString {
+                // then we are on the comments page
+                Story.current?.url = originalStory?.url
+            } else {
+                // then we should navigate to the comments page
+                Story.current?.url = originalStory?.commentsUrl
+            }
+            loadWebView(ignoreReloading: true)
         }
     }
     
@@ -152,11 +179,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(_:UIWebView) {
         
-        if let story  = Story.current {
+        if let story = Story.current {
             if story.isUnreadStory {
                 story.delete()
             }
         }
+        renderCommentsButton()
 
         connectionFailureView.isHidden = true
         if (hasLoadedOnce || (Story.current?.isHackerNews)!) {
@@ -169,8 +197,45 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         } else {
             hasLoadedOnce = true
         }
+        
         updateNavigationButtonImages()
         webViewIndicator.stopAnimating()
+    }
+    
+    func showCommentsImage() {
+        storyImage.isHidden = true
+        commentsImage.isHidden = false
+    }
+    
+    func showStoryImage() {
+        commentsImage.isHidden = true
+        storyImage.isHidden = false
+    }
+    
+    func renderCommentsButton() {
+        // if there is a comments url in the original story then show that if that is not the current url
+        // otherwise show the story image
+        if let storyUrlString = webView.request?.url?.absoluteString,
+           let originalStoryCommentsUrlString = originalStory?.commentsUrl?.absoluteString,
+           let originalStoryUrlString = originalStory?.url?.absoluteString,
+            originalStoryCommentsUrlString != originalStoryUrlString{
+            commentsButton.isHidden = false
+            
+            if storyUrlString == originalStoryCommentsUrlString {
+                // then we are on the comments page
+                showStoryImage()
+            } else if originalStoryCommentsUrlString == originalStory?.url?.absoluteString {
+                // then this story has no comments sections because it is the comments section
+                // so just show the story button
+                showStoryImage()
+            } else {
+                showCommentsImage()
+            }
+        } else {
+            // it must be the default hacker news case so don't show anything
+            // or it must be a hacker news story
+            commentsButton.isHidden = true
+        }
     }
 }
 
@@ -180,7 +245,7 @@ extension WebViewController: UIScrollViewDelegate {
         if (!connectionFailureView.isHidden) {
             connectionFailureView.isHidden = true
             webViewIndicator.startAnimating()
-            loadWebView()
+            loadWebView(ignoreReloading: true)
         }
     }
     

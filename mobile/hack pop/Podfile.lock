@@ -1,10 +1,27 @@
 PODS:
+  - Bugsnag (5.6.3):
+    - KSCrash/RecordingAdvanced (= 1.8.13)
   - Flurry-iOS-SDK/FlurrySDK (7.8.0)
+  - KSCrash/Recording (1.8.13)
+  - KSCrash/RecordingAdvanced (1.8.13):
+    - KSCrash/Recording
 
 DEPENDENCIES:
+  - Bugsnag (from `https://github.com/bugsnag/bugsnag-cocoa.git`)
   - Flurry-iOS-SDK/FlurrySDK
 
+EXTERNAL SOURCES:
+  Bugsnag:
+    :git: https://github.com/bugsnag/bugsnag-cocoa.git
+
+CHECKOUT OPTIONS:
+  Bugsnag:
+    :commit: 93a4d69a310f6fddd42468376e03bf0dfe183afc
+    :git: https://github.com/bugsnag/bugsnag-cocoa.git
+
 SPEC CHECKSUMS:
+  Bugsnag: cfddb45a8c56cf93169d29837797ac2786e35321
   Flurry-iOS-SDK: 388df247b9d92659527b608c891c7e474cd9d00e
+  KSCrash: 4c3a83f133b60f4bd57e05235ebf8d46e36d378d
 
 COCOAPODS: 0.39.0

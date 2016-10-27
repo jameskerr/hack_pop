@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 import Foundation
+import Flurry_iOS_SDK
 
 
-class Story: NSObject {
+class Story: NSObject, HttpNotificationConfirmListener {
     
     var url:URL? = nil
     var title:String? = nil
@@ -22,45 +23,64 @@ class Story: NSObject {
     
     var isHackerNews:Bool = false
     var isUnreadStory = false
-    var markedForDeletion = false
+    var read = false
+    
+    static var lastStoryWasEndOfNotifications = false
     
     static let hackerNewsUrl = "https://news.ycombinator.com/"
     static var current:Story? = nil
     
     static func setCurrentStoryToDefault() {
-        let hackerNewsStory = Story(urlString: Story.hackerNewsUrl, title: "", points: 0);
+        let hackerNewsStory = Story(urlString: Story.hackerNewsUrl, commentsUrlString:nil, title: "", points: 0);
         Story.current = hackerNewsStory
         Story.current?.isHackerNews = true
     }
     
-    convenience init(urlString:String, title:String?, points:Int?, notificationId:Int?) {
-        self.init(urlString:urlString, title:title, points:points)
+    convenience init(urlString:String, commentsUrlString:String?, title:String?, points:Int?, notificationId:Int?) {
+        self.init(urlString:urlString, commentsUrlString: commentsUrlString, title:title, points:points)
         self.notificationId = notificationId
     }
     
-    init(urlString:String, title:String?, points:Int?) {
+    init(urlString:String, commentsUrlString:String?, title:String?, points:Int?) {
         if Story.isRelativeUrlString(string: urlString) {
             self.url = URL.init(string: Story.hackerNewsUrl + urlString)
         } else {
             self.url = URL.init(string: urlString)
         }
+        if let commentsUrlString = commentsUrlString {
+            if Story.isRelativeUrlString(string: commentsUrlString) {
+                self.commentsUrl = URL.init(string: Story.hackerNewsUrl + commentsUrlString)
+            } else {
+                self.commentsUrl = URL.init(string: commentsUrlString)
+            }
+        }
+
         self.title = title
         self.points = points
     }
     
-    init(url:URL?, title:String?, points:Int?) {
+    init(url:URL?, commentsUrl:URL?, title:String?, points:Int?) {
         self.url = url
         self.title = title
         self.points = points
+        self.commentsUrl = commentsUrl
     }
     
     static func storyFromPush(pushData:[AnyHashable : Any]) -> Story {
-        let urlString = pushData["url"] as! String?
-        let title = pushData["title"] as! String?
-        let points = pushData["points"] as! Int?
-        let notificationId:Int? = pushData["notification_id"] as! Int?
+        var commentsUrlString:String? = nil
         
-        return Story(urlString: urlString!, title: title, points: points, notificationId:notificationId)
+        if (pushData["comments_url"] != nil) {
+            commentsUrlString = pushData["comments_url"] as! String?
+        }
+        let urlString = pushData["url"] as! String?
+        let points = pushData["points"] as! Int?
+        let notificationId:Int? = pushData["id"] as! Int?
+        
+        return Story(urlString: urlString!,
+                     commentsUrlString: commentsUrlString,
+                     title: nil,
+                     points: points,
+                     notificationId: notificationId)
     }
     
     static func isRelativeUrlString(string:String) -> Bool {
@@ -72,14 +92,36 @@ class Story: NSObject {
     }
     
     override func copy() -> Any {
-        return Story(urlString: (url?.absoluteString)!, title: title, points: points, notificationId: notificationId)
+        
+        var commentsUrlString:String? = nil
+        if let commentsUrl = commentsUrl {
+            commentsUrlString = commentsUrl.absoluteString
+        }
+        
+        return Story(urlString: (url?.absoluteString)!,
+                     commentsUrlString: commentsUrlString,
+                     title: title,
+                     points: points,
+                     notificationId: notificationId)
     }
     
     
     func delete() {
-        if !markedForDeletion {
-            markedForDeletion = true
+        if read == false,
+            let notificationId = self.notificationId {
+            Story.lastStoryWasEndOfNotifications = true
+            HackPopServer.confirmNotification(notificationId: notificationId,
+                                              delegate: self)
         }
+    }
+    
+    func onNotificationConfirmed() {
+        read = true
+        Flurry.logEvent("Notification Confirmed")
+    }
+    
+    func onNotificationConfirationFailed(error:Error?) {
+        Flurry.logEvent("Notification Confirmation Failed")
     }
 
 }
