@@ -128,7 +128,16 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBAction func shareArticle() {
         if let story = originalStory {
-            let shareContent:[Any] = [story.title, story.url!]
+            let shareContent:[Any]
+            if story.isHackerNews {
+                shareContent = [story.title, story.url!]
+            } else {
+                if let webViewUrl = webView.request?.url {
+                    shareContent = [story.title, webViewUrl]
+                } else {
+                    shareContent = [story.title, Story.hackerNewsUrl]
+                }
+            }
 
             let activityViewController = UIActivityViewController(activityItems: shareContent, applicationActivities: nil)
 
