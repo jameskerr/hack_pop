@@ -30,7 +30,12 @@ class HackPopServer: NSObject {
     
     
     let defaults = UserDefaults.standard
-    var hostUrl = "http://ec2-52-201-223-136.compute-1.amazonaws.com"
+    
+    #if DEBUG
+        var hostUrl = KeyFetcher.getApiKey(key: "Hack Pop Dev Url") as! String
+    #else
+        var hostUrl = KeyFetcher.getApiKey(key: "Hack Pop Prod Url") as! String
+    #endif
     
     struct defaultsKeys {
         static let HackPopUrl = "hack_pop_url"
@@ -56,8 +61,17 @@ class HackPopServer: NSObject {
             return request
         }
         
-        static func UpdateReadNotification(clientId:String, notificationId:String) {
-            
+        static func UpdateReadNotification(clientId:String, notificationId:Int) ->URLRequest {
+            let path = "/clients/\(clientId)/notifications/\(notificationId)"
+            let httpMethod = "PUT"
+            let postDataString = "read=true"
+            let url:URL = URL(string: "\(HackPopServer.instance().hostUrl)\(path)")!
+            var request = URLRequest(url: url)
+            request.httpMethod = httpMethod
+            request.httpBody = postDataString.data(using: String.Encoding.utf8)
+            request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            return request
         }
         
         static func CreateClient(id:String) -> URLRequest {
@@ -91,20 +105,19 @@ class HackPopServer: NSObject {
         
     }
     
-    override init() {
-        if let defaultsUrl = defaults.string(forKey: defaultsKeys.HackPopUrl) {
-            hostUrl = defaultsUrl
-        }
-    }
-    
     static func processStories(jsonArray:[[String:Any]]) -> [Story] {
         var stories:[Story] = []
         for parsedStory in jsonArray {
             let url:String = parsedStory["url"] as! String
+            let commentsUrl:String = parsedStory["comments_url"] as! String
             let title:String = parsedStory["title"] as! String
             let points:Int = parsedStory["points"] as! Int
             let notificationId:Int? = (parsedStory["notification_id"] as? Int?)!
-            let story = Story(urlString: url, title:title, points: points, notificationId: notificationId)
+            let story = Story(urlString: url,
+                              commentsUrlString:commentsUrl,
+                              title:title,
+                              points: points,
+                              notificationId: notificationId)
             stories.append(story)
         }
         return stories
@@ -253,5 +266,33 @@ class HackPopServer: NSObject {
         })
         task.resume()
         return true
+    }
+    
+    static func confirmNotification(notificationId:Int, delegate:HttpNotificationConfirmListener) {
+
+        if let token = Client.instance().token {
+            let request = EndPoints.UpdateReadNotification(clientId:token, notificationId:notificationId)
+            let task = URLSession.shared.dataTask(with: request, completionHandler: {
+                (data, response, error) in
+                
+                if error != nil {
+                    delegate.onNotificationConfirationFailed(error: error)
+                } else {
+                    let httpResponse = response as? HTTPURLResponse
+                    do {
+                        if (httpResponse?.statusCode)! < 200 || (httpResponse?.statusCode)! >= 300 {
+                            throw RequestError.InvalidStatusCode
+                        }
+                        delegate.onNotificationConfirmed()
+                        
+                    } catch let error as NSError {
+                        
+                        delegate.onNotificationConfirationFailed(error: error)
+                        
+                    }
+                }
+            })
+            task.resume()
+        }
     }
 }

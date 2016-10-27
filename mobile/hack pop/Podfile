@@ -4,13 +4,16 @@ use_frameworks!
 
 target 'hack pop' do
 	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
+	pod 'Bugsnag', :git => "https://github.com/bugsnag/bugsnag-cocoa.git"
 end
 
 target 'hack popTests' do
 	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
+	pod 'Bugsnag', :git => "https://github.com/bugsnag/bugsnag-cocoa.git"
 end
 
 target 'hack popUITests' do
 	pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
+	pod 'Bugsnag', :git => "https://github.com/bugsnag/bugsnag-cocoa.git"
 end
 
