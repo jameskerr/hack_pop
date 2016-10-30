@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Flurry_iOS_SDK
+import Bugsnag
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Flurry.setCrashReportingEnabled(true)
             Flurry.setEventLoggingEnabled(true)
         }
-        
+        let bugSnagApiKey = KeyFetcher.getApiKey(key: "BugSnag Api Key") as! String?
+        if let bugSnagApiKey = bugSnagApiKey {
+            Bugsnag.start(withApiKey: bugSnagApiKey)
+            #if DEBUG
+                Bugsnag.configuration()?.releaseStage = "develop"
+            #else
+                Bugsnag.configuration()?.releaseStage = "production"
+            #endif
+        }
         return true
     }
 
@@ -195,6 +204,23 @@ extension AppDelegate: HttpClientCreateListener {
     func onClientCreatedFailed(error: Error) {
         Client.instance().successfullySetId = false
         showFailedAlert(title:"Failed To Connect To Server", message:"If you are offline, please try restarting Hacker News Alerts when you have an internet connection.")
+    }
+}
+
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(base: selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
     }
 }
 

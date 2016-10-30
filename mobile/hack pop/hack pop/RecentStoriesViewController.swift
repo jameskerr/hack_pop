@@ -39,6 +39,9 @@ class RecentStoriesViewController: UIViewController {
         
         Flurry.logEvent("opened recent stories view controller")
         
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.clear.cgColor
+        
         homeViewInteractor = Interactor(delegateViewController:self,
                                         dimissing:true,
                                         destinationIdentifier:"HomeViewController",
@@ -122,12 +125,30 @@ class RecentStoriesViewController: UIViewController {
     }
     
     func startAnimation() {
+        let topViewController = UIApplication.topViewController()
         AppDelegate.delay(delay: 0, closure: {
-            self.moveClouds()
+            if topViewController is RecentStoriesViewController &&
+                Story.lastStoryWasEndOfNotifications {
+                Story.lastStoryWasEndOfNotifications = false
+                self.moveClouds()
+            } else {
+                self.moveCloudsWithoutAnimating()
+            }
         })
     }
     
+    func moveCloudsWithoutAnimating() {
+        let screenFrame = UIScreen.main.bounds
+        leftBigCloud.frame.origin.x = -(screenFrame.size.width)
+        rightBigCloudTop.frame.origin.x = screenFrame.size.width
+        rightBigCloudBottom.frame.origin.x = screenFrame.size.width
+    }
+    
     func moveClouds() {
+        leftBigCloud.isHidden = false
+        rightBigCloudTop.isHidden = false
+        rightBigCloudBottom.isHidden = false
+        
         let screenFrame = UIScreen.main.bounds
         UIView.animate(withDuration: 1,
                        animations: {
@@ -163,7 +184,10 @@ class RecentStoriesViewController: UIViewController {
     }
 
     @IBAction func handleSwipe(_ sender: UIPanGestureRecognizer) {
-       homeViewInteractor.updateGestureMotion(sender: sender)
+        leftBigCloud.isHidden = true
+        rightBigCloudTop.isHidden = true
+        rightBigCloudBottom.isHidden = true
+        homeViewInteractor.updateGestureMotion(sender: sender)
     }
     
     
@@ -211,7 +235,9 @@ extension RecentStoriesViewController: HttpNotificationsFetchListener {
             Flurry.logEvent("failed to load unread stories")
         }
         
-        displayFailedToLoad()
+        AppDelegate.delay(delay: 0.0) {
+            self.displayFailedToLoad()
+        }
         
     }
 }

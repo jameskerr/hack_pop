@@ -60,7 +60,10 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         Flurry.logEvent("opened home view controller")
         
         createSwipeInteractors()
+        view.layer.masksToBounds = false
         view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.shadowColor = UIColor.clear.cgColor
+        
         setup()
         self.navigationController?.delegate = self
         NotificationCenter.default.addObserver(self,
