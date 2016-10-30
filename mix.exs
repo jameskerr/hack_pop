@@ -49,7 +49,6 @@ defmodule HackPop.Mixfile do
      {:cowboy, "~> 1.0.0"},
      {:plug, "~> 1.0"},
      {:poison, "~> 2.0"},
-     {:exrm, "~> 1.0.6"},
      {:apns, "~> 0.9.1"},
      {:bugsnag, "~> 1.3.2"},
      {:plugsnag, "~> 1.1.0"},

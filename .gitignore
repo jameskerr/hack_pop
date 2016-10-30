@@ -16,3 +16,4 @@ Source/Application.h
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata
 /bin
+.deliver/releases/
