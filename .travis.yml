@@ -4,21 +4,8 @@ elixir:
 otp_release:
   - 18.1
 
-addons:
-  s3_region: "us-east-1"
-  artifacts:
-    key: AKIAJHTTJBIDKEDQVCOQ
-    bucket: hack-pop-builds
-    region: "us-east-1"
-    paths:
-      - ./hack_pop_prod.tar.gz
-    target_paths: "$TRAVIS_COMMIT"
-
 script:
   - mix test
-after_success:
-  - MIX_ENV=prod mix do compile, release
-  - cp rel/hack_pop/releases/*/hack_pop.tar.gz hack_pop_prod.tar.gz
 
 services:
   - postgresql
