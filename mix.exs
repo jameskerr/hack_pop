@@ -26,7 +26,8 @@ defmodule HackPop.Mixfile do
                     :apns,
                     :bugsnag,
                     :plugsnag,
-                    :plug],
+                    :plug,
+                    :edeliver],
      mod: {HackPop, []}]
   end
 
@@ -52,6 +53,8 @@ defmodule HackPop.Mixfile do
      {:apns, "~> 0.9.1"},
      {:bugsnag, "~> 1.3.2"},
      {:plugsnag, "~> 1.1.0"},
+     {:edeliver, "~> 1.4.0"},
+     {:distillery, ">= 0.8.0", warn_missing: false},
      {:exvcr, "~> 0.7", only: :test}]
   end
 end
