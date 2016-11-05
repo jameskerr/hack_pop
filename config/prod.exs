@@ -7,8 +7,6 @@ config :hack_pop, HackPop.Repo,
   password: System.get_env("DB_PASSWORD"),
   hostname: System.get_env("DB_HOST")
 
-config :plug, port: 80
-
 config :apns,
   pools: [
     dev_pool: [
