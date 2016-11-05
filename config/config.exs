@@ -7,7 +7,8 @@ config :hack_pop, HackPop.Repo,
   database: "hack_pop_repo",
   username: "postgres",
   password: "",
-  hostname: "localhost"
+  hostname: "localhost",
+  port: 5432
 
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
@@ -21,7 +22,7 @@ config :apns,
     ]
   ]
 
-config :logger, level: :info
+config :logger, level: :debug
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
