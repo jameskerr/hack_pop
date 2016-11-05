@@ -8,6 +8,8 @@ public/public.iml
 /.idea
 .prod_env
 secrets/
+rel/
+.deliver/*
 
 # XCODE
 .DS_Store
