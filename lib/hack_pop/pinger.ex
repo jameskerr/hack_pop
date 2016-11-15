@@ -6,7 +6,7 @@ defmodule HackPop.Pinger do
   alias HackPop.Pusher
 
 
-  @url "https://news.ycombinator.com"
+  @url "https://hacker-news.firebaseio.com/v0/topstories.json"
   @interval 60_000 * 5
 
   @name __MODULE__

@@ -8,13 +8,12 @@ defmodule HackPopTest.ParserTest do
 
   test "find_stories parses title" do
     use_cassette "hackernews" do
-      {:ok, response} = HTTPoison.get("https://news.ycombinator.com/")
-      stories = HackPop.Parser.find_stories(response.body)
+      stories  = HackPop.Parser.find_stories "[12955476, 12955457, 12955445]"
       expected = %HackPop.Story{
-        title:  "Israel Proves the Desalination Era Is Here",
-        url:    "http://www.scientificamerican.com/article/israel-proves-the-desalination-era-is-here/",
-        comments_url: "item?id=12191089",
-        points: 136
+        title:  "Apple's desensitisation of the human race to fundamental security practices",
+        url:    "https://www.troyhunt.com/apples-desensitisation-of-the-human-race-to-fundamental-security-practices/",
+        points: 60,
+        comments_url: "item?id=12955476"
       }
       assert expected == hd(stories)
     end
