@@ -5,39 +5,34 @@ defmodule HackPop.Pinger do
   alias HackPop.Story
   alias HackPop.Pusher
 
-
   @url "https://hacker-news.firebaseio.com/v0/topstories.json"
   @interval 60_000 * 5
-
-  @name __MODULE__
 
   def start_link do
     Task.start_link __MODULE__, :forever_ping, []
   end
 
   def forever_ping do
-    Task.start @name, :ping, []
+    Task.start __MODULE__, :ping, []
     :timer.sleep(@interval)
     forever_ping
   end
 
   def ping do
-    try do
-      HTTPoison.get(@url) |> handle_response
-    rescue
-      error in HTTPoison.HTTPError ->
-        Logger.info "Http error (#{inspect error.message})"
-    end
+    @url
+    |> HTTPoison.get
+    |> handle_response
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
-    Parser.find_stories(body)
+    body
+    |> Parser.find_stories
     |> Story.save_all
     |> Story.set_trending
     |> Pusher.push_to_all_clients
   end
 
   defp handle_response({:ok, %HTTPoison.Response{status_code: status_code}}) do
-    Logger.info "error: (#{status_code})"
+    Logger.error "error: (#{status_code})"
   end
 end

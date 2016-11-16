@@ -22,7 +22,7 @@ config :apns,
     ]
   ]
 
-config :logger, level: :debug
+config :logger, level: :info
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

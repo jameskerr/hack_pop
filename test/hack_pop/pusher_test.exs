@@ -15,22 +15,23 @@ defmodule HackPopTest.PusherTest do
   end
 
   test "push_to_all_clients when not already sent" do
-    stories = [ %Story{title: "Dinosaurs!", points: 301, id: 1} ]
-    client  = Repo.insert!(%Client{id: "123", threshold: 300})
-    Pusher.push_to_all_clients(stories)
+    story  = Repo.insert!(%Story{title: "Dinosaurs!", points: 301, url: "awesome.com"})
+    client = Repo.insert!(%Client{id: "123", threshold: 300})
+
+    Pusher.push_to_all_clients([story])
 
     assert Notification
-           |> where(client_id: ^client.id, story_id: 1)
+           |> where(client_id: ^client.id, story_id: ^story.id)
            |> Repo.one
   end
 
   test "push_to_all_clients when already sent" do
-    stories  = [ %Story{title: "Dinosaurs!", points: 301, id: 1} ]
-    _client  = Repo.insert!(%Client{id: "123", threshold: 300})
-    Pusher.push_to_all_clients(stories)
+    story   = Repo.insert! %Story{title: "Dinosaurs!", points: 301, url: "sheit.com"}
+    _client = Repo.insert!(%Client{id: "123", threshold: 300})
 
+    Pusher.push_to_all_clients([story])
     before_count = notification_count
-    Pusher.push_to_all_clients(stories)
+    Pusher.push_to_all_clients([story])
 
     assert before_count == notification_count
   end
