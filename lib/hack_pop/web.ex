@@ -25,6 +25,7 @@ defmodule HackPop.Web do
     send_resp conn, 200, Poison.encode!(Story.trending)
   end
 
+
   #####################
   # PINGER
   #####################
@@ -57,14 +58,25 @@ defmodule HackPop.Web do
   end
 
   get "/clients/:id/test" do
-    story = %Story{
-      title: "test", 
-      url: "https://www.helloworld.com/",
-      points:10001
-    }
-    %Notification{story: story, client_id: id} 
-    |> Pusher.push
-    send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
+    query = from s in Story, limit: 1, where: s.trending == true, order_by: fragment("RANDOM()")
+    story = query |> Repo.one
+
+    case client = Client.find(id) do
+      %Client{} ->
+        notification = %Notification{client_id: client.id, story_id: story.id, id: 0}
+
+        message = APNS.Message.new
+          |> Map.put(:token, client.id)
+          |> Map.put(:alert, "#{story.title}\nPoints: #{story.points}")
+          |> Map.put(:badge, 0)
+          |> Map.put(:extra, StoryNotification.cast(story, notification) |> Map.from_struct)
+
+        :ok = APNS.push(:dev_pool, message)
+
+        send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
+      nil ->
+        send_resp conn, 404, "No client with #{inspect(id)}"
+    end
   end
 
   get "/clients/:client_id/notifications" do
