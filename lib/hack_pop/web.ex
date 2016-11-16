@@ -11,6 +11,7 @@ defmodule HackPop.Web do
   alias HackPop.StoryNotification
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
+  plug Plug.Logger, log: :info
   plug :match
   plug :dispatch
 
