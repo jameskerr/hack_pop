@@ -9,6 +9,8 @@ defmodule HackPop.Web do
   alias HackPop.Story
   alias HackPop.Notification
   alias HackPop.StoryNotification
+  alias HackPop.Pinger
+
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   plug :match
@@ -20,6 +22,16 @@ defmodule HackPop.Web do
 
   get "/stories" do
     send_resp conn, 200, Poison.encode!(Story.trending)
+  end
+
+
+  #####################
+  # PINGER
+  #####################
+
+  get "/pinger" do
+    Task.start Pinger, :ping, []
+    send_resp conn, 200, "pinger pinged" 
   end
 
   #####################
