@@ -2,21 +2,20 @@
 
 [![Build Status](https://travis-ci.org/jameskerr/hack_pop.svg?branch=master)](https://travis-ci.org/jameskerr/hack_pop)
 
-**TODO: Add description**
+## Servers
 
-## Installation
+**Build**
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+* `54.165.31.207`
+* `ec2-54-165-31-207.compute-1.amazonaws.com`
 
-  1. Add hack_pop to your list of dependencies in `mix.exs`:
+**Staging**
 
-        def deps do
-          [{:hack_pop, "~> 0.0.1"}]
-        end
+* `54.152.78.27`
+* `ec2-54-152-78-27.compute-1.amazonaws.com`
 
-  2. Ensure hack_pop is started before your application:
+**Production**
 
-        def application do
-          [applications: [:hack_pop]]
-        end
+* `52.201.223.136`
+* `ec2-52-201-223-136.compute-1.amazonaws.com`
 
