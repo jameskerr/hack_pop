@@ -23,7 +23,8 @@ defmodule HackPop.Pusher do
 
   def push(notification) do
     message = construct_message(notification)
-    :ok = APNS.push(:dev_pool, message)
+    pool    = Application.get_env(:hack_pop, :apns_pool)
+    :ok     = APNS.push(pool, message)
   end
 
   defp create_notification(story, client) do

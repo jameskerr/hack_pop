@@ -18,9 +18,17 @@ config :apns,
   pools: [
     dev_pool: [
       env: :dev,
-      certfile: "secrets/apns_dev.pem"
+      certfile: "secrets/apns_dev.pem",
+      pool_size: 10
+    ],
+    prod_pool: [
+      env: :prod,
+      certfile: "secrets/apns_prod.pem",
+      pool_size: 100
     ]
   ]
+
+config :hack_pop, apns_pool: :dev_pool
 
 config :logger, level: :info
 

@@ -7,13 +7,7 @@ config :hack_pop, HackPop.Repo,
   password: System.get_env("DB_PASSWORD"),
   hostname: System.get_env("DB_HOST")
 
-config :apns,
-  pools: [
-    dev_pool: [
-      env: :dev,
-      certfile: "secrets/apns_dev.pem"
-    ]
-  ]
+config :hack_pop, apns_pool: :prod_pool
 
 config :bugsnag, api_key:       System.get_env("BUGSNAG_API_KEY")
 config :bugsnag, release_stage: System.get_env("BUGSNAG_RELEASE_STAGE")
