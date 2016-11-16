@@ -2,11 +2,37 @@
 
 [![Build Status](https://travis-ci.org/jameskerr/hack_pop.svg?branch=master)](https://travis-ci.org/jameskerr/hack_pop)
 
+## Dependencies
+
+```
+mix deps.get
+```
+
 ## Development DB
+
+Provided you have postgres and the postgres command line tools installed, these commands will get your database up.
 
 ```
 createdb hack_pop_repo
 mix ecto.migrate
+```
+
+## Running the server
+
+```
+mix run --no-halt
+```
+
+## Running the console
+
+```
+iex -S mix
+```
+
+## Running Tests
+
+```
+mix test
 ```
 
 ## Servers
