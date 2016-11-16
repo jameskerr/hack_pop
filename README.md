@@ -2,6 +2,13 @@
 
 [![Build Status](https://travis-ci.org/jameskerr/hack_pop.svg?branch=master)](https://travis-ci.org/jameskerr/hack_pop)
 
+## Development DB
+
+```
+createdb hack_pop_repo
+mix ecto.migrate
+```
+
 ## Servers
 
 **Build**
