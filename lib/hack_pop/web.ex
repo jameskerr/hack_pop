@@ -60,7 +60,7 @@ defmodule HackPop.Web do
     story = %Story{
       title: "test", 
       url: "https://www.helloworld.com/",
-      points:10001
+      points: 10001
     }
     %Notification{story: story, client_id: id} 
     |> Pusher.push
