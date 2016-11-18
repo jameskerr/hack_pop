@@ -10,6 +10,7 @@ defmodule HackPop.Web do
   alias HackPop.Notification
   alias HackPop.StoryNotification
   alias HackPop.Pinger
+  alias HackPop.Pusher
 
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
@@ -31,7 +32,7 @@ defmodule HackPop.Web do
 
   get "/pinger" do
     Task.start Pinger, :ping, []
-    send_resp conn, 200, "pinger pinged" 
+    send_resp conn, 200, "pinger pinged"
   end
 
   #####################
@@ -58,11 +59,11 @@ defmodule HackPop.Web do
 
   get "/clients/:id/test" do
     story = %Story{
-      title: "test", 
+      title: "test",
       url: "https://www.helloworld.com/",
       points: 10001
     }
-    %Notification{story: story, client_id: id} 
+    %Notification{story: story, client_id: id}
     |> Pusher.push
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
   end
