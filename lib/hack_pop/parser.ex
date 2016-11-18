@@ -3,7 +3,7 @@ defmodule HackPop.Parser do
     body
     |> Poison.decode!
     |> Enum.take(30)
-    |> Stream.map(&(Task.async(fn -> fetch_story(&1) end)))
+    |> Enum.map(&(Task.async(fn -> fetch_story(&1) end)))
     |> Enum.map(&Task.await(&1))
   end
 
