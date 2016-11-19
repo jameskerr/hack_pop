@@ -15,7 +15,7 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 config :plug, port: 4001
 
 config :apns,
-  callback_module: HackPop.Pinger,
+  callback_module: HackPop.Pusher,
   pools: [
     dev_pool: [
       env: :dev,
@@ -34,6 +34,8 @@ config :hack_pop, apns_pool: :dev_pool
 config :hack_pop, auto_ping: true
 
 config :logger, level: :info
+
+config :bugsnag, api_key: System.get_env("BUGSNAG_API_KEY")
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

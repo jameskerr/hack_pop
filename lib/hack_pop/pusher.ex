@@ -21,10 +21,18 @@ defmodule HackPop.Pusher do
     end)
   end
 
-  def push(notification) do
-    message = construct_message(notification)
-    pool    = Application.get_env(:hack_pop, :apns_pool)
-    :ok     = APNS.push(pool, message)
+  def push(notification, opts \\ [sync: false]) do
+    notification
+    |> construct_message
+    |> push_to_pool(opts)
+  end
+
+  defp push_to_pool(message, sync: false) do
+    APNS.push_sync(pool, message)
+  end
+
+  defp push_to_pool(message, sync: true) do
+    APNS.push(pool, message)
   end
 
   defp create_notification(story, client) do
@@ -47,5 +55,27 @@ defmodule HackPop.Pusher do
 
   defp already_sent?(client, story) do
     Notification |> where(client_id: ^client.id, story_id: ^story.id) |> Repo.one
+  end
+
+  defp pool do
+    Application.get_env(:hack_pop, :apns_pool)
+  end
+
+  # A custom Error struct to pass to bugsnag
+  defmodule APNSError do
+    defexception [:message]
+  end
+
+  # Error Callback for the APNS server
+  def error(error, token) do
+    try do
+      raise __MODULE__.APNSError, error.error
+    rescue
+      e -> Bugsnag.report(e, metadata: %{details: error, token: %{token: token}})
+    end
+  end
+
+  def feedback(feedback) do
+    Logger.info inspect(feedback)
   end
 end
