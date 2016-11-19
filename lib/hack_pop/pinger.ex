@@ -24,6 +24,14 @@ defmodule HackPop.Pinger do
     |> handle_response
   end
 
+  def error(error, token) do
+    Bugsnag.report(error, severity: "error", user: %{id: token})
+  end
+
+  def feedback(feedback) do
+    Bugsnag.report(feedback, severity: "info")
+  end
+
   defp handle_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
     body
     |> Parser.find_stories
