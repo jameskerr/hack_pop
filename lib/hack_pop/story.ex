@@ -38,7 +38,7 @@ defmodule HackPop.Story do
   end
 
   defp upsert(struct) do
-    case story = find_recent(struct) do
+    case story = Repo.get(Story, struct.id) do
       nil ->
         struct
         |> Repo.insert!
@@ -63,18 +63,5 @@ defmodule HackPop.Story do
     from s in Story,
       where:  s.trending == true
       and not s.id in ^ids(stories)
-  end
-
-  defp find_recent(story) do
-    story
-    |> find_recent_query
-    |> Repo.one
-  end
-
-  defp find_recent_query(story) do
-    from s in Story,
-      where: s.title == ^story.title
-         and s.url   == ^story.url
-         and s.inserted_at > datetime_add(^Ecto.DateTime.utc, -3, "day")
   end
 end

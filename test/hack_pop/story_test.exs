@@ -13,9 +13,9 @@ defmodule HackPop.StoryTest do
 
   test "save_all with new data" do
     stories = [
-      %Story{title: "A", url: "a.com", points: 1},
-      %Story{title: "B", url: "b.com", points: 2},
-      %Story{title: "C", url: "c.com", points: 3},
+      %Story{id: 1, title: "A", url: "a.com", points: 1},
+      %Story{id: 2, title: "B", url: "b.com", points: 2},
+      %Story{id: 3, title: "C", url: "c.com", points: 3},
     ]
     Story.save_all(stories)
     assert 3 == story_count
@@ -23,35 +23,19 @@ defmodule HackPop.StoryTest do
 
   test "save_all with existing data" do
     stories = [
-      %Story{title: "A", url: "a.com", points: 1},
-      %Story{title: "B", url: "b.com", points: 2},
-      %Story{title: "C", url: "c.com", points: 3},
+      %Story{id: 1, title: "A", url: "a.com", points: 1},
+      %Story{id: 2, title: "B", url: "b.com", points: 2},
+      %Story{id: 3, title: "C", url: "c.com", points: 3},
     ]
     Story.save_all(stories)
 
-    updates = [%Story{title: "C", url: "c.com", points: 100}]
+    updates = [%Story{id: 3, title: "C", url: "c.com", points: 100}]
     Story.save_all(updates)
     assert 3 == story_count
 
-    updated_story = Story
-                    |> where(title: "C", url: "c.com")
-                    |> first
-                    |> Repo.one
+    updated_story = Story |> Repo.get(3)
+
     assert 100 == updated_story.points
-  end
-
-    test "save_all with existing data but over 72 hours old" do
-    four_days_ago = Timex.shift(Timex.now, days: -3, hours: -1)
-                    |> Timex.to_erl
-                    |> Ecto.DateTime.from_erl
-
-    [%Story{ title: "A", url: "a.com", points: 1, inserted_at: four_days_ago }]
-    |> Story.save_all
-
-    [%Story{ title: "A", url: "a.com", points: 100 }]
-    |> Story.save_all
-
-    assert 2 == story_count
   end
 
   defp story_count do

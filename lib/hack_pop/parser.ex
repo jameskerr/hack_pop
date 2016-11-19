@@ -9,15 +9,20 @@ defmodule HackPop.Parser do
 
   def fetch_story(id) do
     id
-    |> build_story_url
+    |> story_api_url
     |> HTTPoison.get
     |> handle_story_response
   end
 
   defp handle_story_response({:ok, %HTTPoison.Response{status_code: 200, body: body}}) do
-    story = Poison.decode!(body)
+    body
+    |> Poison.decode!
+    |> build_story
+  end
 
+  defp build_story(story = %{}) do
     %HackPop.Story{
+      id:           story["id"],
       title:        story["title"],
       url:          parse_url(story),
       points:       story["score"],
@@ -25,7 +30,7 @@ defmodule HackPop.Parser do
     }
   end
 
-  defp build_story_url(id), do: "https://hacker-news.firebaseio.com/v0/item/#{id}.json"
+  defp story_api_url(id), do: "https://hacker-news.firebaseio.com/v0/item/#{id}.json"
 
   defp parse_url(%{"url" => url}), do: url
 
