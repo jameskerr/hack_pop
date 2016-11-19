@@ -3,7 +3,7 @@ defmodule HackPop.Mixfile do
 
   def project do
     [app: :hack_pop,
-     version: "0.0.9",
+     version: "0.0.10",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
