@@ -7,9 +7,7 @@ defmodule HackPop.Parser do
     |> Enum.map(&Task.await(&1))
   end
 
-  # PRIVATE
-
-  defp fetch_story(id) do
+  def fetch_story(id) do
     id
     |> build_story_url
     |> HTTPoison.get
@@ -21,13 +19,15 @@ defmodule HackPop.Parser do
 
     %HackPop.Story{
       title:        story["title"],
-      url:          story["url"],
+      url:          parse_url(story),
       points:       story["score"],
       comments_url: "item?id=#{story["id"]}"
     }
   end
 
-  defp build_story_url(id) do
-    "https://hacker-news.firebaseio.com/v0/item/#{id}.json"
-  end
+  defp build_story_url(id), do: "https://hacker-news.firebaseio.com/v0/item/#{id}.json"
+
+  defp parse_url(%{"url" => url}), do: url
+
+  defp parse_url(%{"id" => id}), do: "https://news.ycombinator.com/item?id=#{id}"
 end

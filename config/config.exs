@@ -30,6 +30,8 @@ config :apns,
 
 config :hack_pop, apns_pool: :dev_pool
 
+config :hack_pop, auto_ping: true
+
 config :logger, level: :info
 
 # This configuration is loaded before any dependency and is restricted
