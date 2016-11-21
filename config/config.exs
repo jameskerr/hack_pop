@@ -19,7 +19,7 @@ config :logger, level: :info
 config :plug, port: 4001
 
 config :apns,
-  callback_module: HackPop.Pusher,
+  callback_module: HackPop.APNS.Callback,
   pools: [
     dev_pool: [
       env: :dev,
