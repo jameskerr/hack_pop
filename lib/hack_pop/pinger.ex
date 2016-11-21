@@ -12,7 +12,7 @@ defmodule HackPop.Pinger do
   end
 
   def ping do
-    HackPop.HackerNews.HTTPClient.top_stories
+    HackPop.HackerNews.TopStories.get
     |> HackPop.Schema.Story.save_all
     |> HackPop.Schema.Story.set_trending
     |> HackPop.Pusher.push_to_all_clients

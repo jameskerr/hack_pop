@@ -103,6 +103,18 @@ defmodule HackPop.Web do
     end
   end
 
+  get "/clients/:client_id/notifications/:id" do
+    client = Repo.get(Client, client_id)
+
+    notification =
+      Repo.get(Notification, id)
+      |> Repo.preload(:story)
+      |> HackPop.Views.NotificationView.cast
+      |> to_json
+
+    send_resp conn, 200, notification
+  end
+
   #####################
   # CATCH ALL
   #####################

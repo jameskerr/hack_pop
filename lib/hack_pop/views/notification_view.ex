@@ -1,7 +1,8 @@
 defmodule HackPop.Views.NotificationView do
-
   @derive [Poison.Encoder]
   defstruct [:title, :url, :comments_url, :points, :notification_id, :story_id]
+
+  def cast([]), do: []
 
   def cast(notification = %{}) do
     %__MODULE__{
@@ -14,9 +15,7 @@ defmodule HackPop.Views.NotificationView do
     }
   end
 
-  def cast(list = [_]) do
+  def cast(list) do
     Enum.map list, &cast/1
   end
-
-  def cast([]), do: []
 end
