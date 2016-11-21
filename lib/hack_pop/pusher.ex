@@ -1,4 +1,6 @@
 defmodule HackPop.Pusher do
+  @apns_client Application.get_env(:hack_pop, :apns_client)
+
   alias HackPop.Repo
   alias HackPop.Schema.Client
   alias HackPop.Schema.Notification
@@ -22,7 +24,7 @@ defmodule HackPop.Pusher do
   def push(notification, opts \\ [sync: false]) do
     notification
     |> HackPop.APNS.Message.from_notification
-    |> HackPop.APNS.Client.push(opts)
+    |> @apns_client.push(opts)
   end
 
   defp create_notification(story, client) do

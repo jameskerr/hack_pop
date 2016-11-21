@@ -1,20 +1,21 @@
 defmodule HackPop.Views.NotificationViewTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
 
   alias HackPop.Views.NotificationView
 
   test "cast" do
-    story = %HackPop.Schema.Story{
-      title: "title",
-      url:   "url",
-      comments_url: "comments_url",
-      id: 1,
-      points: 1000
+    notification = %HackPop.Schema.Notification{
+      id: 10,
+      story: %HackPop.Schema.Story{
+        title: "title",
+        url:   "url",
+        comments_url: "comments_url",
+        id: 1,
+        points: 1000
+      }
     }
 
-    notification = %HackPop.Schema.Notification{id: 10}
-
-    sn = NotificationView.cast(story, notification)
+    sn = NotificationView.cast(notification)
 
     assert sn == %NotificationView{
       title: "title",

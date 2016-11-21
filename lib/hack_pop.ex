@@ -4,6 +4,8 @@ defmodule HackPop do
 
   def start(_type, _args) do
     Application.get_env(:hack_pop, :error_reporting).start
+    Application.get_env(:hack_pop, :apns_client).start
+
     Supervisor.start_link children, strategy: :one_for_one, name: HackPop.Supervisor
   end
 

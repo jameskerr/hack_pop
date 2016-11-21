@@ -1,5 +1,5 @@
 defmodule HackPopTest.PusherTest do
-  use ExUnit.Case
+  use ExUnit.Case, aysnc: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   import Ecto.Query

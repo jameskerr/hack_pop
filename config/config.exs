@@ -14,7 +14,11 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 
 config :hack_pop, apns_pool: :dev_pool
 
+config :hack_pop, apns_client: HackPop.APNS.Client
+
 config :hack_pop, error_reporting: HackPop.Errors.Reporting
+
+config :hack_pop, hacker_news_client: HackPop.HackerNews.HTTPClient
 
 config :logger, level: :info
 

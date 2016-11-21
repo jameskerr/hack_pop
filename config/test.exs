@@ -12,7 +12,9 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 
 config :hack_pop, Repo, pool: Ecto.Adapters.SQL.Sandbox
 
-config :hack_pop, error_reporting: HackPop.Errors.TestReporting
+config :hack_pop, apns_client: HackPop.APNS.ClientMock
+
+config :hack_pop, error_reporting: HackPop.Errors.ReportingMock
 
 config :logger, level: :warn
 

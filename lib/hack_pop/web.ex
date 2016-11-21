@@ -52,7 +52,7 @@ defmodule HackPop.Web do
 
   put "/clients/:id" do
     case (
-      Client.find(id)
+      Repo.get(Client, id)
       |> Client.changeset(%{threshold: conn.params["threshold"]})
       |> Repo.update
     ) do
@@ -73,20 +73,21 @@ defmodule HackPop.Web do
   end
 
   get "/clients/:client_id/notifications" do
-    case client = Client.find(client_id) do
+    case client = Repo.get(Client, client_id) do
       %Client{} ->
-        json =
+        notifications =
           client
-          |> Client.recent_unread_story_notifications
+          |> HackPop.Query.RecentUnreadNotifications.get
+          |> HackPop.Views.NotificationView.cast
           |> to_json
-        send_resp conn, 200, json
+        send_resp conn, 200, notifications
       nil ->
         send_resp conn, 404, "No client with #{inspect(client_id)}"
     end
   end
 
   put "/clients/:client_id/notifications/:id" do
-    case client = Client.find(client_id) do
+    case client = Repo.get(Client, client_id) do
       %Client{} ->
         changeset = Notification
           |> where(client_id: ^client.id, id: ^id)

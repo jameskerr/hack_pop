@@ -1,4 +1,8 @@
 defmodule HackPop.APNS.Client do
+  def start do
+    APNS.start nil, nil
+  end
+
   def push(message, sync: true) do
     APNS.push_sync(pool, message)
   end

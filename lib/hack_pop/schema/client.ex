@@ -21,31 +21,9 @@ defmodule HackPop.Schema.Client do
     |> unique_constraint(:id, name: "clients_pkey")
   end
 
-  def find(id) do
-    Client
-    |> where(id: ^id)
-    |> Repo.one
-  end
-
   def create(params \\ %{}) do
     %Client{}
     |> changeset(params)
     |> Repo.insert
-  end
-
-  def recent_unread_story_notifications(client) do
-    recent_unread_notifications_query(client)
-    |> Repo.all
-    |> Enum.map(&NotificationView.from_notification/1)
-  end
-
-  defp recent_unread_notifications_query(client) do
-    from n in Notification,
-      where:    n.client_id   == ^client.id
-        and     n.read        == false
-        and     n.inserted_at >= ago(5, "day"),
-      limit:    15,
-      order_by: [desc: :inserted_at],
-      preload:  [:story]
   end
 end
