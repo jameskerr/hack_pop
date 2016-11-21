@@ -14,7 +14,7 @@ defmodule HackPop.Pinger do
 
   def forever_ping do
     Task.start __MODULE__, :ping, []
-    :timer.sleep(@interval)
+    :timer.sleep @interval
     forever_ping
   end
 
