@@ -1,11 +1,11 @@
-defmodule HackPop.StoryTest do
+defmodule HackPop.Schema.StoryTest do
   use ExUnit.Case
   use Timex
 
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Story
+  alias HackPop.Schema.Story
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)

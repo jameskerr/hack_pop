@@ -1,10 +1,10 @@
-defmodule HackPop.StoryNotificationTest do
+defmodule HackPop.Schema.StoryNotificationTest do
   use ExUnit.Case
 
-  alias HackPop.StoryNotification
+  alias HackPop.Schema.StoryNotification
 
   test "cast" do
-    story = %HackPop.Story{
+    story = %HackPop.Schema.Story{
       title: "title",
       url:   "url",
       comments_url: "comments_url",
@@ -12,7 +12,7 @@ defmodule HackPop.StoryNotificationTest do
       points: 1000
     }
 
-    notification = %HackPop.Notification{id: 10}
+    notification = %HackPop.Schema.Notification{id: 10}
 
     sn = StoryNotification.cast(story, notification)
 

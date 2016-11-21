@@ -8,3 +8,4 @@ Ecto.Adapters.SQL.Sandbox.mode(HackPop.Repo, :manual)
 Ecto.Adapters.SQL.Sandbox.mode(HackPop.Repo, {:shared, self()})
 
 ExUnit.start()
+

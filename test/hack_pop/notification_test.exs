@@ -1,3 +1,3 @@
-defmodule HackPop.NotificationTest do
+defmodule HackPop.Schema.NotificationTest do
   use ExUnit.Case
 end

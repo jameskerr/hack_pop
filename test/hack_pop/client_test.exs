@@ -1,10 +1,10 @@
-defmodule HackPop.ClientTest do
+defmodule HackPop.Schema.ClientTest do
   use ExUnit.Case
 
   alias HackPop.Repo
-  alias HackPop.Notification
-  alias HackPop.Client
-  alias HackPop.Story
+  alias HackPop.Schema.Notification
+  alias HackPop.Schema.Client
+  alias HackPop.Schema.Story
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)

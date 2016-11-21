@@ -5,10 +5,10 @@ defmodule HackPop.WebTest do
   import Ecto.Query, only: [where: 2]
 
   alias HackPop.Repo
-  alias HackPop.Client
+  alias HackPop.Schema.Client
   alias HackPop.Web
-  alias HackPop.Notification
-  alias HackPop.Story
+  alias HackPop.Schema.Notification
+  alias HackPop.Schema.Story
 
   @opts Web.init([])
 

@@ -1,10 +1,10 @@
-defmodule HackPop.StoryNotification do
+defmodule HackPop.Schema.StoryNotification do
 
   @derive [Poison.Encoder]
   defstruct [:title, :url, :comments_url, :points, :notification_id, :story_id]
 
   def cast(story, notification) do
-    %HackPop.StoryNotification{
+    %HackPop.Schema.StoryNotification{
       title:           story.title,
       url:             story.url,
       comments_url:    story.comments_url,

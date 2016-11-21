@@ -21,7 +21,7 @@ defmodule HackPop.Parser do
   end
 
   defp build_story(story = %{}) do
-    %HackPop.Story{
+    %HackPop.Schema.Story{
       id:           story["id"],
       title:        story["title"],
       url:          parse_url(story),

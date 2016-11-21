@@ -5,10 +5,10 @@ defmodule HackPop.Web do
   import Ecto.Query, only: [from: 2, where: 2]
 
   alias HackPop.Repo
-  alias HackPop.Client
-  alias HackPop.Story
-  alias HackPop.Notification
-  alias HackPop.StoryNotification
+  alias HackPop.Schema.Client
+  alias HackPop.Schema.Story
+  alias HackPop.Schema.Notification
+  alias HackPop.Schema.StoryNotification
   alias HackPop.Pinger
   alias HackPop.Pusher
 

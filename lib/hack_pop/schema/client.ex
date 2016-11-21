@@ -1,13 +1,13 @@
-defmodule HackPop.Client do
+defmodule HackPop.Schema.Client do
   use Ecto.Schema
 
   import Ecto.Changeset
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Client
-  alias HackPop.Notification
-  alias HackPop.StoryNotification
+  alias HackPop.Schema.Client
+  alias HackPop.Schema.Notification
+  alias HackPop.Schema.StoryNotification
 
   @derive { Poison.Encoder, only: [:id, :threshold] }
   @primary_key {:id, :string, autogenerate: false}

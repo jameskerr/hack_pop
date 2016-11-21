@@ -1,10 +1,10 @@
-defmodule HackPop.Story do
+defmodule HackPop.Schema.Story do
   use Ecto.Schema
 
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Story
+  alias HackPop.Schema.Story
 
   @derive {Poison.Encoder, only: [:id, :title, :url, :comments_url, :points]}
   schema "stories" do

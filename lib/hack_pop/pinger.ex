@@ -2,7 +2,7 @@ require Logger
 
 defmodule HackPop.Pinger do
   alias HackPop.Parser
-  alias HackPop.Story
+  alias HackPop.Schema.Story
   alias HackPop.Pusher
 
   @url "https://hacker-news.firebaseio.com/v0/topstories.json"

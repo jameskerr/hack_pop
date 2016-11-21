@@ -6,9 +6,9 @@ defmodule HackPopTest.PusherTest do
 
   alias HackPop.Repo
   alias HackPop.Pusher
-  alias HackPop.Story
-  alias HackPop.Client
-  alias HackPop.Notification
+  alias HackPop.Schema.Story
+  alias HackPop.Schema.Client
+  alias HackPop.Schema.Notification
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)

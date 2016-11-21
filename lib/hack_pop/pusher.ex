@@ -2,8 +2,8 @@ require Logger
 
 defmodule HackPop.Pusher do
   alias HackPop.Repo
-  alias HackPop.Client
-  alias HackPop.Notification
+  alias HackPop.Schema.Client
+  alias HackPop.Schema.Notification
 
   import Ecto.Query
 
