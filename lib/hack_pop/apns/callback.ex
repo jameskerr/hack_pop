@@ -1,6 +1,8 @@
 require Logger
 
 defmodule HackPop.APNS.Callback do
+  @errors Application.get_env(:hack_pop, :error_reporting)
+
   defmodule APNSError do
     defexception [:message]
   end
@@ -9,7 +11,7 @@ defmodule HackPop.APNS.Callback do
     try do
       raise __MODULE__.APNSError, error.error
     rescue
-      e -> Bugsnag.report(e, metadata: %{details: error, token: %{token: token}})
+      e -> @errors.report(e, metadata: %{details: error, token: %{token: token}})
     end
   end
 

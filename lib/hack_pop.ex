@@ -1,25 +1,25 @@
-require Logger
-
 defmodule HackPop do
   use Application
+  import Supervisor.Spec, only: [worker: 2]
 
   def start(_type, _args) do
+    Application.get_env(:hack_pop, :error_reporting).start
     Supervisor.start_link children, strategy: :one_for_one, name: HackPop.Supervisor
   end
 
   defp children do
     case Mix.env do
       :test -> [repo, web]
-      _     -> [repo, web, pinger, error_reporting]
+      _     -> [repo, web, pinger]
     end
   end
 
   defp pinger do
-    Supervisor.Spec.worker HackPop.Pinger, []
+    worker HackPop.Pinger, []
   end
 
   defp repo do
-    Supervisor.Spec.worker HackPop.Repo, []
+    worker HackPop.Repo, []
   end
 
   defp web do
@@ -29,9 +29,5 @@ defmodule HackPop do
       [],
       port: Application.fetch_env!(:plug, :port)
     )
-  end
-
-  defp error_reporting do
-    Supervisor.Spec.worker HackPop.ErrorReporting, []
   end
 end

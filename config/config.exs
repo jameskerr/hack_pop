@@ -14,6 +14,8 @@ config :hack_pop, ecto_repos: [HackPop.Repo]
 
 config :hack_pop, apns_pool: :dev_pool
 
+config :hack_pop, error_reporting: HackPop.Errors.Reporting
+
 config :logger, level: :info
 
 config :plug, port: 4001

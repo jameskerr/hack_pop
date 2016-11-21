@@ -2,16 +2,15 @@ defmodule HackPop.Web do
   use Plug.Router
   use Plugsnag
 
-  import Ecto.Query, only: [from: 2, where: 2]
+  import Ecto.Query, only: [where: 2]
 
   alias HackPop.Repo
   alias HackPop.Schema.Client
   alias HackPop.Schema.Story
   alias HackPop.Schema.Notification
-  alias HackPop.Schema.StoryNotification
   alias HackPop.Pinger
   alias HackPop.Pusher
-
+  alias HackPop.Views.{ClientView, StoryView}
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
   plug Plug.Logger, log: :info
@@ -23,7 +22,12 @@ defmodule HackPop.Web do
   #####################
 
   get "/stories" do
-    send_resp conn, 200, Poison.encode!(Story.trending)
+    stories =
+      HackPop.Query.TrendingStories.get
+      |> StoryView.cast
+      |> to_json
+
+    send_resp conn, 200, stories
   end
 
   #####################
@@ -41,7 +45,7 @@ defmodule HackPop.Web do
 
   post "/clients" do
     case Client.create(%{id: conn.params["client_id"]}) do
-      {:ok,    client }   -> send_resp conn, 201, Poison.encode!(client)
+      {:ok,    client }   -> send_resp conn, 201, client |> ClientView.cast |> to_json
       {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
@@ -52,7 +56,7 @@ defmodule HackPop.Web do
       |> Client.changeset(%{threshold: conn.params["threshold"]})
       |> Repo.update
     ) do
-      {:ok,    client}    -> send_resp conn, 204, Poison.encode!(client)
+      {:ok,    client}    -> send_resp conn, 204, client |> ClientView.cast |> to_json
       {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
   end
@@ -71,9 +75,10 @@ defmodule HackPop.Web do
   get "/clients/:client_id/notifications" do
     case client = Client.find(client_id) do
       %Client{} ->
-        json = client
-               |> Client.recent_unread_story_notifications
-               |> Poison.encode!
+        json =
+          client
+          |> Client.recent_unread_story_notifications
+          |> to_json
         send_resp conn, 200, json
       nil ->
         send_resp conn, 404, "No client with #{inspect(client_id)}"
@@ -108,6 +113,10 @@ defmodule HackPop.Web do
   #####################
   # HELPERS
   #####################
+
+  defp to_json(data) do
+    Poison.encode! data
+  end
 
   defp errors_json(changeset) do
     Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->

@@ -6,7 +6,6 @@ defmodule HackPop.Schema.Story do
   alias HackPop.Repo
   alias HackPop.Schema.Story
 
-  @derive {Poison.Encoder, only: [:id, :title, :url, :comments_url, :points]}
   schema "stories" do
     field :title
     field :url
@@ -19,11 +18,6 @@ defmodule HackPop.Schema.Story do
   def changeset(story, params \\ %{}) do
     story
     |> Ecto.Changeset.cast(params, [:points, :trending])
-  end
-
-  def trending do
-    trending_query
-    |> Repo.all
   end
 
   def set_trending(stories) do
@@ -51,12 +45,6 @@ defmodule HackPop.Schema.Story do
 
   defp ids(stories) do
     Enum.map stories, fn story -> story.id end
-  end
-
-  defp trending_query do
-    from s in Story,
-      where: s.trending == true,
-      order_by: [desc: :points]
   end
 
   defp stories_trending_besides(stories) do

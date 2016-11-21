@@ -7,9 +7,8 @@ defmodule HackPop.Schema.Client do
   alias HackPop.Repo
   alias HackPop.Schema.Client
   alias HackPop.Schema.Notification
-  alias HackPop.Schema.StoryNotification
+  alias HackPop.Views.NotificationView
 
-  @derive { Poison.Encoder, only: [:id, :threshold] }
   @primary_key {:id, :string, autogenerate: false}
   schema "clients" do
     field :threshold, :integer, default: 300
@@ -37,7 +36,7 @@ defmodule HackPop.Schema.Client do
   def recent_unread_story_notifications(client) do
     recent_unread_notifications_query(client)
     |> Repo.all
-    |> Enum.map(&StoryNotification.from_notification/1)
+    |> Enum.map(&NotificationView.from_notification/1)
   end
 
   defp recent_unread_notifications_query(client) do
