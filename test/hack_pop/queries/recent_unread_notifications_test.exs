@@ -10,7 +10,7 @@ defmodule HackPop.Queries.RecentUnreadNotificationsTest do
 
   test "recent_unread_story_notifications" do
     client        = Repo.insert! %Client{id: "123"}
-    story         = Repo.insert! %Story{title: "title", url: "url", points: 100}
+    story         = Repo.insert! %Story{title: "title", url: "url", points: 100, id: 1}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
 
