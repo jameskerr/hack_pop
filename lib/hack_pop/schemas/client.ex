@@ -1,13 +1,7 @@
-defmodule HackPop.Schema.Client do
+defmodule HackPop.Schemas.Client do
   use Ecto.Schema
 
   import Ecto.Changeset
-  import Ecto.Query
-
-  alias HackPop.Repo
-  alias HackPop.Schema.Client
-  alias HackPop.Schema.Notification
-  alias HackPop.Views.NotificationView
 
   @primary_key {:id, :string, autogenerate: false}
   schema "clients" do
@@ -19,11 +13,5 @@ defmodule HackPop.Schema.Client do
     client
     |> cast(params, [:id, :threshold])
     |> unique_constraint(:id, name: "clients_pkey")
-  end
-
-  def create(params \\ %{}) do
-    %Client{}
-    |> changeset(params)
-    |> Repo.insert
   end
 end

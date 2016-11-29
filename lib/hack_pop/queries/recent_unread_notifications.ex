@@ -1,4 +1,4 @@
-defmodule HackPop.Query.RecentUnreadNotifications do
+defmodule HackPop.Queries.RecentUnreadNotifications do
   import Ecto.Query, only: [from: 2]
 
   def get(client) do
@@ -8,7 +8,7 @@ defmodule HackPop.Query.RecentUnreadNotifications do
   end
 
   defp query(client) do
-    from n in HackPop.Schema.Notification,
+    from n in HackPop.Schemas.Notification,
       where:    n.client_id   == ^client.id
         and     n.read        == false
         and     n.inserted_at >= ago(5, "day"),

@@ -1,14 +1,14 @@
-defmodule HackPopTest.PusherTest do
+defmodule HackPop.Services.PushServiceTest do
   use ExUnit.Case, aysnc: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Pusher
-  alias HackPop.Schema.Story
-  alias HackPop.Schema.Client
-  alias HackPop.Schema.Notification
+  alias HackPop.Services.PushService
+  alias HackPop.Schemas.Story
+  alias HackPop.Schemas.Client
+  alias HackPop.Schemas.Notification
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
@@ -18,7 +18,7 @@ defmodule HackPopTest.PusherTest do
     story  = Repo.insert!(%Story{title: "Dinosaurs!", points: 301, url: "awesome.com"})
     client = Repo.insert!(%Client{id: "123", threshold: 300})
 
-    Pusher.push_to_all_clients([story])
+    PushService.push_to_all_clients([story])
 
     assert Notification
            |> where(client_id: ^client.id, story_id: ^story.id)
@@ -29,9 +29,9 @@ defmodule HackPopTest.PusherTest do
     story   = Repo.insert! %Story{title: "Dinosaurs!", points: 301, url: "sheit.com"}
     _client = Repo.insert!(%Client{id: "123", threshold: 300})
 
-    Pusher.push_to_all_clients([story])
+    PushService.push_to_all_clients([story])
     before_count = notification_count
-    Pusher.push_to_all_clients([story])
+    PushService.push_to_all_clients([story])
 
     assert before_count == notification_count
   end
@@ -41,7 +41,7 @@ defmodule HackPopTest.PusherTest do
     _client = Repo.insert!(%Client{id: "123", threshold: 300})
 
     before_count = notification_count()
-    Pusher.push_to_all_clients(stories)
+    PushService.push_to_all_clients(stories)
     assert before_count == notification_count
   end
 

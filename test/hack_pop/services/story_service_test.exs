@@ -1,11 +1,12 @@
-defmodule HackPop.Schema.StoryTest do
+defmodule HackPop.Services.StoryServiceTest do
   use ExUnit.Case #, async: true
   use Timex
 
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Schema.Story
+  alias HackPop.Schemas.Story
+  alias HackPop.Services.StoryService
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
@@ -17,7 +18,7 @@ defmodule HackPop.Schema.StoryTest do
       %Story{id: 2, title: "B", url: "b.com", points: 2},
       %Story{id: 3, title: "C", url: "c.com", points: 3},
     ]
-    Story.save_all(stories)
+    StoryService.save_all(stories)
     assert 3 == story_count
   end
 
@@ -27,10 +28,10 @@ defmodule HackPop.Schema.StoryTest do
       %Story{id: 2, title: "B", url: "b.com", points: 2},
       %Story{id: 3, title: "C", url: "c.com", points: 3},
     ]
-    Story.save_all(stories)
+    StoryService.save_all(stories)
 
     updates = [%Story{id: 3, title: "C", url: "c.com", points: 100}]
-    Story.save_all(updates)
+    StoryService.save_all(updates)
     assert 3 == story_count
 
     updated_story = Story |> Repo.get(3)

@@ -1,6 +1,8 @@
 defmodule HackPop.Pinger do
   @interval 60_000 * 5
 
+  alias HackPop.Services.{StoryService, PushService}
+
   def start_link do
     Task.start_link __MODULE__, :forever_ping, []
   end
@@ -12,9 +14,9 @@ defmodule HackPop.Pinger do
   end
 
   def ping do
-    HackPop.HackerNews.TopStories.get
-    |> HackPop.Schema.Story.save_all
-    |> HackPop.Schema.Story.set_trending
-    |> HackPop.Pusher.push_to_all_clients
+    HackPop.HackerNews.Api.get_top_stories
+    |> StoryService.save_all
+    |> StoryService.set_trending
+    |> PushService.push_to_all_clients
   end
 end

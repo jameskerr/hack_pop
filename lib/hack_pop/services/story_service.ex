@@ -1,34 +1,19 @@
-defmodule HackPop.Schema.Story do
-  use Ecto.Schema
+defmodule HackPop.Services.StoryService do
 
   import Ecto.Query
 
   alias HackPop.Repo
-  alias HackPop.Schema.Story
+  alias HackPop.Schemas.Story
 
-  schema "stories" do
-    field :title
-    field :url
-    field :comments_url
-    field :points, :integer
-    field :trending, :boolean
-    timestamps
-  end
-
-  def changeset(story, params \\ %{}) do
-    story
-    |> Ecto.Changeset.cast(params, [:points, :trending])
+  def save_all(stories) do
+    stories
+    |> Enum.map(&upsert/1)
   end
 
   def set_trending(stories) do
     stories_trending_besides(stories)
     |> Repo.update_all(set: [trending: false])
     stories
-  end
-
-  def save_all(stories) do
-    stories
-    |> Enum.map(&upsert/1)
   end
 
   defp upsert(struct) do
@@ -38,7 +23,7 @@ defmodule HackPop.Schema.Story do
         |> Repo.insert!
       %Story{} ->
         story
-        |> changeset(%{points: struct.points, trending: true})
+        |> Story.changeset(%{points: struct.points, trending: true})
         |> Repo.update!
     end
   end

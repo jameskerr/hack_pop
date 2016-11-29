@@ -1,8 +1,8 @@
-defmodule HackPop.Query.RecentUnreadNotificationsTest do
+defmodule HackPop.Queries.RecentUnreadNotificationsTest do
   use ExUnit.Case, async: true
 
   alias HackPop.Repo
-  alias HackPop.Schema.{Story, Client, Notification}
+  alias HackPop.Schemas.{Story, Client, Notification}
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
@@ -14,7 +14,7 @@ defmodule HackPop.Query.RecentUnreadNotificationsTest do
     _notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
 
-    assert 1 === HackPop.Query.RecentUnreadNotifications.get(client) |> length
+    assert 1 === HackPop.Queries.RecentUnreadNotifications.get(client) |> length
   end
 
   test "recent_unread_story_notifications excludes unread" do
@@ -23,7 +23,7 @@ defmodule HackPop.Query.RecentUnreadNotificationsTest do
                                                story_id: 1,
                                                read: true}
 
-    assert [] == HackPop.Query.RecentUnreadNotifications.get(client)
+    assert [] == HackPop.Queries.RecentUnreadNotifications.get(client)
   end
 
   test "recent_unread_story_notifications exludes older than 5 days" do
@@ -32,6 +32,6 @@ defmodule HackPop.Query.RecentUnreadNotificationsTest do
                                                story_id: 1,
                                                inserted_at: Ecto.DateTime.cast!({{2016, 09, 01}, {0,0,0}})}
 
-    assert [] == HackPop.Query.RecentUnreadNotifications.get(client)
+    assert [] == HackPop.Queries.RecentUnreadNotifications.get(client)
   end
 end

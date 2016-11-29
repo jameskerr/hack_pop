@@ -4,9 +4,9 @@ defmodule HackPop.Views.NotificationViewTest do
   alias HackPop.Views.NotificationView
 
   test "cast" do
-    notification = %HackPop.Schema.Notification{
+    notification = %HackPop.Schemas.Notification{
       id: 10,
-      story: %HackPop.Schema.Story{
+      story: %HackPop.Schemas.Story{
         title: "title",
         url:   "url",
         comments_url: "comments_url",

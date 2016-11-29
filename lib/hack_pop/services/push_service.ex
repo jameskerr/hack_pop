@@ -1,9 +1,9 @@
-defmodule HackPop.Pusher do
+defmodule HackPop.Services.PushService do
   @apns_client Application.get_env(:hack_pop, :apns_client)
 
   alias HackPop.Repo
-  alias HackPop.Schema.Client
-  alias HackPop.Schema.Notification
+  alias HackPop.Schemas.Client
+  alias HackPop.Schemas.Notification
 
   import Ecto.Query
 

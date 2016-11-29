@@ -1,9 +1,9 @@
-defmodule HackPop.Schema.Notification do
+defmodule HackPop.Schemas.Notification do
   use Ecto.Schema
 
   schema "notifications" do
-    belongs_to :client, HackPop.Schema.Client, type: :string
-    belongs_to :story, HackPop.Schema.Story
+    belongs_to :client, HackPop.Schemas.Client, type: :string
+    belongs_to :story, HackPop.Schemas.Story
     field :read, :boolean, default: false
     timestamps
   end

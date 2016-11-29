@@ -1,4 +1,4 @@
-defmodule HackPop.Query.TrendingStories do
+defmodule HackPop.Queries.TrendingStories do
   import Ecto.Query, only: [from: 2]
 
   def get do
@@ -6,7 +6,7 @@ defmodule HackPop.Query.TrendingStories do
   end
 
   defp query do
-    from s in HackPop.Schema.Story,
+    from s in HackPop.Schemas.Story,
       where: s.trending == true,
       order_by: [desc: :points]
   end

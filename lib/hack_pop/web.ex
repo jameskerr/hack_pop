@@ -5,11 +5,10 @@ defmodule HackPop.Web do
   import Ecto.Query, only: [where: 2]
 
   alias HackPop.Repo
-  alias HackPop.Schema.Client
-  alias HackPop.Schema.Story
-  alias HackPop.Schema.Notification
+  alias HackPop.Schemas.Client
+  alias HackPop.Schemas.Story
+  alias HackPop.Schemas.Notification
   alias HackPop.Pinger
-  alias HackPop.Pusher
   alias HackPop.Views.{ClientView, StoryView}
 
   plug Plug.Parsers, parsers: [:urlencoded, :multipart]
@@ -23,7 +22,7 @@ defmodule HackPop.Web do
 
   get "/stories" do
     stories =
-      HackPop.Query.TrendingStories.get
+      HackPop.Queries.TrendingStories.get
       |> StoryView.cast
       |> to_json
 
@@ -44,7 +43,7 @@ defmodule HackPop.Web do
   #####################
 
   post "/clients" do
-    case Client.create(%{id: conn.params["client_id"]}) do
+    case HackPop.Services.ClientService.create(%{id: conn.params["client_id"]}) do
       {:ok,    client }   -> send_resp conn, 201, client |> ClientView.cast |> to_json
       {:error, changeset} -> send_resp conn, 422, errors_json(changeset)
     end
@@ -68,7 +67,7 @@ defmodule HackPop.Web do
       points: 10001
     }
     %Notification{story: story, client_id: id}
-    |> Pusher.push
+    |> HackPop.Services.PushService.push
     send_resp conn, 200, "{\"fer_shur\": \"dude\"}"
   end
 
@@ -77,7 +76,7 @@ defmodule HackPop.Web do
       %Client{} ->
         notifications =
           client
-          |> HackPop.Query.RecentUnreadNotifications.get
+          |> HackPop.Queries.RecentUnreadNotifications.get
           |> HackPop.Views.NotificationView.cast
           |> to_json
         send_resp conn, 200, notifications
@@ -104,7 +103,7 @@ defmodule HackPop.Web do
   end
 
   get "/clients/:client_id/notifications/:id" do
-    client = Repo.get(Client, client_id)
+    Repo.get!(Client, client_id)
 
     notification =
       Repo.get(Notification, id)
