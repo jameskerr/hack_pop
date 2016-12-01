@@ -103,21 +103,34 @@ class HackPopServer: NSObject {
             
         }
         
+        static func GetNotification(clientId:String, notificationId:Int) -> URLRequest {
+            let path = "/clients/\(clientId)/notifications/\(notificationId)"
+            let httpMethod = "GET"
+            let url:URL = URL(string: "\(HackPopServer.instance().hostUrl)\(path)")!
+            var request = URLRequest(url: url)
+            request.httpMethod = httpMethod
+            return request
+        }
+        
+    }
+    
+    static func processStory(json:[String:Any]) -> Story {
+        let url:String = json["url"] as! String
+        let commentsUrl:String = json["comments_url"] as! String
+        let title:String = json["title"] as! String
+        let points:Int = json["points"] as! Int
+        let notificationId:Int? = (json["notification_id"] as? Int?)!
+        return Story(urlString: url,
+                          commentsUrlString:commentsUrl,
+                          title:title,
+                          points: points,
+                          notificationId: notificationId)
     }
     
     static func processStories(jsonArray:[[String:Any]]) -> [Story] {
         var stories:[Story] = []
         for parsedStory in jsonArray {
-            let url:String = parsedStory["url"] as! String
-            let commentsUrl:String = parsedStory["comments_url"] as! String
-            let title:String = parsedStory["title"] as! String
-            let points:Int = parsedStory["points"] as! Int
-            let notificationId:Int? = (parsedStory["notification_id"] as? Int?)!
-            let story = Story(urlString: url,
-                              commentsUrlString:commentsUrl,
-                              title:title,
-                              points: points,
-                              notificationId: notificationId)
+            let story = processStory(json: parsedStory)
             stories.append(story)
         }
         return stories
@@ -288,6 +301,31 @@ class HackPopServer: NSObject {
                     } catch let error as NSError {
                         
                         delegate.onNotificationConfirationFailed(error: error)
+                        
+                    }
+                }
+            })
+            task.resume()
+        }
+    }
+    
+    static func getNotification(notificationId:Int, delegate:HttpNotificationGetListener) {
+        if let token = Client.instance().token {
+            let request = EndPoints.GetNotification(clientId: token, notificationId: notificationId)
+            let task = URLSession.shared.dataTask(with: request, completionHandler: {
+                (data, response, error) in
+                
+                if error == nil {
+                    let httpResponse = response as? HTTPURLResponse
+                    do {
+                        if (httpResponse?.statusCode)! < 200 || (httpResponse?.statusCode)! >= 300 {
+                            throw RequestError.InvalidStatusCode
+                        }
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
+                        let story = processStory(json: json)
+                        delegate.onGetNotificationSucceeded(story: story)
+                        
+                    } catch _ as NSError {
                         
                     }
                 }

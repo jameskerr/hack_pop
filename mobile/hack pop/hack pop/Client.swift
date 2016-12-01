@@ -47,10 +47,5 @@ class Client: NSObject {
             defaults.synchronize()
         }
     }
-    
-    
-    func save() {
-        
-    }
 
 }
