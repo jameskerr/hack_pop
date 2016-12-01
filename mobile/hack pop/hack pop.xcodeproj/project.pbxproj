@@ -26,6 +26,9 @@
 		7D3144BE1D925A2500E00718 /* HackPopStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */; };
 		7D3144C41D925C7500E00718 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */; };
 		7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */; };
+		7D396DC81DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D396DC71DEFCB37001245D3 /* HttpNotificationGetListener.swift */; };
+		7D396DC91DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D396DC71DEFCB37001245D3 /* HttpNotificationGetListener.swift */; };
+		7D396DCA1DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D396DC71DEFCB37001245D3 /* HttpNotificationGetListener.swift */; };
 		7D4551931D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
 		7D4551941D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
 		7D4551951D938A4D00A6D20E /* HackPopServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4551921D938A4D00A6D20E /* HackPopServer.swift */; };
@@ -176,6 +179,7 @@
 		7D3144BD1D925A2500E00718 /* HackPopStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopStyleTests.swift; sourceTree = "<group>"; };
 		7D3144C31D925C7500E00718 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		7D3144C51D925C9F00E00718 /* PointsRetainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsRetainerTests.swift; sourceTree = "<group>"; };
+		7D396DC71DEFCB37001245D3 /* HttpNotificationGetListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpNotificationGetListener.swift; sourceTree = "<group>"; };
 		7D4551921D938A4D00A6D20E /* HackPopServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackPopServer.swift; sourceTree = "<group>"; };
 		7D4551961D93AAC400A6D20E /* HttpStoriesListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStoriesListener.swift; sourceTree = "<group>"; };
 		7D45519A1D93AB0E00A6D20E /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 				7DEEB8DB1DAF3060000F2789 /* HttpSetThresholdListener.swift */,
 				7DABDCA41DB714D80065B111 /* HttpNotificationsFetchListener.swift */,
 				7DABDCAE1DB9C1D00065B111 /* HttpNotifcationConfirmListener.swift */,
+				7D396DC71DEFCB37001245D3 /* HttpNotificationGetListener.swift */,
 			);
 			name = Http;
 			sourceTree = "<group>";
@@ -811,6 +816,7 @@
 				7DE2ECF91D8A3F2400A53ABF /* HomeViewController.swift in Sources */,
 				7D4551971D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DD6D9351DA4E0DD0062A69C /* Interactor.swift in Sources */,
+				7D396DC81DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */,
 				7D101BA21D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
 				7DABDCA51DB714D80065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7DE2ECFF1D8A3F2400A53ABF /* hack_pop.xcdatamodeld in Sources */,
@@ -847,6 +853,7 @@
 				7D4551981D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7D7D282E1D94DD20009334CA /* WebViewController.swift in Sources */,
 				7D101B951D9A451400C89D5A /* CookieStore.swift in Sources */,
+				7D396DC91DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */,
 				7DD6D93A1DA4E1120062A69C /* Interactor.swift in Sources */,
 				7D3144C61D925C9F00E00718 /* PointsRetainerTests.swift in Sources */,
 				7D4A9E311D8BC4A5009A7A61 /* PointSelectViewController.swift in Sources */,
@@ -868,6 +875,7 @@
 				7D4563C31D92421B0083FEB0 /* HackPopStyle.swift in Sources */,
 				7D4551991D93AAC400A6D20E /* HttpStoriesListener.swift in Sources */,
 				7DEEB8DA1DAF226A000F2789 /* HttpClientCreateListener.swift in Sources */,
+				7D396DCA1DEFCB37001245D3 /* HttpNotificationGetListener.swift in Sources */,
 				7D101BA41D9B9D4700C89D5A /* RecentStoriesViewController.swift in Sources */,
 				7DABDCAB1DB7209A0065B111 /* HttpNotificationsFetchListener.swift in Sources */,
 				7DD6D93B1DA4E1130062A69C /* Interactor.swift in Sources */,

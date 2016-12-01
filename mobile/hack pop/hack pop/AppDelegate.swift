@@ -133,15 +133,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-        //
-        let story = Story.storyFromPush(pushData: userInfo)
-        story.isUnreadStory = true
-        Story.current = story
-        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = webViewController
-        window?.makeKeyAndVisible()
+        
+        let notificationId:Int? = userInfo["id"] as! Int?
+        HackPopServer.getNotification(notificationId: notificationId!, delegate: self)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -192,6 +186,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static func delay(delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) { closure() }
+    }
+}
+
+extension AppDelegate: HttpNotificationGetListener {
+    
+    func onGetNotificationSucceeded(story:Story) {
+        
+        DispatchQueue.main.async {
+            story.isUnreadStory = true
+            Story.current = story
+            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+            UIApplication.shared.keyWindow?.rootViewController = webViewController
+        }
     }
 }
 
