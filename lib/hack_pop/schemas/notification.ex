@@ -1,10 +1,9 @@
-defmodule HackPop.Notification do
+defmodule HackPop.Schemas.Notification do
   use Ecto.Schema
 
-  @derive {Poison.Encoder, only: [:id, :story, :read]}
   schema "notifications" do
-    belongs_to :client, HackPop.Client, type: :string
-    belongs_to :story, HackPop.Story
+    belongs_to :client, HackPop.Schemas.Client, type: :string
+    belongs_to :story, HackPop.Schemas.Story
     field :read, :boolean, default: false
     timestamps
   end

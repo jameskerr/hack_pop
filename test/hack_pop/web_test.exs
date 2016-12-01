@@ -1,14 +1,14 @@
 defmodule HackPop.WebTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   use Plug.Test
 
   import Ecto.Query, only: [where: 2]
 
   alias HackPop.Repo
-  alias HackPop.Client
+  alias HackPop.Schemas.Client
   alias HackPop.Web
-  alias HackPop.Notification
-  alias HackPop.Story
+  alias HackPop.Schemas.Notification
+  alias HackPop.Schemas.Story
 
   @opts Web.init([])
 
@@ -17,7 +17,7 @@ defmodule HackPop.WebTest do
   end
 
   test "get /stories when trending" do
-    Repo.insert! %Story{title: "A", url: "a.com", comments_url: "item?id=a", points: 1, trending: true}
+    Repo.insert! %Story{title: "A", url: "a.com", comments_url: "item?id=a", points: 1, trending: true, id: 1}
 
     conn = conn(:get, "/stories") |> Web.call(@opts)
 
@@ -27,7 +27,7 @@ defmodule HackPop.WebTest do
   end
 
   test "get /stories when not trending" do
-    Repo.insert! %Story{title: "A", url: "a.com", comments_url: "item?id=a", points: 1, trending: false}
+    Repo.insert! %Story{title: "A", url: "a.com", comments_url: "item?id=a", points: 1, trending: false, id: 1}
 
     conn = conn(:get, "/stories") |> Web.call(@opts)
 
@@ -79,7 +79,7 @@ defmodule HackPop.WebTest do
 
   test "get /clients/:client_id/notifications 200" do
     client        = Repo.insert! %Client{id: "123"}
-    story         = Repo.insert! %Story{title: "Sup", url: "hi", comments_url: "item?id=12191089", points: 100}
+    story         = Repo.insert! %Story{title: "Sup", url: "hi", comments_url: "item?id=12191089", points: 100, id: 1}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                                story_id: story.id}
     url  = "/clients/123/notifications"
@@ -94,7 +94,7 @@ defmodule HackPop.WebTest do
 
   test "put /clients/:client_id/notifications/:id updates read" do
     client       = Repo.insert! %Client{id: "123"}
-    story        = Repo.insert! %Story{title: "Sup", url: "hi", points: 100}
+    story        = Repo.insert! %Story{title: "Sup", url: "hi", points: 100, id: 1}
     notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
 

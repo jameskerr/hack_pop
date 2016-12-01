@@ -23,7 +23,6 @@ defmodule HackPop.Mixfile do
                     :timex,
                     :cowboy,
                     :poison,
-                    :apns,
                     :bugsnag,
                     :plugsnag,
                     :plug,

@@ -12,10 +12,20 @@ config :hack_pop, HackPop.Repo,
 
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
+config :hack_pop, apns_pool: :dev_pool
+
+config :hack_pop, apns_client: HackPop.APNS.Client
+
+config :hack_pop, error_reporting: HackPop.Errors.Reporting
+
+config :hack_pop, hacker_news_client: HackPop.HackerNews.HTTPClient
+
+config :logger, level: :info
+
 config :plug, port: 4001
 
 config :apns,
-  callback_module: HackPop.Pusher,
+  callback_module: HackPop.APNS.Callback,
   pools: [
     dev_pool: [
       env: :dev,
@@ -28,12 +38,6 @@ config :apns,
       pool_size: 100
     ]
   ]
-
-config :hack_pop, apns_pool: :dev_pool
-
-config :hack_pop, auto_ping: true
-
-config :logger, level: :info
 
 config :bugsnag, api_key: System.get_env("BUGSNAG_API_KEY")
 

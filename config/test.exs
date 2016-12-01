@@ -8,12 +8,17 @@ config :hack_pop, HackPop.Repo,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
-config :plug, port: 4002
-
-config :apns, []
-
 config :hack_pop, ecto_repos: [HackPop.Repo]
 
 config :hack_pop, Repo, pool: Ecto.Adapters.SQL.Sandbox
 
-config :hack_pop, auto_ping: false
+config :hack_pop, apns_client: HackPop.APNS.ClientMock
+
+config :hack_pop, error_reporting: HackPop.Errors.ReportingMock
+
+config :logger, level: :warn
+
+config :plug, port: 4002
+
+config :apns, pools: []
+

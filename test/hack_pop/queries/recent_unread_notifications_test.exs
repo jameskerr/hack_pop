@@ -1,32 +1,20 @@
-defmodule HackPop.ClientTest do
-  use ExUnit.Case
+defmodule HackPop.Queries.RecentUnreadNotificationsTest do
+  use ExUnit.Case, async: true
 
   alias HackPop.Repo
-  alias HackPop.Notification
-  alias HackPop.Client
-  alias HackPop.Story
+  alias HackPop.Schemas.{Story, Client, Notification}
 
   setup do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
   end
 
-  test "find when exists" do
-    Repo.insert! %Client{id: "123", threshold: 300}
-
-    assert Client.find("123").id == "123"
-  end
-
-  test "find when does not exist" do
-    assert Client.find("123") == nil
-  end
-
   test "recent_unread_story_notifications" do
     client        = Repo.insert! %Client{id: "123"}
-    story         = Repo.insert! %Story{title: "title", url: "url", points: 100}
+    story         = Repo.insert! %Story{title: "title", url: "url", points: 100, id: 1}
     _notification = Repo.insert! %Notification{client_id: client.id,
                                               story_id: story.id}
 
-    assert 1 === Client.recent_unread_story_notifications(client) |> length
+    assert 1 === HackPop.Queries.RecentUnreadNotifications.get(client) |> length
   end
 
   test "recent_unread_story_notifications excludes unread" do
@@ -35,7 +23,7 @@ defmodule HackPop.ClientTest do
                                                story_id: 1,
                                                read: true}
 
-    assert [] == Client.recent_unread_story_notifications(client)
+    assert [] == HackPop.Queries.RecentUnreadNotifications.get(client)
   end
 
   test "recent_unread_story_notifications exludes older than 5 days" do
@@ -44,6 +32,6 @@ defmodule HackPop.ClientTest do
                                                story_id: 1,
                                                inserted_at: Ecto.DateTime.cast!({{2016, 09, 01}, {0,0,0}})}
 
-    assert [] == Client.recent_unread_story_notifications(client)
+    assert [] == HackPop.Queries.RecentUnreadNotifications.get(client)
   end
 end

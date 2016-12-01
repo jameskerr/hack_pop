@@ -1,29 +1,35 @@
-require Logger
-
 defmodule HackPop do
   use Application
+  import Supervisor.Spec, only: [worker: 2]
 
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
+    Application.get_env(:hack_pop, :error_reporting).start
+    Application.get_env(:hack_pop, :apns_client).start
 
-    Bugsnag.start(nil, nil)
-
-    children = [
-      worker(HackPop.Repo, []),
-      Plug.Adapters.Cowboy.child_spec(:http, HackPop.Web, [], [port: Application.fetch_env!(:plug, :port)])
-    ]
-
-    if auto_ping? do
-      children = children ++ [worker(HackPop.Pinger, [])]
-    end
-
-    opts = [strategy: :one_for_one, name: HackPop.Supervisor]
-    Supervisor.start_link(children, opts)
+    Supervisor.start_link children, strategy: :one_for_one, name: HackPop.Supervisor
   end
 
-  defp auto_ping? do
-    Application.fetch_env!(:hack_pop, :auto_ping)
+  defp children do
+    case Mix.env do
+      :test -> [repo, web]
+      _     -> [repo, web, pinger]
+    end
+  end
+
+  defp pinger do
+    worker HackPop.Pinger, []
+  end
+
+  defp repo do
+    worker HackPop.Repo, []
+  end
+
+  defp web do
+    Plug.Adapters.Cowboy.child_spec(
+      :http,
+      HackPop.Web,
+      [],
+      port: Application.fetch_env!(:plug, :port)
+    )
   end
 end
-
-
