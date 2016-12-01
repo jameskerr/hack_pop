@@ -14,8 +14,17 @@ defmodule HackPop.Services.PushServiceTest do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo)
   end
 
+  test "push message format" do
+    PushService.push %Notification{id: 1, client_id: "abc", story: %Story{title: "Fucking yeah!"}}
+
+    assert_received {:ok, message}
+    assert message.token == "abc"
+    assert message.alert == "Fucking yeah!"
+    assert message.extra == %{id: 1}
+  end
+
   test "push_to_all_clients when not already sent" do
-    story  = Repo.insert!(%Story{title: "Dinosaurs!", points: 301, url: "awesome.com"})
+    story  = Repo.insert!(%Story{id: 1, title: "Dinosaurs!", points: 301, url: "awesome.com"})
     client = Repo.insert!(%Client{id: "123", threshold: 300})
 
     PushService.push_to_all_clients([story])
@@ -26,7 +35,7 @@ defmodule HackPop.Services.PushServiceTest do
   end
 
   test "push_to_all_clients when already sent" do
-    story   = Repo.insert! %Story{title: "Dinosaurs!", points: 301, url: "sheit.com"}
+    story   = Repo.insert! %Story{id: 1, title: "Dinosaurs!", points: 301, url: "sheit.com"}
     _client = Repo.insert!(%Client{id: "123", threshold: 300})
 
     PushService.push_to_all_clients([story])
