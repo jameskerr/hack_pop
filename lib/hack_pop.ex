@@ -10,10 +10,7 @@ defmodule HackPop do
   end
 
   defp children do
-    case Mix.env do
-      :test -> [repo, web]
-      _     -> [repo, web, pinger]
-    end
+    [repo, web, pinger]
   end
 
   defp pinger do
