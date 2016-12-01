@@ -27,6 +27,7 @@ defmodule HackPop.Mixfile do
                     :plugsnag,
                     :plug,
                     :edeliver],
+     included_applications: [:apns],
      mod: {HackPop, []}]
   end
 
