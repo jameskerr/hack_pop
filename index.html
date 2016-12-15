@@ -1,1 +1,136 @@
-<h1>Hacker News Alerts</h1>
+<!doctype>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+        color: #5D5D5D;
+      }
+
+      header {
+        background-color: #F68336;
+        color: white;
+        padding: 1em 0;
+        margin-bottom: 2em;
+      }
+
+      h1 {
+        font-weight: normal;
+        font-size: 3em;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+
+      .wrap {
+        margin: 0 auto;
+        max-width: 860px;
+        padding: 0 1em;
+      }
+
+      .wrap:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      section {
+        width: 60%;
+        float: left;
+      }
+
+      aside {
+        width: 35%;
+        float: right;
+        text-align: center;
+      }
+
+      .screenshot {
+        margin: 1em 0;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+      }
+
+      footer {
+        padding: 3em 0;
+        margin-bottom: 3em;
+        text-align: center;
+      }
+
+      .icon {
+        vertical-align: middle;
+        max-width: 82px;
+        width: 100%;
+        height: auto;
+        margin: 1em;
+      }
+
+      .download {
+        border: 2px solid #F68336;
+        padding: 1em;
+        border-radius: 10px;
+        transition: 150ms;
+        font-size: 1.2em;
+        display: inline-block;
+      }
+
+      .download:hover {
+        background-color: #F68336;
+        color: white;
+      }
+
+      @media (max-width: 860px) {
+        section, aside {
+          width: 100%;
+        }
+
+        .screenshot {
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Hacker News Alerts</h1>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="description">
+        <p>
+          Hacker News Alerts is an app developed by two hackers who wanted push notifications from
+          <a href="http://news.ycombinator.com">news.ycombinator.com</a>. However, it turns out a lot of things get posted to Hacker News. Getting push notificaitons for everything would be overwhelming and annoying. So Hacker News Alerts allows you to set a point threshold, and <strong>only receive push notifications after a story reaches the threshold you set</strong>.
+        </p>
+        <p>
+          If you want to get notified everytime a new javascript framework comes out, set your threshold to 100. If you want to get notified only when a vulnerability is discovered in Linux, set your theshold to 1000. The amount of notifications you recieve is up to you.
+        </p>
+        <p>
+          Hacker News Alerts also keeps a list of your unread stories so that you don’t miss the stories that make your morning commute slightly better than that of the average American’s morning commute.
+        </p>
+      </section>
+
+      <aside>
+        <img class="screenshot" src="screenshot.png"/>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="wrap">
+      <img src="icon.png" class="icon"/>
+        <a href="#" class="download">Download on the iOS App Store</a>
+      </div>
+    </footer>
+  </body>
+</html>
+
